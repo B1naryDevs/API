@@ -4,7 +4,13 @@
 <h1>B1NARY DEVS </h1></br> 
 </div>
 
+<div align = "center">
+
+<img src = "https://user-images.githubusercontent.com/101594950/186716264-470da9dd-da11-46ae-8fe8-0cec7e82c898.png" width="400" height="400" />
+
   #### O **+Vagas** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas. 
+
+</div>
 
 <br>
 

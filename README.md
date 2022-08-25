@@ -6,9 +6,9 @@
 
 <div align = "center">
 
-<img src = "https://user-images.githubusercontent.com/101594950/186716264-470da9dd-da11-46ae-8fe8-0cec7e82c898.png" width="400" height="400" />
+<img src = "https://user-images.githubusercontent.com/101594950/186729554-e21228b5-fab2-4f89-89ec-4f3a3fe8a096.png" />
 
-  #### O **+Vagas** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas. 
+  #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas. 
 
 </div>
 

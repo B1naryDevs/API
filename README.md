@@ -133,6 +133,30 @@
  ![image](https://user-images.githubusercontent.com/59184811/172053967-04975a0d-f20c-468d-accd-427b3ac6f528.png)
 
  </details>
+ 
+ </div>
+  
+<details>
+  
+ **<summary> 4º sprint - 07/11 á 27/11 </summary><br>**
+  
+* **a definir**
+* a definir
+* a definir
+
+
+<hr>
+  
+ #### imagens programa exemplo
+  
+ <b>[Documentação a ser realizada](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
+ <br>
+
+ <b>Gráfico de Burndown</b>
+ <br>
+ ![image](https://user-images.githubusercontent.com/59184811/168484736-37a60122-cb39-4e7b-b6a9-21bc38cad026.png)
+
+</details>
 
 <div align="center">
 
@@ -141,3 +165,5 @@
 </div>
   
 <hr>
+
+

@@ -29,7 +29,7 @@
             <th>Breno Silva (Dev) <width="100"/th>
               <th>Gabriel Vieira (Dev) <width="100"/th>
                 <th>Gui Santana (Dev) <width="100"/th>
-                  <th>Larissa Souza (Product Ower) <width="100"/th>
+                  <th>Larissa Souza (Product Owner) <width="100"/th>
                     <th>Wallace Honorato (Dev) <width="100"/th>
     </tr>
 </thead>

@@ -52,18 +52,31 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 <div align = "center"><br>
  
-# Backlog do Produto
+# Backlog do Produto 
  
-</div>
+<br>
+  
+| Atividade  | prioridade   |
+| ------- | -------- |
+| Validação de Wireframe Cadastro de Candidato   | Alta    |
+| Implementar Interface de Cadastro de Candidato   | Alta    |
+| Arquitetura e Modelagem de Banco de Dados   | Alta    |
+| Estabelecer CRUD da Aplicação   | Alta    |
+| Validação de Telas Restantes   | Média    |
+| Implementar Interface de Cadastro de Vagas   | Média    |
+| Criação de Banco de Dados   | Média    |
+| Implementar Interface de Login   | Média    |
+| Implementar Interface de Cadastro   | Média    |
+| Implementar Interface de Análise de Candidatura   | Média    |
+| Implementar Interface Home   | Baixa    |
+| Relatórios e Métricas   | Baixa    |
+| Testes e Correções   | Baixa    |
+| Revisão de Documentação   | Baixa    |
+  
+</div> 
  
-- Relatório de vagas
-- Relatório de candidaturas
-- Relatório de desempenho dos recrutadores
-- Criação de vagas
-- Criação de candidaturas
-- Análise e aprovação de candidaturas
-- Interface de uso
-- Análise e alteração de vagas
+
+
 
 <div align= "center">
  

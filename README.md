@@ -50,34 +50,19 @@
 <br>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-<div align = "center"><br>
+<div align="center">
  
 # Backlog do Produto 
+
+![bc1](https://user-images.githubusercontent.com/101594950/187271607-7706c148-909c-43ca-b6e7-53b77a70f190.png)
+ 
+#### <b>[Link do Documento](https://user-images.githubusercontent.com/101594950/187272837-c2fd6f24-3dd1-4af1-8bcb-d709a0250f74.jpeg)</b>
+
+</div>
  
 <br>
-
-![WhatsApp Image 2022-08-29 at 13 26 53](https://user-images.githubusercontent.com/101594950/187253560-7e24a320-ad36-48c8-8f96-731e36ed5ee2.jpeg)
-
-| Atividade  | prioridade   |
-| ------- | -------- |
-| Validação de Wireframe Cadastro de Candidato   | Alta    |
-| Implementar Interface de Cadastro de Candidato   | Alta    |
-| Arquitetura e Modelagem de Banco de Dados   | Alta    |
-| Validação de Telas Restantes   | Média    |
-| Implementar Interface de Cadastro de Vagas   | Média    |
-| Criação de Banco de Dados   | Média    |
-| Implementar Interface de Login   | Média    |
-| Implementar Interface de Cadastro   | Média    |
-| Implementar Interface de Análise de Candidatura   | Média    |
-| Estabelecer CRUD da Aplicação   | Média    |
-| Implementar Interface Home   | Baixa    |
-| Relatórios e Métricas   | Baixa    |
-| Testes e Correções   | Baixa    |
-| Revisão de Documentação   | Baixa    |
   
-</div> <br>
-
-### <b>[Documentação Completa](https://user-images.githubusercontent.com/101594950/187252348-212e9aaa-d7ed-41f4-af60-a332bcd42fb1.jpeg)</b>
+</div>
 
 <div align="center">
 
@@ -91,21 +76,13 @@
   
   | Atividade  | prioridade   |
 | ------- | -------- |
-| Validação de Wireframe Cadastro de Candidato e Vagas   | Alta    |
-| Arquitetura e Modelagem de Banco de Dados   | Alta    |
-| Implementar Interface de Cadastro de Candidato e Vagass   | Alta    |
-
+| Validação de Wireframe Cadastro de Candidato   | Alta    |
+| Validação de Wireframe Cadastro de Vagas   | Alta    |
+| Implementar Interface de Cadastro de Candidato | Média    |
+| Implementar Interface de Cadastro de Vagas   | Média    |
+| Arquitetura e Modelagem de Banco de Dados   | Média    |
 
 <hr>
-  
- #### imagens programa exemplo
-  
- <b>[Documentação a ser realizada](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
- <br>
-
- <b>Gráfico de Burndown</b>
- <br>
- ![image](https://user-images.githubusercontent.com/59184811/168484736-37a60122-cb39-4e7b-b6a9-21bc38cad026.png)
 
 </details>
 
@@ -118,15 +95,6 @@
 * a definir
 * a definir
 
-<hr> 
- 
- <b>[Documentação a ser realizada](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
- <br>
- 
- <b>Gráfico de Burndown</b>
- <br>
- ![image](https://user-images.githubusercontent.com/59184811/168485529-45118439-b08c-407c-9c9c-c268228f491d.png)
-
  </details>
  
  <details>
@@ -135,15 +103,6 @@
 * **a definir**
 * a definir
 * a definir
-
-<hr>
-
- <b>[Documentação a ser realizada](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
- <br>
- 
- <b>Gráfico de Burndown</b>
- <br>
- ![image](https://user-images.githubusercontent.com/59184811/172053967-04975a0d-f20c-468d-accd-427b3ac6f528.png)
 
  </details>
  
@@ -157,18 +116,8 @@
 * a definir
 * a definir
 
-
 <hr>
   
- #### imagens programa exemplo
-  
- <b>[Documentação a ser realizada](https://github.com/fatec-bd1sem/Otus/files/8696015/sprint1.pdf)</b>
- <br>
-
- <b>Gráfico de Burndown</b>
- <br>
- ![image](https://user-images.githubusercontent.com/59184811/168484736-37a60122-cb39-4e7b-b6a9-21bc38cad026.png)
-
 </details>
 
 <div align="center">
@@ -187,7 +136,3 @@
  
 <br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />
 </div> <br>
-
-
-
-

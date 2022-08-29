@@ -55,37 +55,29 @@
 # Backlog do Produto 
  
 <br>
-  
+
+![WhatsApp Image 2022-08-29 at 13 26 53](https://user-images.githubusercontent.com/101594950/187253560-7e24a320-ad36-48c8-8f96-731e36ed5ee2.jpeg)
+
 | Atividade  | prioridade   |
 | ------- | -------- |
 | Validação de Wireframe Cadastro de Candidato   | Alta    |
 | Implementar Interface de Cadastro de Candidato   | Alta    |
 | Arquitetura e Modelagem de Banco de Dados   | Alta    |
-| Estabelecer CRUD da Aplicação   | Alta    |
 | Validação de Telas Restantes   | Média    |
 | Implementar Interface de Cadastro de Vagas   | Média    |
 | Criação de Banco de Dados   | Média    |
 | Implementar Interface de Login   | Média    |
 | Implementar Interface de Cadastro   | Média    |
 | Implementar Interface de Análise de Candidatura   | Média    |
+| Estabelecer CRUD da Aplicação   | Média    |
 | Implementar Interface Home   | Baixa    |
 | Relatórios e Métricas   | Baixa    |
 | Testes e Correções   | Baixa    |
 | Revisão de Documentação   | Baixa    |
   
-</div> 
- 
-
-
-
-<div align= "center">
- 
- <br>
-
-# Tecnologias <br>
- 
-<br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />
 </div> <br>
+
+### <b>[Documentação Completa](https://user-images.githubusercontent.com/101594950/187252348-212e9aaa-d7ed-41f4-af60-a332bcd42fb1.jpeg)</b>
 
 <div align="center">
 
@@ -97,9 +89,11 @@
   
  **<summary> 1º sprint - 29/08 á 18/09 </summary><br>**
   
-* **a definir**
-* a definir
-* a definir
+  | Atividade  | prioridade   |
+| ------- | -------- |
+| Validação de Wireframe Cadastro de Candidato e Vagas   | Alta    |
+| Arquitetura e Modelagem de Banco de Dados   | Alta    |
+| Implementar Interface de Cadastro de Candidato e Vagass   | Alta    |
 
 
 <hr>
@@ -184,5 +178,16 @@
 </div>
   
 <hr>
+
+<div align= "center">
+ 
+ <br>
+
+# Tecnologias <br>
+ 
+<br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />
+</div> <br>
+
+
 
 

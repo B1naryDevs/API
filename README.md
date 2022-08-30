@@ -20,28 +20,28 @@
 # **Equipe de Desenvolvimento** <br>
 
 </div>
- 
+
 <table border="1">
 <thead>
     <tr>
-        <th>Carlos Torres (Scrum Master) <width="100"/th>
-          <th>Davi Gusmão (Dev) <width="100"/th>
+          <th>Larissa Souza (Product Owner) <width="100"/th>
+           <th>Carlos Torres (Scrum Master) <width="100"/th>
             <th>Breno Silva (Dev) <width="100"/th>
-              <th>Gabriel Vieira (Dev) <width="100"/th>
-                <th>Gui Santana (Dev) <width="100"/th>
-                  <th>Larissa Souza (Product Owner) <width="100"/th>
+              <th>Davi Gusmão (Dev) <width="100"/th>
+                <th>Gabriel Vieira (Dev) <width="100"/th>
+                  <th>Gui Santana (Dev) <width="100"/th>            
                     <th>Wallace Honorato (Dev) <width="100"/th>
     </tr>
 </thead>
 <tbody>
     <tr>
-        <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/carlos-torres-638b13210" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/CarlosTorres2305" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td> 
-                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/davi-gusm%C3%A3o-a09421240" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/Davign10" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td> 
-                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/breno-do-nascimento-silva" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/Breno30" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
-                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/gabriel-silva-vieira-79166b208/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/DevBielgrazi" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
-                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/guilherme-santana-696535249" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/1SGuilherme" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
-                                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/larissatsouza" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/larissasouz" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
-                                                <td><img src="https://user-images.githubusercontent.com/101594950/173720182-1be62bbb-a684-41e7-9d27-28eae7359714.png" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/wallace-honorato-b15a3b1a2" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/WallaceHS20" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+                                           <td><img src="https://user-images.githubusercontent.com/101594950/187515045-cdb6fc23-56c1-45aa-bcfc-c294d9715a2b.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/larissatsouza" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/larissasouz" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+        <td><img src="https://user-images.githubusercontent.com/101594950/187515049-324d4bdb-a5e8-4002-8c81-d1adec6044de.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/carlos-torres-638b13210" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/CarlosTorres2305" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td> 
+                <td><img src="https://user-images.githubusercontent.com/101594950/187515042-90231107-4797-4cc4-b06a-086c8fd65231.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/breno-do-nascimento-silva" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/Breno30" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+                 <td><img src="https://user-images.githubusercontent.com/101594950/187515046-b434391c-5a2c-4edd-bb6b-7e56596c41ea.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/davi-gusm%C3%A3o-a09421240" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/Davign10" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+                <td><img src="https://user-images.githubusercontent.com/101594950/187515048-878e6003-aa0e-4853-a236-8d7bc516f182.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/gabriel-silva-vieira-79166b208/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/DevBielgrazi" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+                <td><img src="https://user-images.githubusercontent.com/101594950/187515051-d1565aa7-326c-4a7b-8496-237c4245fad2.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/guilherme-santana-696535249" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/1SGuilherme" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
+                                                <td><img src="https://user-images.githubusercontent.com/101594950/187515039-54f418a5-0549-4f57-a40f-993f04a715a4.jpeg" width="200" height="100" target="_blank"></a> <br> <a href="https://www.linkedin.com/in/wallace-honorato-b15a3b1a2" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> <a href="https://github.com/WallaceHS20" target="_blank"><img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" target="_blank"></a> </td>
     </tr>
 </tbody>
 <tfoot>
@@ -72,9 +72,9 @@
   
 <details>
   
- **<summary> 1º sprint - 29/08 á 18/09 </summary><br>**
+ **<summary> 1º Sprint - 29/08 á 18/09 </summary>**
   
-  | Atividade  | prioridade   |
+  | Atividade  | Prioridade   |
 | ------- | -------- |
 | Validação de Wireframe Cadastro de Candidato   | Alta    |
 | Validação de Wireframe Cadastro de Vagas   | Alta    |
@@ -82,27 +82,38 @@
 | Implementar Interface de Cadastro de Vagas   | Média    |
 | Arquitetura e Modelagem de Banco de Dados   | Média    |
 
-<hr>
+
+<br>
 
 </details>
 
 
 <details>
   
- **<summary> 2º sprint - 19/09 á 09/10 </summary><br>**
-  
-* **a definir**
-* a definir
-* a definir
+ **<summary> 2º Sprint - 19/09 á 09/10 </summary>**
+ 
+  | Atividade  | Prioridade   |
+| ------- | -------- |
+| Validação de Wireframe de Telas Restantes   | Média    |
+| Implementar Interface de Cadastro   | Média    |
+| Criação de Banco de Dados | Média    |
+
+<br>
 
  </details>
  
  <details>
   
- **<summary> 3º sprint - 13/10 á 06/11 </summary>**
-* **a definir**
-* a definir
-* a definir
+ **<summary> 3º Sprint - 13/10 á 06/11 </summary>**
+
+  | Atividade  | Prioridade   |
+| ------- | -------- |
+| Implementar interface de Login    | Média    |
+| Implementar Interface de Cadastro de Vagas  | Média    |
+| Implementar Interface de Análise de Candidatura | Média    |
+| Estabelecer Crud da Aplicação | Média    |
+
+<br>
 
  </details>
  
@@ -110,11 +121,16 @@
   
 <details>
   
- **<summary> 4º sprint - 07/11 á 27/11 </summary><br>**
+ **<summary> 4º Sprint - 07/11 á 27/11 </summary>**
   
-* **a definir**
-* a definir
-* a definir
+  | Atividade  | Prioridade   |
+| ------- | -------- |
+| Implementar Interface Home   | Média    |
+| Relatórios e Métricas   | Média    |
+| Testes e Correções | Média    |
+| Revisão de Documentação | Média    |
+
+<br>
 
 <hr>
   

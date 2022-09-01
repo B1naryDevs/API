@@ -54,10 +54,10 @@
  
 # Backlog do Produto 
 
-![bc1](https://user-images.githubusercontent.com/101594950/187271607-7706c148-909c-43ca-b6e7-53b77a70f190.png)
+![bc1](https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_produto.png?raw=true)
  
-#### <b>[Link do Documento](https://user-images.githubusercontent.com/101594950/187272837-c2fd6f24-3dd1-4af1-8bcb-d709a0250f74.jpeg)</b>
-
+# Backlog de Sprint
+![bc1](https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_sprint.png?raw=true)
 </div>
  
 <br>
@@ -69,73 +69,26 @@
 # Cronograma
   
 </div>
-  
+
 <details>
-  
- **<summary> 1º Sprint - 29/08 á 18/09 </summary>**
-  
-  | Atividade  | Prioridade   |
-| ------- | -------- |
-| Validação de Wireframe Cadastro de Candidato   | Alta    |
-| Validação de Wireframe Cadastro de Vagas   | Alta    |
-| Implementar Interface de Cadastro de Candidato | Média    |
-| Implementar Interface de Cadastro de Vagas   | Média    |
-| Arquitetura e Modelagem de Banco de Dados   | Média    |
+**<summary> <b> 1º Sprint - 29/08 á 18/09 </b> </summary>**
+<br>
+</details>
 
-
+<details>
+**<summary> <b> 2º Sprint - 19/09 á 09/10 </b> </summary>**
 <br>
 
 </details>
 
-
 <details>
-  
- **<summary> 2º Sprint - 19/09 á 09/10 </summary>**
- 
-  | Atividade  | Prioridade   |
-| ------- | -------- |
-| Validação de Wireframe de Telas Restantes   | Média    |
-| Implementar Interface de Cadastro   | Média    |
-| Criação de Banco de Dados | Média    |
-
+**<summary> <b> 3º Sprint - 13/10 á 06/11 </b> </summary>**
 <br>
-
- </details>
- 
- <details>
-  
- **<summary> 3º Sprint - 13/10 á 06/11 </summary>**
-
-  | Atividade  | Prioridade   |
-| ------- | -------- |
-| Implementar interface de Login    | Média    |
-| Implementar Interface de Cadastro de Vagas  | Média    |
-| Implementar Interface de Análise de Candidatura | Média    |
-| Estabelecer Crud da Aplicação | Média    |
-
-<br>
-
- </details>
- 
- </div>
-  
-<details>
-  
- **<summary> 4º Sprint - 07/11 á 27/11 </summary>**
-  
-  | Atividade  | Prioridade   |
-| ------- | -------- |
-| Implementar Interface Home   | Média    |
-| Relatórios e Métricas   | Média    |
-| Testes e Correções | Média    |
-| Revisão de Documentação | Média    |
-
-<br>
-
-<hr>
-  
 </details>
 
+<details>
+**<summary> <b> 4º Sprint - 07/11 á 27/11 </b> </summary>**
+</details>
 <div align="center">
 
 ### Feira de soluções - 18/12 

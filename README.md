@@ -1,12 +1,15 @@
 <div align= "center">
-<img src = "https://github.com/WallaceHS20/Testes/blob/main/logo%20(1).png" width="400" height="400" />
+
+<img src = "https://user-images.githubusercontent.com/101594950/188217613-d8bbdf5a-672f-41b6-9cc2-47b4c0174d52.png" width="400" height="400" />
 
 <h1>B1NARY DEVS </h1></br> 
 </div>
 
 <div align = "center">
 
-<img src = "https://user-images.githubusercontent.com/101594950/186729554-e21228b5-fab2-4f89-89ec-4f3a3fe8a096.png" />
+<img src = "https://user-images.githubusercontent.com/101594950/188217045-aab51d17-01d3-48e5-b690-a916d4832116.png" />
+
+# 
 
   #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas. 
 

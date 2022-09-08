@@ -55,7 +55,7 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 <div align="center">
  
-# Backlog do Produto 
+# Backlog do Produto :scroll:
 
 <img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_produto.png?raw=true" width="600" height="600" /> 
 
@@ -73,7 +73,7 @@
 
 <div align="center">
 
-# Cronograma
+# Cronograma :calendar:
   
 </div>
 
@@ -112,7 +112,7 @@
 
 <div align="center">
 
-### Feira de soluções - 18/12 
+### Feira de soluções - 18/12 :checkered_flag:
 
 </div>
   
@@ -122,7 +122,7 @@
  
  <br>
 
-# Tecnologias <br>
+# Tecnologias :desktop_computer: <br>
  
 <br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />   &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/188023366-6fd24b40-0e6d-433f-9257-e6382726930a.png" width="60" height="70" />
 </div> <br>

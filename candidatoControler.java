@@ -20,7 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
-public class candidatoCOntroler {
+public class candidatoControler {
 
     @FXML
     private Button botaoAvancar;
@@ -148,3 +148,4 @@ public class candidatoCOntroler {
         }
     }
 }
+

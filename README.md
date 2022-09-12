@@ -12,7 +12,6 @@
 
 ## Time de desenvolvimento:<br>
 
-- [Breno Nascimento](https://www.linkedin.com/in/breno-do-nascimento-silva)
 
 - [Davi Gusmão](https://www.linkedin.com/in/davi-gusm%C3%A3o-a09421240)
 

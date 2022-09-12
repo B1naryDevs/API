@@ -20,7 +20,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
-public class candidatoControler {
+public class candidatoCOntroler {
 
     @FXML
     private Button botaoAvancar;
@@ -57,73 +57,91 @@ public class candidatoControler {
         String email = emailCandidato.getText();
         String senha = senhaCandidato.getText();
         String telefone = telefoneCandidato.getText();
+        
         if(nomeCandidato.getText().equals("")){
-            System.out.println("O CAMPO NOME É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String nomeObrigatorio = JOptionPane.showInputDialog("O CAMPO NOME É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(nomeObrigatorio);
             return;
         }
         if(cpfCandidato.getText().equals("")){
-            System.out.println("O CAMPO CPF É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String cpfObrigatorio = JOptionPane.showInputDialog("O CAMPO CPF É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(cpfObrigatorio);
             return;
         }
         if (cpfCandidato.getText().equals("00000000000")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf0 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf0);
             return;
         }
         if (cpfCandidato.getText().equals("11111111111")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf1 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf1);
             return;
         }
         if (cpfCandidato.getText().equals("22222222222")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf2 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf2);
             return;
         }
         if (cpfCandidato.getText().equals("33333333333")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf3 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf3);
             return;
         }
         if (cpfCandidato.getText().equals("44444444444")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf4 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf4);
             return;
         }
         if (cpfCandidato.getText().equals("55555555555")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf5 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf5);
             return;
         }
         if (cpfCandidato.getText().equals("66666666666")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf6 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf6);
             return;
         }
         if (cpfCandidato.getText().equals("77777777777")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf7 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf7);
             return;
         }
         if (cpfCandidato.getText().equals("88888888888")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf8 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf8);
             return;
         }
         if (cpfCandidato.getText().equals("99999999999")){
-            System.out.println("INSIRA UM CPF VÁLIDO!");
+            String cpf9 = JOptionPane.showInputDialog("INSIRA UM CPF VÁLIDO!");
+            System.out.println(cpf9);
             return;
         }
         //if (cpfCandidato.length() != 11){    
         //}
         
         if(dataCandidato.getValue().equals("")){
-            System.out.println("O CAMPO DATA DE NASCIMENTO É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String dataObrigatoria = JOptionPane.showInputDialog("O CAMPO DATA DE NASCIMENTO É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(dataObrigatoria);
             return;
         }
         if(emailCandidato.getText().equals("")){
-            System.out.println("O CAMPO EMAIL É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String emailObrigatorio = JOptionPane.showInputDialog("O CAMPO EMAIL É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(emailObrigatorio);
             return;
         }
         if(senhaCandidato.getText().equals("")){
-            System.out.println("O CAMPO SENHA É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String senhaObrigatoria = JOptionPane.showInputDialog("O CAMPO SENHA É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(senhaObrigatoria);
             return;
         }
         if(telefoneCandidato.getText().equals("")){
-            System.out.println("O CAMPO TELEFONE É OBRIGATÓRIO! FAVOR PREENCHER!");
+            String telefoneObrigatorio = JOptionPane.showInputDialog("O CAMPO TELEFONE É OBRIGATÓRIO! FAVOR PREENCHER!");
+            System.out.println(telefoneObrigatorio);
             return;
         }
+        
         
 
         try {

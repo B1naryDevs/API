@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -10,54 +9,52 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
 import com.opencsv.CSVWriter;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
-public class candidatoControler {
+public class candidatoControler3 {
 
     @FXML
-    private Button botaoAvancar;
+    private Button botaoAvancar3;
 
     @FXML
-    private TextField cpfCandidato;
+    private Button botaoVoltar2;
 
     @FXML
-    private DatePicker dataCandidato;
+    private TextField competenciaCandidato;
 
     @FXML
-    private TextField emailCandidato;
+    private TextField cursoCandidato;
 
     @FXML
-    private TextField nomeCandidato;
+    private TextField idiomaCandidato;
 
     @FXML
-    private TextField senhaCandidato;
+    private DatePicker inicioCandidato2;
 
     @FXML
-    private TextField telefoneCandidato;
+    private TextField intituicaoCandidato;
 
     @FXML
-    void cadastrarDados(ActionEvent event) throws FileNotFoundException {
-        String nome = nomeCandidato.getText();
-        String cpf = cpfCandidato.getText();
-        LocalDate data = dataCandidato.getValue();
+    private DatePicker terminoCandidato2;
+
+    @FXML
+    void cadastrarDados3(ActionEvent event) throws FileNotFoundException {
+        String curso = cursoCandidato.getText();
+        String instituicao = intituicaoCandidato.getText();
+        String idioma = idiomaCandidato.getText();
+        String competencia = competenciaCandidato.getText();
+        LocalDate inicio3 = inicioCandidato2.getValue();
         final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH);
-        String data2 = dtf.format(data);
-        String email = emailCandidato.getText();
-        String senha = senhaCandidato.getText();
-        String telefone = telefoneCandidato.getText();
-
-        if (nome.equals("") || cpf.equals("") || data2.equals("") || email.equals("") || senha.equals("")
-                || telefone.equals("")) {
-            JOptionPane.showMessageDialog(null, "PREEENCHA TODOS OS CAMPOS!");
-            return;
-        }
+        String inicio4 = dtf.format(inicio3);
+        LocalDate termino3 = terminoCandidato2.getValue();
+        String termino4 = dtf.format(inicio3);
 
         // Objeto para receber os arquivos
         File arquivoCSV = new File("dados_candidato.csv");
@@ -77,7 +74,7 @@ public class candidatoControler {
         }
 
         // incremento do novo índice na lista que contém os itens do csv
-        dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone);
+        dados.add(curso + "," + instituicao + "," + idioma + "," + competencia + "," + inicio4 + "," + termino4);
 
         // criação de novo objeto para escrever os novos valores
         PrintWriter pw = new PrintWriter(new File("dados_cadidato.csv"));
@@ -96,7 +93,10 @@ public class candidatoControler {
 
         // frcha conexão com arquivo
         pw.close();
+    }
 
+    @FXML
+    void voltarTela2(ActionEvent event) {
         App.ChangeScene("tela2");
     }
 

@@ -58,11 +58,7 @@
 <img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_produto.png?raw=true" width="600" height="600" /> 
 
 <br>
- 
-# Backlog de Sprint
 
-<img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_sprint.png?raw=true" width="900" height="600" /> 
- 
 </div>
  
 <br>
@@ -82,9 +78,8 @@
 
 <div align="center">
 
-### Feira de soluções - 18/12 :checkered_flag:
+# Feira de soluções - 18/12 :checkered_flag:
   
-<hr>
 
 <div align= "center">
  

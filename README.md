@@ -9,9 +9,9 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/188217045-aab51d17-01d3-48e5-b690-a916d4832116.png" />
 
-# 
 
-  #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas. 
+
+  #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas.
 
 </div>
 
@@ -72,51 +72,17 @@
 <div align="center">
 
 # Cronograma :calendar:
- 
->>[1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)ffff!!!
- 
+  
 </div>
 
-<details>
-
-
-
- 
-
-<br>
-
-</details>
-
-<details>
-
-
-**<summary> <b font color="black"> 2º Sprint - 19/09 á 09/10 </b> </summary>**
-
-<br>
-
-</details>
-
-<details>
-
-**<summary> <b> 3º Sprint - 13/10 á 06/11 </b> </summary>**
-
-<br>
-
-</details>
-
-<details>
-
-**<summary> <b> 4º Sprint - 07/11 á 27/11 </b> </summary>**
-
-<br>
-
-</details>
+### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)
+### 2º Sprint - 19/09 á 09/10
+### 3º Sprint - 13/10 á 06/11
+### 4º Sprint - 07/11 á 27/11
 
 <div align="center">
 
 ### Feira de soluções - 18/12 :checkered_flag:
-
-</div>
   
 <hr>
 

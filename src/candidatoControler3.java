@@ -17,7 +17,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
 
 public class candidatoControler3 {
 
@@ -56,13 +55,6 @@ public class candidatoControler3 {
         String inicio4 = dtf.format(inicio3);
         LocalDate termino3 = terminoCandidato2.getValue();
         String termino4 = dtf.format(inicio3);
-        
-        if (curso.equals("") || instituicao.equals("") || idioma.equals("") || competencia.equals("")
-                || inicio4.equals("") || termino4.equals("")){ 
-            JOptionPane.showMessageDialog(null, "PREEENCHA TODOS OS CAMPOS!");
-            return;
-        }    
-        
 
         // Objeto para receber os arquivos
         File arquivoCSV = new File("dados_candidato.csv");

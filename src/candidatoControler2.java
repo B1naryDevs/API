@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -16,7 +17,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javax.swing.JOptionPane;
 
 public class candidatoControler2 {
 
@@ -42,7 +42,7 @@ public class candidatoControler2 {
     private DatePicker inicioCandidato;
 
     @FXML
-    private TextField pretensaoCandidato;
+    private TextField pretencaoCandidato;
 
     @FXML
     private DatePicker terminoCandidato;
@@ -53,17 +53,12 @@ public class candidatoControler2 {
         String descricao = descricaoCandidato.getText();
         String empresa = empresaCandidato.getText();
         String cargos = cargosCandidato.getText();
-        String pretensao = pretensaoCandidato.getText();
+        String pretencao = pretencaoCandidato.getText();
         LocalDate inicio = inicioCandidato.getValue();
         final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH);
         String inicio2 = dtf.format(inicio);
         LocalDate termino = terminoCandidato.getValue();
         String termino2 = dtf.format(termino);
-        
-        if (cargos.equals("") || pretensao.equals("")){
-            JOptionPane.showMessageDialog(null, "PREENCHA OS CAMPOS DE CARGOS DE INTERESSE E PRETENSÃO SALARIAL!");
-            return;
-        }
 
         // Objeto para receber os arquivos
         File arquivoCSV = new File("dados_candidato.csv");
@@ -84,7 +79,7 @@ public class candidatoControler2 {
 
         // incremento do novo índice na lista que contém os itens do csv
         dados.add(cargo + "," + descricao + "," + empresa + "," + inicio2 + "," + termino2 + "," + cargos + ","
-                + pretensao);
+                + pretencao);
 
         // criação de novo objeto para escrever os novos valores
         PrintWriter pw = new PrintWriter(new File("dados_cadidato2.csv"));
@@ -113,5 +108,3 @@ public class candidatoControler2 {
     }
 
 }
-
-

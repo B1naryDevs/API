@@ -72,12 +72,16 @@
 <div align="center">
 
 # Cronograma :calendar:
-  
+ 
+>>[1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)ffff!!!
+ 
 </div>
 
 <details>
 
-**<summary> <b> 1º Sprint - 29/08 á 18/09 </b> </summary>**
+
+
+ 
 
 <br>
 
@@ -86,7 +90,7 @@
 <details>
 
 
-**<summary> <b> 2º Sprint - 19/09 á 09/10 </b> </summary>**
+**<summary> <b font color="black"> 2º Sprint - 19/09 á 09/10 </b> </summary>**
 
 <br>
 

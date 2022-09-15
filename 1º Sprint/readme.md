@@ -1,10 +1,8 @@
 <div align="center">
   
 # 1º SPRINT - 29/08 á 18/09
-  
-<hr>
 
-<img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_sprint.png?raw=true" width="900" height="600" /> <br>
+<img src = "https://user-images.githubusercontent.com/101594950/190410770-59a89d75-4494-44d3-b48d-68ae05a834f8.jpeg" width="900" height="600" /> <br>
   
 <hr>
 

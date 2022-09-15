@@ -1,12 +1,17 @@
 <div align="center">
-  
-# 1º SPRINT - 29/08 á 18/09
 
-<img src = "https://user-images.githubusercontent.com/101594950/190433640-d012f33e-3d42-4cfb-84dd-0d39483eef8d.jpg" width="500" height="500" /> <br>
+
+<img src = "https://user-images.githubusercontent.com/101594950/190467779-d0889789-b2b4-4022-8af2-f7a0af7a3966.png" width="800" height="200" /> <br>
   
 <hr>
+  
+<img src = "https://user-images.githubusercontent.com/101594950/190470772-8df0141f-2bc7-4aa0-a361-7d501a8c4cb9.png" width="800" height="200" /> <br>
 
-# WIREFRAME 
+<img src = "https://user-images.githubusercontent.com/101594950/190433640-d012f33e-3d42-4cfb-84dd-0d39483eef8d.jpg" width="800" height="450" /> <br>
+
+<hr>
+
+<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
   
 </div>
 

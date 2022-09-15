@@ -2,7 +2,7 @@
   
 # 1º SPRINT - 29/08 á 18/09
 
-<img src = "https://user-images.githubusercontent.com/101594950/190410770-59a89d75-4494-44d3-b48d-68ae05a834f8.jpeg" width="900" height="600" /> <br>
+<img src = "https://user-images.githubusercontent.com/101594950/190433640-d012f33e-3d42-4cfb-84dd-0d39483eef8d.jpg" width="500" height="500" /> <br>
   
 <hr>
 

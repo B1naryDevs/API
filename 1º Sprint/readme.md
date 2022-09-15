@@ -55,7 +55,7 @@
  </details>
  
  <details>
-  
+
  <summary> CADASTRO DE VAGAS </summary><br>
   
  * ## Preenchimento de Informações <br> 
@@ -73,3 +73,7 @@
   <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
    
  </div>
+  
+ <hr>
+  
+ ![4](https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png)

@@ -7,16 +7,16 @@
 <img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_sprint.png?raw=true" width="900" height="600" /> <br>
   
 <hr>
-  
+
 # WIREFRAME 
   
 </div>
 
 <details>
   
- <summary> PROTOTIPAGEM DE TELAS </summary><br>
+ <summary> CADASTRO DE CANDIDATO </summary><br>
   
- * ## Tela Candidato  <br> 
+ * ## Informações Pessoais  <br> 
   
  <div align="center">
   
@@ -24,7 +24,7 @@
   
  </div>
   
-  * ## Tela Candidato  <br>
+  * ## Experiência Profissional  <br>
   
   <div align="center">
   
@@ -32,7 +32,7 @@
   
   </div>
   
-  * ## Tela Candidato  <br>
+  * ## Formação Acadêmica  <br>
   
  <div align="center">
   
@@ -40,13 +40,33 @@
    
  </div>
   
-  * ## Tela Candidato  <br>
+  * ## Finalizado  <br>
   
  <div align = "center">
   
  <img src="https://user-images.githubusercontent.com/101594950/190285186-4847bb72-474d-407d-816f-15d223a6a788.png">
    
  </div>
-  
-  * ## Tela Candidato  <br>
+ 
  </summary>
+ </details>
+ 
+ <details>
+  
+ <summary> CADASTRO DE VAGAS </summary><br>
+  
+ * ## Preenchimento de Informações <br> 
+  
+ <div align="center">
+  
+ <img src="https://user-images.githubusercontent.com/101594950/190403096-df91d8b7-110a-46b8-800f-7f3879257caa.png"> <br>
+  
+ </div>
+  
+  * ## Finalizado <br>
+  
+  <div align="center">
+  
+  <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
+   
+ </div>

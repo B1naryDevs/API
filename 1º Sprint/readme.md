@@ -66,14 +66,26 @@
   
  </div>
   
-  * ## Finalizado <br>
+ * ## Finalizado <br>
   
-  <div align="center">
+ <div align="center">
   
-  <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
+ <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
+    
+ </details>
    
+  <hr>
+  <div align="center">
+   
+  <img src = "https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png" width="800" height="200" /> <br>
+    
+   <img src = "https://user-images.githubusercontent.com/101594950/190472908-4f6c3744-8d9c-4d9b-ba71-76d4c5acf9c7.jpg" width="700" height="400" /> <br>
+   
+  </div>
+  
  </div>
+ 
+ 
   
- <hr>
-  
- ![4](https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png)
+
+

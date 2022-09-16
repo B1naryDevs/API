@@ -9,18 +9,14 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/188217045-aab51d17-01d3-48e5-b690-a916d4832116.png" />
 
-
-
   #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas.
 
 </div>
 
-<br>
-
 --------------------------------------------------------------------------------------------------------------------------------------------------- 
 <div align="center">
 
-# **Equipe de Desenvolvimento** <br>
+<img src = "https://user-images.githubusercontent.com/101594950/190664756-bd1227a3-a84b-420c-8474-a9a14feb1faf.png" width="900" height="200" /> <br>
 
 </div>
 
@@ -53,21 +49,21 @@
 ---------------------------------------------------------------------------------------------------------------------------------------------
 <div align="center">
  
-# Backlog do Produto :scroll:
+<img src = "https://user-images.githubusercontent.com/101594950/190662202-6d173216-6a04-4800-a09d-51093e9bebd7.png" width="900" height="200" /> <br>
 
-<img src = "https://github.com/B1naryDevs/API/blob/dev/imagens/backlog_produto.png?raw=true" width="600" height="600" /> 
+<img src = "https://user-images.githubusercontent.com/101594950/190661690-a1a8cc5c-935d-45f2-a000-52920a9115fa.jpeg" width="600" height="600" /> <br>
 
 <br>
+
+<hr>
 
 </div>
- 
-<br>
   
 </div>
 
 <div align="center">
 
-# Cronograma :calendar:
+<img src = "https://user-images.githubusercontent.com/101594950/190663698-1fe9b907-3f5d-41eb-8ddf-7b42bd745816.png" width="900" height="200" /> <br>
   
 </div>
 
@@ -76,16 +72,31 @@
 ### 3º Sprint - 13/10 á 06/11
 ### 4º Sprint - 07/11 á 27/11
 
+<br>
+
+<hr>
+
+<img src = "https://user-images.githubusercontent.com/101594950/190708500-d0a1594a-c6d8-47fa-a550-53e8393c87bf.png" width="900" height="200" /> <br>
+
+<hr>
+
 <div align="center">
 
-# Feira de soluções - 18/12 :checkered_flag:
-  
+<img src = "https://user-images.githubusercontent.com/101594950/190707696-035a5f66-af2e-4263-9a20-fdfe3d82695a.png" width="900" height="200" /> <br>
 
 <div align= "center">
- 
- <br>
 
-# Tecnologias :desktop_computer: <br>
- 
 <br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />   &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/188023366-6fd24b40-0e6d-433f-9257-e6382726930a.png" width="60" height="70" />
-</div> <br>
+<br>
+
+<hr>
+
+<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
+
+<hr>
+
+<img src = "https://user-images.githubusercontent.com/101594950/190710873-0920e034-ecd1-4a2b-9e0e-fe3e9cf378ea.png" width="900" height="200" /> <br>
+
+<hr>
+
+</div>

@@ -97,6 +97,8 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190710873-0920e034-ecd1-4a2b-9e0e-fe3e9cf378ea.png" width="900" height="200" /> <br>
 
+<b>[Download de Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar)<b/>
+
 <hr>
 
 </div>

@@ -99,6 +99,34 @@
 
 <b>[Download de Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar)<b/>
 
-<hr>
+</div>
 
 </div>
+
+<details>
+
+<summary> Visualizar Bibliotecas </summary>
+
+* opencsv-5.2.jar
+
+* javafx.base.jar
+
+* javafx.controls.jar
+
+* javafx.fxml.jar
+
+* javafx.graphics.jar
+
+* javafx.media.jar
+
+* javafx.swing.jar
+
+* javafx.web.jar
+
+* javafx.swt.jar
+
+</summary>
+
+</details>
+
+<hr>

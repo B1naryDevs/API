@@ -156,11 +156,11 @@
                   <Font name="Cambria" size="40.0" />
                </font>
             </Label>
-            <Label layoutX="547.0" layoutY="643.0" text="DADOS" textFill="WHITE" />
-            <Label layoutX="525.0" layoutY="660.0" text="OBRIGATÓRIOS" textFill="WHITE" />
-            <Label layoutX="664.0" layoutY="643.0" text="DADOS" textFill="WHITE" />
-            <Label layoutX="653.0" layoutY="660.0" text="OPCIONAIS" textFill="WHITE" />
-            <Label layoutX="763.0" layoutY="643.0" text="FINALIZAÇÃO" textFill="WHITE" />
+            <Label layoutX="543.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
+            <Label layoutX="525.0" layoutY="646.0" text="OBRIGATÓRIOS" textFill="WHITE" />
+            <Label layoutX="664.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
+            <Label layoutX="653.0" layoutY="646.0" text="OPCIONAIS" textFill="WHITE" />
+            <Label layoutX="768.0" layoutY="634.0" text="FINALIZAÇÃO" textFill="WHITE" />
             <Button layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="AVANÇAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />

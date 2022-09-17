@@ -108,31 +108,11 @@
                   <Font name="Cambria" size="40.0" />
                </font>
             </Label>
-            <Label layoutX="663.0" layoutY="634.0" prefHeight="24.0" prefWidth="38.0" text="DADOS" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="548.0" layoutY="634.0" prefHeight="24.0" prefWidth="38.0" text="DADOS" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="531.0" layoutY="646.0" prefHeight="24.0" prefWidth="81.0" text="OBRIGATÓRIOS" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="653.0" layoutY="646.0" prefHeight="24.0" prefWidth="58.0" text="OPCIONAIS" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="12.0" />
-               </font>
-            </Label>
-            <Label layoutX="768.0" layoutY="634.0" prefHeight="24.0" prefWidth="69.0" text="FINALIZAÇÃO" textFill="WHITE">
-               <font>
-                  <Font name="Calibri" size="12.0" />
-               </font>
-            </Label>
+            <Label layoutX="663.0" layoutY="634.0" prefHeight="24.0" prefWidth="48.0" text="DADOS" textFill="WHITE" />
+            <Label layoutX="543.0" layoutY="634.0" prefHeight="24.0" prefWidth="48.0" text="DADOS" textFill="WHITE" />
+            <Label layoutX="525.0" layoutY="646.0" prefHeight="24.0" prefWidth="87.0" text="OBRIGATÓRIOS" textFill="WHITE" />
+            <Label layoutX="653.0" layoutY="646.0" prefHeight="24.0" prefWidth="65.0" text="OPCIONAIS" textFill="WHITE" />
+            <Label layoutX="768.0" layoutY="634.0" prefHeight="24.0" prefWidth="78.0" text="FINALIZAÇÃO" textFill="WHITE" />
             <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="802.0" text="CADASTRO DE CANDIDATO" textFill="#ebebeb" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />

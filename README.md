@@ -14,11 +14,14 @@
 </div>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------- 
+
 <div align="center">
 
 <img src = "https://user-images.githubusercontent.com/101594950/190664756-bd1227a3-a84b-420c-8474-a9a14feb1faf.png" width="900" height="200" /> <br>
 
-</div>
+<details>
+
+<summary> VER EQUIPE  </summary>
 
 <table border="1">
 <thead>
@@ -44,6 +47,13 @@
 <tfoot>
 </tfoot>
 </table>
+
+</summary>
+
+</details>
+
+</div>
+
 <br>
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
@@ -51,7 +61,17 @@
  
 <img src = "https://user-images.githubusercontent.com/101594950/190662202-6d173216-6a04-4800-a09d-51093e9bebd7.png" width="900" height="200" /> <br>
 
+<div align = "center">
+
+<details>
+
+<summary> EXIBIR DOCUMENTO </summary>
+
 <img src = "https://user-images.githubusercontent.com/101594950/190661690-a1a8cc5c-935d-45f2-a000-52920a9115fa.jpeg" width="600" height="600" /> <br>
+
+</summary>
+
+</div>
 
 <br>
 
@@ -91,13 +111,7 @@
 
 <hr>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
-
-<hr>
-
 <img src = "https://user-images.githubusercontent.com/101594950/190710873-0920e034-ecd1-4a2b-9e0e-fe3e9cf378ea.png" width="900" height="200" /> <br>
-
-<b>[Download de Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar)<b/>
 
 </div>
 
@@ -128,5 +142,19 @@
 </summary>
 
 </details>
+
+<div align= "center">
+
+<b>[Download de Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar)<b/>
+
+</div>
+
+<hr>
+
+<div align="center">
+
+<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
+
+</div>
 
 <hr>

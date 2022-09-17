@@ -115,33 +115,37 @@
 
 </div>
 
-</div>
-
 <details>
 
-<summary> Visualizar Bibliotecas </summary>
+<summary> Visualizar Bibliotecas Utilizadas </summary>
 
-* opencsv-5.2.jar
+<br>
 
-* javafx.base.jar
+#### opencsv-5.2.jar
 
-* javafx.controls.jar
+#### javafx.base.jar
 
-* javafx.fxml.jar
+#### javafx.controls.jar
 
-* javafx.graphics.jar
+#### javafx.fxml.jar
 
-* javafx.media.jar
+#### javafx.graphics.jar
 
-* javafx.swing.jar
+#### javafx.media.jar
 
-* javafx.web.jar
+#### javafx.swing.jar
 
-* javafx.swt.jar
+#### javafx.web.jar
+
+#### javafx.swt.jar
+
+<br>
 
 </summary>
 
 </details>
+
+</div>
 
 <div align= "center">
 

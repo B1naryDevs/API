@@ -1,6 +1,31 @@
 package com.example.emprego;
 
-public class Candidato {
+public class candidato {
+
+    public candidato(String nome, String cpf,String dataNac,String email,String senha,String telefone,String expEmpresa,
+                     String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,float pretSalarial,String competencia,
+                     String instituicao,String cursoInicio,String cursoTermino,String idioma,String curso){
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNac = dataNac;
+        this.email = email;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.expEmpresa = expEmpresa;
+        this.cargo = cargo;
+        this.expInicio = expInicio;
+        this.expTermino = expTermino;
+        this.descricao = descricao;
+        this.cargoInteresse = cargoInteresse;
+        this.pretSalarial = pretSalarial;
+        this.competencia = competencia;
+        this.instituicao = instituicao;
+        this.cursoInicio = cursoInicio;
+        this.cursoTermino = cursoTermino;
+        this.idioma = idioma;
+        this.curso = curso;
+    }
+
     //Atributos
     private String nome;
     private String cpf;

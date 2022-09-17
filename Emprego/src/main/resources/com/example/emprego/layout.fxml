@@ -32,29 +32,21 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="candidatoControler">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
             <Pane layoutX="311.0" layoutY="155.0" opacity="0.78" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #747977;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
             <Pane layoutX="321.0" layoutY="165.0" opacity="0.26" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
-            <TextField fx:id="senhaCandidato" layoutX="500.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+            <TextField fx:id="campoCpf" layoutX="500.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
                <font>
                   <Font size="14.0" />
                </font></TextField>
@@ -62,7 +54,7 @@
                <font>
                   <Font size="20.0" />
                </font></Label>
-            <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#cadastrarDados" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="AVANÇAR" textFill="WHITE">
+            <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="AVANÇAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -124,27 +116,22 @@
                </font>
             </Label>
             <Line endX="29.0" layoutX="740.0" layoutY="603.0" startX="-28.0" stroke="#ff891c" />
-            <TextField fx:id="senhaCandidato1" layoutX="931.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+            <TextField fx:id="campoNome" layoutX="82.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="senhaCandidato2" layoutX="82.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+            <TextField fx:id="campoEmail" layoutX="82.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="senhaCandidato21" layoutX="82.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+            <TextField fx:id="campoSenha" layoutX="500.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="senhaCandidato211" layoutX="500.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="senhaCandidato2111" layoutX="931.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+            <TextField fx:id="campoTelefone" layoutX="931.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
                <font>
                   <Font size="14.0" />
                </font>
@@ -212,6 +199,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
+            <DatePicker fx:id="campoData" layoutX="931.0" layoutY="290.0" prefHeight="30.0" prefWidth="329.0" />
       </children>
     </AnchorPane>
   </children>

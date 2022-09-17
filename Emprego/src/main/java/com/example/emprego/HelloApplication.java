@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 
-import java.io.IOException;
-
 public class HelloApplication extends Application {
 
     private static Stage stage;
@@ -26,14 +24,14 @@ public class HelloApplication extends Application {
         Parent tela1fxml = FXMLLoader.load(getClass().getResource("layout.fxml"));
         tela1 = new Scene(tela1fxml);
 
-        Parent tela2fxlm = FXMLLoader.load(getClass().getResource("layout2.fxml"));
-        tela2 = new Scene(tela2fxlm);
+        Parent tela2fxml = FXMLLoader.load(getClass().getResource("layout2.fxml"));
+        tela2 = new Scene(tela2fxml);
 
-        Parent tela3fxlm = FXMLLoader.load(getClass().getResource("layout3.fxml"));
-        tela3 = new Scene(tela3fxlm);
+        Parent tela3fxml = FXMLLoader.load(getClass().getResource("layout3.fxml"));
+        tela3 = new Scene(tela3fxml);
 
-        Parent tela4fxlm = FXMLLoader.load(getClass().getResource("layout4.fxml"));
-        tela4 = new Scene(tela4fxlm);
+        Parent tela4fxml = FXMLLoader.load(getClass().getResource("layout4.fxml"));
+        tela4 = new Scene(tela4fxml);
 
         primaryStage.setScene(tela1);
         primaryStage.show();

@@ -1,19 +1,12 @@
 <div align= "center">
 
-<img src = "https://user-images.githubusercontent.com/101594950/188217613-d8bbdf5a-672f-41b6-9cc2-47b4c0174d52.png" width="400" height="400" />
+<img src = "https://user-images.githubusercontent.com/101594950/190840531-97abdf42-4050-494b-bb74-034fe8fc6424.png" width="1000" height="250" />
 
-<h1>B1NARY DEVS </h1></br> 
-</div>
+<hr>
 
-<div align = "center">
-
-<img src = "https://user-images.githubusercontent.com/101594950/188217045-aab51d17-01d3-48e5-b690-a916d4832116.png" />
-
-  #### O **+Emprego** tem como objetivo gerenciar um sistema para vagas de emprego e o acompanhamento do processo seletivos dos candidatos, também sendo capaz de realizar relatórios e análises de desempenho das empresas cadastradas.
+<br>
 
 </div>
-
---------------------------------------------------------------------------------------------------------------------------------------------------- 
 
 <div align="center">
 

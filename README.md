@@ -154,4 +154,15 @@
 
 </div>
 
+<details>
+
+<summary> Tutorial </summary><br>
+
+1° Passo: Baixar e Instalar o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
+>De acordo com as especificações da sua máquina!<br>
+
+2° Passo: [Baixe aqui]() nosso projeto e execute!
+
+</div>
+
 <hr>

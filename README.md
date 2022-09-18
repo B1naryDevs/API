@@ -6,39 +6,22 @@
     
 <img src = "https://user-images.githubusercontent.com/101594950/190930234-7267c8d6-4b6e-4482-87f6-97acdac6ff0c.png" width="900" height="200" />
 
-<<<<<<< HEAD
- - [Larissa Souza](https://www.linkedin.com/in/larissatsouza)
-=======
 ### O +Emprego é um sistema Desktop que tem como objetivo realizar o gerenciamento e acompanhamento de processos seletivos de candidatos para vagas de emprego, sendo capaz também de realizar relatórios e análises de aprovação do setor de recursos humanos.
     
 <hr>
->>>>>>> dev
 
 <br>
 
-<<<<<<< HEAD
-- [Carlos Torres](https://www.linkedin.com/in/carlos-torres-638b13210)
-=======
 </div>
->>>>>>> dev
 
 <div align="center">
 
 <img src = "https://user-images.githubusercontent.com/101594950/190664756-bd1227a3-a84b-420c-8474-a9a14feb1faf.png" width="900" height="200" /> <br>
 
-<<<<<<< HEAD
-- [Davi Gusmão](https://www.linkedin.com/in/davi-gusm%C3%A3o-a09421240)
-
-- [Gabriel Vieira](https://www.linkedin.com/in/gabriel-silva-vieira-79166b208/)
-=======
 <details>
->>>>>>> dev
 
 <summary> VER EQUIPE  </summary>
 
-<<<<<<< HEAD
-- [Wallace Honorato](https://www.linkedin.com/in/wallace-honorato-b15a3b1a2)
-=======
 <table border="1">
 <thead>
     <tr>
@@ -185,4 +168,3 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
 7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
 
 </div>
->>>>>>> dev

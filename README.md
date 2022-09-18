@@ -77,13 +77,13 @@
 <div align="center">
 
 <img src = "https://user-images.githubusercontent.com/101594950/190663698-1fe9b907-3f5d-41eb-8ddf-7b42bd745816.png" width="900" height="200" /> <br>
-  
-</div>
 
 ### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)
 ### 2º Sprint - 19/09 á 09/10
 ### 3º Sprint - 13/10 á 06/11
 ### 4º Sprint - 07/11 á 27/11
+
+</div>
 
 <br>
 
@@ -97,10 +97,9 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190707696-035a5f66-af2e-4263-9a20-fdfe3d82695a.png" width="900" height="200" /> <br>
 
-<div align= "center">
+<img src = "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" width="160" height="30"/><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" width="110" height="30"/><img src = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" width="75" height="30"/><img src = "https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="110" height="30"/>
 
-<br ><img src = "https://user-images.githubusercontent.com/101594950/186548020-70fe6c79-a090-46f9-91e4-ebf6200d9a75.png" width="60" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552334-e74856f0-294a-46e7-bde3-f06b42e9bb57.png" width="100" height="100" /> &nbsp; &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186552399-591df955-f423-4ac6-8474-6d7a7c05c69c.png" width="120" height="60" /> &nbsp; &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/186661772-cc028ca9-489e-43bd-969b-8a57dfb2e516.png" width="190" height="80" />   &nbsp; &nbsp; <img src = "https://user-images.githubusercontent.com/101594950/188023366-6fd24b40-0e6d-433f-9257-e6382726930a.png" width="60" height="70" />
-<br>
+<div align="center">
 
 <hr>
 
@@ -152,14 +151,13 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
 
-</div>
-
 <details>
 
 <summary> Tutorial </summary><br>
 
 1° Passo: Baixar e Instalar o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
->De acordo com as especificações da sua máquina!<br>
+
+_De acordo com as especificações da sua máquina!_ <br>
 
 2° Passo: [Baixe aqui]() nosso projeto e execute!
 

@@ -11,6 +11,22 @@
 <img src = "https://user-images.githubusercontent.com/101594950/190887718-ab7274c2-7c70-4fd0-8f50-7d16d4742860.jpg" width="1000" height="450" /> <br>
 
 <hr>
+ 
+<img src = "https://user-images.githubusercontent.com/101594950/190927311-c45a9a2e-f842-4808-bd11-3aae2a7377c9.png" width="900" height="200" /> <br>
+  
+<details>
+  
+<summary> MODELO CONCEITUAL </summary>
+  
+<br>
+  
+ ![Sem título](https://user-images.githubusercontent.com/101594950/190927874-e2b1aed3-d8db-412b-a7af-1e45bed0fe49.png)
+  
+</summary>
+  
+</details>
+  
+<hr>
 
 <img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
   
@@ -85,15 +101,47 @@
   <hr>
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
-   
-  </div>
+    
+### _CADASTRO DE CANDIDATO_
+    
+<details>
   
- </div>
+<summary> INFORMAÇÕES PESSOAIS </summary>
+  
+![candidato 1](https://user-images.githubusercontent.com/101594950/190928832-aab85ca4-775a-4ff9-85e9-744e5f6cd587.gif)
  
- <hr>
- 
- <div align = "center">
- 
- <img src = "https://user-images.githubusercontent.com/101594950/190841495-6994aaad-b666-4f45-9cde-c07bdaaa0e0b.jpg" width="800" height="200" /> <br>
+</summary>
+  
+</details>
+  
+ <details>
+  
+<summary> EXPERIÊNCIA PROFISSIONAL </summary>
+  
+![candidato 2](https://user-images.githubusercontent.com/101594950/190928883-92a091db-23b5-4247-ace7-8951dd601f1a.gif)
+
+</summary>
+  
+</details>
+
+<details>
+  
+<summary> FORMAÇÃO ACADÊMICA </summary>
+  
+![candidato 3](https://user-images.githubusercontent.com/101594950/190928937-fe5963f5-7e05-4f7d-acea-6b55b8dcd0be.gif)
+
+</summary>
+  
+</details>
+
+<details>
+  
+<summary> FINALIZAÇÃO </summary>
+
+![candidato 3](https://user-images.githubusercontent.com/101594950/190928952-71c998ca-f76f-4af8-8504-2f60f70837f4.gif)
+
+</summary>
+  
+</details>
  
 </div>

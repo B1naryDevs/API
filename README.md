@@ -4,7 +4,9 @@
 
 <hr>
     
-![Design sem nome (1)](https://user-images.githubusercontent.com/101594950/190887629-cdea8e41-2ca3-4740-8f3c-c8a44338fcac.png)
+<img src = "https://user-images.githubusercontent.com/101594950/190930234-7267c8d6-4b6e-4482-87f6-97acdac6ff0c.png" width="900" height="200" />
+
+### O +Emprego é um sistema Desktop que tem como objetivo realizar o gerenciamento e acompanhamento de processos seletivos de candidatos para vagas de emprego, sendo capaz também de realizar relatórios, dashboards e análises de aproveitamento das empresas contratantes usuárias do sistema.
     
 <hr>
 

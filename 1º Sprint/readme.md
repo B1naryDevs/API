@@ -62,7 +62,7 @@
    
  </div>
   
-  ## Finalizado  <br>
+  ## Confirmação  <br>
   
  <div align = "center">
   
@@ -106,7 +106,7 @@
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
     
-### _CADASTRO DE CANDIDATO_
+### CADASTRO DE CANDIDATO
     
 <details>
   
@@ -140,7 +140,7 @@
 
 <details>
   
-<summary> FINALIZAÇÃO </summary>
+<summary> CONFIRMAÇÃO </summary>
 
 ![candidato 3](https://user-images.githubusercontent.com/101594950/190928952-71c998ca-f76f-4af8-8504-2f60f70837f4.gif)
 

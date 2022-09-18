@@ -108,6 +108,33 @@
 <div align="center">
 
 <hr>
+<div align="center">
+
+<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
+
+<details>
+
+<summary> Tutorial </summary><br>
+
+Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
+
+1° Passo:<br> Instale o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)<br>
+
+2° Passo:<br> Instale a IDE [IntelliJ 2022.2.1](https://www.jetbrains.com/pt-br/idea/download/other.html)<br>
+
+3° Passo:<br> Instale o [Scene Builder 18](https://gluonhq.com/products/scene-builder/)<br>
+
+4° Passo:<br> Clone o nosso projeto.<br>
+
+5° Passo:<br> Abra o projeto na IDE.<br>
+
+6° Passo:<br> Instale as bibliotecas que estão logo abaixo.<br>
+
+7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
+
+</div>
+
+<hr>
 
 <img src = "https://user-images.githubusercontent.com/101594950/190710873-0920e034-ecd1-4a2b-9e0e-fe3e9cf378ea.png" width="900" height="200" /> <br>
 
@@ -137,7 +164,7 @@
 
 #### javafx.swt.jar
 
-<br>
+<br> 
 
 </summary>
 
@@ -153,20 +180,4 @@
 
 <hr>
 
-<div align="center">
 
-<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
-
-<details>
-
-<summary> Tutorial </summary><br>
-
-1° Passo: Baixar e Instalar o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)
-
-_De acordo com as especificações da sua máquina!_ <br>
-
-2° Passo: [Baixe aqui]() nosso projeto e execute!
-
-</div>
-
-<hr>

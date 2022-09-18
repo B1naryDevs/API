@@ -32,11 +32,13 @@
   
 </div>
 
+<div align = "center">
+
 <details>
   
  <summary> CADASTRO DE CANDIDATO </summary><br>
   
- * ## Informações Pessoais  <br> 
+ ## Informações Pessoais  <br> 
   
  <div align="center">
   
@@ -44,7 +46,7 @@
   
  </div>
   
-  * ## Experiência Profissional  <br>
+  ## Experiência Profissional  <br>
   
   <div align="center">
   
@@ -52,7 +54,7 @@
   
   </div>
   
-  * ## Formação Acadêmica  <br>
+  ## Formação Acadêmica  <br>
   
  <div align="center">
   
@@ -60,7 +62,7 @@
    
  </div>
   
-  * ## Finalizado  <br>
+  ## Finalizado  <br>
   
  <div align = "center">
   
@@ -75,7 +77,7 @@
 
  <summary> CADASTRO DE VAGAS </summary><br>
   
- * ## Preenchimento de Informações <br> 
+ ## Preenchimento de Informações <br> 
   
  <div align="center">
   
@@ -83,7 +85,7 @@
   
  </div>
   
- * ## Finalizado <br>
+ ## Finalizado <br>
   
  <div align="center">
   

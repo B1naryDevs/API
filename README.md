@@ -6,7 +6,7 @@
     
 <img src = "https://user-images.githubusercontent.com/101594950/190930234-7267c8d6-4b6e-4482-87f6-97acdac6ff0c.png" width="900" height="200" />
 
-### O +Emprego é um sistema Desktop que tem como objetivo realizar o gerenciamento e acompanhamento de processos seletivos de candidatos para vagas de emprego, sendo capaz também de realizar relatórios, dashboards e análises de aproveitamento das empresas contratantes usuárias do sistema.
+### O +Emprego é um sistema Desktop que tem como objetivo realizar o gerenciamento e acompanhamento de processos seletivos de candidatos para vagas de emprego, sendo capaz também de realizar relatórios e análises de aprovação do setor de recursos humanos.
     
 <hr>
 
@@ -108,45 +108,14 @@
 <div align="center">
 
 <hr>
-<div align="center">
-
-<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
-
-<details>
-
-<summary> Tutorial </summary><br>
-
-Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
-
-1° Passo:<br> Instale o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)<br>
-
-2° Passo:<br> Instale a IDE [IntelliJ 2022.2.1](https://www.jetbrains.com/pt-br/idea/download/other.html)<br>
-
-3° Passo:<br> Instale o [Scene Builder 18](https://gluonhq.com/products/scene-builder/)<br>
-
-4° Passo:<br> Clone o nosso projeto.<br>
-
-5° Passo:<br> Abra o projeto na IDE.<br>
-
-6° Passo:<br> Instale as bibliotecas que estão logo abaixo.<br>
-
-7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
-
-</div>
-
-<hr>
 
 <img src = "https://user-images.githubusercontent.com/101594950/190710873-0920e034-ecd1-4a2b-9e0e-fe3e9cf378ea.png" width="900" height="200" /> <br>
 
-</div>
-
 <details>
 
-<summary> Visualizar Bibliotecas Utilizadas </summary>
+<summary> Bibliotecas Necessárias </summary>
 
 <br>
-
-#### opencsv-5.2.jar
 
 #### javafx.base.jar
 
@@ -170,14 +139,32 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
 
 </details>
 
-</div>
-
-<div align= "center">
-
-<b>[Download de Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar)<b/>
-
-</div>
-
 <hr>
 
+</div>
 
+<div align="center">
+
+<img src = "https://user-images.githubusercontent.com/101594950/190707985-46666638-0d53-4c23-8045-37a2055b8a6b.png" width="900" height="200" /> <br>
+
+<details>
+
+<summary> Tutorial </summary><br>
+
+Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
+
+1° Passo:<br> Instale o [Java SE Development Kit 18.0.2](https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html)<br>
+
+2° Passo:<br> Instale a IDE [IntelliJ 2022.2.1](https://www.jetbrains.com/pt-br/idea/download/other.html)<br>
+
+3° Passo:<br> Instale o [Scene Builder 18](https://gluonhq.com/products/scene-builder/)<br>
+
+4° Passo:<br> Clone o nosso projeto.<br>
+
+5° Passo:<br> Abra o projeto na IDE.<br>
+
+6° Passo:<br> Instale as [Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar) <br>
+
+7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
+
+</div>

@@ -1,8 +1,8 @@
 package com.example.emprego;
 
-public class candidato {
+public class Candidato {
 
-    public candidato(String nome, String cpf,String dataNac,String email,String senha,String telefone,String expEmpresa,
+    public Candidato(String nome, String cpf,String dataNac,String email,String senha,String telefone,String expEmpresa,
                      String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,float pretSalarial,String competencia,
                      String instituicao,String cursoInicio,String cursoTermino,String idioma,String curso){
         this.nome = nome;

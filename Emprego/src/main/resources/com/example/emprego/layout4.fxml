@@ -47,7 +47,7 @@
       <children>
             <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../imagens/+empregosemfundo.png" />
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
             <Button fx:id="botaoHome" layoutX="343.0" layoutY="34.0" mnemonicParsing="false" onAction="#VoltarInicio" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="HOME" textFill="WHITE">
@@ -97,7 +97,7 @@
             </Label>
             <ImageView fitHeight="161.0" fitWidth="171.0" layoutX="603.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../imagens/confirmacao.png" />
+                  <Image url="@../../../imagens/confirmacao.png" />
                </image>
             </ImageView>
             <Button layoutX="1250.0" layoutY="25.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="48.0" textFill="WHITE">

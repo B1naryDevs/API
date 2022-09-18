@@ -59,7 +59,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="338.0" layoutX="67.0" layoutY="220.0" stroke="#323232cc" strokeType="INSIDE" strokeWidth="2.0" width="497.0" />
             <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../imagens/+empregosemfundo.png" />
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
             <Button layoutX="343.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="HOME" textFill="WHITE">
@@ -89,7 +89,7 @@
             </Button>
             <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../imagens/exit.png" />
+                  <Image url="@../../../imagens/exit.png" />
                </image>
             </ImageView>
             <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="792.0" text="CADASTRO DE CANDIDATO" textFill="#fffefe" AnchorPane.topAnchor="120.0">

@@ -1,5 +1,7 @@
 <div align = "center">
 
+<hr>
+
 [//]: # (CAPA 1° SPRINT)
 <img src = "https://user-images.githubusercontent.com/101594950/191516016-7625fdf3-62ce-408c-95b9-2543d32b4f3e.png" width="900" height="200" /> 
 

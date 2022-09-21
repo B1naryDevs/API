@@ -3,7 +3,7 @@
 <hr>
 
 [//]: # (CAPA 1° SPRINT)
-<img src = "https://user-images.githubusercontent.com/101594950/191516016-7625fdf3-62ce-408c-95b9-2543d32b4f3e.png" width="900" height="200" /> 
+<img src = "https://user-images.githubusercontent.com/101594950/191550373-113b551b-fdb1-4285-b5b9-9b37f84ddd7c.png" width="900" height="200" /> 
 
 <hr>
 

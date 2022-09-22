@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+  This file is available and licensed under the following license:
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="343.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="HOME" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="480.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="TEXTO" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="617.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="TEXTO" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="750.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #343A40;" text="TEXTO" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <Button layoutX="901.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="TEXTO" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/exit.png" />
+               </image>
+            </ImageView>
+            <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="792.0" text="CADASTRO DE VAGAS" textFill="#fffefe" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="63.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="255.0" text="CARGO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="botaoFinalizar" layoutX="1151.0" layoutY="590.0" mnemonicParsing="false" onAction="#finalizarVaga" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: #FF800C;" text="FINALIZAR" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label layoutX="952.0" layoutY="255.0" prefHeight="30.0" prefWidth="275.0" text="EXPERIÊNCIA PROFISSIONAL*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="campoCargo2" layoutX="93.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="campoPeriodo" layoutX="521.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" />
+            <Label layoutX="522.0" layoutY="255.0" text="PERÍODO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoExperiencia" layoutX="952.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" />
+            <Label layoutX="521.0" layoutY="354.0" text="SALÁRIO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoSalario" layoutX="521.0" layoutY="385.0" prefHeight="25.0" prefWidth="275.0" />
+            <Label layoutX="953.0" layoutY="354.0" text="DESCRIÇÃO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoDescricao" layoutX="952.0" layoutY="385.0" prefHeight="160.0" prefWidth="275.0" />
+            <Label layoutX="91.0" layoutY="354.0" prefHeight="30.0" prefWidth="103.0" text="REMOTO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="campoSim" layoutX="198.0" layoutY="356.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" text="SIM" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="campoNao" layoutX="290.0" layoutY="356.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="75.0" text="NÃO" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </CheckBox>
+            <Label layoutX="94.0" layoutY="446.0" prefHeight="30.0" prefWidth="49.0" text="CEP*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoCep" layoutX="94.0" layoutY="473.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="674.0" layoutY="528.0" text="NÚMERO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoNumero" layoutX="672.0" layoutY="552.0" prefHeight="25.0" prefWidth="125.0" />
+            <Label layoutX="93.0" layoutY="528.0" text="CIDADE*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoCidade" layoutX="94.0" layoutY="552.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="381.0" layoutY="528.0" text="ESTADO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoEstado" layoutX="381.0" layoutY="552.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="97.0" layoutY="600.0" text="COMPLEMENTO" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoComplemento" layoutX="94.0" layoutY="628.0" prefHeight="25.0" prefWidth="200.0" />
+            <Button layoutX="1048.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="TEXTO" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Button>
+            <TextField fx:id="campoEndereco" layoutX="381.0" layoutY="473.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label layoutX="381.0" layoutY="446.0" text="ENDEREÇO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="672.0" layoutY="446.0" text="BAIRRO*" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoBairro" layoutX="672.0" layoutY="473.0" prefHeight="25.0" prefWidth="125.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

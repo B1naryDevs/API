@@ -97,7 +97,7 @@ public class candidatoControler3 {
 
     @FXML
     void VoltarTela(ActionEvent event) {
-        HelloApplication.ChangeScene("tela3");
+        HelloApplication.ChangeScene("tela2");
     }
 
 }

@@ -54,6 +54,13 @@ public class candidatoControler3 {
         String curso = campoCurso.getText();
 
         Candidato candidato = new Candidato();
+        candidato.setCompetencia(competencia);
+        candidato.setIdioma(idioma);
+        candidato.setInstituicao(instituicao);
+        candidato.setCursoInicio(inicio);
+        candidato.setCursoTermino(termino);
+        candidato.setCurso(curso);
+
         String nome = candidato.getNome();
         String cpf = candidato.getCpf();
         String data = candidato.getDataNac();
@@ -86,7 +93,7 @@ public class candidatoControler3 {
         }
 
         // incremento do novo índice na lista que contém os itens do csv
-        dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone + "," + empresa + "," + cargo + "," + expinicio + "," + exptermino + "," + descricao + "," + cargos + "," + pretensao + "," +competencia + "," + idioma + "," + instituicao + "," + inicio + "," + termino);
+        dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone + "," + empresa + "," + cargo + "," + expinicio + "," + exptermino + "," + descricao + "," + cargos + "," + pretensao + "," +competencia + "," + idioma + "," + instituicao + "," + inicio + "," + termino + "," + curso);
 
         // criação de novo objeto para escrever os novos valores
         PrintWriter pw = new PrintWriter(new File("dados_candidato.csv"));

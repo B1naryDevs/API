@@ -49,13 +49,27 @@ public class candidatoControler3 {
         String instituicao = campoInstituicao.getText();
         LocalDate inicioinicial = campoInicio.getValue();
         LocalDate terminoinicial = campoTermino.getValue();
-        final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH);
-        String iniciofinal = dtf.format(inicioinicial);
-        String terminofinal = dtf.format(terminoinicial);
+        String inicio = String.valueOf(inicioinicial);
+        String termino = String.valueOf(terminoinicial);
         String curso = campoCurso.getText();
 
+        Candidato candidato = new Candidato();
+        String nome = candidato.getNome();
+        String cpf = candidato.getCpf();
+        String data = candidato.getDataNac();
+        String email = candidato.getEmail();
+        String senha = candidato.getSenha();
+        String telefone = candidato.getTelefone();
+        String empresa = candidato.getExpEmpresa();
+        String cargo = candidato.getCargo();
+        String expinicio = candidato.getExpInicio();
+        String exptermino = candidato.getExpTermino();
+        String descricao = candidato.getDescricao();
+        String cargos = candidato.getCargoInteresse();
+        String pretensao = candidato.getPretSalarial();
+
         // Objeto para receber os arquivos
-        File arquivoCSV = new File("dados_candidato3.csv");
+        File arquivoCSV = new File("dados_candidato.csv");
 
         // - lista que irá receber todos valores do csv
         List<String> dados = new ArrayList();
@@ -72,10 +86,10 @@ public class candidatoControler3 {
         }
 
         // incremento do novo índice na lista que contém os itens do csv
-        dados.add(competencia + "," + idioma + "," + instituicao + "," + iniciofinal + "," + terminofinal + "," + curso);
+        dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone + "," + empresa + "," + cargo + "," + expinicio + "," + exptermino + "," + descricao + "," + cargos + "," + pretensao + "," +competencia + "," + idioma + "," + instituicao + "," + inicio + "," + termino);
 
         // criação de novo objeto para escrever os novos valores
-        PrintWriter pw = new PrintWriter(new File("dados_candidato3.csv"));
+        PrintWriter pw = new PrintWriter(new File("dados_candidato.csv"));
 
         // Criação da lista para aplicar os valores no csv
         StringBuilder sb = new StringBuilder();

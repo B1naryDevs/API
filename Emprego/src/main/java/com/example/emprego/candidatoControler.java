@@ -164,43 +164,13 @@ public class candidatoControler {
                                                 String DATE_REGEX = "^\\d{4}-\\d{2}-\\d{2}$";
                                                 Pattern DATE_PATTERN = Pattern.compile(DATE_REGEX);
                                                 if (DATE_PATTERN.matcher(data).matches()) {
-                                                    // Objeto para receber os arquivos
-                                                    File arquivoCSV = new File("dados_candidato.csv");
-
-                                                    // - lista que irá receber todos valores do csv
-                                                    List<String> dados = new ArrayList();
-
-                                                    // variavel para receber as linhas por linhas
-                                                    String linha = new String();
-                                                    Scanner read = new Scanner(arquivoCSV);
-
-                                                    // Correr todas as linhas do arquivo
-                                                    while (read.hasNext()) {
-
-                                                        linha = read.nextLine();
-                                                        dados.add(linha);
-                                                    }
-
-                                                    // incremento do novo índice na lista que contém os itens do csv
-                                                    dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone);
-
-                                                    // criação de novo objeto para escrever os novos valores
-                                                    PrintWriter pw = new PrintWriter(new File("dados_candidato.csv"));
-
-                                                    // Criação da lista para aplicar os valores no csv
-                                                    StringBuilder sb = new StringBuilder();
-
-                                                    // laço para inserir linha(indice) por linha
-                                                    for (String lin : dados) {
-                                                        sb.append(lin);
-                                                        sb.append("\r\n");
-                                                    }
-
-                                                    // objeto adicionar os valores no arquivo
-                                                    pw.write(sb.toString());
-
-                                                    // frcha conexão com arquivo
-                                                    pw.close();
+                                                    Candidato candidato = new Candidato();
+                                                    candidato.setNome(nome);
+                                                    candidato.setCpf(cpf);
+                                                    candidato.setDataNac(data);
+                                                    candidato.setEmail(email);
+                                                    candidato.setSenha(senha);
+                                                    candidato.setTelefone(telefone);
 
                                                     HelloApplication.ChangeScene("tela2");
                                                 } else {

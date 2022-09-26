@@ -4,10 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
-public class candidatoControler5 {
+public class vagaControler {
 
     @FXML
     private Button botaoFinalizar;
@@ -16,7 +15,7 @@ public class candidatoControler5 {
     private TextField campoBairro;
 
     @FXML
-    private ChoiceBox<?> campoCargo2;
+    private TextField campoCargo;
 
     @FXML
     private TextField campoCep;

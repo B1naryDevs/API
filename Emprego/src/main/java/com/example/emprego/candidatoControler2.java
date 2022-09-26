@@ -66,12 +66,12 @@ public class candidatoControler2 {
         candidato.setCargoInteresse(cargos);
         candidato.setPretSalarial(pretensao);
 
-        HelloApplication.ChangeScene("tela3");
+        HelloApplication.ChangeScene("candidato3");
     }
 
     @FXML
     void VoltarTela(ActionEvent event) {
-        HelloApplication.ChangeScene("tela1");
+        HelloApplication.ChangeScene("candidato");
     }
 
 }

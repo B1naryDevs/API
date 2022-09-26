@@ -113,12 +113,12 @@ public class candidatoControler3 {
         // frcha conexão com arquivo
         pw.close();
 
-        HelloApplication.ChangeScene("tela4");
+        HelloApplication.ChangeScene("candidatofinal");
     }
 
     @FXML
     void VoltarTela(ActionEvent event) {
-        HelloApplication.ChangeScene("tela2");
+        HelloApplication.ChangeScene("candidato2");
     }
 
 }

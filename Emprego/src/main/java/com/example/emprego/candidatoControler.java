@@ -172,7 +172,7 @@ public class candidatoControler {
                                                     candidato.setSenha(senha);
                                                     candidato.setTelefone(telefone);
 
-                                                    HelloApplication.ChangeScene("tela2");
+                                                    HelloApplication.ChangeScene("candidato2");
                                                 } else {
                                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                                     alert.setHeaderText("FORMATO DE DATA INVÁLIDO!");

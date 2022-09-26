@@ -76,6 +76,6 @@ public class candidatoControler4 {
 
         // frcha conexão com arquivo
         pw.close();
-        HelloApplication.ChangeScene("tela1");
+        HelloApplication.ChangeScene("candidato");
     }
 }

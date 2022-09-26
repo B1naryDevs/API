@@ -10,10 +10,11 @@ public class HelloApplication extends Application {
 
     private static Stage stage;
 
-    private static Scene tela1;
-    private static Scene tela2;
-    private static Scene tela3;
-    private static Scene tela4;
+    private static Scene candidato;
+    private static Scene candidato2;
+    private static Scene candidato3;
+    private static Scene candidatofinal;
+    private static Scene vaga;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -21,39 +22,46 @@ public class HelloApplication extends Application {
 
         primaryStage.setTitle("+Emprego");
 
-        Parent tela1fxml = FXMLLoader.load(getClass().getResource("layout.fxml"));
-        tela1 = new Scene(tela1fxml);
+        Parent layoutfxml = FXMLLoader.load(getClass().getResource("layout.fxml"));
+        candidato = new Scene(layoutfxml);
 
-        Parent tela2fxml = FXMLLoader.load(getClass().getResource("layout2.fxml"));
-        tela2 = new Scene(tela2fxml);
+        Parent layout2fxml = FXMLLoader.load(getClass().getResource("layout2.fxml"));
+        candidato2 = new Scene(layout2fxml);
 
-        Parent tela3fxml = FXMLLoader.load(getClass().getResource("layout3.fxml"));
-        tela3 = new Scene(tela3fxml);
+        Parent layout3fxml = FXMLLoader.load(getClass().getResource("layout3.fxml"));
+        candidato3 = new Scene(layout3fxml);
 
-        Parent tela4fxml = FXMLLoader.load(getClass().getResource("layout4.fxml"));
-        tela4 = new Scene(tela4fxml);
+        Parent layout4fxml = FXMLLoader.load(getClass().getResource("layout4.fxml"));
+        candidatofinal = new Scene(layout4fxml);
 
-        primaryStage.setScene(tela1);
+        Parent layout5fxml = FXMLLoader.load(getClass().getResource("layout5.fxml"));
+        vaga = new Scene(layout5fxml);
+
+        primaryStage.setScene(vaga);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
 
     public static void ChangeScene(String tela) {
         switch (tela) {
-            case "tela1":
-                stage.setScene(tela1);
+            case "candidato1":
+                stage.setScene(candidato);
                 stage.setFullScreen(true);
                 break;
-            case "tela2":
-                stage.setScene(tela2);
+            case "candidato2":
+                stage.setScene(candidato2);
                 stage.setFullScreen(true);
                 break;
-            case "tela3":
-                stage.setScene(tela3);
+            case "candidato3":
+                stage.setScene(candidato3);
                 stage.setFullScreen(true);
                 break;
-            case "tela4":
-                stage.setScene(tela4);
+            case "candidato4":
+                stage.setScene(candidatofinal);
+                stage.setFullScreen(true);
+                break;
+            case "vaga":
+                stage.setScene(vaga);
                 stage.setFullScreen(true);
         }
     }

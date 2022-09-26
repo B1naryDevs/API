@@ -37,7 +37,7 @@ public class HelloApplication extends Application {
         Parent layout5fxml = FXMLLoader.load(getClass().getResource("layout5.fxml"));
         vaga = new Scene(layout5fxml);
 
-        primaryStage.setScene(vaga);
+        primaryStage.setScene(candidato);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }

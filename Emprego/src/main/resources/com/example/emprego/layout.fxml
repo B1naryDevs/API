@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler">
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
             <children>
@@ -31,9 +21,9 @@
                     <font>
                         <Font size="20.0" />
                     </font></Label>
-                <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="AVANÇAR" textFill="WHITE">
+                <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="AVANÇAR" textFill="WHITE">
                     <font>
-                        <Font size="17.0" />
+                        <Font size="1.0" />
                     </font>
                 </Button>
                 <Circle layoutX="565.0" layoutY="604.0" radius="30.0" smooth="false" strokeType="INSIDE" strokeWidth="0.0">
@@ -113,27 +103,27 @@
                         <Image url="@../../../imagens/+empregosemfundo.png" />
                     </image>
                 </ImageView>
-                <Button layoutX="343.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="HOME" textFill="WHITE">
+                <Button layoutX="347.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="480.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="LOGIN" textFill="WHITE">
+                <Button layoutX="484.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="617.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" style="-fx-background-color: #343A40;" text="ÁREA DO CANDIDATO" textFill="WHITE">
+                <Button layoutX="612.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="918.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="VAGAS" textFill="WHITE">
+                <Button layoutX="918.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="1055.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #343A40;" text="SOBRE NÓS" textFill="WHITE">
+                <Button layoutX="1054.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>

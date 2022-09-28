@@ -13,7 +13,7 @@
     -fx-text-fill: #f57c00;
 }
 
-button: pressed {
+.button: pressed {
     -fx-font-veight: bold;
     -fx-background-color: white;
     -fx-font-size: 17;

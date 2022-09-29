@@ -54,6 +54,14 @@ public class vagaControler {
     private CheckBox campoSim;
 
     @FXML
+    private void mascaraCep() {
+        Formatter nascimento = new Formatter();
+        nascimento.setMask("#####-###");
+        nascimento.setCaracteresValidos("0123456789");
+        nascimento.setTf(campoCep);
+        nascimento.formatter();
+    }
+    @FXML
     void finalizarVaga(ActionEvent event) {
 
     }

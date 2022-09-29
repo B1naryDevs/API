@@ -39,6 +39,9 @@ public class candidatoControler {
     private TextField campoTelefone;
 
     @FXML
+    private TextField campoNascimento;
+
+    @FXML
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String nome = campoNome.getText();
         String cpf = campoCpf.getText();
@@ -227,6 +230,16 @@ public class candidatoControler {
         cpf.setTf(campoCpf);
         cpf.formatter();
     }
+
+    @FXML
+    private void mascaraNascimento() {
+        Formatter nascimento = new Formatter();
+        nascimento.setMask("##/##/####");
+        nascimento.setCaracteresValidos("0123456789");
+        nascimento.setTf(campoNascimento);
+        nascimento.formatter();
+    }
+
 }
 
 

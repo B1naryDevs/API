@@ -98,7 +98,7 @@
                         <Font size="14.0" />
                     </font>
                 </TextField>
-                <TextField fx:id="campoEmail" layoutX="82.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+                <TextField fx:id="campoEmail" layoutX="82.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="seuemail@email.com">
                     <font>
                         <Font size="14.0" />
                     </font>
@@ -164,13 +164,14 @@
                     </font>
                 </Label>
                 <DatePicker fx:id="campoData" layoutX="931.0" layoutY="290.0" prefHeight="30.0" prefWidth="329.0" />
-                <PasswordField fx:id="campoSenha" layoutX="500.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" />
+                <PasswordField fx:id="campoSenha" layoutX="500.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
                 <Label layoutX="500.0" layoutY="476.0" text="CONFIRMAR SENHA*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <PasswordField fx:id="campoConfirmarsenha" layoutX="500.0" layoutY="500.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" />
+                <PasswordField fx:id="campoConfirmarsenha" layoutX="500.0" layoutY="500.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+            <TextField fx:id="campoNascimento" layoutX="931.0" layoutY="330.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="DD/MM/AAAA" />
             </children>
         </AnchorPane>
     </children>

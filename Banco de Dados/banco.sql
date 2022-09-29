@@ -210,3 +210,12 @@ insert into vaga (cargo_vaga, setor_vaga, id_vaga, periodo, experiencia, salario
 
 select * from vaga;
 
+# TESTE DE SELECTS PARA RETORNO DE DADOS ----------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+select * from cargo order by nome_cargo; # ordem alfabética ou crescente (desc - descrescente)
+select nome_candidato, pret_salarial from candidato order by pret_salarial; # restrição de campos
+select * from competencia where cpf_candidato_comp = 55555555555; # valores especificos
+select nome_candidato, pret_salarial from candidato where pret_salarial > 1200.00 order by pret_salarial; #condição lógica
+select gafanhotos.nome, gafanhotos.cursopreferido, cursos.nome_curso, cursos_ano from gafanhotos join cursos;
+

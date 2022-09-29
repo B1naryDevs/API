@@ -1,23 +1,16 @@
 package com.example.emprego;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import java.text.ParseException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
 import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
-import java.text.ParseException;
-import javafx.scene.control.TextField;
-import javax.swing.text.MaskFormatter;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+
+
+
 
 public class candidatoControler {
 
@@ -216,4 +209,24 @@ public class candidatoControler {
                 }
         }
     }
+
+    @FXML
+    private void mascaraTel() {
+        Formatter tff = new Formatter();
+        tff.setMask("(##)#####-####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(campoTelefone);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraCpf() {
+        Formatter cpf = new Formatter();
+        cpf.setMask("###.###.###-##");
+        cpf.setCaracteresValidos("0123456789");
+        cpf.setTf(campoCpf);
+        cpf.formatter();
+    }
 }
+
+

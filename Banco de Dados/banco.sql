@@ -84,6 +84,11 @@ nivel enum('Básico', 'Intermediário', 'Avançado'),
 primary key (id_comp)
 );
 
+CREATE TABLE setor(
+nome_setor varchar (40) not null,
+primary key (nome_setor)
+);
+
 # TABELAS RELACIONAMENTOS ---------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
 

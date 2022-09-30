@@ -14,9 +14,6 @@ public class vagaControler2 {
     private Button botaoCadastrar;
 
     @FXML
-    private TextField campoCargo2;
-
-    @FXML
     void VoltarInicio(ActionEvent event) {
 
     }

@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
@@ -40,22 +29,22 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="623.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
+            <Button layoutX="616.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="920.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
+            <Button layoutX="914.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="1057.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
+            <Button layoutX="1052.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="1260.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagens/exit.png" />
                </image>
@@ -101,12 +90,12 @@
             </CheckBox>
             <Button layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
                <font>
-                  <Font size="20.0" />
+                  <Font size="17.0" />
                </font>
             </Button>
             <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" textFill="WHITE">
                <font>
-                  <Font size="1.0" />
+                  <Font size="17.0" />
                </font>
             </Button>
             <Circle fill="#78777500" layoutX="565.0" layoutY="604.0" radius="30.0" stroke="#ff891c" strokeType="INSIDE" />
@@ -143,7 +132,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" promptText="99.999.99" />
+            <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" />
             <Label layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
                <font>
                   <Font size="20.0" />

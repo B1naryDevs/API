@@ -55,11 +55,11 @@ public class vagaControler {
 
     @FXML
     private void mascaraCep() {
-        Formatter nascimento = new Formatter();
-        nascimento.setMask("#####-###");
-        nascimento.setCaracteresValidos("0123456789");
-        nascimento.setTf(campoCep);
-        nascimento.formatter();
+        Formatter cep = new Formatter();
+        cep.setMask("#####-###");
+        cep.setCaracteresValidos("0123456789");
+        cep.setTf(campoCep);
+        cep.formatter();
     }
     @FXML
     void finalizarVaga(ActionEvent event) {
@@ -72,7 +72,7 @@ public class vagaControler {
         if(campoSim.isSelected()) {
             String cep = campoCep.getText();
             String cidade = campoCidade.getText();
-            String complemento = campoComplemento.gettext();
+            String complemento = campoComplemento.getText();
             String endereco = campoEndereco.getText();
             String estado = campoEstado.getText();
             String numero = campoNumero.getText();

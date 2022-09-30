@@ -156,21 +156,21 @@ UPDATE vaga SET remoto = 'Não' where cargo_vaga = 'Recepcionista';
 select * from vaga;
 
 insert into candidato (nome_candidato, cpf, data_nasc, pret_salarial) values
-('Bielzinho 30pra1', 69696969669, '2003-12-17', 200.50),
-('Master Carlos Midset', 55555555555, '1950-08-16', 20000.50),
-('The Predator PHD', 01010101011, '2002-04-05', 1800.70),
-('Gui', 46336936899, '1997-11-18', 1500.80),
-('Larissa PO', 48615448696, '2000-05-19', 1500.80);
+('Gabriel', 69696969669, '2003-12-17', 2000.50),
+('Carlos', 55555555555, '1950-08-16', 20000.50),
+('Wallace', 01010101011, '2002-04-05', 1800.70),
+('Guilherme', 46336936899, '1997-11-18', 1500.80),
+('Larissa', 48615448696, '2000-05-19', 1500.80);
 
 select * from candidato;
 
 update candidato set nome_candidato = 'Bielzinho Mexicano' where cpf = 69696969669;
 
 insert into experiencia_profissional(id_cargo, cpf_candidato_exp, cargo_exercido, inicio_exp, termino_exp, cargo_atual, desc_atividades) values
-(default, 69696969669, 'Desenvolvedor', '2022-08-01', '2022-09-28', 'Não', 'Entregava Cafezinho'),
-(default, 55555555555, 'Master', '2000-08-01', '2022-09-28', 'Sim', 'Comandava o Pelotão'),
-(default,01010101011 , 'Desenvolvedor Senior', '2022-08-01', '2022-09-28', 'Sim', 'Instalava Impressora'),
-(default, 48615448696, 'PO', '2022-08-01', '2022-09-28', 'Sim', 'Entende os Valores do Cliente');
+(default, 69696969669, 'Desenvolvedor', '2022-08-01', '2022-09-28', 'Não', 'Desenvolver Soluções'),
+(default, 55555555555, 'Master', '2000-08-01', '2022-09-28', 'Sim', 'Potencializar o Trabalho da Equipe'),
+(default,01010101011 , 'Desenvolvedor Senior', '2022-08-01', '2022-09-28', 'Sim', 'Desenvolver Soluções'),
+(default, 48615448696, 'PO', '2022-08-01', '2022-09-28', 'Sim', 'Criar e Manter Atualizado o Product Backlog');
 
 
 select * from experiencia_profissional;

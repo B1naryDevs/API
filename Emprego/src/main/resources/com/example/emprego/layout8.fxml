@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.menuControler">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.menuControler">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
@@ -41,7 +41,7 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="40.0" fitWidth="38.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagens/exit.png" />
                </image>
@@ -51,6 +51,16 @@
                   <Font size="23.0" />
                </font>
             </Button>
+            <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="117.0" stylesheets="@../../../styles/Styles2.css" text="CADASTRAR" />
+            <Label layoutX="82.0" layoutY="350.0" text="CARGO" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="360.0" layoutY="150.0" prefHeight="92.0" prefWidth="645.0" text="CADASTRO DE CARGO" textFill="WHITE">
+               <font>
+                  <Font size="63.0" />
+               </font></Label>
+            <TextField fx:id="campoCargo2" layoutX="176.0" layoutY="352.0" prefHeight="25.0" prefWidth="275.0" />
       </children>
     </AnchorPane>
   </children>

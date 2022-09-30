@@ -12,13 +12,13 @@ public class Vaga {
     private static String cidade;
     private static String estado;
     private static String numero;
-
+    private static String endereco;
     private static  String bairro;
     private static String complemento;
 
     public Vaga(){}
 
-    public Vaga(String cargo,String periodo,String expProfissional,String salario,String descricao,Boolean remoto,String cep,String cidade,String estado,String numero,String bairro,String complemento){
+    public Vaga(String cargo,String periodo,String expProfissional,String salario,String descricao,Boolean remoto,String cep,String cidade,String estado,String numero,String endereco,String bairro,String complemento){
         this.cargo = cargo;
         this.periodo = periodo;
         this.expProfissional = expProfissional;
@@ -29,6 +29,7 @@ public class Vaga {
         this.cidade = cidade;
         this.estado = estado;
         this.numero = numero;
+        this.endereco = endereco;
         this.bairro = bairro;
         this.complemento = complemento;
     }
@@ -111,6 +112,14 @@ public class Vaga {
 
     public String getNumero() {
         return this.numero;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getEndereco() {
+        return this.endereco;
     }
 
     public void  setBairro(String bairro){this.bairro = bairro;}

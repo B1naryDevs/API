@@ -63,7 +63,31 @@ public class vagaControler {
     }
     @FXML
     void finalizarVaga(ActionEvent event) {
+        String cargo = campoCargo.getText();
+        String salario = campoSalario.getText();
+        String experiencia = campoExperiencia.getText();
+        String descricao = campoDescricao.getText();
+        String periodo = campoPeriodo.getText();
 
+        if(campoSim.isSelected()) {
+            String cep = campoCep.getText();
+            String cidade = campoCidade.getText();
+            String complemento = campoComplemento.gettext();
+            String endereco = campoEndereco.getText();
+            String estado = campoEstado.getText();
+            String numero = campoNumero.getText();
+            String bairro = campoBairro.getText();
+        }
+
+        if(campoNao.isSelected()){
+            campoCep.setVisible(false);
+            campoCidade.setVisible(false);
+            campoComplemento.setVisible(false);
+            campoEndereco.setVisible(false);
+            campoEstado.setVisible(false);
+            campoNumero.setVisible(false);
+            campoBairro.setVisible(false);
+        }
     }
 
 }

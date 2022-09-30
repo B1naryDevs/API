@@ -15,6 +15,9 @@ public class HelloApplication extends Application {
     private static Scene candidato3;
     private static Scene candidatofinal;
     private static Scene vaga;
+    private static Scene vagafinal;
+    private static Scene login;
+    private static Scene menu;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -37,7 +40,16 @@ public class HelloApplication extends Application {
         Parent layout5fxml = FXMLLoader.load(getClass().getResource("layout5.fxml"));
         vaga = new Scene(layout5fxml);
 
-        primaryStage.setScene(candidato);
+        Parent layout6fxml = FXMLLoader.load(getClass().getResource("layout6.fxml"));
+        vagafinal = new Scene(layout6fxml);
+
+        Parent layout7fxml = FXMLLoader.load(getClass().getResource("layout7.fxml"));
+        login = new Scene(layout7fxml);
+
+        Parent layout8fxml = FXMLLoader.load(getClass().getResource("layout8.fxml"));
+        menu = new Scene(layout8fxml);
+
+        primaryStage.setScene(login);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
@@ -56,12 +68,24 @@ public class HelloApplication extends Application {
                 stage.setScene(candidato3);
                 stage.setFullScreen(true);
                 break;
-            case "candidato4":
+            case "candidatofinal":
                 stage.setScene(candidatofinal);
                 stage.setFullScreen(true);
                 break;
             case "vaga":
                 stage.setScene(vaga);
+                stage.setFullScreen(true);
+                break;
+            case "vagafinal":
+                stage.setScene(vagafinal);
+                stage.setFullScreen(true);
+                break;
+            case "login":
+                stage.setScene(login);
+                stage.setFullScreen(true);
+                break;
+            case "menu":
+                stage.setScene(menu);
                 stage.setFullScreen(true);
         }
     }

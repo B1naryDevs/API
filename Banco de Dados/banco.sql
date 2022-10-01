@@ -49,7 +49,7 @@ primary key (id_vaga)
 CREATE TABLE cargo(
 nome_cargo varchar(30) not null,
 id_cargo int(5) auto_increment unique,
-descricao_cargo varchar(100),
+setor_cargo varchar(40) not null,
 primary key (nome_cargo)
 );
 
@@ -84,10 +84,6 @@ nivel enum('Básico', 'Intermediário', 'Avançado'),
 primary key (id_comp)
 );
 
-CREATE TABLE setor(
-nome_setor varchar (40) not null,
-primary key (nome_setor)
-);
 
 # TABELAS RELACIONAMENTOS ---------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------
@@ -106,6 +102,11 @@ id_pret int(5) auto_increment not null,
 cpf_candidato_pret bigint (11) not null,
 nome_cargo_pret varchar(30) not null,
 primary key (id_pret)
+);
+
+CREATE TABLE setor(
+nome_setor varchar (40) not null,
+primary key (nome_setor)
 );
 
 # CRIAÇÃO DE CHAVES ESTRANGEIRAS (FK) ----------------------------------------------------
@@ -164,7 +165,7 @@ UPDATE vaga SET remoto = 'Não' where cargo_vaga = 'Recepcionista';
 select * from vaga;
 
 insert into candidato (nome_candidato, cpf, data_nasc, pret_salarial) values
-('Gabriel', 69696969669, '2003-12-17', 2000.50),
+('Gabriel', 69696969669, '2003-12-17', 200.50),
 ('Carlos', 55555555555, '1950-08-16', 20000.50),
 ('Wallace', 01010101011, '2002-04-05', 1800.70),
 ('Guilherme', 46336936899, '1997-11-18', 1500.80),
@@ -172,13 +173,13 @@ insert into candidato (nome_candidato, cpf, data_nasc, pret_salarial) values
 
 select * from candidato;
 
-update candidato set nome_candidato = 'Bielzinho Mexicano' where cpf = 69696969669;
+update candidato set nome_candidato = 'Gabriel Vieira' where cpf = 69696969669;
 
 insert into experiencia_profissional(id_cargo, cpf_candidato_exp, cargo_exercido, inicio_exp, termino_exp, cargo_atual, desc_atividades) values
-(default, 69696969669, 'Desenvolvedor', '2022-08-01', '2022-09-28', 'Não', 'Desenvolver Soluções'),
-(default, 55555555555, 'Master', '2000-08-01', '2022-09-28', 'Sim', 'Potencializar o Trabalho da Equipe'),
-(default,01010101011 , 'Desenvolvedor Senior', '2022-08-01', '2022-09-28', 'Sim', 'Desenvolver Soluções'),
-(default, 48615448696, 'PO', '2022-08-01', '2022-09-28', 'Sim', 'Criar e Manter Atualizado o Product Backlog');
+(default, 69696969669, 'Desenvolvedor', '2022-08-01', '2022-09-28', 'Não', 'Desenvolver Programas'),
+(default, 55555555555, 'Master', '2000-08-01', '2022-09-28', 'Sim', 'Comandar o time de desenvolvimento'),
+(default,01010101011 , 'Desenvolvedor Senior', '2022-08-01', '2022-09-28', 'Sim', 'Desenvolver Programas'),
+(default, 48615448696, 'PO', '2022-08-01', '2022-09-28', 'Sim', 'Passar a Visão do Cliente para a Equipe');
 
 
 select * from experiencia_profissional;
@@ -214,7 +215,29 @@ select * from cargo;
 
 describe cargo;
 insert into vaga (cargo_vaga, setor_vaga, id_vaga, periodo, experiencia, salario, descricao_vaga, endereco_vaga, cidade_vaga, remoto, status_vaga) value
-('Analista de Sistemas Jr', 'Tecnologia e Informação', default, 'Integral', 'Sim', 1200.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta');
+('Telefonista', 'Atendimento', default, 'Integral', 'Sim', 1300.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta'),
+('Contador', 'Financeiro', default, 'Integral', 'Sim', 2800.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta'),
+('Tecnico em Marketing', 'publicidade', default, 'Integral', 'Sim', 3500.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta');
+
+select * from candidatura;
+
+insert into setor(nome_setor) values
+('Transporte'),
+('Tecnologia e Informação'),
+('Jurídico'),
+('Atendimento'),
+('Publicidade'),
+('Financeiro');
+
+select * from setor;
+insert into candidatura(id_candidatura, cpf_candidatura, cod_vaga, data_cand, status_cand) values
+(default, '48615448696', 5, '2022-09-30', 'Em andamento' ),
+(default, '01010101011', 6, '2022-09-30', 'Em andamento' ),
+(default, '48615448696', 7, '2022-09-30', 'Em andamento' ),
+(default, '69696969669', 5, '2022-09-30', 'Em andamento' );
+
+
+describe vaga;
 
 select * from vaga;
 
@@ -227,3 +250,10 @@ select * from competencia where cpf_candidato_comp = 55555555555; # valores espe
 select nome_candidato, pret_salarial from candidato where pret_salarial > 1200.00 order by pret_salarial; #condição lógica
 select gafanhotos.nome, gafanhotos.cursopreferido, cursos.nome_curso, cursos_ano from gafanhotos join cursos;
 select candidato.nome_candidato, candidatura.cpf_candidatura, candidatura.cargo_cand from candidato join candidatura;
+
+
+
+
+
+
+

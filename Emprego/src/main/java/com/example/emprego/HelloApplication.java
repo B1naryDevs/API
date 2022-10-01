@@ -19,6 +19,8 @@ public class HelloApplication extends Application {
     private static Scene login;
     private static Scene menu;
 
+    private static Scene cargo;
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
@@ -49,7 +51,10 @@ public class HelloApplication extends Application {
         Parent layout_menu = FXMLLoader.load(getClass().getResource("layout_menu.fxml"));
         menu = new Scene(layout_menu);
 
-        primaryStage.setScene(login);
+        Parent layout_cargo = FXMLLoader.load(getClass().getResource("layout_cargo.fxml"));
+        cargo = new Scene(layout_cargo);
+
+        primaryStage.setScene(menu);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
@@ -86,6 +91,10 @@ public class HelloApplication extends Application {
                 break;
             case "menu":
                 stage.setScene(menu);
+                stage.setFullScreen(true);
+                break;
+            case "cargo":
+                stage.setScene(cargo);
                 stage.setFullScreen(true);
         }
     }

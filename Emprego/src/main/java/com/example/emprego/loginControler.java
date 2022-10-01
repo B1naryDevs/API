@@ -22,7 +22,7 @@ public class loginControler {
 
     @FXML
     void cadastrarLogin(ActionEvent event) {
-        HelloApplication.ChangeScene("cadidato");
+        HelloApplication.ChangeScene("candidato");
     }
 
     @FXML

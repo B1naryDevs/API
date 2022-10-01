@@ -25,29 +25,29 @@ public class HelloApplication extends Application {
 
         primaryStage.setTitle("+Emprego");
 
-        Parent layoutfxml = FXMLLoader.load(getClass().getResource("layout.fxml"));
-        candidato = new Scene(layoutfxml);
+        Parent layout_candidato = FXMLLoader.load(getClass().getResource("layout_candidato.fxml"));
+        candidato = new Scene(layout_candidato);
 
-        Parent layout2fxml = FXMLLoader.load(getClass().getResource("layout2.fxml"));
-        candidato2 = new Scene(layout2fxml);
+        Parent layout_candidato2 = FXMLLoader.load(getClass().getResource("layout_candidato2.fxml"));
+        candidato2 = new Scene(layout_candidato2);
 
-        Parent layout3fxml = FXMLLoader.load(getClass().getResource("layout3.fxml"));
-        candidato3 = new Scene(layout3fxml);
+        Parent layout_candidato3 = FXMLLoader.load(getClass().getResource("layout_candidato3.fxml"));
+        candidato3 = new Scene(layout_candidato3);
 
-        Parent layout4fxml = FXMLLoader.load(getClass().getResource("layout4.fxml"));
-        candidatofinal = new Scene(layout4fxml);
+        Parent layout_candidato4 = FXMLLoader.load(getClass().getResource("layout_candidato4.fxml"));
+        candidatofinal = new Scene(layout_candidato4);
 
-        Parent layout5fxml = FXMLLoader.load(getClass().getResource("layout5.fxml"));
-        vaga = new Scene(layout5fxml);
+        Parent layout_vaga = FXMLLoader.load(getClass().getResource("layout_vaga.fxml"));
+        vaga = new Scene(layout_vaga);
 
-        Parent layout6fxml = FXMLLoader.load(getClass().getResource("layout6.fxml"));
-        vagafinal = new Scene(layout6fxml);
+        Parent layout_vaga2 = FXMLLoader.load(getClass().getResource("layout_vaga2.fxml"));
+        vagafinal = new Scene(layout_vaga2);
 
-        Parent layout7fxml = FXMLLoader.load(getClass().getResource("layout7.fxml"));
-        login = new Scene(layout7fxml);
+        Parent layout_login = FXMLLoader.load(getClass().getResource("layout_login.fxml"));
+        login = new Scene(layout_login);
 
-        Parent layout8fxml = FXMLLoader.load(getClass().getResource("layout8.fxml"));
-        menu = new Scene(layout8fxml);
+        Parent layout_menu = FXMLLoader.load(getClass().getResource("layout_menu.fxml"));
+        menu = new Scene(layout_menu);
 
         primaryStage.setScene(login);
         primaryStage.show();
@@ -56,7 +56,7 @@ public class HelloApplication extends Application {
 
     public static void ChangeScene(String tela) {
         switch (tela) {
-            case "candidato1":
+            case "candidato":
                 stage.setScene(candidato);
                 stage.setFullScreen(true);
                 break;

@@ -7,13 +7,13 @@ import javafx.scene.control.Button;
 public class menuControler {
 
     @FXML
-    private Button botaoCadastro;
+    private Button botaoCargo;
 
     @FXML
     private Button botaoVaga;
 
     @FXML
-    void AvancarCargo(ActionEvent event) {
+    void AvancarCargo(ActionEvent event) { HelloApplication.ChangeScene("cargo");
 
     }
 

@@ -219,7 +219,7 @@ insert into vaga (cargo_vaga, setor_vaga, id_vaga, periodo, experiencia, salario
 ('Contador', 'Financeiro', default, 'Integral', 'Sim', 2800.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta'),
 ('Tecnico em Marketing', 'publicidade', default, 'Integral', 'Sim', 3500.00, 'teste', 'rua 1' , 'cidade 1', 'Sim', 'Aberta');
 
-select * from candidatura;
+select * from vaga;
 
 insert into setor(nome_setor) values
 ('Transporte'),
@@ -237,9 +237,7 @@ insert into candidatura(id_candidatura, cpf_candidatura, cod_vaga, data_cand, st
 (default, '69696969669', 5, '2022-09-30', 'Em andamento' );
 
 
-describe vaga;
-
-select * from vaga;
+select * from candidatura;
 
 # TESTE DE SELECTS PARA RETORNO DE DADOS ----------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------

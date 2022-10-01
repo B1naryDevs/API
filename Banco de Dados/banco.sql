@@ -223,4 +223,4 @@ select nome_candidato, pret_salarial from candidato order by pret_salarial; # re
 select * from competencia where cpf_candidato_comp = 55555555555; # valores especificos
 select nome_candidato, pret_salarial from candidato where pret_salarial > 1200.00 order by pret_salarial; #condição lógica
 select gafanhotos.nome, gafanhotos.cursopreferido, cursos.nome_curso, cursos_ano from gafanhotos join cursos;
-
+select candidato.nome_candidato, candidatura.cpf_candidatura, candidatura.cargo_cand from candidato join candidatura;

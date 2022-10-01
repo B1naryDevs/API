@@ -135,6 +135,9 @@ ALTER TABLE competencia ADD FOREIGN KEY (cpf_candidato_comp) REFERENCES candidat
 # CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA EXPERIÊNCIA PROFISSIONAL
 ALTER TABLE experiencia_profissional ADD FOREIGN KEY (cpf_candidato_exp) REFERENCES candidato (cpf);
 
+# CHAVE ESTRANGEIRA FK - NOME SETOR PARA SETOR DO CARGO
+ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
+
 
 # ACRESCENTAMENTO DE INFORMAÇÕES TESTES ---------------------------------------
 ------------------------------------------------------------------------------

@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import javafx.scene.control.ToggleButton;
 
 public class candidatoControler2 {
 
@@ -24,6 +25,15 @@ public class candidatoControler2 {
 
     @FXML
     private Button botaoVoltar;
+    
+    @FXML
+    private Button botaoHome;
+
+    @FXML
+    private Button botaoLogin;
+
+    @FXML
+    private ToggleButton botaoSair;
 
     @FXML
     private TextField campoCargo;
@@ -45,6 +55,15 @@ public class candidatoControler2 {
 
     @FXML
     private DatePicker campoTermino;
+    
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+
+    @FXML
+    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
     void AvancarTela(ActionEvent event) throws FileNotFoundException {

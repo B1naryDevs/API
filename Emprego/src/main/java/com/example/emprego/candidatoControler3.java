@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import javafx.scene.control.ToggleButton;
 
 public class candidatoControler3 {
 
@@ -24,6 +25,24 @@ public class candidatoControler3 {
 
     @FXML
     private Button botaoVoltar;
+    
+    @FXML
+    private Button botaoHome;
+
+    @FXML
+    private Button botaoLogin;
+
+    @FXML
+    private ToggleButton botaoSair;
+
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+
+    @FXML
+    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
     private TextField campoCompetencia;

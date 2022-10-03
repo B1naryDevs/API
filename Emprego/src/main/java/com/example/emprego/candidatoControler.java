@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.ToggleButton;
 
 
 
@@ -16,6 +17,15 @@ public class candidatoControler {
 
     @FXML
     private Button botaoAvancar;
+    
+    @FXML
+    private Button botaoHome;
+
+    @FXML
+    private Button botaoLogin;
+
+    @FXML
+    private ToggleButton botaoSair;
 
     @FXML
     private PasswordField campoConfirmarsenha;
@@ -40,6 +50,15 @@ public class candidatoControler {
 
     @FXML
     private TextField campoNascimento;
+    
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+
+    @FXML
+    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
     void AvancarTela(ActionEvent event) throws FileNotFoundException {

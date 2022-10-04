@@ -43,7 +43,7 @@ public class loginControler {
     }
     
     @FXML
-    void SairTela(ActionEvent event) { HelloApplication.ChangeScene("candidato2"); }
+    void SairTela(ActionEvent event) { HelloApplication.ChangeScene("menu"); }
 
     //ocultar/mostrar senha
     @FXML

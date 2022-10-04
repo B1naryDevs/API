@@ -15,36 +15,31 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button fx:id="botaoHome" layoutX="339.0" layoutY="19.0" mnemonicParsing="false" onAction="#VoltarInicio" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+            <Button fx:id="botaoHome" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="480.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="624.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="765.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="RH" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="909.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../imagens/exit.png" />
-               </image>
-            </ImageView>
             <Label alignment="CENTER" graphicTextGap="60.0" layoutX="390.0" layoutY="381.0" prefHeight="80.0" prefWidth="557.0" text="CADASTRO DE VAGA EFETUADO COM SUCESSO!" textFill="#ebebeb">
                <font>
                   <Font size="25.0" />
@@ -55,28 +50,16 @@
                   <Image url="@../../../imagens/confirmacao.png" />
                </image>
             </ImageView>
-            <Button layoutX="1250.0" layoutY="25.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="48.0" textFill="WHITE">
-               <font>
-                  <Font size="7.0" />
-               </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Button>
-            <Button layoutX="1062.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
+            <ToggleButton fx:id="botaoSair" layoutX="1244.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="69.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../imagens/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
       </children>
     </AnchorPane>
-      <Button mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="48.0" textFill="WHITE">
-         <font>
-            <Font size="7.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Button>
   </children>
 </VBox>

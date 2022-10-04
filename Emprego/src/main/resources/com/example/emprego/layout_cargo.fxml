@@ -13,17 +13,11 @@
                <image>
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image></ImageView>
-            <Button layoutX="344.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" />
-            <Button layoutX="480.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <Button layoutX="481.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <Button layoutX="618.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <Button layoutX="755.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <Button layoutX="892.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <Button layoutX="1032.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" />
-            <ImageView fitHeight="38.0" fitWidth="40.0" layoutX="1260.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../imagens/exit.png" />
-               </image></ImageView>
+            <Button fx:id="botaoHome" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" />
+            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" />
+            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" />
+            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="134.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
             <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="CADASTRAR" />
             <Label layoutX="372.0" layoutY="120.0" prefHeight="92.0" prefWidth="660.0" text="CADASTRO DE CARGO" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
@@ -35,6 +29,15 @@
                </font>
             </Label>
             <TextField fx:id="campoCargo2" layoutX="195.0" layoutY="357.0" prefHeight="25.0" prefWidth="350.0" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
          </children></AnchorPane>
    </children>
 </VBox>

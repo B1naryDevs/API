@@ -9,6 +9,10 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.vagaControler">
   <children>
@@ -19,36 +23,31 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button layoutX="344.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+            <Button fx:id="botaoHome" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="481.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="621.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="750.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="901.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
+            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../imagens/exit.png" />
-               </image>
-            </ImageView>
             <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="792.0" text="CADASTRO DE VAGAS" textFill="#fffefe" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
@@ -133,11 +132,6 @@
                </font>
             </Label>
             <TextField fx:id="campoComplemento" layoutX="94.0" layoutY="628.0" prefHeight="25.0" prefWidth="200.0" />
-            <Button layoutX="1048.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="TEXTO" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
             <TextField fx:id="campoEndereco" layoutX="381.0" layoutY="473.0" prefHeight="25.0" prefWidth="200.0" />
             <Label layoutX="381.0" layoutY="446.0" text="ENDEREÇO*" textFill="WHITE">
                <font>
@@ -151,6 +145,15 @@
             </Label>
             <TextField fx:id="campoBairro" layoutX="672.0" layoutY="473.0" prefHeight="25.0" prefWidth="125.0" />
             <TextField fx:id="campoCargo" layoutX="93.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
       </children>
     </AnchorPane>
   </children>

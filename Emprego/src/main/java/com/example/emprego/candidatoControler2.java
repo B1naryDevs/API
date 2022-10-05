@@ -17,8 +17,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.Label;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class candidatoControler2 {
+public class candidatoControler2 implements Initializable {
 
     @FXML
     private Button botaoAvancar;
@@ -39,7 +43,25 @@ public class candidatoControler2 {
     private TextField campoCargo;
 
     @FXML
-    private TextField campoCargos;
+    private Label labelCargosInteresse;
+
+    @FXML
+    private ChoiceBox<String> campoCargos;
+
+    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargos.getItems().addAll(cargos);
+
+    }
+
+    public void getCargo(ActionEvent event){
+        String CargoSelecionado = campoCargos.getValue();
+        labelCargosInteresse.setText(CargoSelecionado);
+
+    }
 
     @FXML
     private TextField campoPretensao;
@@ -69,7 +91,7 @@ public class candidatoControler2 {
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String empresa = campoEmpresa.getText();
         String cargo = campoCargo.getText();
-        String cargos = campoCargos.getText();
+        String cargos = campoCargos.getValue();
         LocalDate inicioinicial = campoInicio.getValue();
         LocalDate terminoinicial = campoTermino.getValue();
         String inicio = String.valueOf(inicioinicial);

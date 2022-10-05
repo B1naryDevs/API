@@ -3,8 +3,12 @@ package com.example.emprego;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.scene.control.Label;
 
-public class vagaControler {
+public class vagaControler implements Initializable {
 
     @FXML
     private Label labelCep;
@@ -28,13 +32,13 @@ public class vagaControler {
     private Label labelComplemento;
 
     @FXML
+    private Label labelCargo;
+
+    @FXML
     private Button botaoFinalizar;
 
     @FXML
     private TextField campoBairro;
-
-    @FXML
-    private TextField campoCargo;
 
     @FXML
     private TextField campoCep;
@@ -46,7 +50,7 @@ public class vagaControler {
     private TextField campoComplemento;
 
     @FXML
-    private TextField campoDescricao;
+    private TextArea campoDescricao;
 
     @FXML
     private TextField campoEndereco;
@@ -89,6 +93,23 @@ public class vagaControler {
     private ToggleButton botaoSair;
 
     @FXML
+    private ChoiceBox<String> campoCargo;
+
+    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargo.getItems().addAll(cargos);
+
+    }
+
+    public void getCargo(ActionEvent event){
+        String CargoSelecionado = campoCargo.getValue();
+        labelCargo.setText(CargoSelecionado);
+
+    }
+    @FXML
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
@@ -116,7 +137,7 @@ public class vagaControler {
     }
     @FXML
     void finalizarVaga(ActionEvent event) {
-        String cargo = campoCargo.getText();
+        String cargo = campoCargo.getValue();
         String salario = campoSalario.getText();
         String experiencia = campoExperiencia.getText();
         String descricao = campoDescricao.getText();

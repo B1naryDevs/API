@@ -54,7 +54,7 @@ public class HelloApplication extends Application {
         Parent layout_cargo = FXMLLoader.load(getClass().getResource("layout_cargo.fxml"));
         cargo = new Scene(layout_cargo);
 
-        primaryStage.setScene(menu);
+        primaryStage.setScene(login);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }

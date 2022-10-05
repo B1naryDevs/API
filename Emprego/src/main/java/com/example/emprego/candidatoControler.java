@@ -3,6 +3,9 @@ package com.example.emprego;
 import java.io.FileNotFoundException;
 import java.text.ParseException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
@@ -63,19 +66,57 @@ public class candidatoControler {
     @FXML
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String nome = campoNome.getText();
-        String cpf = campoCpf.getText();
+        String cpf_not = campoCpf.getText();
+        String[] char_cpf = cpf_not.split("");
+        List<String> chars = new ArrayList();
+        String remover = "";
+
+        long cpf_long = 0L;
+
+        chars.addAll(Arrays.asList(char_cpf));
+
+        for (String sss : chars){
+
+            if (!"-".equals(sss) && !".".equals(sss)){
+
+                remover += sss;
+
+            }
+
+        }
+        cpf_long = Long.parseLong(remover);
+        String cpf = String.valueOf(cpf_long);
         LocalDate datainicial = campoData.getValue();
         String data = String.valueOf(datainicial);
         String email = campoEmail.getText();
         String senha = campoSenha.getText();
         String senha2 = campoConfirmarsenha.getText();
-        String telefone = campoTelefone.getText();
+        String telefone_not = campoTelefone.getText();
+        String[] char_telefone = telefone_not.split("");
+        List<String> chars2 = new ArrayList();
+        String remover2 = "";
+
+        long telefone_long = 0L;
+
+        chars2.addAll(Arrays.asList(char_telefone));
+
+        for (String sss : chars2){
+
+            if (!"-".equals(sss) && !"(".equals(sss) && !")".equals(sss)){
+
+                remover2 += sss;
+
+            }
+
+        }
+        telefone_long = Long.parseLong(remover2);
+        String telefone = String.valueOf(telefone_long);
 
         if (nome.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O NOME!");
             alert.showAndWait();
-        } else if (cpf.isEmpty()) {
+        } else if (cpf_not.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O CPF!");
             alert.showAndWait();
@@ -95,7 +136,7 @@ public class candidatoControler {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA A CONFIRMAÇÃO DE SENHA!");
             alert.showAndWait();
-        } else if (telefone.isEmpty()) {
+        } else if (telefone_not.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O TELEFONE!");
             alert.showAndWait();
@@ -172,7 +213,7 @@ public class candidatoControler {
                                         Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
                                         if (EMAIL_PATTERN.matcher(email).matches()) {
                                             //Validação de telefone
-                                            String TELEPHONE_REGEX = "\\d{8,12}";
+                                            String TELEPHONE_REGEX = "\\d{11}";
                                             Pattern TELEPHONE_PATTERN = Pattern.compile(TELEPHONE_REGEX);
                                             if (TELEPHONE_PATTERN.matcher(telefone).matches()) {
                                                 //Validação de data

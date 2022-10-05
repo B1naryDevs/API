@@ -71,11 +71,6 @@
                   <Font size="63.0" />
                </font>
             </Label>
-            <Label layoutX="527.0" layoutY="333.0" text="FORMAÇÃO ACADÊMICA" textFill="WHITE">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Label>
             <Label layoutX="114.0" layoutY="409.0" text="INSTITUIÇÃO*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -132,20 +127,19 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label layoutX="114.0" layoutY="269.0" prefHeight="30.0" prefWidth="164.0" text="COMPETÊNCIA*" textFill="WHITE">
+            <Label layoutX="114.0" layoutY="354.0" prefHeight="30.0" prefWidth="164.0" text="COMPETÊNCIA*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="795.0" layoutY="269.0" prefHeight="30.0" prefWidth="92.0" text="IDIOMA*" textFill="WHITE">
+            <Label fx:id="labelIngles" layoutX="795.0" layoutY="354.0" prefHeight="30.0" prefWidth="92.0" text="INGLÊS*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <TextField fx:id="campoInstituicao" layoutX="274.0" layoutY="411.0" prefHeight="25.0" prefWidth="301.0" />
             <TextField fx:id="campoCurso" layoutX="893.0" layoutY="412.0" prefHeight="25.0" prefWidth="301.0" />
-            <TextField fx:id="campoIdioma" layoutX="893.0" layoutY="272.0" prefHeight="25.0" prefWidth="301.0" />
-            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="272.0" prefHeight="25.0" prefWidth="301.0" />
+            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" />
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -154,6 +148,12 @@
                      </image>
                   </ImageView>
                </graphic></ToggleButton>
+            <Label layoutX="510.0" layoutY="247.0" text="FORMAÇÃO ACADÊMICA" textFill="WHITE">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="campoIngles" layoutX="893.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" stylesheets="@../../../styles/Styles4.css" />
       </children>
     </AnchorPane>
   </children>

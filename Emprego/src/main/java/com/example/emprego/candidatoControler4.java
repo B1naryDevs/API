@@ -20,11 +20,11 @@ public class candidatoControler4 {
     void VoltarInicio(ActionEvent event) throws FileNotFoundException {
         Candidato candidato = new Candidato(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);;
         String nome = candidato.getNome();
-        String cpf = candidato.getCpf();
+        long cpf = candidato.getCpf();
         String data = candidato.getDataNac();
         String email = candidato.getEmail();
         String senha = candidato.getSenha();
-        String telefone = candidato.getTelefone();
+        long telefone = candidato.getTelefone();
         String empresa = candidato.getExpEmpresa();
         String cargo = candidato.getCargo();
         String expinicio = candidato.getExpInicio();

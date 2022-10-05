@@ -77,9 +77,6 @@ public class candidatoControler3 implements Initializable{
     private TextField campoCurso;
 
     @FXML
-    private TextField campoIdioma;
-
-    @FXML
     private DatePicker campoInicio;
 
     @FXML
@@ -91,7 +88,7 @@ public class candidatoControler3 implements Initializable{
     @FXML
     void FinalizarCadastro(ActionEvent event) throws FileNotFoundException {
         String competencia = campoCompetencia.getText();
-        String idioma = campoIdioma.getText();
+        String idioma = campoIngles.getValue();
         String instituicao = campoInstituicao.getText();
         LocalDate inicioinicial = campoInicio.getValue();
         LocalDate terminoinicial = campoTermino.getValue();
@@ -141,11 +138,11 @@ public class candidatoControler3 implements Initializable{
                     candidato.setCurso(curso);
 
                     String nome = candidato.getNome();
-                    String cpf = candidato.getCpf();
+                    long cpf = candidato.getCpf();
                     String data = candidato.getDataNac();
                     String email = candidato.getEmail();
                     String senha = candidato.getSenha();
-                    String telefone = candidato.getTelefone();
+                    long telefone = candidato.getTelefone();
                     String empresa = candidato.getExpEmpresa();
                     String cargo = candidato.getCargo();
                     String expinicio = candidato.getExpInicio();

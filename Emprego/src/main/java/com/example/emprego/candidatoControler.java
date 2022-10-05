@@ -222,11 +222,11 @@ public class candidatoControler {
                                                 if (DATE_PATTERN.matcher(data).matches()) {
                                                     Candidato candidato = new Candidato();
                                                     candidato.setNome(nome);
-                                                    candidato.setCpf(cpf);
+                                                    candidato.setCpf(cpf_long);
                                                     candidato.setDataNac(data);
                                                     candidato.setEmail(email);
                                                     candidato.setSenha(senha);
-                                                    candidato.setTelefone(telefone);
+                                                    candidato.setTelefone(telefone_long);
 
                                                     HelloApplication.ChangeScene("candidato2");
                                                 } else {

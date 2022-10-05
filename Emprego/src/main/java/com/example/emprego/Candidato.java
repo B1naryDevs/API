@@ -4,11 +4,11 @@ public class Candidato {
 
     //Atributos
     private static String nome;
-    private static String cpf;
+    private static Long cpf;
     private static String dataNac;
     private static String email;
     private static String senha;
-    private static String telefone;
+    private static Long telefone;
 
     private static String expEmpresa;
     private static String cargo;
@@ -27,7 +27,7 @@ public class Candidato {
 
     public Candidato(){}
 
-    public Candidato(String nome, String cpf,String dataNac,String email,String senha,String telefone,String expEmpresa,
+    public Candidato(String nome, Long cpf,String dataNac,String email,String senha,Long telefone,String expEmpresa,
                      String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,String pretSalarial,String competencia,
                      String instituicao,String cursoInicio,String cursoTermino,String idioma,String curso){
         this.nome = nome;
@@ -58,11 +58,11 @@ public class Candidato {
         this.nome = nome;
     }
 
-    public String getCpf() {
+    public long getCpf() {
         return this.cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 
@@ -90,11 +90,11 @@ public class Candidato {
         this.senha = senha;
     }
 
-    public String getTelefone() {
+    public long getTelefone() {
         return this.telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(long telefone) {
         this.telefone = telefone;
     }
 

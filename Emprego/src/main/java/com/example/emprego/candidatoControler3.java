@@ -17,8 +17,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 import javafx.scene.control.ToggleButton;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class candidatoControler3 {
+public class candidatoControler3 implements Initializable{
 
     @FXML
     private Button botaoFinalizar;
@@ -34,6 +37,26 @@ public class candidatoControler3 {
 
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private Label labelIngles;
+
+    @FXML
+    private ChoiceBox<String> campoIngles;
+
+    private String[] nivel = {"BÁSICO", "INTERMEDIÁRIO", "AVANÇADO", "FLUENTE" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoIngles.getItems().addAll(nivel);
+
+    }
+    public void getCargo(ActionEvent event){
+        String CargoSelecionado = campoIngles.getValue();
+        labelIngles.setText(CargoSelecionado);
+
+    }
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}

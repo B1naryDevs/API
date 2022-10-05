@@ -54,23 +54,23 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label layoutX="82.0" layoutY="270.0" text="EMPRESA" textFill="WHITE">
+            <Label fx:id="labelEmpresa" layoutX="82.0" layoutY="270.0" text="EMPRESA" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <TextField fx:id="campoEmpresa" layoutX="181.0" layoutY="272.0" prefHeight="25.0" prefWidth="350.0" />
-            <Label layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="92.0" text="CARGO" textFill="WHITE">
+            <Label fx:id="labelCargo" layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="92.0" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="84.0" layoutY="354.0" prefHeight="30.0" prefWidth="92.0" text="INÍCIO" textFill="WHITE">
+            <Label fx:id="labelInicio" layoutX="84.0" layoutY="354.0" prefHeight="30.0" prefWidth="92.0" text="INÍCIO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="310.0" layoutY="355.0" prefHeight="30.0" prefWidth="92.0" text="TÉRMINO" textFill="WHITE">
+            <Label fx:id="labelTermino" layoutX="310.0" layoutY="355.0" prefHeight="30.0" prefWidth="92.0" text="TÉRMINO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -78,12 +78,12 @@
             <DatePicker fx:id="campoInicio" layoutX="162.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
             <DatePicker fx:id="campoTermino" layoutX="403.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
             <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" />
-            <CheckBox layoutX="82.0" layoutY="500.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
+            <CheckBox fx:id="campoExperiencia" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
             </CheckBox>
-            <Button layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
+            <Button fx:id="botaoAdicionar" layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -128,7 +128,7 @@
                </font>
             </Label>
             <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" />
-            <Label layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
+            <Label fx:id="labelDescricao" layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -175,4 +175,3 @@
     </AnchorPane>
   </children>
 </VBox>
-

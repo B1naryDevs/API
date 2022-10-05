@@ -2,10 +2,9 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+
+import java.beans.BeanProperty;
 import java.util.regex.Pattern;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -16,14 +15,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.Label;
+
 import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.scene.control.ChoiceBox;
 
 public class candidatoControler2 implements Initializable {
+
 
     @FXML
     private Button botaoAvancar;
@@ -38,32 +36,37 @@ public class candidatoControler2 implements Initializable {
     private Button botaoLogin;
 
     @FXML
-    private ToggleButton botaoSair;
+    private Button botaoAdicionar;
 
     @FXML
-    private TextField campoCargo;
+    private ToggleButton botaoSair;
 
     @FXML
     private Label labelCargosInteresse;
 
     @FXML
+    private Label labelEmpresa;
+
+    @FXML
+    private Label labelCargo;
+
+    @FXML
+    private Label labelInicio;
+
+    @FXML
+    private Label labelTermino;
+
+    @FXML
+    private Label labelDescricao;
+
+    @FXML
     private ChoiceBox<String> campoCargos;
 
-    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+    @FXML
+    private CheckBox campoExperiencia;
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-
-        campoCargos.getItems().addAll(cargos);
-
-    }
-
-    public void getCargo(ActionEvent event){
-        String CargoSelecionado = campoCargos.getValue();
-        labelCargosInteresse.setText(CargoSelecionado);
-
-    }
-
+    @FXML
+    private TextField campoCargo;
     @FXML
     private TextField campoPretensao;
 
@@ -133,6 +136,52 @@ public class candidatoControler2 implements Initializable {
     }
 
 
+    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargos.getItems().addAll(cargos);
+
+    }
+
+    public void getCargo(ActionEvent event){
+        String CargoSelecionado = campoCargos.getValue();
+        labelCargosInteresse.setText(CargoSelecionado);
+
+    }
+
+    public void CheckEmprego (ActionEvent event){
+
+        if (campoExperiencia.isSelected()) {
+            campoEmpresa.setVisible(false);
+            campoCargo.setVisible(false);
+            campoInicio.setVisible(false);
+            campoTermino.setVisible(false);
+            campoDescricao.setVisible(false);
+            labelEmpresa.setVisible(false);
+            labelCargo.setVisible(false);
+            labelInicio.setVisible(false);
+            labelTermino.setVisible(false);
+            labelDescricao.setVisible(false);
+            botaoAdicionar.setVisible(false);
+
+
+
+        } else {
+            campoEmpresa.setVisible(true);
+            campoCargo.setVisible(true);
+            campoInicio.setVisible(true);
+            campoTermino.setVisible(true);
+            campoDescricao.setVisible(true);
+            labelEmpresa.setVisible(true);
+            labelCargo.setVisible(true);
+            labelInicio.setVisible(true);
+            labelTermino.setVisible(true);
+            labelDescricao.setVisible(true);
+            botaoAdicionar.setVisible(true);
+        }
+    }
     @FXML
     void VoltarTela(ActionEvent event) {
         HelloApplication.ChangeScene("candidato");

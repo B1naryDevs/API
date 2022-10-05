@@ -95,21 +95,6 @@ public class vagaControler implements Initializable {
 
     @FXML
     private ChoiceBox<String> campoCargo;
-
-    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
-
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-
-        campoCargo.getItems().addAll(cargos);
-
-    }
-
-    public void getCargo(ActionEvent event){
-        String CargoSelecionado = campoCargo.getValue();
-        labelCargo.setText(CargoSelecionado);
-
-    }
     @FXML
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
@@ -127,6 +112,21 @@ public class vagaControler implements Initializable {
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargo.getItems().addAll(cargos);
+
+    }
+
+    public void getCargo(ActionEvent event){
+        String CargoSelecionado = campoCargo.getValue();
+        labelCargo.setText(CargoSelecionado);
+
+    }
 
     @FXML
     private void mascaraCep() {

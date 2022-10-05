@@ -2,12 +2,30 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 
 public class vagaControler {
+
+    @FXML
+    private Label labelCep;
+
+    @FXML
+    private Label labelEndereco;
+
+    @FXML
+    private Label labelBairro;
+
+    @FXML
+    private Label labelCidade;
+
+    @FXML
+    private Label labelEstado;
+
+    @FXML
+    private Label labelNumero;
+
+    @FXML
+    private Label labelComplemento;
 
     @FXML
     private Button botaoFinalizar;
@@ -39,8 +57,6 @@ public class vagaControler {
     @FXML
     private TextField campoExperiencia;
 
-    @FXML
-    private CheckBox campoNao;
 
     @FXML
     private TextField campoNumero;
@@ -52,7 +68,7 @@ public class vagaControler {
     private TextField campoSalario;
 
     @FXML
-    private CheckBox campoSim;
+    private CheckBox campoRemoto;
 
     @FXML
     private Button botaoHome;
@@ -105,26 +121,40 @@ public class vagaControler {
         String experiencia = campoExperiencia.getText();
         String descricao = campoDescricao.getText();
         String periodo = campoPeriodo.getText();
-
-        if(campoSim.isSelected()) {
-            String cep = campoCep.getText();
-            String cidade = campoCidade.getText();
-            String complemento = campoComplemento.getText();
-            String endereco = campoEndereco.getText();
-            String estado = campoEstado.getText();
-            String numero = campoNumero.getText();
-            String bairro = campoBairro.getText();
-        }
-
-        if(campoNao.isSelected()){
-            campoCep.setVisible(false);
-            campoCidade.setVisible(false);
-            campoComplemento.setVisible(false);
-            campoEndereco.setVisible(false);
-            campoEstado.setVisible(false);
-            campoNumero.setVisible(false);
-            campoBairro.setVisible(false);
-        }
     }
 
+    public void CheckBox (ActionEvent event){
+
+            if (campoRemoto.isSelected()) {
+                campoCep.setVisible(false);
+                campoCidade.setVisible(false);
+                campoComplemento.setVisible(false);
+                campoEndereco.setVisible(false);
+                campoEstado.setVisible(false);
+                campoNumero.setVisible(false);
+                campoBairro.setVisible(false);
+                labelBairro.setVisible(false);
+                labelCep.setVisible(false);
+                labelCidade.setVisible(false);
+                labelComplemento.setVisible(false);
+                labelEndereco.setVisible(false);
+                labelNumero.setVisible(false);
+                labelEstado.setVisible(false);
+            } else {
+                campoCep.setVisible(true);
+                campoCidade.setVisible(true);
+                campoComplemento.setVisible(true);
+                campoEndereco.setVisible(true);
+                campoEstado.setVisible(true);
+                campoNumero.setVisible(true);
+                campoBairro.setVisible(true);
+                labelBairro.setVisible(true);
+                labelCep.setVisible(true);
+                labelCidade.setVisible(true);
+                labelComplemento.setVisible(true);
+                labelEndereco.setVisible(true);
+                labelNumero.setVisible(true);
+                labelEstado.setVisible(true);
+            }
+        }
 }

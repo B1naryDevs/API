@@ -18,7 +18,7 @@
             <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
             <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" />
             <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="134.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
-            <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="CADASTRAR" />
+            <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#CadastrarCargo" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="CADASTRAR" />
             <Label layoutX="372.0" layoutY="120.0" prefHeight="92.0" prefWidth="660.0" text="CADASTRO DE CARGO" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />

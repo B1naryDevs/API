@@ -55,9 +55,9 @@ public class candidatoControler3 implements Initializable{
         campoIngles.getItems().addAll(nivel);
 
     }
-    public void getCargo(ActionEvent event){
-        String CargoSelecionado = campoIngles.getValue();
-        labelIngles.setText(CargoSelecionado);
+    public void getNivel(ActionEvent event){
+        String NivelSelecionado = campoIngles.getValue();
+        labelIngles.setText(NivelSelecionado);
 
     }
 

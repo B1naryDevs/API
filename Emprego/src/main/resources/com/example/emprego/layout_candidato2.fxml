@@ -117,7 +117,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label fx:id="labelCargosInteresse" layoutX="754.0" layoutY="270.0" prefHeight="30.0" prefWidth="221.0" text="CARGOS DE INTERESSE*" textFill="WHITE">
+            <Label fx:id="labelCargoInteresse" layoutX="754.0" layoutY="270.0" prefHeight="30.0" prefWidth="221.0" text="CARGOS DE INTERESSE*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -170,7 +170,7 @@
                      </image>
                   </ImageView>
                </graphic></ToggleButton>
-            <ChoiceBox fx:id="campoCargos" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
+            <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
       </children>
     </AnchorPane>
   </children>

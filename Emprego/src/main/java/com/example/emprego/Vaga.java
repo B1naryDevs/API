@@ -4,21 +4,21 @@ public class Vaga {
     private static String cargo;
     private static String periodo;
     private static String expProfissional;
-    private static String salario;
+    private static float salario;
     private static String descricao;
     private static Boolean remoto;
 
-    private static String cep;
+    private static Long cep;
     private static String cidade;
     private static String estado;
-    private static String numero;
+    private static int numero;
     private static String endereco;
     private static  String bairro;
     private static String complemento;
 
     public Vaga(){}
 
-    public Vaga(String cargo,String periodo,String expProfissional,String salario,String descricao,Boolean remoto,String cep,String cidade,String estado,String numero,String endereco,String bairro,String complemento){
+    public Vaga(String cargo,String periodo,String expProfissional,float salario,String descricao,Boolean remoto,Long cep,String cidade,String estado,int numero,String endereco,String bairro,String complemento){
         this.cargo = cargo;
         this.periodo = periodo;
         this.expProfissional = expProfissional;
@@ -58,11 +58,11 @@ public class Vaga {
         return this.expProfissional;
     }
 
-    public void setSalario(String salario) {
+    public void setSalario(float salario) {
         this.salario = salario;
     }
 
-    public String getSalario() {
+    public float getSalario() {
         return this.salario;
     }
 
@@ -82,11 +82,9 @@ public class Vaga {
         return this.remoto;
     }
 
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
+    public void setCep(Long cep) {this.cep = cep;}
 
-    public String getCep() {
+    public Long getCep() {
         return this.cep;
     }
 
@@ -106,11 +104,11 @@ public class Vaga {
         return this.estado;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return this.numero;
     }
 

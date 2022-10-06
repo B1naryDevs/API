@@ -5,7 +5,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.fxml.Initializable;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
 
@@ -139,10 +144,126 @@ public class vagaControler implements Initializable {
     @FXML
     void finalizarVaga(ActionEvent event) {
         String cargo = campoCargo.getValue();
-        String salario = campoSalario.getText();
-        String experiencia = campoExperiencia.getText();
-        String descricao = campoDescricao.getText();
         String periodo = campoPeriodo.getText();
+        String experiencia = campoExperiencia.getText();
+        String salario = campoSalario.getText();
+        String descricao = campoDescricao.getText();
+
+        if (cargo.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O CARGO!");
+            alert.showAndWait();
+        } else if (periodo.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O PERIODO!");
+            alert.showAndWait();
+        } else if (experiencia.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA A EXPERIÊNCIA!");
+            alert.showAndWait();
+        } else if (salario.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O SALÁRIO!");
+            alert.showAndWait();
+        } else if (descricao.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA A DESCRIÇÃO!");
+            alert.showAndWait();
+        }else{
+            if (campoRemoto.isSelected()) {
+                String cep = campoCep.getText();
+                String[] char_cep = cep.split("");
+                List<String> chars = new ArrayList();
+                String remover = "";
+
+                long cep_long = 0L;
+
+                chars.addAll(Arrays.asList(char_cep));
+
+                for (String sss : chars){
+
+                    if (!"-".equals(sss)){
+
+                        remover += sss;
+
+                    }
+
+                }
+                cep_long = Long.parseLong(remover);
+                String cep_s = String.valueOf(cep_long);
+                String endereco = campoEndereco.getText();
+                String bairro = campoBairro.getText();
+                String cidade = campoCidade.getText();
+                String estado = campoEstado.getText();
+                String num_s = campoNumero.getText();
+                int numero = Integer.parseInt(num_s);
+                String complemento = campoComplemento.getText();
+                if (cep.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("PREENCHA O CEP!");
+                    alert.showAndWait();
+                } else if (endereco.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("PREENCHA O ENDEREÇO!");
+                    alert.showAndWait();
+                } else if (bairro.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("PREENCHA O BAIRRO!");
+                    alert.showAndWait();
+                } else if (cidade.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("PREENCHA A CIDADE!");
+                    alert.showAndWait();
+                } else if (estado.isEmpty()) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("PREENCHA O ESTADO!");
+                    alert.showAndWait();
+                }else{
+                    String CEP_REGEX = "\\d{7}";
+                    Pattern CEP_PATTERN = Pattern.compile(CEP_REGEX);
+                    if (CEP_PATTERN.matcher(cep_s).matches()) {
+                        String NUMERO_REGEX = "\\d";
+                        Pattern NUMERO_PATTERN = Pattern.compile(NUMERO_REGEX);
+                        if (NUMERO_PATTERN.matcher(num_s).matches()) {
+                            Vaga vaga = new Vaga();
+                            vaga.setCep(cep_long);
+                            vaga.setEndereco(endereco);
+                            vaga.setBairro(bairro);
+                            vaga.setCidade(cidade);
+                            vaga.setEstado(estado);
+                            vaga.setNumero(numero);
+                            vaga.setComplemento(complemento);
+                        }else{
+                            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setHeaderText("FORMATO DE NUMERO INVÁLIDO!");
+                            alert.showAndWait();
+                        }
+                    }else{
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText("FORMATO DE CEP INVÁLIDO!");
+                        alert.showAndWait();
+                    }
+                }
+            }
+            //Validação salário
+            String SALARIO_REGEX = "\\d{3,}";
+            Pattern SALARIO_PATTERN = Pattern.compile(SALARIO_REGEX);
+            if (SALARIO_PATTERN.matcher(salario).matches()) {
+                Vaga vaga = new Vaga();
+                vaga.setCargo(cargo);
+                vaga.setPeriodo(periodo);
+                vaga.setExpProfissional(experiencia);
+                vaga.setSalario(Float.valueOf(salario));
+                vaga.setDescricao(descricao);
+                ////////////////////////////////////////////////
+                ///////////////CONEXÃO COM BANCO////////////////
+                ////////////////////////////////////////////////
+            }else{
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("FORMATO DE SALÁRIO INVÁLIDO!");
+                alert.showAndWait();
+            }
+        }
     }
 
     public void CheckBox (ActionEvent event){

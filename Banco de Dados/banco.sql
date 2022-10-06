@@ -10,7 +10,7 @@ use api;
 CREATE TABLE candidato(
 nome_candidato varchar(30) not null,
 cpf bigint (11) not null,
-data_nasc date not null,
+data_nasc varchar(10) not null,
 telefone bigint (11) not null,
 pret_salarial decimal(7,2) not null,
 primary key (cpf)) default charset = utf8;
@@ -63,8 +63,8 @@ CREATE TABLE formacao (
     cpf_candidato_form BIGINT(11) NOT NULL,
     instituicao VARCHAR(50) NOT NULL,
     curso VARCHAR(30) NOT NULL,
-    inicio_curso DATE NOT NULL,
-    termino_curso DATE NOT NULL,
+    inicio_curso varchar(10) not null,
+    termino_curso varchar(10) not null,
     incompleto ENUM('Sim', 'Não') NOT NULL,
     PRIMARY KEY (id_formacao)
 );
@@ -73,8 +73,8 @@ CREATE TABLE experiencia_profissional (
     id_cargo INT(5) AUTO_INCREMENT NOT NULL,
     cpf_candidato_exp BIGINT(11) NOT NULL,
     cargo_exercido VARCHAR(40) NOT NULL,
-    inicio_exp DATE NOT NULL,
-    termino_exp DATE NOT NULL,
+    inicio_exp varchar(10) not null,
+    termino_exp varchar(10) not null,
     cargo_atual ENUM('Sim', 'Não') NOT NULL,
     desc_atividades VARCHAR(80) NOT NULL,
     PRIMARY KEY (id_cargo)
@@ -99,7 +99,7 @@ CREATE TABLE candidatura (
     id_candidatura INT(5) AUTO_INCREMENT,
     cpf_candidatura BIGINT(11) NOT NULL,
     cod_vaga INT(5) NOT NULL,
-    data_cand DATE NOT NULL,
+    data_cand varchar(10) not null,
     status_cand ENUM('Em andamento', 'Desclassificado', 'Entrevista Online', 'Entrevista Presencial', 
     'Entrevista com Diretoria', 'Em Contratação' , 'Contratado'),
     PRIMARY KEY (id_candidatura)
@@ -168,6 +168,8 @@ insert into setor(nome_setor) values
 
 # ADICIONAR CARGOS
 insert into cargo (nome_cargo, setor_cargo) values 
+('DESENVOLVEDOR BACK-END', 'Tecnologia e Informação'),
+('DESENVOLVEDOR FRONT-END', 'Tecnologia e Informação')
 ('Analista de Sistemas Junior', 'Tecnologia e Informação'),
 ('Suporte Técnico', 'Tecnologia e Informação'),
 ('Gerente Financeiro', 'Financeiro'),
@@ -232,17 +234,6 @@ insert into candidatura(empresa_candidatura, cargo_candidatura, id_candidatura, 
 
 # TESTE DE SELECTS PARA RETORNO DE DADOS ----------------------------------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------
-
-# VER TODOS :
-select * from setor_cargo;
-select * from cargo;
-select * from rh;
-select * from vaga;
-select * from candidato;
-select * from experiencia_profissional;
-select * from formacao;
-select * from competencia;
-select * from candidatura;
 
 #SELECTS ESPECIAIS------------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------------------------

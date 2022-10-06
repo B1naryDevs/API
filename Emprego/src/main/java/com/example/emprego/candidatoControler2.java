@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
-
+import javafx.scene.control.ChoiceBox;
 import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -42,9 +42,6 @@ public class candidatoControler2 implements Initializable {
     private ToggleButton botaoSair;
 
     @FXML
-    private Label labelCargosInteresse;
-
-    @FXML
     private Label labelEmpresa;
 
     @FXML
@@ -60,13 +57,14 @@ public class candidatoControler2 implements Initializable {
     private Label labelDescricao;
 
     @FXML
-    private ChoiceBox<String> campoCargos;
+    private Label labelCargoInteresse;
 
     @FXML
     private CheckBox campoExperiencia;
 
     @FXML
     private TextField campoCargo;
+
     @FXML
     private TextField campoPretensao;
 
@@ -81,6 +79,24 @@ public class candidatoControler2 implements Initializable {
 
     @FXML
     private DatePicker campoTermino;
+
+    @FXML
+    private ChoiceBox<String> campoCargoInteresse;
+
+    private String[] setores = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargoInteresse.getItems().addAll(setores);
+
+    }
+
+    public void getInteresse(ActionEvent event){
+        String cargoSelecionado = campoCargoInteresse.getValue();
+        labelCargoInteresse.setText(cargoSelecionado);
+
+    }
     
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
@@ -95,7 +111,7 @@ public class candidatoControler2 implements Initializable {
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String empresa = campoEmpresa.getText();
         String cargo = campoCargo.getText();
-        String cargos = campoCargos.getValue();
+        String cargos = campoCargoInteresse.getValue();
         LocalDate inicioinicial = campoInicio.getValue();
         LocalDate terminoinicial = campoTermino.getValue();
         String inicio = String.valueOf(inicioinicial);
@@ -122,7 +138,7 @@ public class candidatoControler2 implements Initializable {
                 candidato.setExpInicio(inicio);
                 candidato.setExpTermino(termino);
                 candidato.setDescricao(descricao);
-                candidato.setCargoInteresse(cargo);
+                candidato.setCargoInteresse(cargos);
                 candidato.setPretSalarial(pretensao);
 
                 HelloApplication.ChangeScene("candidato3");
@@ -136,20 +152,7 @@ public class candidatoControler2 implements Initializable {
     }
 
 
-    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-
-        campoCargos.getItems().addAll(cargos);
-
-    }
-
-    public void getCargo(ActionEvent event){
-        String CargoSelecionado = campoCargos.getValue();
-        labelCargosInteresse.setText(CargoSelecionado);
-
-    }
 
     public void CheckEmprego (ActionEvent event){
 

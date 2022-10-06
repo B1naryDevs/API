@@ -51,5 +51,8 @@ public class cargoControler {
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    
+    @FXML
+    void CadastrarCargo(ActionEvent event) {HelloApplication.ChangeScene("cargofinal");}
 
 }

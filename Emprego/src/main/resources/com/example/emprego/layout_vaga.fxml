@@ -59,8 +59,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoPeriodo" layoutX="521.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" />
-            <Label layoutX="522.0" layoutY="255.0" text="PERÍODO*" textFill="WHITE">
+            <Label fx:id="labelPeriodo" layoutX="522.0" layoutY="255.0" text="PERÍODO*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -135,6 +134,7 @@
             <TextArea fx:id="campoDescricao" layoutX="953.0" layoutY="386.0" prefHeight="170.0" prefWidth="275.0" />
             <ChoiceBox fx:id="campoCargo" layoutX="93.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
             <ChoiceBox fx:id="campoEstado" layoutX="381.0" layoutY="552.0" prefHeight="25.0" prefWidth="200.0" stylesheets="@../../../styles/Styles4.css" />
+            <ChoiceBox fx:id="campoPeriodo" layoutX="521.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
       </children>
     </AnchorPane>
   </children>

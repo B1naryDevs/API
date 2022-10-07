@@ -45,19 +45,27 @@ public class loginControler {
     @FXML
     void SairTela(ActionEvent event) { HelloApplication.ChangeScene("menu"); }
 
+    @FXML
+    Image img_MostrarSenha = new Image("C:\\Programação\\API1\\Emprego\\src\\main\\resources\\imagens\\iconMostrar.png",40,25,true,true);
+    Image img_OcultarSenha = new Image("C:\\Programação\\API1\\Emprego\\src\\main\\resources\\imagens\\iconApagar.png",40,25,true,true);
+
+
     //ocultar/mostrar senha
     @FXML
     void mostrarSenha(ActionEvent event){
         if(tgbtMostrarSenha.isSelected()){
+            tgbtMostrarSenha.setGraphic(new ImageView(img_OcultarSenha));
             campoSenha2.setText(campoSenha.getText());
             campoSenha2.setVisible(true);
             campoSenha.setVisible(false);
         }else{
+            tgbtMostrarSenha.setGraphic(new ImageView(img_MostrarSenha));
             campoSenha.setText(campoSenha2.getText());
             campoSenha.setVisible(true);
             campoSenha2.setVisible(false);
         }
     }
+
 }
 
 

@@ -5,10 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -16,12 +18,6 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler">
     <children>
@@ -165,22 +161,49 @@
                     </font>
                 </Label>
                 <DatePicker fx:id="campoData" layoutX="931.0" layoutY="290.0" prefHeight="30.0" prefWidth="329.0" />
-                <PasswordField fx:id="campoSenha" layoutX="500.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+                <StackPane layoutX="500.0" layoutY="420.0">
+                    <children>
+                        <TextField fx:id="campoSenha4" prefHeight="31.0" prefWidth="329.0" />
+                        <PasswordField fx:id="campoSenha3" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+                    </children>
+                </StackPane>
                 <Label layoutX="500.0" layoutY="476.0" text="CONFIRMAR SENHA*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <PasswordField fx:id="campoConfirmarsenha" layoutX="500.0" layoutY="500.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
-            <TextField fx:id="campoNascimento" layoutX="931.0" layoutY="330.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="DD/MM/AAAA" />
-            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
-               <graphic>
-                      <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
-                          <image>
-                              <Image url="@../../../imagens/exit.png" />
-                          </image>
-                      </ImageView>
-               </graphic></ToggleButton>
+                <StackPane layoutX="500.0" layoutY="500.0">
+                    <children>
+                        <TextField fx:id="campoConfirmarsenha2" prefHeight="30.0" prefWidth="329.0" />
+                        <PasswordField fx:id="campoConfirmarsenha" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+                    </children>
+                </StackPane>
+                <TextField fx:id="campoNascimento" layoutX="931.0" layoutY="330.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="DD/MM/AAAA" />
+                <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/exit.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></ToggleButton>
+                <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="828.0" layoutY="499.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/iconApagar.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></ToggleButton>
+                <ToggleButton fx:id="tgbtMostrarSenha1" layoutX="829.0" layoutY="420.0" mnemonicParsing="false" onAction="#mostrarSenha1" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/iconApagar.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
             </children>
         </AnchorPane>
     </children>

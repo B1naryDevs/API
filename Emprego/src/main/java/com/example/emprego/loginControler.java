@@ -19,13 +19,13 @@ public class loginControler {
 
     @FXML
     private ToggleButton botaoSair;
-    
+
     @FXML
     private TextField campoEmail;
 
     @FXML
     private PasswordField campoSenha;
-    
+
     @FXML
     private TextField campoSenha2;
 
@@ -41,7 +41,7 @@ public class loginControler {
     void entrarLogin(ActionEvent event) {
         HelloApplication.ChangeScene("menu");
     }
-    
+
     @FXML
     void SairTela(ActionEvent event) { HelloApplication.ChangeScene("menu"); }
 

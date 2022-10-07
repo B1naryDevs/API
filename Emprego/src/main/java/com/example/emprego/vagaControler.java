@@ -63,7 +63,7 @@ public class vagaControler implements Initializable {
     private TextField campoEndereco;
 
     @FXML
-    private TextField campoEstado;
+    private ChoiceBox<String> campoEstado;
 
     @FXML
     private TextField campoExperiencia;
@@ -101,6 +101,7 @@ public class vagaControler implements Initializable {
 
     @FXML
     private ChoiceBox<String> campoCargo;
+
     @FXML
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
@@ -119,18 +120,32 @@ public class vagaControler implements Initializable {
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
+
     private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+
+    final ChoiceBox<String> cb = new ChoiceBox<String>(
+            FXCollections.observableArrayList( "DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" ));
+    private String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
+"PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"};
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         campoCargo.getItems().addAll(cargos);
+        campoEstado.getItems().addAll(estados);
 
     }
 
     public void getCargo(ActionEvent event){
         String CargoSelecionado = campoCargo.getValue();
         labelCargo.setText(CargoSelecionado);
+
+    }
+
+    public void getEstado(ActionEvent event){
+        String EstadoSelecionado = campoEstado.getValue();
+        labelEstado.setText(EstadoSelecionado);
 
     }
 
@@ -195,7 +210,7 @@ public class vagaControler implements Initializable {
                 String endereco = campoEndereco.getText();
                 String bairro = campoBairro.getText();
                 String cidade = campoCidade.getText();
-                String estado = campoEstado.getText();
+                String estado = campoEstado.getValue();
                 String num_s = campoNumero.getText();
                 int numero = Integer.parseInt(num_s);
                 String complemento = campoComplemento.getText();

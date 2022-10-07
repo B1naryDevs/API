@@ -42,6 +42,9 @@ public class vagaControler implements Initializable {
     private Label labelCargo;
 
     @FXML
+    private Label labelPeriodo;
+
+    @FXML
     private Button botaoFinalizar;
 
     @FXML
@@ -73,9 +76,6 @@ public class vagaControler implements Initializable {
     private TextField campoNumero;
 
     @FXML
-    private TextField campoPeriodo;
-
-    @FXML
     private TextField campoSalario;
 
     @FXML
@@ -103,6 +103,9 @@ public class vagaControler implements Initializable {
     private ChoiceBox<String> campoCargo;
 
     @FXML
+    private ChoiceBox<String> campoPeriodo;
+
+    @FXML
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
@@ -124,12 +127,14 @@ public class vagaControler implements Initializable {
     private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
     private String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
 "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"};
+    private String[] periodos = {"DIURNO", "NOTURNO", "INTEGRAL"};
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         campoCargo.getItems().addAll(cargos);
         campoEstado.getItems().addAll(estados);
+        campoPeriodo.getItems().addAll(periodos);
 
     }
 
@@ -145,6 +150,12 @@ public class vagaControler implements Initializable {
 
     }
 
+    public void getPeriodo(ActionEvent event){
+        String PeriodoSelecionado = campoPeriodo.getValue();
+        labelPeriodo.setText(PeriodoSelecionado);
+
+    }
+
     @FXML
     private void mascaraCep() {
         Formatter cep = new Formatter();
@@ -156,7 +167,7 @@ public class vagaControler implements Initializable {
     @FXML
     void finalizarVaga(ActionEvent event) {
         String cargo = campoCargo.getValue();
-        String periodo = campoPeriodo.getText();
+        String periodo = campoPeriodo.getValue();
         String experiencia = campoExperiencia.getText();
         String salario = campoSalario.getText();
         String descricao = campoDescricao.getText();

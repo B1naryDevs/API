@@ -3,6 +3,7 @@ package com.example.emprego;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -15,7 +16,7 @@ public class cargoControler {
 
     @FXML
     private TextField campoCargo2;
-    
+
     @FXML
     private Button botaoHome;
 
@@ -35,24 +36,44 @@ public class cargoControler {
     private ToggleButton botaoSair;
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {
+        HelloApplication.ChangeScene("menu");
+    }
 
     @FXML
-    void AvancarVaga(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVaga(ActionEvent event) {
+        HelloApplication.ChangeScene("vaga");
+    }
 
     @FXML
-    void AvancarCargo(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargo(ActionEvent event) {
+        HelloApplication.ChangeScene("cargo");
+    }
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRH(ActionEvent event) {
+        HelloApplication.ChangeScene("");
+    }
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorio(ActionEvent event) {
+        HelloApplication.ChangeScene("");
+    }
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
-    
-    @FXML
-    void CadastrarCargo(ActionEvent event) {HelloApplication.ChangeScene("cargofinal");}
+    void SairTela(ActionEvent event) {
+        HelloApplication.ChangeScene("login");
+    }
 
+    @FXML
+    void CadastrarCargo(ActionEvent event) {
+        String cargo2 = campoCargo2.getText();
+        if (cargo2.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O CARGO!");
+            alert.showAndWait();
+        }else{
+            HelloApplication.ChangeScene("cargofinal");
+        }
+    }
 }

@@ -174,7 +174,7 @@ insert into setor(nome_setor) values
 # ADICIONAR CARGOS
 insert into cargo (nome_cargo, setor_cargo) values 
 ('DESENVOLVEDOR BACK-END', 'Tecnologia e Informação'),
-('DESENVOLVEDOR FRONT-END', 'Tecnologia e Informação')
+('DESENVOLVEDOR FRONT-END', 'Tecnologia e Informação'),
 ('Analista de Sistemas Junior', 'Tecnologia e Informação'),
 ('Suporte Técnico', 'Tecnologia e Informação'),
 ('Gerente Financeiro', 'Financeiro'),

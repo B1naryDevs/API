@@ -44,7 +44,7 @@ public class loginControler {
     
     @FXML
     void SairTela(ActionEvent event) { HelloApplication.ChangeScene("menu"); }
-
+/*
     @FXML
     Image img_MostrarSenha = new Image("C:\\Programação\\API1\\Emprego\\src\\main\\resources\\imagens\\iconMostrar.png",40,25,true,true);
     Image img_OcultarSenha = new Image("C:\\Programação\\API1\\Emprego\\src\\main\\resources\\imagens\\iconApagar.png",40,25,true,true);
@@ -64,7 +64,7 @@ public class loginControler {
             campoSenha.setVisible(true);
             campoSenha2.setVisible(false);
         }
-    }
+    }*/
 
 }
 

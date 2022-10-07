@@ -273,7 +273,7 @@ public class vagaControler implements Initializable {
                 vaga.setExpProfissional(experiencia);
                 vaga.setSalario(sal);
                 vaga.setDescricao(descricao);
-                vaga.setEndereco(campoEndereco.getText());
+                vaga.setEndereco(campoEndereco.getText() + ", " + campoBairro.getText() + ", " + campoComplemento.getText() + ", " + campoCep.getText());
                 vaga.setCidade(campoCidade.getText());
                 vaga.setRemote("Sim");
                 vaga.setStatus_vaga("Encerrada");

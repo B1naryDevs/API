@@ -105,7 +105,6 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoEstado" layoutX="381.0" layoutY="552.0" prefHeight="25.0" prefWidth="200.0" />
             <Label fx:id="labelComplemento" layoutX="97.0" layoutY="600.0" text="COMPLEMENTO" textFill="WHITE">
                <font>
                   <Font size="20.0" />

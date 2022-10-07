@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.VagaDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -249,15 +250,36 @@ public class vagaControler implements Initializable {
             String SALARIO_REGEX = "\\d{3,}";
             Pattern SALARIO_PATTERN = Pattern.compile(SALARIO_REGEX);
             if (SALARIO_PATTERN.matcher(salario).matches()) {
-                Vaga vaga = new Vaga();
-                vaga.setCargo(cargo);
-                vaga.setPeriodo(periodo);
-                vaga.setExpProfissional(experiencia);
-                vaga.setSalario(Float.valueOf(salario));
-                vaga.setDescricao(descricao);
+                //Vaga vaga = new Vaga();
+                //vaga.setCargo(cargo);
+                //vaga.setPeriodo(periodo);
+                //vaga.setExpProfissional(experiencia);
+                //vaga.setSalario(Float.valueOf(salario));
+                //vaga.setDescricao(descricao);
                 ////////////////////////////////////////////////
                 ///////////////CONEXÃO COM BANCO////////////////
                 ////////////////////////////////////////////////
+
+                Float sal = Float.valueOf(salario);
+
+
+                VagaDAO vagaDAO = new VagaDAO();
+
+                Vaga vaga = new Vaga();
+                vaga.setCargo(cargo);
+                vaga.setEmpresa_vaga("Pro4TECH");
+                vaga.setSetor_vaga("Tecnologia e informação");
+                vaga.setPeriodo(periodo);
+                vaga.setExpProfissional(experiencia);
+                vaga.setSalario(sal);
+                vaga.setDescricao(descricao);
+                vaga.setEndereco(campoEndereco.getText());
+                vaga.setCidade(campoCidade.getText());
+                vaga.setRemote("Sim");
+                vaga.setStatus_vaga("Encerrada");
+
+                vagaDAO.save(vaga);
+
             }else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("FORMATO DE SALÁRIO INVÁLIDO!");

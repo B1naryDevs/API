@@ -2,10 +2,11 @@ package AcessoDAO;
 
 import ConnectionFA.ConnectionFactory;
 import com.example.emprego.Vaga;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-public class VagaAO {
+public class VagaDAO {
 
     public void save (Vaga vaga){
         String sql = "INSERT INTO vaga (cargo_vaga, empresa_vaga, setor_vaga, periodo, experiencia, salario, descricao_vaga, endereco_vaga, cidade_vaga, remoto, status_vaga) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";

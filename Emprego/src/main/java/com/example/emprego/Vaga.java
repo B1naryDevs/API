@@ -16,9 +16,46 @@ public class Vaga {
     private static  String bairro;
     private static String complemento;
 
+    public static String getEmpresa_vaga() {
+        return empresa_vaga;
+    }
+
+    public static void setEmpresa_vaga(String empresa_vaga) {
+        Vaga.empresa_vaga = empresa_vaga;
+    }
+
+    public static String getSetor_vaga() {
+        return setor_vaga;
+    }
+
+    public static void setSetor_vaga(String setor_vaga) {
+        Vaga.setor_vaga = setor_vaga;
+    }
+
+    public static String getRemote() {
+        return remote;
+    }
+
+    public static void setRemote(String remote) {
+        Vaga.remote = remote;
+    }
+
+    public static String getStatus_vaga() {
+        return status_vaga;
+    }
+
+    public static void setStatus_vaga(String status_vaga) {
+        Vaga.status_vaga = status_vaga;
+    }
+
+    private static String empresa_vaga;
+    private static String setor_vaga;
+    private static String remote;
+    private static String status_vaga;
+
     public Vaga(){}
 
-    public Vaga(String cargo,String periodo,String expProfissional,float salario,String descricao,Boolean remoto,Long cep,String cidade,String estado,int numero,String endereco,String bairro,String complemento){
+    public Vaga(String cargo,String periodo,String expProfissional,float salario,String descricao,Boolean remoto,Long cep,String cidade,String estado,int numero,String endereco,String bairro,String complemento, String empresa_vaga, String setor_vaga,String remote,String status_vaga){
         this.cargo = cargo;
         this.periodo = periodo;
         this.expProfissional = expProfissional;

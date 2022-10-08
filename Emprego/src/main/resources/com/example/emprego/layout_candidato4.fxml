@@ -20,7 +20,7 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="480.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
+            <Button fx:id="botaoLogin" layoutX="480.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarLogin" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
@@ -40,11 +40,6 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../imagens/exit.png" />
-               </image>
-            </ImageView>
             <Label alignment="CENTER" graphicTextGap="60.0" layoutX="446.0" layoutY="370.0" prefHeight="80.0" prefWidth="475.0" text="CADASTRO EFETUADO COM SUCESSO!" textFill="#ebebeb">
                <font>
                   <Font size="25.0" />
@@ -65,23 +60,15 @@
                   <Image url="@../../../imagens/confirmacao.png" />
                </image>
             </ImageView>
-            <Button layoutX="1250.0" layoutY="25.0" mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="48.0" textFill="WHITE">
-               <font>
-                  <Font size="7.0" />
-               </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Button>
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image></ImageView>
+               </graphic>
+            </ToggleButton>
       </children>
     </AnchorPane>
-      <Button mnemonicParsing="false" opacity="0.0" prefHeight="60.0" prefWidth="48.0" textFill="WHITE">
-         <font>
-            <Font size="7.0" />
-         </font>
-         <opaqueInsets>
-            <Insets />
-         </opaqueInsets>
-      </Button>
   </children>
 </VBox>

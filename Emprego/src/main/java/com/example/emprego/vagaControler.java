@@ -293,6 +293,8 @@ public class vagaControler implements Initializable {
 
                 vagaDAO.save(vaga);
 
+                HelloApplication.ChangeScene("vagafinal");
+
             }else{
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("FORMATO DE SALÁRIO INVÁLIDO!");

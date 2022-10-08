@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CargoDAO;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -73,6 +74,15 @@ public class cargoControler {
             alert.setHeaderText("PREENCHA O CARGO!");
             alert.showAndWait();
         }else{
+
+            CargoDAO cargoDAO = new CargoDAO();
+
+            Cargo cargo = new Cargo();
+            cargo.setNome(campoCargo2.getText());
+            cargo.setSetor("Tecnologia e Inovação");
+
+            cargoDAO.save(cargo);
+
             HelloApplication.ChangeScene("cargofinal");
         }
     }

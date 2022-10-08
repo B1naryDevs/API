@@ -85,7 +85,7 @@
 <img src = "https://user-images.githubusercontent.com/101594950/190663698-1fe9b907-3f5d-41eb-8ddf-7b42bd745816.png" width="900" height="200" /> <br>
 
 ### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)
-### 2º Sprint - 19/09 á 09/10
+###[2º Sprint - 19/09 á 09/10](https://github.com/B1naryDevs/API/tree/dev/2%C2%B0%20Sprint)
 ### 3º Sprint - 13/10 á 06/11
 ### 4º Sprint - 07/11 á 27/11
 

@@ -77,15 +77,6 @@
                         </ToggleButton>
                     </children>
                 </HBox>
-                <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
-                    <graphic>
-                        <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../imagens/exit.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </ToggleButton>
             </children>
         </AnchorPane>
     </children>

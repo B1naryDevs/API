@@ -79,7 +79,7 @@ public class cargoControler {
 
             Cargo cargo = new Cargo();
             cargo.setNome(campoCargo2.getText());
-            cargo.setSetor("Tecnologia e Inovação");
+            cargo.setSetor("Tecnologia e Informação");
 
             cargoDAO.save(cargo);
 

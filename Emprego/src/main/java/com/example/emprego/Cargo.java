@@ -15,7 +15,7 @@ public class Cargo {
         return nome;
     }
 
-    public static void setNome(String cargo) {
+    public static void setNome(String nome) {
         Cargo.nome = nome;
     }
 

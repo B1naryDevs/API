@@ -1,4 +1,4 @@
-<hr>
+[//]: # (CAPA 2° SPRINT)
 
 <div align="center">
 
@@ -6,9 +6,12 @@
   
 <hr>
 
+[//]: # (CAPA BACKLOG DA SPRINT)
+
 <img src = "https://user-images.githubusercontent.com/101594950/190470772-8df0141f-2bc7-4aa0-a361-7d501a8c4cb9.png" width="800" height="200" /> <br>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190887718-ab7274c2-7c70-4fd0-8f50-7d16d4742860.jpg" width="1000" height="450" /> <br>
+
+<img src = "https://user-images.githubusercontent.com/101594950/194714542-564633f4-e053-4c89-88ad-2fc6b50d7155.jpeg" width="1000" height="450" /> <br>
 
 <hr>
  
@@ -20,7 +23,7 @@
   
 <br>
   
- ![Sem título](https://user-images.githubusercontent.com/101594950/190927874-e2b1aed3-d8db-412b-a7af-1e45bed0fe49.png)
+![modelagemFinal](https://user-images.githubusercontent.com/101594950/194715022-a4b6c7ea-5488-4289-8508-291294453158.jpeg)
   
 </summary>
   
@@ -29,7 +32,21 @@
 <hr>
 
 <img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
-  
+
+<details>
+
+<summary> LOGIN DE USUÁRIO </summary>
+
+# LOGIN OU CADASTRO 
+
+![login1](https://user-images.githubusercontent.com/101594950/194718892-bc4f5025-01aa-4e8d-ac4e-a462dd2f6c3b.png)
+
+![login2](https://user-images.githubusercontent.com/101594950/194718894-1287d61f-768f-46a0-a28a-8b6a00fe52bc.png)
+
+</summary>
+
+</details>
+
 </div>
 
 <div align = "center">
@@ -39,10 +56,10 @@
  <summary> CADASTRO DE CANDIDATO </summary><br>
   
  ## Informações Pessoais  <br> 
-  
+
  <div align="center">
   
- <img src="https://user-images.githubusercontent.com/101594950/190285159-5f8db807-90a5-4562-b870-4ee770f3ec96.png"> <br>
+ ![candidato1](https://user-images.githubusercontent.com/101594950/194717874-7cddd5f1-4d20-4bc6-8d84-fdf9708fc212.png)
   
  </div>
   
@@ -50,7 +67,9 @@
   
   <div align="center">
   
-  <img src="https://user-images.githubusercontent.com/101594950/190285169-ba31c8a4-918a-4b5a-a46d-4080ab6a47f4.png">
+  ![candidato3](https://user-images.githubusercontent.com/101594950/194717991-4c645cb5-8ff9-431e-ad87-a788c0982611.png)
+  
+  ![candidato2](https://user-images.githubusercontent.com/101594950/194717953-ff9068cf-2ac1-4075-baf7-86c3f4465f74.png)
   
   </div>
   
@@ -58,15 +77,15 @@
   
  <div align="center">
   
- <img src="https://user-images.githubusercontent.com/101594950/190285171-9a263be0-a6ec-4add-b8e2-e69d3cd2abfa.png">
-   
+![candidato4](https://user-images.githubusercontent.com/101594950/194718001-2dd49db5-1467-4e31-81d5-1b5ab4a4fd1b.png)
+
  </div>
   
   ## Confirmação  <br>
   
  <div align = "center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190285186-4847bb72-474d-407d-816f-15d223a6a788.png">
+ 
+![candidato5](https://user-images.githubusercontent.com/101594950/194718070-2b98bf8d-43ec-40e8-88c2-b395242113c0.png)
    
  </div>
  
@@ -80,17 +99,19 @@
  ## Preenchimento de Informações <br> 
   
  <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190403096-df91d8b7-110a-46b8-800f-7f3879257caa.png"> <br>
-  
+ 
+ ![vaga1 1](https://user-images.githubusercontent.com/101594950/194718294-7917948c-a2a6-42a2-8fb0-062988d1c493.png)
+ 
+ ![vaga1](https://user-images.githubusercontent.com/101594950/194718203-e0ed2e20-82ae-4871-aaaf-1193a8f86451.png)
+
  </div>
   
  ## Finalizado <br>
   
  <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
-    
+ 
+  ![vaga2](https://user-images.githubusercontent.com/101594950/194718356-0dd4a261-5e09-4ef5-afe5-fb47ef0c1702.png)
+
  </details>
    
   <hr>

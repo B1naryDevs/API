@@ -31,7 +31,7 @@ public class candidatoControler4 {
         String exptermino = candidato.getExpTermino();
         String descricao = candidato.getDescricao();
         String cargos = candidato.getCargoInteresse();
-        String pretensao = candidato.getPretSalarial();
+        float pretensao = candidato.getPretSalarial();
         String competencia = candidato.getCompetencia();
         String idioma = candidato.getIdioma();
         String instituicao = candidato.getInstituicao();

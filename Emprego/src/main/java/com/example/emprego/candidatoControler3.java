@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidatoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -149,7 +150,7 @@ public class candidatoControler3 implements Initializable{
                     String exptermino = candidato.getExpTermino();
                     String descricao = candidato.getDescricao();
                     String cargos = candidato.getCargoInteresse();
-                    String pretensao = candidato.getPretSalarial();
+                    String pretensao = String.valueOf(candidato.getPretSalarial());
 
                     // Objeto para receber os arquivos
                     File arquivoCSV = new File("dados_candidato.csv");
@@ -188,6 +189,28 @@ public class candidatoControler3 implements Initializable{
 
                     // fecha conexão com arquivo
                     pw.close();
+
+                    float sal = Float.valueOf(pretensao);
+
+                    CandidatoDAO candidatoDAO = new CandidatoDAO();
+
+                    Candidato candidatobanc = new Candidato();
+                    candidatobanc.setNome(nome);
+                    candidatobanc.setCpf(cpf);
+                    candidatobanc.setDataNac(data);
+                    candidatobanc.setTelefone(telefone);
+                    candidatobanc.setPretSalarial(String.valueOf(sal));
+
+                    candidatoDAO.savecand(candidatobanc);
+
+                    CandidatoDAO candidatoUsuDAO = new CandidatoDAO();
+                    Candidato candusu = new Candidato();
+
+                    candusu.setEmail(email);
+                    candusu.setSenha(senha);
+                    candusu.setCpf(cpf);
+
+                    candidatoUsuDAO.saveusucand(candusu);
 
                     HelloApplication.ChangeScene("candidatofinal");
                 } else {

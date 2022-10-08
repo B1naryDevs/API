@@ -272,15 +272,6 @@ public class vagaControler implements Initializable {
             String SALARIO_REGEX = "\\d{3,}";
             Pattern SALARIO_PATTERN = Pattern.compile(SALARIO_REGEX);
             if (SALARIO_PATTERN.matcher(salario).matches()) {
-                //Vaga vaga = new Vaga();
-                //vaga.setCargo(cargo);
-                //vaga.setPeriodo(periodo);
-                //vaga.setExpProfissional(experiencia);
-                //vaga.setSalario(Float.valueOf(salario));
-                //vaga.setDescricao(descricao);
-                ////////////////////////////////////////////////
-                ///////////////CONEXÃO COM BANCO////////////////
-                ////////////////////////////////////////////////
 
                 Float sal = Float.valueOf(salario);
 
@@ -290,15 +281,15 @@ public class vagaControler implements Initializable {
                 Vaga vaga = new Vaga();
                 vaga.setCargo(cargo);
                 vaga.setEmpresa_vaga("Pro4TECH");
-                vaga.setSetor_vaga("Tecnologia e informação");
+                vaga.setSetor_vaga("Tecnologia e Informação");
                 vaga.setPeriodo(periodo);
                 vaga.setExpProfissional(experiencia);
                 vaga.setSalario(sal);
                 vaga.setDescricao(descricao);
-                vaga.setEndereco(campoEndereco.getText() + ", " + campoBairro.getText() + ", " + campoComplemento.getText() + ", " + campoCep.getText());
+                vaga.setEndereco(campoEndereco.getText() + ", " + campoNumero.getText() + ", " + campoBairro.getText() + ", " + campoComplemento.getText() + ", " + campoCep.getText());
                 vaga.setCidade(campoCidade.getText());
-                vaga.setRemote("Sim");
-                vaga.setStatus_vaga("Encerrada");
+                vaga.setRemote("Não");
+                vaga.setStatus_vaga("Aberta");
 
                 vagaDAO.save(vaga);
 

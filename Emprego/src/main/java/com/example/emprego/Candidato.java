@@ -146,8 +146,8 @@ public class Candidato {
         this.cargoInteresse = cargoInteresse;
     }
 
-    public String getPretSalarial() {
-        return pretSalarial;
+    public float getPretSalarial() {
+        return Float.parseFloat(pretSalarial);
     }
 
     public void setPretSalarial(String pretSalarial) {

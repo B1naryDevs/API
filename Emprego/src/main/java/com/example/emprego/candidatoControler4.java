@@ -10,11 +10,28 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import javafx.scene.control.ToggleButton;
 
 public class candidatoControler4 {
 
     @FXML
     private Button botaoHome;
+    
+    @FXML
+    private Button botaoAvancar;
+
+    @FXML
+    private Button botaoLogin;
+
+    @FXML
+    private ToggleButton botaoSair;
+
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
 
     @FXML
     void VoltarInicio(ActionEvent event) throws FileNotFoundException {
@@ -74,7 +91,7 @@ public class candidatoControler4 {
         // objeto adicionar os valores no arquivo
         pw.write(sb.toString());
 
-        // frcha conexão com arquivo
+        // fecha conexão com arquivo
         pw.close();
         HelloApplication.ChangeScene("candidato");
     }

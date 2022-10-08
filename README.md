@@ -66,7 +66,9 @@
 
 <summary> EXIBIR DOCUMENTO </summary>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190661690-a1a8cc5c-935d-45f2-a000-52920a9115fa.jpeg" width="600" height="600" /> <br>
+<br>
+
+![WhatsApp Image 2022-10-08 at 02 26 03](https://user-images.githubusercontent.com/101594950/194719275-e1218fc9-ba7c-4b87-8772-c92ee6de5674.jpeg)
 
 </summary>
 
@@ -133,6 +135,8 @@
 
 #### javafx.swt.jar
 
+#### mysql-connector-5.1.18.jar
+
 <br> 
 
 </summary>
@@ -163,7 +167,9 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
 
 5° Passo:<br> Abra o projeto na IDE.<br>
 
-6° Passo:<br> Instale as [Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar) <br>
+6° Passo:<br> Instale as [Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar) e depois adicione em [File / Project Structure / Global Libraries / + ] <br>
+
+8° Passo:<br> Instale o [Conectivo do Banco](https://github.com/B1naryDevs/API/raw/dev/Banco%20de%20Dados/mysql-connector-5.1.18.jar) e depois adicione em [File / Project Structure / Libraries / + ]
 
 7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
 

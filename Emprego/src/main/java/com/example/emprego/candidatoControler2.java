@@ -19,6 +19,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.ToggleButton;
 
 public class candidatoControler2 implements Initializable {
 

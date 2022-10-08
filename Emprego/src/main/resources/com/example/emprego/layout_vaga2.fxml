@@ -52,13 +52,12 @@
             </ImageView>
             <ToggleButton fx:id="botaoSair" layoutX="1244.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
-                  <ImageView fitHeight="69.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../imagens/exit.png" />
+                        <Image url="@../../../imagens/exit.png" />
                      </image>
                   </ImageView>
-               </graphic>
-            </ToggleButton>
+               </graphic></ToggleButton>
       </children>
     </AnchorPane>
   </children>

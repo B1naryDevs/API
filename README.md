@@ -170,7 +170,17 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
 6° Passo:<br> Instale as [Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar) e depois adicione em [File / Project Structure / Global Libraries / + ] <br>
 
 8° Passo:<br> Instale o [Conectivo do Banco](https://github.com/B1naryDevs/API/raw/dev/Banco%20de%20Dados/mysql-connector-5.1.18.jar) e depois adicione em [File / Project Structure / Libraries / + ]
+    
+9° Passo:<br> Baixe o [instalador do MySQL e MySQL Workbench](https://dev.mysql.com/downloads/file/?id=512698) 
 
-7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
+10° Passo:<br> Baixe o [XAMMP](https://www.apachefriends.org/pt_br/download.html) para fazer conexão com Banco
+
+11° Passo:<br> Abra o XAMMP e aperte em Start nas opções MySQL e Apache
+    
+12° Passo:<br> Abra o MySQL Workbench e abra a conexão Local Instance e verifique se está na porta 3306
+    
+13° Passo:<br> Copie e cole o [Script](https://github.com/B1naryDevs/API/blob/dev/Banco%20de%20Dados/banco%20com%20user%20binary.sql) e clique no primeiro raio no canto superior a esquerda da janela de código
+
+12° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
 
 </div>

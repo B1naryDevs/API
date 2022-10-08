@@ -8,7 +8,7 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190470772-8df0141f-2bc7-4aa0-a361-7d501a8c4cb9.png" width="800" height="200" /> <br>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190887718-ab7274c2-7c70-4fd0-8f50-7d16d4742860.jpg" width="1000" height="450" /> <br>
+![WhatsApp Image 2022-10-08 at 02 26 01](https://user-images.githubusercontent.com/101594950/194720875-dc25300d-995a-43cc-9aff-c7017dc49dec.jpeg)
 
 <hr>
  

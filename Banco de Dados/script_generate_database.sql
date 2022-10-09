@@ -39,23 +39,23 @@ CREATE TABLE setor (
 );
 
 CREATE TABLE vaga (
-    cargo_vaga VARCHAR(30) NOT NULL,
+    cargo_vaga VARCHAR(32) NOT NULL,
     empresa_vaga VARCHAR(40) NOT NULL,
     setor_vaga VARCHAR(30) NOT NULL,
     id_vaga INT(5) NOT NULL AUTO_INCREMENT,
     periodo VARCHAR(20) NOT NULL,
     experiencia ENUM('Sim', 'Não') NOT NULL,
-    salario DECIMAL(7 , 2 ) NULL,
+    salario DECIMAL(7 , 2 ) NOT NULL,
     descricao_vaga VARCHAR(200) NOT NULL,
-    endereco_vaga VARCHAR(60) NOT NULL,
-    cidade_vaga VARCHAR(40) NOT NULL,
+    endereco_vaga VARCHAR(60) NULL,
+    cidade_vaga VARCHAR(40) NULL,
     remoto ENUM('Sim', 'Não') NOT NULL,
     status_vaga ENUM('Aberta', 'Encerrada', 'Em Andamento') NOT NULL,
     PRIMARY KEY (id_vaga)
 );
 
 CREATE TABLE cargo (
-    nome_cargo VARCHAR(30) NOT NULL,
+    nome_cargo VARCHAR(32) NOT NULL,
     id_cargo INT(5) AUTO_INCREMENT UNIQUE,
     setor_cargo VARCHAR(40) NOT NULL,
     PRIMARY KEY (nome_cargo)

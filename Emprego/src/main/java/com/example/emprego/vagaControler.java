@@ -193,7 +193,7 @@ public class vagaControler implements Initializable {
             alert.setHeaderText("PREENCHA A DESCRIÇÃO!");
             alert.showAndWait();
         }else{
-            if (campoRemoto.isSelected()) {
+            if (!campoRemoto.isSelected()) {
                 String cep = campoCep.getText();
                 String[] char_cep = cep.split("");
                 List<String> chars = new ArrayList();

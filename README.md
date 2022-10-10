@@ -179,7 +179,7 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
     
 12° Passo:<br> Abra o MySQL Workbench e abra a conexão Local Instance e verifique se está na porta 3306
     
-13° Passo:<br> Copie e cole o [Script](https://github.com/B1naryDevs/API/blob/dev/Banco%20de%20Dados/banco%20com%20user%20binary.sql) e clique no primeiro raio no canto superior a esquerda da janela de código
+13° Passo:<br> Copie e cole o [Script](https://github.com/B1naryDevs/API/blob/dev/Banco%20de%20Dados/script_generate_database.sql) e clique no primeiro raio no canto superior a esquerda da janela de código
 
 12° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
 

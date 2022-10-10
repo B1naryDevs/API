@@ -63,9 +63,6 @@ public class candidatoControler {
     private TextField campoTelefone;
 
     @FXML
-    private TextField campoNascimento;
-
-    @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
@@ -300,15 +297,6 @@ public class candidatoControler {
         cpf.setCaracteresValidos("0123456789");
         cpf.setTf(campoCpf);
         cpf.formatter();
-    }
-
-    @FXML
-    private void mascaraNascimento() {
-        Formatter nascimento = new Formatter();
-        nascimento.setMask("##/##/####");
-        nascimento.setCaracteresValidos("0123456789");
-        nascimento.setTf(campoNascimento);
-        nascimento.formatter();
     }
 
     //imagem ação

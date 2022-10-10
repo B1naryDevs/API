@@ -242,10 +242,10 @@ public class vagaControler implements Initializable {
                     alert.setHeaderText("PREENCHA O ESTADO!");
                     alert.showAndWait();
                 }else{
-                    String CEP_REGEX = "\\d{7}";
+                    String CEP_REGEX = "\\d{8}";
                     Pattern CEP_PATTERN = Pattern.compile(CEP_REGEX);
                     if (CEP_PATTERN.matcher(cep_s).matches()) {
-                        String NUMERO_REGEX = "\\d";
+                        String NUMERO_REGEX = "\\d{1,8}";
                         Pattern NUMERO_PATTERN = Pattern.compile(NUMERO_REGEX);
                         if (NUMERO_PATTERN.matcher(num_s).matches()) {
                             Vaga vaga = new Vaga();

@@ -234,23 +234,3 @@ insert into candidatura(empresa_candidatura, cargo_candidatura, id_candidatura, 
 ('Atlanta Construções', 'Motorista', default, '69696969669', 3, '2022-09-30', 'Entrevista Presencial' ),
 ('Atlanta Construções', 'Motorista', default, '01010101011', 3, '2022-09-30', 'Desclassificado' ),
 ('Pro4TECH', 'Desenvolvedor', default, '01010101011', 2, '2022-09-30', 'Entrevista Online' );
-
-# TESTE DE SELECTS PARA RETORNO DE DADOS ----------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------
-
-#SELECTS ESPECIAIS------------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------
-
-select * from cargo order by nome_cargo; # ordem alfabética ou crescente (desc - descrescente)
-
-select nome_candidato, pret_salarial from candidato order by pret_salarial; # restrição de campos
-
-select * from competencia where cpf_candidato_comp = 55555555555; # valores especificos
-
-select nome_candidato, pret_salarial from candidato where pret_salarial > 1200.00 order by pret_salarial; #condição lógica
-
-describe candidatura;
-select * from vaga;
-
-#SELECT COM DUAS TABELAS INER JOIN
-select candidato.nome_candidato, candidatura.cpf_candidatura, candidatura.empresa_candidatura, candidatura.cargo_candidatura, candidatura.status_cand from candidato join candidatura where candidato.nome_candidato = 'Wallace' and candidatura.cpf_candidatura = 01010101011;

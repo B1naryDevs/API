@@ -152,44 +152,6 @@ public class candidatoControler3 implements Initializable{
                     String cargos = candidato.getCargoInteresse();
                     String pretensao = String.valueOf(candidato.getPretSalarial());
 
-                    // Objeto para receber os arquivos
-                    File arquivoCSV = new File("dados_candidato.csv");
-
-                    // - lista que irá receber todos valores do csv
-                    List<String> dados = new ArrayList();
-
-                    // variavel para receber as linhas por linhas
-                    String linha = new String();
-                    Scanner read = new Scanner(arquivoCSV);
-
-                    // Correr todas as linhas do arquivo
-                    while (read.hasNext()) {
-
-                        linha = read.nextLine();
-                        dados.add(linha);
-                    }
-
-                    // incremento do novo índice na lista que contém os itens do csv
-                    dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone + "," + empresa + "," + cargo + "," + expinicio + "," + exptermino + "," + descricao + "," + cargos + "," + pretensao + "," + competencia + "," + idioma + "," + instituicao + "," + inicio + "," + termino + "," + curso);
-
-                    // criação de novo objeto para escrever os novos valores
-                    PrintWriter pw = new PrintWriter(new File("dados_candidato.csv"));
-
-                    // Criação da lista para aplicar os valores no csv
-                    StringBuilder sb = new StringBuilder();
-
-                    // laço para inserir linha(indice) por linha
-                    for (String lin : dados) {
-                        sb.append(lin);
-                        sb.append("\r\n");
-                    }
-
-                    // objeto adicionar os valores no arquivo
-                    pw.write(sb.toString());
-
-                    // fecha conexão com arquivo
-                    pw.close();
-
                     float sal = Float.valueOf(pretensao);
 
                     CandidatoDAO candidatoDAO = new CandidatoDAO();

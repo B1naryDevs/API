@@ -48,20 +48,6 @@
   ![WhatsApp Image 2022-10-08 at 12 28 31 (2)](https://user-images.githubusercontent.com/101594950/194790944-00c81e3a-9166-4a35-8c53-f4e23ff5c501.jpeg)
   
 </details>
-
-<details> <summary> CANDIDATO </summary> 
-  
-  ### FORMAÇÃO ACADÊMICA
-  
-  ![WhatsApp Image 2022-10-08 at 12 28 31](https://user-images.githubusercontent.com/101594950/194790576-ed1717e9-ea37-4a8b-bad6-15263ffc5707.jpeg)
-  
-  ### FINALIZAÇÃO
-  
-  ![WhatsApp Image 2022-10-08 at 12 28 31 (1)](https://user-images.githubusercontent.com/101594950/194790646-52a133e0-b881-417c-b4c9-c0e820d95bbb.jpeg)
-  
- </summary>
-
-</details>
  
  <details> <summary> CARGO </summary> 
   

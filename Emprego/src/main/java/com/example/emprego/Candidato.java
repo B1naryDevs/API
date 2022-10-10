@@ -2,8 +2,33 @@ package com.example.emprego;
 
 public class Candidato {
 
-    public Candidato(String nome, String cpf,String dataNac,String email,String senha,String telefone,String expEmpresa,
-                     String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,float pretSalarial,String competencia,
+    //Atributos
+    private static String nome;
+    private static Long cpf;
+    private static String dataNac;
+    private static String email;
+    private static String senha;
+    private static Long telefone;
+
+    private static String expEmpresa;
+    private static String cargo;
+    private static String expInicio;
+    private static String expTermino;
+    private static String descricao;
+    private static String cargoInteresse;
+    private static String pretSalarial;
+
+    private static String competencia;
+    private static String instituicao;
+    private static String cursoInicio;
+    private static String cursoTermino;
+    private static String idioma;
+    private static String curso;
+
+    public Candidato(){}
+
+    public Candidato(String nome, Long cpf,String dataNac,String email,String senha,Long telefone,String expEmpresa,
+                     String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,String pretSalarial,String competencia,
                      String instituicao,String cursoInicio,String cursoTermino,String idioma,String curso){
         this.nome = nome;
         this.cpf = cpf;
@@ -25,48 +50,24 @@ public class Candidato {
         this.idioma = idioma;
         this.curso = curso;
     }
-
-    //Atributos
-    private String nome;
-    private String cpf;
-    private String dataNac;
-    private String email;
-    private String senha;
-    private String telefone;
-
-    private String expEmpresa;
-    private String cargo;
-    private String expInicio;
-    private String expTermino;
-    private String descricao;
-    private String cargoInteresse;
-    private float pretSalarial;
-
-    private String competencia;
-    private String instituicao;
-    private String cursoInicio;
-    private String cursoTermino;
-    private String idioma;
-    private String curso;
-
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public long getCpf() {
+        return this.cpf;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 
     public String getDataNac() {
-        return dataNac;
+        return this.dataNac;
     }
 
     public void setDataNac(String dataNac) {
@@ -74,7 +75,7 @@ public class Candidato {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -82,18 +83,18 @@ public class Candidato {
     }
 
     public String getSenha() {
-        return senha;
+        return this.senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public long getTelefone() {
+        return this.telefone;
     }
 
-    public void setTelefone(String telefone) {
+    public void setTelefone(long telefone) {
         this.telefone = telefone;
     }
 
@@ -146,10 +147,10 @@ public class Candidato {
     }
 
     public float getPretSalarial() {
-        return pretSalarial;
+        return Float.parseFloat(pretSalarial);
     }
 
-    public void setPretSalarial(float pretSalarial) {
+    public void setPretSalarial(String pretSalarial) {
         this.pretSalarial = pretSalarial;
     }
 

@@ -10,10 +10,16 @@ public class HelloApplication extends Application {
 
     private static Stage stage;
 
-    private static Scene tela1;
-    private static Scene tela2;
-    private static Scene tela3;
-    private static Scene tela4;
+    private static Scene candidato;
+    private static Scene candidato2;
+    private static Scene candidato3;
+    private static Scene candidatofinal;
+    private static Scene vaga;
+    private static Scene vagafinal;
+    private static Scene login;
+    private static Scene menu;
+    private static Scene cargo;
+    private static Scene cargofinal;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -21,39 +27,81 @@ public class HelloApplication extends Application {
 
         primaryStage.setTitle("+Emprego");
 
-        Parent tela1fxml = FXMLLoader.load(getClass().getResource("layout.fxml"));
-        tela1 = new Scene(tela1fxml);
+        Parent layout_candidato = FXMLLoader.load(getClass().getResource("layout_candidato.fxml"));
+        candidato = new Scene(layout_candidato);
 
-        Parent tela2fxml = FXMLLoader.load(getClass().getResource("layout2.fxml"));
-        tela2 = new Scene(tela2fxml);
+        Parent layout_candidato2 = FXMLLoader.load(getClass().getResource("layout_candidato2.fxml"));
+        candidato2 = new Scene(layout_candidato2);
 
-        Parent tela3fxml = FXMLLoader.load(getClass().getResource("layout3.fxml"));
-        tela3 = new Scene(tela3fxml);
+        Parent layout_candidato3 = FXMLLoader.load(getClass().getResource("layout_candidato3.fxml"));
+        candidato3 = new Scene(layout_candidato3);
 
-        Parent tela4fxml = FXMLLoader.load(getClass().getResource("layout4.fxml"));
-        tela4 = new Scene(tela4fxml);
+        Parent layout_candidato4 = FXMLLoader.load(getClass().getResource("layout_candidato4.fxml"));
+        candidatofinal = new Scene(layout_candidato4);
 
-        primaryStage.setScene(tela1);
+        Parent layout_vaga = FXMLLoader.load(getClass().getResource("layout_vaga.fxml"));
+        vaga = new Scene(layout_vaga);
+
+        Parent layout_vaga2 = FXMLLoader.load(getClass().getResource("layout_vaga2.fxml"));
+        vagafinal = new Scene(layout_vaga2);
+
+        Parent layout_login = FXMLLoader.load(getClass().getResource("layout_login.fxml"));
+        login = new Scene(layout_login);
+
+        Parent layout_menu = FXMLLoader.load(getClass().getResource("layout_menu.fxml"));
+        menu = new Scene(layout_menu);
+
+        Parent layout_cargo = FXMLLoader.load(getClass().getResource("layout_cargo.fxml"));
+        cargo = new Scene(layout_cargo);
+        
+        Parent layout_cargo2 = FXMLLoader.load(getClass().getResource("layout_cargo2.fxml"));
+        cargofinal = new Scene(layout_cargo2);
+
+        primaryStage.setScene(login);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
 
     public static void ChangeScene(String tela) {
         switch (tela) {
-            case "tela1":
-                stage.setScene(tela1);
+            case "candidato":
+                stage.setScene(candidato);
                 stage.setFullScreen(true);
                 break;
-            case "tela2":
-                stage.setScene(tela2);
+            case "candidato2":
+                stage.setScene(candidato2);
                 stage.setFullScreen(true);
                 break;
-            case "tela3":
-                stage.setScene(tela3);
+            case "candidato3":
+                stage.setScene(candidato3);
                 stage.setFullScreen(true);
                 break;
-            case "tela4":
-                stage.setScene(tela4);
+            case "candidatofinal":
+                stage.setScene(candidatofinal);
+                stage.setFullScreen(true);
+                break;
+            case "vaga":
+                stage.setScene(vaga);
+                stage.setFullScreen(true);
+                break;
+            case "vagafinal":
+                stage.setScene(vagafinal);
+                stage.setFullScreen(true);
+                break;
+            case "login":
+                stage.setScene(login);
+                stage.setFullScreen(true);
+                break;
+            case "menu":
+                stage.setScene(menu);
+                stage.setFullScreen(true);
+                break;
+            case "cargo":
+                stage.setScene(cargo);
+                stage.setFullScreen(true);
+                break;
+            case "cargofinal":
+                stage.setScene(cargofinal);
                 stage.setFullScreen(true);
         }
     }

@@ -2,10 +2,10 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
+import java.beans.BeanProperty;
+import java.util.regex.Pattern;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -15,20 +15,56 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import javafx.scene.control.ChoiceBox;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.scene.control.ToggleButton;
 
-public class candidatoControler2 {
+public class candidatoControler2 implements Initializable {
+
 
     @FXML
     private Button botaoAvancar;
 
     @FXML
     private Button botaoVoltar;
+    
+    @FXML
+    private Button botaoHome;
+
+    @FXML
+    private Button botaoLogin;
+
+    @FXML
+    private Button botaoAdicionar;
+
+    @FXML
+    private ToggleButton botaoSair;
+
+    @FXML
+    private Label labelEmpresa;
+
+    @FXML
+    private Label labelCargo;
+
+    @FXML
+    private Label labelInicio;
+
+    @FXML
+    private Label labelTermino;
+
+    @FXML
+    private Label labelDescricao;
+
+    @FXML
+    private Label labelCargoInteresse;
+
+    @FXML
+    private CheckBox campoExperiencia;
 
     @FXML
     private TextField campoCargo;
-
-    @FXML
-    private TextField campoCargos;
 
     @FXML
     private TextField campoPretensao;
@@ -46,62 +82,113 @@ public class candidatoControler2 {
     private DatePicker campoTermino;
 
     @FXML
+    private ChoiceBox<String> campoCargoInteresse;
+
+    private String[] setores = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+
+        campoCargoInteresse.getItems().addAll(setores);
+
+    }
+
+    public void getInteresse(ActionEvent event){
+        String cargoSelecionado = campoCargoInteresse.getValue();
+        labelCargoInteresse.setText(cargoSelecionado);
+
+    }
+    
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+
+    @FXML
+    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String empresa = campoEmpresa.getText();
         String cargo = campoCargo.getText();
+        String cargos = campoCargoInteresse.getValue();
         LocalDate inicioinicial = campoInicio.getValue();
         LocalDate terminoinicial = campoTermino.getValue();
-        final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH);
-        String iniciofinal = dtf.format(inicioinicial);
-        String terminofinal = dtf.format(terminoinicial);
+        String inicio = String.valueOf(inicioinicial);
+        String termino = String.valueOf(terminoinicial);
         String descricao = campoDescricao.getText();
-        String cargos = campoCargos.getText();
         String pretensao = campoPretensao.getText();
 
-        // Objeto para receber os arquivos
-        File arquivoCSV = new File("dados_candidato2.csv");
+        if (cargos.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O CARGO DE INTERESSE!");
+            alert.showAndWait();
+        } else if (pretensao.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA A PRETENSÃO SALARIAL!");
+            alert.showAndWait();
+        } else {
+            // Validacao pretensão salarial, mínimo 3 digitos
+            String PRETENSAO_REGEX = "\\d{3,}";
+            Pattern PRETENSAO_PATTERN = Pattern.compile(PRETENSAO_REGEX);
+            if (PRETENSAO_PATTERN.matcher(pretensao).matches()) {
+                Candidato candidato = new Candidato();
+                candidato.setExpEmpresa(empresa);
+                candidato.setCargo(cargo);
+                candidato.setExpInicio(inicio);
+                candidato.setExpTermino(termino);
+                candidato.setDescricao(descricao);
+                candidato.setCargoInteresse(cargos);
+                candidato.setPretSalarial(pretensao);
 
-        // - lista que irá receber todos valores do csv
-        List<String> dados = new ArrayList();
+                HelloApplication.ChangeScene("candidato3");
 
-        // variavel para receber as linhas por linhas
-        String linha = new String();
-        Scanner read = new Scanner(arquivoCSV);
-
-        // Correr todas as linhas do arquivo
-        while (read.hasNext()) {
-
-            linha = read.nextLine();
-            dados.add(linha);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("FORMATO DE PRETENSÃO SALARIAL INVÁLIDO!");
+                alert.showAndWait();
+            }
         }
-
-        // incremento do novo índice na lista que contém os itens do csv
-        dados.add(empresa + "," + cargo + "," + iniciofinal + "," + terminofinal + "," + descricao+ "," + cargos + "," + pretensao);
-
-        // criação de novo objeto para escrever os novos valores
-        PrintWriter pw = new PrintWriter(new File("dados_candidato2.csv"));
-
-        // Criação da lista para aplicar os valores no csv
-        StringBuilder sb = new StringBuilder();
-
-        // laço para inserir linha(indice) por linha
-        for (String lin : dados) {
-            sb.append(lin);
-            sb.append("\r\n");
-        }
-
-        // objeto adicionar os valores no arquivo
-        pw.write(sb.toString());
-
-        // frcha conexão com arquivo
-        pw.close();
-
-        HelloApplication.ChangeScene("tela3");
     }
 
+
+
+
+    public void CheckEmprego (ActionEvent event){
+
+        if (campoExperiencia.isSelected()) {
+            campoEmpresa.setVisible(false);
+            campoCargo.setVisible(false);
+            campoInicio.setVisible(false);
+            campoTermino.setVisible(false);
+            campoDescricao.setVisible(false);
+            labelEmpresa.setVisible(false);
+            labelCargo.setVisible(false);
+            labelInicio.setVisible(false);
+            labelTermino.setVisible(false);
+            labelDescricao.setVisible(false);
+            botaoAdicionar.setVisible(false);
+
+
+
+        } else {
+            campoEmpresa.setVisible(true);
+            campoCargo.setVisible(true);
+            campoInicio.setVisible(true);
+            campoTermino.setVisible(true);
+            campoDescricao.setVisible(true);
+            labelEmpresa.setVisible(true);
+            labelCargo.setVisible(true);
+            labelInicio.setVisible(true);
+            labelTermino.setVisible(true);
+            labelDescricao.setVisible(true);
+            botaoAdicionar.setVisible(true);
+        }
+    }
     @FXML
     void VoltarTela(ActionEvent event) {
-        HelloApplication.ChangeScene("tela1");
+        HelloApplication.ChangeScene("candidato");
     }
 
 }

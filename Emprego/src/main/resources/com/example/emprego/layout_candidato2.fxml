@@ -1,58 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
-  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
-  All rights reserved. Use is subject to license terms.
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-  This file is available and licensed under the following license:
-
-  Redistribution and use in source and binary forms, with or without
-  modification, are permitted provided that the following conditions
-  are met:
-
-  - Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-  - Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in
-    the documentation and/or other materials provided with the distribution.
-  - Neither the name of Oracle Corporation nor the names of its
-    contributors may be used to endorse or promote products derived
-    from this software without specific prior written permission.
-
-  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
-
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
   <children>
-    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
+    <AnchorPane layoutX="986.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
             <Pane layoutX="102.0" layoutY="112.0" opacity="0.78" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #747977;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
             <Pane layoutX="243.0" layoutY="120.0" opacity="0.26" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
@@ -62,36 +19,31 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button layoutX="343.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="HOME" textFill="WHITE">
+            <Button fx:id="botaoHome" layoutX="347.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="480.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" text="LOGIN" textFill="WHITE">
+            <Button fx:id="botaoLogin" layoutX="480.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarLogin" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="617.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" style="-fx-background-color: #343A40;" text="ÁREA DO CANDIDATO" textFill="WHITE">
+            <Button layoutX="616.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="915.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #343A40;" text="VAGAS" textFill="WHITE">
+            <Button layoutX="914.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="1055.0" layoutY="34.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #343A40;" text="SOBRE NÓS" textFill="WHITE">
+            <Button layoutX="1052.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <ImageView fitHeight="69.0" fitWidth="58.0" layoutX="1245.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../imagens/exit.png" />
-               </image>
-            </ImageView>
             <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="792.0" text="CADASTRO DE CANDIDATO" textFill="#fffefe" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
@@ -102,23 +54,23 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <Label layoutX="82.0" layoutY="270.0" text="EMPRESA" textFill="WHITE">
+            <Label fx:id="labelEmpresa" layoutX="82.0" layoutY="270.0" text="EMPRESA" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
             <TextField fx:id="campoEmpresa" layoutX="181.0" layoutY="272.0" prefHeight="25.0" prefWidth="350.0" />
-            <Label layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="92.0" text="CARGO" textFill="WHITE">
+            <Label fx:id="labelCargo" layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="92.0" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="84.0" layoutY="354.0" prefHeight="30.0" prefWidth="92.0" text="INÍCIO" textFill="WHITE">
+            <Label fx:id="labelInicio" layoutX="84.0" layoutY="354.0" prefHeight="30.0" prefWidth="92.0" text="INÍCIO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="310.0" layoutY="355.0" prefHeight="30.0" prefWidth="92.0" text="TÉRMINO" textFill="WHITE">
+            <Label fx:id="labelTermino" layoutX="310.0" layoutY="355.0" prefHeight="30.0" prefWidth="92.0" text="TÉRMINO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -126,17 +78,17 @@
             <DatePicker fx:id="campoInicio" layoutX="162.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
             <DatePicker fx:id="campoTermino" layoutX="403.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
             <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" />
-            <CheckBox layoutX="82.0" layoutY="500.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
+            <CheckBox fx:id="campoExperiencia" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
             </CheckBox>
-            <Button layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" style="-fx-background-color: #FF800C;" text="ADICIONAR" textFill="WHITE">
+            <Button fx:id="botaoAdicionar" layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="VOLTAR" textFill="WHITE">
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -160,12 +112,12 @@
             <Label layoutX="664.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
             <Label layoutX="653.0" layoutY="646.0" text="OPCIONAIS" textFill="WHITE" />
             <Label layoutX="768.0" layoutY="634.0" text="FINALIZAÇÃO" textFill="WHITE" />
-            <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" style="-fx-background-color: #FF800C;" text="AVANÇAR" textFill="WHITE">
+            <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="AVANÇAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Button>
-            <Label layoutX="754.0" layoutY="270.0" prefHeight="30.0" prefWidth="221.0" text="CARGOS DE INTERESSE*" textFill="WHITE">
+            <Label fx:id="labelCargoInteresse" layoutX="754.0" layoutY="270.0" prefHeight="30.0" prefWidth="221.0" text="CARGOS DE INTERESSE*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -176,7 +128,7 @@
                </font>
             </Label>
             <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" />
-            <Label layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
+            <Label fx:id="labelDescricao" layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -210,7 +162,15 @@
                   <Font name="Cambria" size="40.0" />
                </font>
             </Label>
-            <TextField fx:id="campoCargos" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image>
+                  </ImageView>
+               </graphic></ToggleButton>
+            <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
       </children>
     </AnchorPane>
   </children>

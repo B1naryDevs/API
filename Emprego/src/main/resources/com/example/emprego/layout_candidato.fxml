@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutX="311.0" layoutY="155.0" opacity="0.78" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #747977;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
+                <Pane layoutX="321.0" layoutY="165.0" opacity="0.26" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="85.0" />
+                <TextField fx:id="campoCpf" layoutX="500.0" layoutY="290.0" minHeight="-Infinity" onKeyReleased="#mascaraCpf" prefHeight="30.0" prefWidth="329.0" promptText="999.999.999-99">
+                    <font>
+                        <Font size="14.0" />
+                    </font></TextField>
+                <Label layoutX="500.0" layoutY="230.0" prefHeight="16.0" prefWidth="50.0" text="CPF *" textFill="WHITE" AnchorPane.topAnchor="265.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font></Label>
+                <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="AVANÇAR" textFill="WHITE">
+                    <font>
+                        <Font size="1.0" />
+                    </font>
+                </Button>
+                <Circle layoutX="565.0" layoutY="604.0" radius="30.0" smooth="false" strokeType="INSIDE" strokeWidth="0.0">
+                    <fill>
+                        <LinearGradient endX="0.5355450236966823" endY="1.0" startX="0.4834123222748815">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="1.0" green="0.5372549295425415" blue="0.10980392247438431" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.6241610738255033">
+                                    <color>
+                                        <Color red="1.0" green="0.5372549295425415" blue="0.10980392247438431" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="0.7686274647712708" blue="0.5568627715110779" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </fill>
+                </Circle>
+                <Circle fill="#78777500" layoutX="682.0" layoutY="604.0" radius="30.0" smooth="false" stroke="#ff891c" strokeType="INSIDE" />
+                <Circle fill="#78777500" layoutX="800.0" layoutY="604.0" opacity="0.63" radius="30.0" stroke="#ff891c" strokeType="INSIDE" />
+                <Line endX="29.0" layoutX="624.0" layoutY="604.0" startX="-28.0" stroke="#ff891c" />
+                <Label layoutX="555.0" layoutY="579.0" prefHeight="16.0" prefWidth="4.0" text="1" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria" size="40.0" />
+                    </font>
+                </Label>
+                <Label layoutX="790.0" layoutY="580.0" text="3" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria" size="40.0" />
+                    </font>
+                </Label>
+                <Label layoutX="672.0" layoutY="579.0" prefHeight="16.0" prefWidth="4.0" text="2" textFill="WHITE">
+                    <font>
+                        <Font name="Cambria" size="40.0" />
+                    </font>
+                </Label>
+                <Label layoutX="663.0" layoutY="634.0" prefHeight="24.0" prefWidth="48.0" text="DADOS" textFill="WHITE" />
+                <Label layoutX="543.0" layoutY="634.0" prefHeight="24.0" prefWidth="48.0" text="DADOS" textFill="WHITE" />
+                <Label layoutX="525.0" layoutY="646.0" prefHeight="24.0" prefWidth="87.0" text="OBRIGATÓRIOS" textFill="WHITE" />
+                <Label layoutX="653.0" layoutY="646.0" prefHeight="24.0" prefWidth="65.0" text="OPCIONAIS" textFill="WHITE" />
+                <Label layoutX="768.0" layoutY="634.0" prefHeight="24.0" prefWidth="78.0" text="FINALIZAÇÃO" textFill="WHITE" />
+                <Label graphicTextGap="60.0" layoutX="320.0" layoutY="60.0" prefHeight="92.0" prefWidth="802.0" text="CADASTRO DE CANDIDATO" textFill="#ebebeb" AnchorPane.topAnchor="120.0">
+                    <font>
+                        <Font size="63.0" />
+                    </font>
+                </Label>
+                <Label layoutX="82.0" layoutY="230.0" text="NOME*" textFill="WHITE" AnchorPane.leftAnchor="82.0" AnchorPane.topAnchor="264.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Line endX="29.0" layoutX="740.0" layoutY="603.0" startX="-28.0" stroke="#ff891c" />
+                <TextField fx:id="campoNome" layoutX="82.0" layoutY="290.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="campoEmail" layoutX="82.0" layoutY="420.0" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="seuemail@email.com">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="campoTelefone" layoutX="931.0" layoutY="420.0" minHeight="-Infinity" onKeyReleased="#mascaraTel" prefHeight="30.0" prefWidth="329.0" promptText="(99)99999-9999">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </TextField>
+                <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../imagens/+empregosemfundo.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="botaoHome" layoutX="347.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button fx:id="botaoLogin" layoutX="484.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarLogin" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button layoutX="612.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button layoutX="918.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Button layoutX="1054.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Button>
+                <Label layoutX="92.0" layoutY="396.0" text="EMAIL*" textFill="WHITE" AnchorPane.leftAnchor="82.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="500.0" layoutY="396.0" text="SENHA*" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="931.0" layoutY="396.0" text="TELEFONE*" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="931.0" layoutY="230.0" prefHeight="30.0" prefWidth="220.0" text="DATA DE NASCIMENTO*" textFill="WHITE" AnchorPane.topAnchor="265.0">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="campoData" layoutX="931.0" layoutY="290.0" prefHeight="30.0" prefWidth="329.0" />
+                <StackPane layoutX="500.0" layoutY="420.0">
+                    <children>
+                        <TextField fx:id="campoSenha4" prefHeight="31.0" prefWidth="329.0" />
+                        <PasswordField fx:id="campoSenha3" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+                    </children>
+                </StackPane>
+                <Label layoutX="500.0" layoutY="476.0" text="CONFIRMAR SENHA*" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+                <StackPane layoutX="500.0" layoutY="500.0">
+                    <children>
+                        <TextField fx:id="campoConfirmarsenha2" prefHeight="30.0" prefWidth="329.0" />
+                        <PasswordField fx:id="campoConfirmarsenha" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
+                    </children>
+                </StackPane>
+                <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+                    <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/exit.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></ToggleButton>
+                <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="828.0" layoutY="499.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                    <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/iconApagar.png" />
+                            </image>
+                        </ImageView>
+                    </graphic></ToggleButton>
+                <ToggleButton fx:id="tgbtMostrarSenha1" layoutX="829.0" layoutY="420.0" mnemonicParsing="false" onAction="#mostrarSenha1" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../imagens/iconApagar.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </ToggleButton>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

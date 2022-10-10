@@ -28,6 +28,14 @@
 </summary>
   
 </details>
+
+<details> 
+  <summary> MODELO LÓGICO </summary>
+  
+  ![ModeloLogico2 jpg](https://user-images.githubusercontent.com/101594950/194786325-a649b49f-f9a5-4d65-b561-824df828d2ba.png)
+
+  </summary>
+</details>
   
 <hr>
 
@@ -118,55 +126,52 @@
   <div align="center">
    
   <img src = "https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png" width="800" height="200" /> <br>
-    
  
- ![burn](https://user-images.githubusercontent.com/101594950/190929645-237bf331-a8d1-481a-bfd0-ab1a56d214ec.png)
+![burnd](https://user-images.githubusercontent.com/101594950/194786519-a3758f70-7764-424d-b288-c1f2d1f24c06.png)
 
-  
   <hr>
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
     
-### CADASTRO DE CANDIDATO
+### LOGIN
+<details>  
+  
+  <summary> USUÁRIO </summary>
+  
+  ![Login](https://user-images.githubusercontent.com/101594950/194787397-bd2f8c5f-7e80-433b-88bb-7fb607a07761.gif)
+  
+</details>
+    
+### CANDIDATO
     
 <details>
   
 <summary> INFORMAÇÕES PESSOAIS </summary>
   
-![candidato 1](https://user-images.githubusercontent.com/101594950/190928832-aab85ca4-775a-4ff9-85e9-744e5f6cd587.gif)
+![Candidato](https://user-images.githubusercontent.com/101594950/194788312-8224f408-4d10-4b55-ace4-204715b65c22.gif)
  
 </summary>
   
 </details>
-  
- <details>
-  
-<summary> EXPERIÊNCIA PROFISSIONAL </summary>
-  
-![candidato 2](https://user-images.githubusercontent.com/101594950/190928883-92a091db-23b5-4247-ace7-8951dd601f1a.gif)
 
-</summary>
-  
-</details>
+### VAGA
 
 <details>
+<summary> CADASTRO DE VAGA </summary>
   
-<summary> FORMAÇÃO ACADÊMICA </summary>
-  
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928937-fe5963f5-7e05-4f7d-acea-6b55b8dcd0be.gif)
+  ![Vaga](https://user-images.githubusercontent.com/101594950/194788222-03672f43-10db-4557-84c5-ae6ab25b50e9.gif)
 
-</summary>
-  
+  </summary>
 </details>
 
-<details>
-  
-<summary> CONFIRMAÇÃO </summary>
+### CARGO
 
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928952-71c998ca-f76f-4af8-8504-2f60f70837f4.gif)
-
-</summary>
+<details> <summary> CADASTRO DE CARGO </summary> 
   
-</details>
+  ![Cargo](https://user-images.githubusercontent.com/101594950/194787693-18f65430-055a-4a1d-99e3-e40fe8e865b4.gif)
+ 
+  </summary> </details>
  
 </div>
+
+

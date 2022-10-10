@@ -118,7 +118,7 @@
   
 <summary> CANDIDATO </summary>
   
-![Candidato](https://user-images.githubusercontent.com/101594950/194788312-8224f408-4d10-4b55-ace4-204715b65c22.gif)
+  ![Candidato](https://user-images.githubusercontent.com/101594950/194793158-475699a1-73a3-4641-a479-859d21aa1130.gif)
  
 </summary>
   

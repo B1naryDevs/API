@@ -8,7 +8,7 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190470772-8df0141f-2bc7-4aa0-a361-7d501a8c4cb9.png" width="800" height="200" /> <br>
 
-![WhatsApp Image 2022-10-08 at 02 26 01](https://user-images.githubusercontent.com/101594950/194720875-dc25300d-995a-43cc-9aff-c7017dc49dec.jpeg)
+<img src = "https://user-images.githubusercontent.com/101594950/190887718-ab7274c2-7c70-4fd0-8f50-7d16d4742860.jpg" width="1000" height="450" /> <br>
 
 <hr>
  
@@ -28,21 +28,25 @@
   
 <hr>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
+<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" />
   
+</div>
+
+<div align = "center">
+
 </div>
 
 <div align = "center">
 
 <details>
   
- <summary> CADASTRO DE CANDIDATO </summary><br>
+ <summary> CANDIDATO </summary><br>
   
  ## Informações Pessoais  <br> 
-  
+
  <div align="center">
   
- <img src="https://user-images.githubusercontent.com/101594950/190285159-5f8db807-90a5-4562-b870-4ee770f3ec96.png"> <br>
+ ![candidato1](https://user-images.githubusercontent.com/101594950/194717874-7cddd5f1-4d20-4bc6-8d84-fdf9708fc212.png)
   
  </div>
   
@@ -50,7 +54,9 @@
   
   <div align="center">
   
-  <img src="https://user-images.githubusercontent.com/101594950/190285169-ba31c8a4-918a-4b5a-a46d-4080ab6a47f4.png">
+  ![candidato3](https://user-images.githubusercontent.com/101594950/194717991-4c645cb5-8ff9-431e-ad87-a788c0982611.png)
+  
+  ![candidato2](https://user-images.githubusercontent.com/101594950/194717953-ff9068cf-2ac1-4075-baf7-86c3f4465f74.png)
   
   </div>
   
@@ -58,15 +64,15 @@
   
  <div align="center">
   
- <img src="https://user-images.githubusercontent.com/101594950/190285171-9a263be0-a6ec-4add-b8e2-e69d3cd2abfa.png">
-   
+![candidato4](https://user-images.githubusercontent.com/101594950/194718001-2dd49db5-1467-4e31-81d5-1b5ab4a4fd1b.png)
+
  </div>
   
   ## Confirmação  <br>
   
  <div align = "center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190285186-4847bb72-474d-407d-816f-15d223a6a788.png">
+ 
+![candidato5](https://user-images.githubusercontent.com/101594950/194718070-2b98bf8d-43ec-40e8-88c2-b395242113c0.png)
    
  </div>
  
@@ -75,7 +81,7 @@
  
  <details>
 
- <summary> CADASTRO DE VAGAS </summary><br>
+ <summary> VAGA </summary><br>
   
  ## Preenchimento de Informações <br> 
   
@@ -106,44 +112,14 @@
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
     
-### CADASTRO DE CANDIDATO
+### CANDIDATO
     
 <details>
   
-<summary> INFORMAÇÕES PESSOAIS </summary>
+<summary> CANDIDATO </summary>
   
-![candidato 1](https://user-images.githubusercontent.com/101594950/190928832-aab85ca4-775a-4ff9-85e9-744e5f6cd587.gif)
+![Candidato](https://user-images.githubusercontent.com/101594950/194788312-8224f408-4d10-4b55-ace4-204715b65c22.gif)
  
-</summary>
-  
-</details>
-  
- <details>
-  
-<summary> EXPERIÊNCIA PROFISSIONAL </summary>
-  
-![candidato 2](https://user-images.githubusercontent.com/101594950/190928883-92a091db-23b5-4247-ace7-8951dd601f1a.gif)
-
-</summary>
-  
-</details>
-
-<details>
-  
-<summary> FORMAÇÃO ACADÊMICA </summary>
-  
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928937-fe5963f5-7e05-4f7d-acea-6b55b8dcd0be.gif)
-
-</summary>
-  
-</details>
-
-<details>
-  
-<summary> CONFIRMAÇÃO </summary>
-
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928952-71c998ca-f76f-4af8-8504-2f60f70837f4.gif)
-
 </summary>
   
 </details>

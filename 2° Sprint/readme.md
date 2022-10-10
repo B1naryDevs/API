@@ -133,7 +133,7 @@
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
     
-### LOGIN
+### LOGIN 
 <details>  
   
   <summary> USUÁRIO </summary>
@@ -146,7 +146,7 @@
     
 <details>
   
-<summary> INFORMAÇÕES PESSOAIS </summary>
+<summary> CADASTRO DE CANDIDATO </summary>
   
 ![Candidato](https://user-images.githubusercontent.com/101594950/194788312-8224f408-4d10-4b55-ace4-204715b65c22.gif)
  

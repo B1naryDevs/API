@@ -100,6 +100,20 @@
  </summary>
  </details>
  
+ <details> <summary> CADASTRO DE CARGO </summary> 
+  
+  ### CADASTRO DO CARGO
+  
+  ![cargo1](https://user-images.githubusercontent.com/101594950/194789424-ae62b2ee-c024-4725-9969-2cf1773ba4c5.png)
+  
+  ### CONFIRMAÇÃO DE CADASTRO
+  
+  ![cargo2](https://user-images.githubusercontent.com/101594950/194789388-5e3738a7-0164-4887-bc39-9da619fdf3a5.png)
+
+  </summary>
+  
+  </details>
+ 
  <details>
 
  <summary> CADASTRO DE VAGAS </summary><br>
@@ -153,17 +167,7 @@
 </summary>
   
 </details>
-
-### VAGA
-
-<details>
-<summary> CADASTRO DE VAGA </summary>
   
-  ![Vaga](https://user-images.githubusercontent.com/101594950/194788222-03672f43-10db-4557-84c5-ae6ab25b50e9.gif)
-
-  </summary>
-</details>
-
 ### CARGO
 
 <details> <summary> CADASTRO DE CARGO </summary> 
@@ -174,4 +178,12 @@
  
 </div>
 
+### VAGA
 
+<details>
+<summary> CADASTRO DE VAGA </summary>
+  
+  ![Vaga](https://user-images.githubusercontent.com/101594950/194788222-03672f43-10db-4557-84c5-ae6ab25b50e9.gif)
+
+  </summary>
+</details>

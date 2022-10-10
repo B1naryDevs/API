@@ -40,12 +40,34 @@
 <hr>
 
 <img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" />
+
+<details>  
+  
+  <summary> USUÁRIO </summary>
+  
+  ![WhatsApp Image 2022-10-08 at 12 28 31 (2)](https://user-images.githubusercontent.com/101594950/194790944-00c81e3a-9166-4a35-8c53-f4e23ff5c501.jpeg)
+  
+</details>
+
+<details> <summary> CANDIDATO </summary> 
+  
+  ### FORMAÇÃO ACADÊMICA
+  
+  ![WhatsApp Image 2022-10-08 at 12 28 31](https://user-images.githubusercontent.com/101594950/194790576-ed1717e9-ea37-4a8b-bad6-15263ffc5707.jpeg)
+  
+  ### FINALIZAÇÃO
+  
+  ![WhatsApp Image 2022-10-08 at 12 28 31 (1)](https://user-images.githubusercontent.com/101594950/194790646-52a133e0-b881-417c-b4c9-c0e820d95bbb.jpeg)
+  
+ </summary>
+
+</details>
  
  <details> <summary> CARGO </summary> 
   
   ### CADASTRO DO CARGO
   
-  ![cargo1](https://user-images.githubusercontent.com/101594950/194789424-ae62b2ee-c024-4725-9969-2cf1773ba4c5.png)
+  ![WhatsApp Image 2022-10-08 at 12 28 32](https://user-images.githubusercontent.com/101594950/194791036-b727be83-afce-4ca4-b270-61ff294d47fc.jpeg)
   
   ### CONFIRMAÇÃO DE CADASTRO
   
@@ -63,9 +85,7 @@
   
  <div align="center">
  
- ![vaga1 1](https://user-images.githubusercontent.com/101594950/194718294-7917948c-a2a6-42a2-8fb0-062988d1c493.png)
- 
- ![vaga1](https://user-images.githubusercontent.com/101594950/194718203-e0ed2e20-82ae-4871-aaaf-1193a8f86451.png)
+![WhatsApp Image 2022-10-08 at 12 28 31 (3)](https://user-images.githubusercontent.com/101594950/194791078-327fb363-f568-4c1e-907c-da56b2d790f7.jpeg)
 
  </div>
   
@@ -73,7 +93,7 @@
   
  <div align="center">
  
-  ![vaga2](https://user-images.githubusercontent.com/101594950/194718356-0dd4a261-5e09-4ef5-afe5-fb47ef0c1702.png)
+  ![WhatsApp Image 2022-10-08 at 12 28 31 (4)](https://user-images.githubusercontent.com/101594950/194791188-72e1c561-7959-4716-b6f8-49b5a07781da.jpeg)
 
  </details>
    

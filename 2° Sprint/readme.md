@@ -39,68 +39,9 @@
   
 <hr>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
-
-<details>
-
-<summary> LOGIN DE USUÁRIO </summary>
-
-# LOGIN OU CADASTRO 
-
-![login1](https://user-images.githubusercontent.com/101594950/194718892-bc4f5025-01aa-4e8d-ac4e-a462dd2f6c3b.png)
-
-![login2](https://user-images.githubusercontent.com/101594950/194718894-1287d61f-768f-46a0-a28a-8b6a00fe52bc.png)
-
-</summary>
-
-</details>
-
-</div>
-
-<div align = "center">
-
-<details>
-  
- <summary> CADASTRO DE CANDIDATO </summary><br>
-  
- ## Informações Pessoais  <br> 
-
- <div align="center">
-  
- ![candidato1](https://user-images.githubusercontent.com/101594950/194717874-7cddd5f1-4d20-4bc6-8d84-fdf9708fc212.png)
-  
- </div>
-  
-  ## Experiência Profissional  <br>
-  
-  <div align="center">
-  
-  ![candidato3](https://user-images.githubusercontent.com/101594950/194717991-4c645cb5-8ff9-431e-ad87-a788c0982611.png)
-  
-  ![candidato2](https://user-images.githubusercontent.com/101594950/194717953-ff9068cf-2ac1-4075-baf7-86c3f4465f74.png)
-  
-  </div>
-  
-  ## Formação Acadêmica  <br>
-  
- <div align="center">
-  
-![candidato4](https://user-images.githubusercontent.com/101594950/194718001-2dd49db5-1467-4e31-81d5-1b5ab4a4fd1b.png)
-
- </div>
-  
-  ## Confirmação  <br>
-  
- <div align = "center">
+<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" />
  
-![candidato5](https://user-images.githubusercontent.com/101594950/194718070-2b98bf8d-43ec-40e8-88c2-b395242113c0.png)
-   
- </div>
- 
- </summary>
- </details>
- 
- <details> <summary> CADASTRO DE CARGO </summary> 
+ <details> <summary> CARGO </summary> 
   
   ### CADASTRO DO CARGO
   
@@ -116,9 +57,9 @@
  
  <details>
 
- <summary> CADASTRO DE VAGAS </summary><br>
+ <summary> VAGA </summary><br>
   
- ## Preenchimento de Informações <br> 
+ ## CADASTRO DE VAGA <br> 
   
  <div align="center">
  
@@ -153,18 +94,6 @@
   <summary> USUÁRIO </summary>
   
   ![Login](https://user-images.githubusercontent.com/101594950/194787397-bd2f8c5f-7e80-433b-88bb-7fb607a07761.gif)
-  
-</details>
-    
-### CANDIDATO
-    
-<details>
-  
-<summary> CADASTRO DE CANDIDATO </summary>
-  
-![Candidato](https://user-images.githubusercontent.com/101594950/194788312-8224f408-4d10-4b55-ace4-204715b65c22.gif)
- 
-</summary>
   
 </details>
   

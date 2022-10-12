@@ -1,14 +1,14 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidatoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.ToggleButton;
+
+import javax.swing.*;
 
 public class loginControler {
 
@@ -40,7 +40,33 @@ public class loginControler {
 
     @FXML
     void entrarLogin(ActionEvent event) {
-        HelloApplication.ChangeScene("menu");
+
+        //validação de campos em branco
+
+        if (campoEmail.getText() == "" || campoSenha.getText() == ""){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("campo vazio !");
+            alert.showAndWait();
+
+        } else {
+
+            // conexão com banco
+
+            CandidatoDAO dao = new CandidatoDAO();
+            if( dao.checklogin(campoEmail.getText(), campoSenha.getText())){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Bem Vindo !");
+                alert.showAndWait();
+                HelloApplication.ChangeScene("menu");
+
+            } else{
+
+                // USUARIO NÃO ENCONTRADO
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("E-mail ou Senha incorretos !");
+                alert.showAndWait();
+            }
+        }
     }
 
     @FXML

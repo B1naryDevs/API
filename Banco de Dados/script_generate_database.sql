@@ -234,3 +234,6 @@ insert into candidatura(empresa_candidatura, cargo_candidatura, id_candidatura, 
 ('Atlanta Construções', 'Motorista', default, '69696969669', 3, '2022-09-30', 'Entrevista Presencial' ),
 ('Atlanta Construções', 'Motorista', default, '01010101011', 3, '2022-09-30', 'Desclassificado' ),
 ('Pro4TECH', 'Desenvolvedor', default, '01010101011', 2, '2022-09-30', 'Entrevista Online' );
+
+insert into usuario (email, senha, cpf_candidato_usu) values 
+('Adm@123', '123', 48615448696 );

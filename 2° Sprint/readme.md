@@ -1,4 +1,4 @@
-<hr>
+[//]: # (CAPA 2° SPRINT)
 
 <div align="center">
 
@@ -6,9 +6,12 @@
   
 <hr>
 
+[//]: # (CAPA BACKLOG DA SPRINT)
+
 <img src = "https://user-images.githubusercontent.com/101594950/190470772-8df0141f-2bc7-4aa0-a361-7d501a8c4cb9.png" width="800" height="200" /> <br>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190887718-ab7274c2-7c70-4fd0-8f50-7d16d4742860.jpg" width="1000" height="450" /> <br>
+
+<img src = "https://user-images.githubusercontent.com/101594950/194714542-564633f4-e053-4c89-88ad-2fc6b50d7155.jpeg" width="1000" height="450" /> <br>
 
 <hr>
  
@@ -20,132 +23,102 @@
   
 <br>
   
- ![Sem título](https://user-images.githubusercontent.com/101594950/190927874-e2b1aed3-d8db-412b-a7af-1e45bed0fe49.png)
+![modelagemFinal](https://user-images.githubusercontent.com/101594950/194715022-a4b6c7ea-5488-4289-8508-291294453158.jpeg)
   
 </summary>
   
 </details>
+
+<details> 
+  <summary> MODELO LÓGICO </summary>
+  
+  ![ModeloLogico2 jpg](https://user-images.githubusercontent.com/101594950/194786325-a649b49f-f9a5-4d65-b561-824df828d2ba.png)
+
+  </summary>
+</details>
   
 <hr>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" /> <br>
-  
-</div>
+<img src = "https://user-images.githubusercontent.com/101594950/190471142-ead516a1-da58-4a01-879a-eb710026ce4f.png" width="800" height="220" />
 
-<div align = "center">
-
-<details>
+<details>  
   
- <summary> CADASTRO DE CANDIDATO </summary><br>
+  <summary> USUÁRIO </summary>
   
- ## Informações Pessoais  <br> 
+  ![WhatsApp Image 2022-10-08 at 12 28 31 (2)](https://user-images.githubusercontent.com/101594950/194790944-00c81e3a-9166-4a35-8c53-f4e23ff5c501.jpeg)
   
- <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190285159-5f8db807-90a5-4562-b870-4ee770f3ec96.png"> <br>
-  
- </div>
-  
-  ## Experiência Profissional  <br>
-  
-  <div align="center">
-  
-  <img src="https://user-images.githubusercontent.com/101594950/190285169-ba31c8a4-918a-4b5a-a46d-4080ab6a47f4.png">
-  
-  </div>
-  
-  ## Formação Acadêmica  <br>
-  
- <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190285171-9a263be0-a6ec-4add-b8e2-e69d3cd2abfa.png">
-   
- </div>
-  
-  ## Confirmação  <br>
-  
- <div align = "center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190285186-4847bb72-474d-407d-816f-15d223a6a788.png">
-   
- </div>
+</details>
  
- </summary>
- </details>
+ <details> <summary> CARGO </summary> 
+  
+  ### CADASTRO DO CARGO
+  
+  ![WhatsApp Image 2022-10-08 at 12 28 32](https://user-images.githubusercontent.com/101594950/194791036-b727be83-afce-4ca4-b270-61ff294d47fc.jpeg)
+  
+  ### CONFIRMAÇÃO DE CADASTRO
+  
+  ![cargo2](https://user-images.githubusercontent.com/101594950/194789388-5e3738a7-0164-4887-bc39-9da619fdf3a5.png)
+
+  </summary>
+  
+  </details>
  
  <details>
 
- <summary> CADASTRO DE VAGAS </summary><br>
+ <summary> VAGA </summary><br>
   
- ## Preenchimento de Informações <br> 
+ ## CADASTRO DE VAGA <br> 
   
  <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190403096-df91d8b7-110a-46b8-800f-7f3879257caa.png"> <br>
-  
+ 
+![WhatsApp Image 2022-10-08 at 12 28 31 (3)](https://user-images.githubusercontent.com/101594950/194791078-327fb363-f568-4c1e-907c-da56b2d790f7.jpeg)
+
  </div>
   
  ## Finalizado <br>
   
  <div align="center">
-  
- <img src="https://user-images.githubusercontent.com/101594950/190403084-9656161d-ac89-4e2e-a2f1-eb51b1c5f313.png">
-    
+ 
+  ![WhatsApp Image 2022-10-08 at 12 28 31 (4)](https://user-images.githubusercontent.com/101594950/194791188-72e1c561-7959-4716-b6f8-49b5a07781da.jpeg)
+
  </details>
    
   <hr>
   <div align="center">
    
   <img src = "https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png" width="800" height="200" /> <br>
-    
  
- ![burn](https://user-images.githubusercontent.com/101594950/190929645-237bf331-a8d1-481a-bfd0-ab1a56d214ec.png)
+![burnd](https://user-images.githubusercontent.com/101594950/194786519-a3758f70-7764-424d-b288-c1f2d1f24c06.png)
 
-  
   <hr>
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
     
-### CADASTRO DE CANDIDATO
-    
-<details>
+### LOGIN 
+<details>  
   
-<summary> INFORMAÇÕES PESSOAIS </summary>
+  <summary> USUÁRIO </summary>
   
-![candidato 1](https://user-images.githubusercontent.com/101594950/190928832-aab85ca4-775a-4ff9-85e9-744e5f6cd587.gif)
+  ![Login](https://user-images.githubusercontent.com/101594950/194787397-bd2f8c5f-7e80-433b-88bb-7fb607a07761.gif)
+  
+</details>
+  
+### CARGO
+
+<details> <summary> CADASTRO DE CARGO </summary> 
+  
+  ![Cargo](https://user-images.githubusercontent.com/101594950/194787693-18f65430-055a-4a1d-99e3-e40fe8e865b4.gif)
  
-</summary>
-  
-</details>
-  
- <details>
-  
-<summary> EXPERIÊNCIA PROFISSIONAL </summary>
-  
-![candidato 2](https://user-images.githubusercontent.com/101594950/190928883-92a091db-23b5-4247-ace7-8951dd601f1a.gif)
-
-</summary>
-  
-</details>
-
-<details>
-  
-<summary> FORMAÇÃO ACADÊMICA </summary>
-  
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928937-fe5963f5-7e05-4f7d-acea-6b55b8dcd0be.gif)
-
-</summary>
-  
-</details>
-
-<details>
-  
-<summary> CONFIRMAÇÃO </summary>
-
-![candidato 3](https://user-images.githubusercontent.com/101594950/190928952-71c998ca-f76f-4af8-8504-2f60f70837f4.gif)
-
-</summary>
-  
-</details>
+  </summary> </details>
  
 </div>
+
+### VAGA
+
+<details>
+<summary> CADASTRO DE VAGA </summary>
+  
+  ![Vaga](https://user-images.githubusercontent.com/101594950/194788222-03672f43-10db-4557-84c5-ae6ab25b50e9.gif)
+
+  </summary>
+</details>

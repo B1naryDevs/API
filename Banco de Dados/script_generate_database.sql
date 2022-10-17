@@ -1,8 +1,3 @@
-drop database api;
-
-
-
-
 create database api
 default character set utf8
 default collate utf8_general_ci; 
@@ -44,23 +39,23 @@ CREATE TABLE setor (
 );
 
 CREATE TABLE vaga (
-    cargo_vaga VARCHAR(30) NOT NULL,
+    cargo_vaga VARCHAR(32) NOT NULL,
     empresa_vaga VARCHAR(40) NOT NULL,
     setor_vaga VARCHAR(30) NOT NULL,
     id_vaga INT(5) NOT NULL AUTO_INCREMENT,
     periodo VARCHAR(20) NOT NULL,
     experiencia ENUM('Sim', 'Não') NOT NULL,
-    salario DECIMAL(7 , 2 ) NULL,
+    salario DECIMAL(7 , 2 ) NOT NULL,
     descricao_vaga VARCHAR(200) NOT NULL,
-    endereco_vaga VARCHAR(60) NOT NULL,
-    cidade_vaga VARCHAR(40) NOT NULL,
+    endereco_vaga VARCHAR(60) NULL,
+    cidade_vaga VARCHAR(40) NULL,
     remoto ENUM('Sim', 'Não') NOT NULL,
     status_vaga ENUM('Aberta', 'Encerrada', 'Em Andamento') NOT NULL,
     PRIMARY KEY (id_vaga)
 );
 
 CREATE TABLE cargo (
-    nome_cargo VARCHAR(30) NOT NULL,
+    nome_cargo VARCHAR(32) NOT NULL,
     id_cargo INT(5) AUTO_INCREMENT UNIQUE,
     setor_cargo VARCHAR(40) NOT NULL,
     PRIMARY KEY (nome_cargo)
@@ -239,23 +234,3 @@ insert into candidatura(empresa_candidatura, cargo_candidatura, id_candidatura, 
 ('Atlanta Construções', 'Motorista', default, '69696969669', 3, '2022-09-30', 'Entrevista Presencial' ),
 ('Atlanta Construções', 'Motorista', default, '01010101011', 3, '2022-09-30', 'Desclassificado' ),
 ('Pro4TECH', 'Desenvolvedor', default, '01010101011', 2, '2022-09-30', 'Entrevista Online' );
-
-# TESTE DE SELECTS PARA RETORNO DE DADOS ----------------------------------------------------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------------
-
-#SELECTS ESPECIAIS------------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------
-
-select * from cargo order by nome_cargo; # ordem alfabética ou crescente (desc - descrescente)
-
-select nome_candidato, pret_salarial from candidato order by pret_salarial; # restrição de campos
-
-select * from competencia where cpf_candidato_comp = 55555555555; # valores especificos
-
-select nome_candidato, pret_salarial from candidato where pret_salarial > 1200.00 order by pret_salarial; #condição lógica
-
-describe candidatura;
-select * from vaga;
-
-#SELECT COM DUAS TABELAS INER JOIN
-select candidato.nome_candidato, candidatura.cpf_candidatura, candidatura.empresa_candidatura, candidatura.cargo_candidatura, candidatura.status_cand from candidato join candidatura where candidato.nome_candidato = 'Wallace' and candidatura.cpf_candidatura = 01010101011;

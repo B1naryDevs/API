@@ -178,7 +178,6 @@
                         <PasswordField fx:id="campoConfirmarsenha" minHeight="-Infinity" prefHeight="30.0" prefWidth="329.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
                     </children>
                 </StackPane>
-                <TextField fx:id="campoNascimento" layoutX="931.0" layoutY="330.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="DD/MM/AAAA" />
                 <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                     <graphic>
                         <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">

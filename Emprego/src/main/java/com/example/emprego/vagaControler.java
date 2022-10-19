@@ -69,10 +69,6 @@ public class vagaControler implements Initializable {
     private ChoiceBox<String> campoEstado;
 
     @FXML
-    private TextField campoExperiencia;
-
-
-    @FXML
     private TextField campoNumero;
 
     @FXML
@@ -80,6 +76,9 @@ public class vagaControler implements Initializable {
 
     @FXML
     private CheckBox campoRemoto;
+
+    @FXML
+    private CheckBox campoExperiencia;
 
     @FXML
     private Button botaoHome;
@@ -172,15 +171,15 @@ public class vagaControler implements Initializable {
         String salario = campoSalario.getText();
         String descricao = campoDescricao.getText();
 
-        if (cargo.isEmpty()) {
+        if (cargo == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O CARGO!");
             alert.showAndWait();
-        } else if (periodo.isEmpty()) {
+        } else if (periodo == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O PERIODO!");
             alert.showAndWait();
-        } else if (experiencia.isEmpty()) {
+        } else if (experiencia == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA A EXPERIÊNCIA!");
             alert.showAndWait();

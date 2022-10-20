@@ -66,7 +66,7 @@ public class candidatoControler {
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("candidato");}
 
     @FXML
     void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}

@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
   <children>
     <AnchorPane layoutX="986.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
@@ -75,8 +87,6 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <DatePicker fx:id="campoInicio" layoutX="162.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
-            <DatePicker fx:id="campoTermino" layoutX="403.0" layoutY="357.0" prefHeight="25.0" prefWidth="130.0" />
             <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" />
             <CheckBox fx:id="campoExperiencia" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
                <font>
@@ -171,6 +181,8 @@
                   </ImageView>
                </graphic></ToggleButton>
             <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
+            <TextField fx:id="campoInicio" layoutX="162.0" layoutY="357.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
+            <TextField fx:id="campoTermino" layoutX="403.0" layoutY="357.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
       </children>
     </AnchorPane>
   </children>

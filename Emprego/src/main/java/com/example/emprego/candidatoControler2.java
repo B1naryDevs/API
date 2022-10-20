@@ -76,10 +76,10 @@ public class candidatoControler2 implements Initializable {
     private TextField campoEmpresa;
 
     @FXML
-    private DatePicker campoInicio;
+    private TextField campoInicio;
 
     @FXML
-    private DatePicker campoTermino;
+    private TextField campoTermino;
 
     @FXML
     private ChoiceBox<String> campoCargoInteresse;
@@ -103,7 +103,7 @@ public class candidatoControler2 implements Initializable {
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("candidato");}
 
     @FXML
     void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
@@ -113,10 +113,8 @@ public class candidatoControler2 implements Initializable {
         String empresa = campoEmpresa.getText();
         String cargo = campoCargo.getText();
         String cargos = campoCargoInteresse.getValue();
-        LocalDate inicioinicial = campoInicio.getValue();
-        LocalDate terminoinicial = campoTermino.getValue();
-        String inicio = String.valueOf(inicioinicial);
-        String termino = String.valueOf(terminoinicial);
+        String inicio = campoInicio.getText();
+        String termino = campoTermino.getText();
         String descricao = campoDescricao.getText();
         String pretensao = campoPretensao.getText();
 
@@ -189,6 +187,24 @@ public class candidatoControler2 implements Initializable {
     @FXML
     void VoltarTela(ActionEvent event) {
         HelloApplication.ChangeScene("candidato");
+    }
+
+    @FXML
+    private void mascaraData() {
+        Formatter data = new Formatter();
+        data.setMask("##/##/####");
+        data.setCaracteresValidos("0123456789");
+        data.setTf(campoInicio);
+        data.formatter();
+    }
+
+    @FXML
+    private void mascaraData2() {
+        Formatter data = new Formatter();
+        data.setMask("##/##/####");
+        data.setCaracteresValidos("0123456789");
+        data.setTf(campoTermino);
+        data.formatter();
     }
 
 }

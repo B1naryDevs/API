@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler2">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles.css">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
+               </image></ImageView>
+            <Button fx:id="botaoHome" layoutX="370.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
+            <Button fx:id="botaoCargos" layoutX="503.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="CARGOS" />
+            <Button fx:id="botaoVagas" layoutX="641.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGAS" />
+            <Button fx:id="botaoRH" layoutX="750.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RH" />
+            <Button fx:id="botaoRelatorios" layoutX="868.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIOS" />
+            <Button fx:id="botaoSobre" layoutX="1048.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image></ImageView>
+               </graphic></ToggleButton>
+            <Label layoutX="480.0" layoutY="60.0" text="CADASTRO RH" textFill="WHITE" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="63.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoNome" layoutX="205.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label fx:id="labelNome" layoutX="94.0" layoutY="280.0" text="NOME *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="labelEmail" layoutX="94.0" layoutY="380.0" text="EMAIL *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoEmail" layoutX="205.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label fx:id="labelTelefone" layoutX="94.0" layoutY="480.0" text="TELEFONE *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font></TextField>
+            <Label fx:id="labelCpf" layoutX="882.0" layoutY="280.0" text="CPF *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSenha" layoutX="853.0" layoutY="380.0" text="SENHA *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelConfirmarSenha" layoutX="736.0" layoutY="480.0" text="CONFIRMAR SENHA *" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="campoConfirmarSenha" layoutX="938.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campoSenha" layoutX="938.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="campoCpf" layoutX="938.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
+            <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="37.0" prefWidth="116.0" text="CADASTRAR" />
+         </children></AnchorPane>
+   </children>
+</VBox>

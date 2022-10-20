@@ -43,7 +43,7 @@ public class candidatoControler {
     private PasswordField campoSenha3;
 
     @FXML
-    private DatePicker campoData;
+    private TextField campoData;
 
     @FXML
     private TextField campoConfirmarsenha2;
@@ -75,8 +75,7 @@ public class candidatoControler {
     void AvancarTela(ActionEvent event) throws FileNotFoundException {
         String nome = campoNome.getText();
         String cpf_not = campoCpf.getText();
-        LocalDate datainicial = campoData.getValue();
-        String data = String.valueOf(datainicial);
+        String data = campoData.getText();
         String email = campoEmail.getText();
         String senha = campoSenha3.getText();
         String senha2 = campoConfirmarsenha.getText();
@@ -231,7 +230,7 @@ public class candidatoControler {
                                                 Pattern TELEPHONE_PATTERN = Pattern.compile(TELEPHONE_REGEX);
                                                 if (TELEPHONE_PATTERN.matcher(telefone).matches()) {
                                                     //Validação de data
-                                                    String DATE_REGEX = "^\\d{4}-\\d{2}-\\d{2}$";
+                                                    String DATE_REGEX = "^\\d{2}/\\d{2}/\\d{4}$";
                                                     Pattern DATE_PATTERN = Pattern.compile(DATE_REGEX);
                                                     if (DATE_PATTERN.matcher(data).matches()) {
                                                         Candidato candidato = new Candidato();
@@ -313,6 +312,15 @@ public class candidatoControler {
         cpf.setCaracteresValidos("0123456789");
         cpf.setTf(campoCpf);
         cpf.formatter();
+    }
+
+    @FXML
+    private void mascaraNascimento() {
+        Formatter nascimento = new Formatter();
+        nascimento.setMask("##/##/####");
+        nascimento.setCaracteresValidos("0123456789");
+        nascimento.setTf(campoData);
+        nascimento.formatter();
     }
 
     //imagem ação

@@ -44,16 +44,16 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoEmail" layoutX="205.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+            <TextField fx:id="campoEmail" layoutX="205.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <Label fx:id="labelTelefone" layoutX="94.0" layoutY="480.0" text="TELEFONE *" textFill="WHITE">
+            <Label fx:id="labelTelefone" layoutX="94.0" layoutY="480.0" text="TELEFONE *" textFill="white">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+            <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white">>
                <font>
                   <Font size="14.0" />
                </font></TextField>
@@ -72,17 +72,17 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoConfirmarSenha" layoutX="938.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+            <TextField fx:id="campoConfirmarSenha" layoutX="938.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white">>
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="campoSenha" layoutX="938.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+            <TextField fx:id="campoSenha" layoutX="938.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white">>
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="campoCpf" layoutX="938.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A;">
+            <TextField fx:id="campoCpf" layoutX="938.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white">>
                <font>
                   <Font size="14.0" />
                </font>

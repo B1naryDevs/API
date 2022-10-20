@@ -9,7 +9,6 @@ import javafx.scene.Parent;
 public class HelloApplication extends Application {
 
     private static Stage stage;
-
     private static Scene candidato;
     private static Scene candidato2;
     private static Scene candidato3;
@@ -20,6 +19,8 @@ public class HelloApplication extends Application {
     private static Scene menu;
     private static Scene cargo;
     private static Scene cargofinal;
+    private static Scene rh;
+    private static Scene rh2;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -57,7 +58,13 @@ public class HelloApplication extends Application {
         Parent layout_cargo2 = FXMLLoader.load(getClass().getResource("layout_cargo2.fxml"));
         cargofinal = new Scene(layout_cargo2);
 
-        primaryStage.setScene(login);
+        Parent layout_rh = FXMLLoader.load(getClass().getResource("layout_rh.fxml"));
+        rh = new Scene(layout_rh);
+
+        Parent layout_rh2 = FXMLLoader.load(getClass().getResource("layout_rh2.fxml"));
+        rh2 = new Scene(layout_rh2);
+
+        primaryStage.setScene(rh);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
@@ -102,6 +109,14 @@ public class HelloApplication extends Application {
                 break;
             case "cargofinal":
                 stage.setScene(cargofinal);
+                stage.setFullScreen(true);
+                break;
+            case "rh":
+                stage.setScene(rh);
+                stage.setFullScreen(true);
+                break;
+            case "rh2":
+                stage.setScene(rh2);
                 stage.setFullScreen(true);
         }
     }

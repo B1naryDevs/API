@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 
 public class vagaControler implements Initializable {
 
@@ -66,9 +67,6 @@ public class vagaControler implements Initializable {
     private TextField campoEndereco;
 
     @FXML
-    private ChoiceBox<String> campoEstado;
-
-    @FXML
     private TextField campoNumero;
 
     @FXML
@@ -100,6 +98,9 @@ public class vagaControler implements Initializable {
 
     @FXML
     private ChoiceBox<String> campoCargo;
+
+    @FXML
+    private ComboBox<String> campoEstado;
 
     @FXML
     private ChoiceBox<String> campoPeriodo;

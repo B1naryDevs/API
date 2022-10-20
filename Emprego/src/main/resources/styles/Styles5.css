@@ -1,0 +1,20 @@
+// Cor de fundo de todo o menu de contexto
+.combo-box .context-menu { -fx-background-color: white; }
+
+// Cor de fundo do item em destaque na lista
+.combo-box .menu-item:focused { -fx-background-color: orange; }
+
+// Cor do texto de itens não focados na lista
+.combo-box .menu-item > .label { -fx-text-fill: black; }
+
+// Cor do texto do item focado na lista
+.combo-box .menu-item:focused > .label { -fx-text-fill: white; }
+
+// Cor de fundo do próprio controle
+.combo-box {-fx-background-color: white; }
+
+// Cor da seta
+.combo-box {-fx-mark-color: orange; }
+
+// Cor do texto do item selecionado no próprio controle
+.combo-box > .label { -fx-text-fill: black; }

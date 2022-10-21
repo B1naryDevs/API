@@ -21,6 +21,8 @@ public class HelloApplication extends Application {
     private static Scene cargofinal;
     private static Scene rh;
     private static Scene rh2;
+    private static Scene rh3;
+    private static Scene rh4;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -63,6 +65,12 @@ public class HelloApplication extends Application {
 
         Parent layout_rh2 = FXMLLoader.load(getClass().getResource("layout_rh2.fxml"));
         rh2 = new Scene(layout_rh2);
+
+        Parent layout_rh3 = FXMLLoader.load(getClass().getResource("layout_rh3.fxml"));
+        rh3 = new Scene(layout_rh3);
+
+        Parent layout_rh4 = FXMLLoader.load(getClass().getResource("layout_rh4.fxml"));
+        rh4 = new Scene(layout_rh4);
 
         primaryStage.setScene(candidato);
         primaryStage.show();
@@ -117,6 +125,14 @@ public class HelloApplication extends Application {
                 break;
             case "rh2":
                 stage.setScene(rh2);
+                stage.setFullScreen(true);
+                break;
+            case "rh3":
+                stage.setScene(rh3);
+                stage.setFullScreen(true);
+                break;
+            case "rh4":
+                stage.setScene(rh4);
                 stage.setFullScreen(true);
         }
     }

@@ -58,10 +58,10 @@ public class rhControler {
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargos(ActionEvent event) { HelloApplication.ChangeScene("");}
+    void AvancarCargos(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
 
     @FXML
     void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
@@ -73,7 +73,7 @@ public class rhControler {
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
-    void AvancarVisualizarFuncionarios(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarVisualizarFuncionarios(ActionEvent event) {HelloApplication.ChangeScene("rh4");}
 
     @FXML
     void AvancarCadastrarFuncionarios(ActionEvent event) {HelloApplication.ChangeScene("rh2");}

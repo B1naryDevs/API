@@ -71,7 +71,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoEmpresa" layoutX="181.0" layoutY="272.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="campoEmpresa" layoutX="181.0" layoutY="272.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <Label fx:id="labelCargo" layoutX="84.0" layoutY="314.0" prefHeight="30.0" prefWidth="92.0" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -87,7 +87,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <CheckBox fx:id="campoExperiencia" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
                <font>
                   <Font size="19.0" />
@@ -137,13 +137,13 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" />
+            <TextField fx:id="campoPretensao" layoutX="986.0" layoutY="357.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
             <Label fx:id="labelDescricao" layoutX="84.0" layoutY="401.0" prefHeight="30.0" prefWidth="110.0" text="DESCRIÇÃO" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoDescricao" layoutX="194.0" layoutY="401.0" prefHeight="86.0" prefWidth="342.0" />
+            <TextField fx:id="campoDescricao" layoutX="194.0" layoutY="401.0" prefHeight="86.0" prefWidth="342.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <Circle layoutX="682.0" layoutY="604.0" radius="30.0" smooth="false" strokeType="INSIDE" strokeWidth="0.0">
                <fill>
                   <LinearGradient endX="0.5355450236966823" endY="1.0" startX="0.4834123222748815">
@@ -181,8 +181,8 @@
                   </ImageView>
                </graphic></ToggleButton>
             <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" />
-            <TextField fx:id="campoInicio" layoutX="162.0" layoutY="357.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
-            <TextField fx:id="campoTermino" layoutX="403.0" layoutY="357.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
+            <TextField fx:id="campoInicio" layoutX="162.0" layoutY="357.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+            <TextField fx:id="campoTermino" layoutX="403.0" layoutY="357.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
       </children>
     </AnchorPane>
   </children>

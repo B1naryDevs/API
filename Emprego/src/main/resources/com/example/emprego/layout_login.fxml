@@ -63,8 +63,8 @@
                     <children>
                         <StackPane>
                             <children>
-                                <TextField fx:id="campoSenha2" prefHeight="36.0" prefWidth="223.0" />
-                                <PasswordField fx:id="campoSenha" prefHeight="40.0" prefWidth="228.0" />
+                                <TextField fx:id="campoSenha2" prefHeight="36.0" prefWidth="223.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+                                <PasswordField fx:id="campoSenha" prefHeight="40.0" prefWidth="228.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
                             </children>
                         </StackPane>
                         <ToggleButton fx:id="tgbtMostrarSenha" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="51.0" prefWidth="61.0" style="-fx-background-color: white;">

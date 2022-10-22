@@ -28,7 +28,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoCargo2" layoutX="195.0" layoutY="357.0" prefHeight="25.0" prefWidth="350.0" />
+            <TextField fx:id="campoCargo2" layoutX="195.0" layoutY="357.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">

@@ -145,9 +145,9 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoInstituicao" layoutX="274.0" layoutY="411.0" prefHeight="25.0" prefWidth="301.0" />
-            <TextField fx:id="campoCurso" layoutX="893.0" layoutY="412.0" prefHeight="25.0" prefWidth="301.0" />
-            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" />
+            <TextField fx:id="campoInstituicao" layoutX="274.0" layoutY="411.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+            <TextField fx:id="campoCurso" layoutX="893.0" layoutY="412.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -162,8 +162,8 @@
                </font>
             </Label>
             <ChoiceBox fx:id="campoIngles" layoutX="893.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" stylesheets="@../../../styles/Styles4.css" />
-            <TextField fx:id="campoInicio" layoutX="199.0" layoutY="468.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
-            <TextField fx:id="campoTermino" layoutX="446.0" layoutY="469.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
+            <TextField fx:id="campoInicio" layoutX="199.0" layoutY="468.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+            <TextField fx:id="campoTermino" layoutX="446.0" layoutY="469.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
       </children>
     </AnchorPane>
   </children>

@@ -1,11 +1,7 @@
 package com.example.emprego;
 
 import java.io.FileNotFoundException;
-import java.text.ParseException;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
@@ -233,15 +229,53 @@ public class candidatoControler {
                                                     String DATE_REGEX = "^\\d{2}/\\d{2}/\\d{4}$";
                                                     Pattern DATE_PATTERN = Pattern.compile(DATE_REGEX);
                                                     if (DATE_PATTERN.matcher(data).matches()) {
-                                                        Candidato candidato = new Candidato();
-                                                        candidato.setNome(nome);
-                                                        candidato.setCpf(cpf_long);
-                                                        candidato.setDataNac(data);
-                                                        candidato.setEmail(email);
-                                                        candidato.setSenha(senha);
-                                                        candidato.setTelefone(telefone_long);
+                                                        //Validação de idade
+                                                        String ano = data.substring(6,10);
+                                                        int a = Integer.parseInt(ano);
+                                                        int year = Calendar.getInstance().get(Calendar.YEAR);;
+                                                        if((year-a)>16) {
+                                                                    Candidato candidato = new Candidato();
+                                                                    candidato.setNome(nome);
+                                                                    candidato.setCpf(cpf_long);
+                                                                    candidato.setDataNac(data);
+                                                                    candidato.setEmail(email);
+                                                                    candidato.setSenha(senha);
+                                                                    candidato.setTelefone(telefone_long);
 
-                                                        HelloApplication.ChangeScene("candidato2");
+                                                                    HelloApplication.ChangeScene("candidato2");
+                                                        } else if((year-a)==16) {
+                                                            String mes = data.substring(3,5);
+                                                            int m = Integer.parseInt(mes);
+                                                            int month = Calendar.getInstance().get(Calendar.MONTH);;
+                                                            if((month-m)>=0) {
+                                                                String dia = data.substring(0,2);
+                                                                int d = Integer.parseInt(dia);
+                                                                int day = Calendar.getInstance().get(Calendar.DATE);;
+                                                                if((day-d)>=0) {
+                                                                    Candidato candidato = new Candidato();
+                                                                    candidato.setNome(nome);
+                                                                    candidato.setCpf(cpf_long);
+                                                                    candidato.setDataNac(data);
+                                                                    candidato.setEmail(email);
+                                                                    candidato.setSenha(senha);
+                                                                    candidato.setTelefone(telefone_long);
+
+                                                                    HelloApplication.ChangeScene("candidato2");
+                                                                } else {
+                                                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                                                    alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                    alert.showAndWait();
+                                                                }
+                                                            } else {
+                                                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                                                alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                alert.showAndWait();
+                                                            }
+                                                        } else {
+                                                                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                                                    alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                    alert.showAndWait();
+                                                                }
                                                     } else {
                                                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                                         alert.setHeaderText("FORMATO DE DATA INVÁLIDO!");

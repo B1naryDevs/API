@@ -78,7 +78,7 @@ public class HelloApplication extends Application {
         processoseletivo = new Scene(layout_processoseletivo);
 
 
-        primaryStage.setScene(processoseletivo);
+        primaryStage.setScene(login);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }

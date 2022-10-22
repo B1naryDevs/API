@@ -14,11 +14,11 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button fx:id="botaoHome" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" />
-            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" />
-            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
-            <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" />
-            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="134.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" />
+            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" />
+            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" />
+            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="134.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
             <ImageView fitHeight="161.0" fitWidth="171.0" layoutX="603.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagens/confirmacao.png" />
@@ -30,7 +30,7 @@
                </font></Label>
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/exit.png" />
                      </image></ImageView>

@@ -47,7 +47,7 @@ public class CargoDAO {
     public static List<String> carg(){
 
         List<String> cargos = new ArrayList<>();
-        String sql = "Select nome_cargo from cargo";
+        String sql = "Select * from cargo";
         Connection conn = null;
         PreparedStatement pstm = null;
         ResultSet rset = null;
@@ -67,7 +67,6 @@ public class CargoDAO {
                 cargos.add(rset.getString("nome_cargo"));
                 
             }
-
 
         } catch (Exception e){
             e.printStackTrace();

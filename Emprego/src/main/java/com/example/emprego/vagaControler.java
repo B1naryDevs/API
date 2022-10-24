@@ -1,11 +1,13 @@
 package com.example.emprego;
 
+import AcessoDAO.CargoDAO;
 import AcessoDAO.VagaDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.fxml.Initializable;
 import java.net.URL;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -97,7 +99,7 @@ public class vagaControler implements Initializable {
     private ToggleButton botaoSair;
 
     @FXML
-    private ChoiceBox<String> campoCargo;
+    public ChoiceBox<String> campoCargo;
 
     @FXML
     private ComboBox<String> campoEstado;
@@ -123,16 +125,20 @@ public class vagaControler implements Initializable {
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
-
-    private String[] cargos = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
     private String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
 "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"};
     private String[] periodos = {"DIURNO", "NOTURNO", "INTEGRAL"};
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        campoCargo.getItems().addAll(cargos);
+        // laço para percorrer a lista e adicionar os componentes
+        for (String c : CargoDAO.carg()){
+
+            //adicionar cargos
+            campoCargo.getItems().add(c);
+
+        }
+
         campoEstado.getItems().addAll(estados);
         campoPeriodo.getItems().addAll(periodos);
 

@@ -48,13 +48,13 @@ public class rhControler4  {
     private TableView<RH> tabelaFuncionarios;
 
     @FXML
-    private TableColumn<Object, Object> colunaNome ;
+    private TableColumn<RH, String> colunaNome ;
 
     @FXML
-    private TableColumn<Object, Object> colunaEmail;
+    private TableColumn<RH, String>  colunaEmail;
 
     @FXML
-    private TableColumn<Object, Object> colunaEmpresa;
+    private TableColumn<RH, String>  colunaEmpresa;
 
     private List<RH> listRh = new ArrayList<>();
     private ObservableList<RH> observablerh;
@@ -69,22 +69,8 @@ public class rhControler4  {
     void Selecionar (ActionEvent event) {
 
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        colunaEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colunaEmail.setCellValueFactory((new PropertyValueFactory<>("email")));
         colunaEmpresa.setCellValueFactory(new PropertyValueFactory<>("empresa"));
-
-        RH func = new RH();
-        RH.setNome("Wallace");
-        RH.setEmail("Legal");
-        RH.setEmpresa("Show");
-
-        listRh.add(func);
-
-        String ter = "";
-
-        observablerh = FXCollections.observableArrayList(listRh);
-        tabelaFuncionarios.setItems(observablerh);
-
-        selec("www");
 
     }
 

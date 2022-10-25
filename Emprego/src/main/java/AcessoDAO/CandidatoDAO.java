@@ -48,7 +48,7 @@ public class CandidatoDAO {
     }
 
     public void saveusucand (Candidato candidato){
-        String sql = "INSERT INTO usuario (email, senha, cpf_candidato_usu) VALUES (?, ?, ?)";
+        String sql = "INSERT INTO usuario (email, senha, cpf_usu) VALUES (?, ?, ?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 

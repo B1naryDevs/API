@@ -2,36 +2,39 @@ package com.example.emprego;
 
 public class RH {
 
-    private static String nome;
+     String nome;
 
-    private static String email;
+     String email;
 
-    private static String empresa;
+     String empresa;
 
-    public static String getNome() {
+    public RH(String nome, String email, String empresa) {
+        this.nome = nome;
+        this.email = email;
+        this.empresa = empresa;
+    }
+
+    public String getNome() {
         return nome;
     }
 
-    public static void setNome(String nome) {
-        RH.nome = nome;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public static void setEmail(String email) {
-        RH.email = email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public static String getEmpresa() {
+    public String getEmpresa() {
         return empresa;
     }
 
-    public static void setEmpresa(String empresa) {
-        RH.empresa = empresa;
-    }
-
-    public RH() {
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
     }
 }

@@ -33,7 +33,7 @@ public class processoSeletivoControler  {
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void AvancarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}

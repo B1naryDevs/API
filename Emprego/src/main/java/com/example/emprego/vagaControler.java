@@ -117,7 +117,7 @@ public class vagaControler implements Initializable {
     void AvancarCargo(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
 
     @FXML
     void AvancarRelatorio(ActionEvent event) {HelloApplication.ChangeScene("");}

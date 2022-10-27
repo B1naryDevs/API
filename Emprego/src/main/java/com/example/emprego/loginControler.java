@@ -69,9 +69,6 @@ public class loginControler {
         }
     }
 
-    @FXML
-    void SairTela(ActionEvent event) { HelloApplication.ChangeScene("menu"); }
-
     //imagem ação
     @FXML
     Image img_MostrarSenha = new Image("file:src/main/resources/imagens/iconMostrar.png",25,25,true,true);

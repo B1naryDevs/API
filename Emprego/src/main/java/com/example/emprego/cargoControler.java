@@ -53,7 +53,7 @@ public class cargoControler {
 
     @FXML
     void AvancarRH(ActionEvent event) {
-        HelloApplication.ChangeScene("");
+        HelloApplication.ChangeScene("rh");
     }
 
     @FXML

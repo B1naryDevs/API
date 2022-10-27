@@ -57,6 +57,7 @@ public class rhControler4 implements Initializable {
 
     @FXML
     private TableColumn<RH, String>  colunaEmpresa;
+
     ObservableList <RH> ListaM;
 
 

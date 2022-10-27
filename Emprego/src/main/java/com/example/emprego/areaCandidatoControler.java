@@ -1,21 +1,17 @@
 package com.example.emprego;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
-import javafx.stage.Stage;
-public class processoSeletivoControler  {
 
+public class areaCandidatoControler {
 
     // Nomeclatura dos botões
 
     @FXML
     private Button botaoHome;
-
-    @FXML
-    private Button botaoAreaCandidato;
 
     @FXML
     private Button botaoVagas;
@@ -24,8 +20,30 @@ public class processoSeletivoControler  {
     private Button botaoSobre;
 
     @FXML
+    private Button botaoSalvar;
+
+    @FXML
+    private Button botaoAcompanhar;
+
+    @FXML
     private ToggleButton botaoSair;
 
+    // Definição dos campos
+
+    @FXML
+    private TextField campoCpf;
+
+    @FXML
+    private TextField campoEmail;
+
+    @FXML
+    private TextField campoNome;
+
+    @FXML
+    private TextField campoTelefone;
+
+    @FXML
+    private TextField campoData;
 
     // Definição das ações dos botões
 
@@ -37,6 +55,9 @@ public class processoSeletivoControler  {
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+
+    @FXML
+    void AvancarProcessoSeletivo(ActionEvent event) {HelloApplication.ChangeScene("processoseletivo");}
 
     @FXML
     void AvancarSobre(ActionEvent event) {HelloApplication.ChangeScene("");}

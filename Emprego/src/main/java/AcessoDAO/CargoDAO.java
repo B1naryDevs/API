@@ -47,7 +47,7 @@ public class CargoDAO {
     public static List<String> carg(){
 
         List<String> cargos = new ArrayList<>();
-        String sql = "Select * from cargo";
+        String sql = "Select nome_cargo from cargo";
         Connection conn = null;
         PreparedStatement pstm = null;
         ResultSet rset = null;

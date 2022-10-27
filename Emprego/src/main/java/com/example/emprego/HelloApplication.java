@@ -23,8 +23,10 @@ public class HelloApplication extends Application {
     private static Scene rh2;
     private static Scene rh3;
     private static Scene rh4;
-
     private static Scene processoseletivo;
+    private static Scene candidatura;
+    private static Scene areacandidato;
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -76,6 +78,12 @@ public class HelloApplication extends Application {
 
         Parent layout_processoseletivo = FXMLLoader.load(getClass().getResource("layout_processoSeletivo.fxml"));
         processoseletivo = new Scene(layout_processoseletivo);
+
+        Parent layout_area_candidato = FXMLLoader.load(getClass().getResource("layout_area_candidato.fxml"));
+        areacandidato = new Scene(layout_area_candidato);
+
+        Parent layout_candidatura = FXMLLoader.load(getClass().getResource("layout_candidatura.fxml"));
+        candidatura = new Scene(layout_candidatura);
 
 
         primaryStage.setScene(login);
@@ -143,6 +151,14 @@ public class HelloApplication extends Application {
                 break;
             case "processoseletivo":
                 stage.setScene(processoseletivo);
+                stage.setFullScreen(true);
+                break;
+            case "areacandidato":
+                stage.setScene(areacandidato);
+                stage.setFullScreen(true);
+                break;
+            case "candidatura":
+                stage.setScene(candidatura);
                 stage.setFullScreen(true);
         }
     }

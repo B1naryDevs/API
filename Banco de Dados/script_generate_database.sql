@@ -1,9 +1,9 @@
+CREATE USER 'binary'@'localhost' IDENTIFIED BY 'binary123';
+GRANT ALL PRIVILEGES ON * . * TO 'binary'@'localhost';
+
 create database api
 default character set utf8
 default collate utf8_general_ci; 
-
-CREATE USER 'binary'@'localhost' IDENTIFIED BY 'binary123';
-GRANT ALL PRIVILEGES ON * . * TO 'binary'@'localhost';
 
 use api;
 
@@ -22,16 +22,26 @@ CREATE TABLE usuario (
     email VARCHAR(40) NOT NULL,
     senha VARCHAR(40) NOT NULL,
     cpf_candidato_usu BIGINT(11) NULL,
-    nome_usu_rh VARCHAR(40) NULL,
     PRIMARY KEY (email)
 );
 
 CREATE TABLE rh (
-    nome_rh VARCHAR(40) NOT NULL,
-    funcao ENUM ('Administrador', 'Publicador') not null,
-    nivel_acesso ENUM('1', '2') NOT NULL,
+    nome_rh VARCHAR(40) NOT NULL, #NOME_RH - EMPRESA
+    local_rh VARCHAR(40) NOT NULL,
+    telefone bigint (11) NOT NULL,
     PRIMARY KEY (nome_rh)
 ); 
+
+CREATE TABLE funcionario (
+empresa VARCHAR(40),
+nome_func VARCHAR(60) not null,
+email VARCHAR(40) NOT NULL,
+senha VARCHAR(40) NOT NULL,
+cpf BIGINT(11) NULL,
+funcao ENUM ('Administrador', 'Publicador') not null,
+nivel_acesso ENUM('1', '2') NOT NULL,
+primary key (cpf)
+);
 
 CREATE TABLE setor (
     nome_setor VARCHAR(40) NOT NULL,
@@ -117,6 +127,10 @@ CREATE TABLE pretensao_cargo (
 
 # CRIAÇÃO DE CHAVES ESTRANGEIRAS (FK) ----------------------------------------------------
 ------------------------------------------------------------------------------------------
+
+# CHAVE ESTRANGEIRA FK - EMPRESA PARA RH
+ALTER TABLE funcionario ADD FOREIGN KEY (empresa) REFERENCES rh (nome_rh);
+
 # CHAVE ESTRANGEIRA FK - EMAIL DE USUARIO
 ALTER TABLE usuario ADD FOREIGN KEY (cpf_candidato_usu) REFERENCES candidato (cpf);
 
@@ -183,11 +197,17 @@ insert into cargo (nome_cargo, setor_cargo) values
 ('Advogado', 'Jurídico');
 
 #ADICIONAR RH
-insert into rh (nome_rh, funcao, nivel_acesso) values
-('Atlanta Construções', 'Publicador', '2'),
-('Irmãos Ademar', 'Publicador', '2'),
-('CPX Outleet', 'Publicador', '2'),
-('Pro4TECH', 'Administrador', '1');
+insert into rh (nome_rh, local_rh, telefone) values
+('Atlanta Construções', 'Porto Alegre', '15999999999'),
+('Irmãos Ademar', 'Fortaleza', '15999999999'),
+('CPX Outleet', 'Guarulhos', '15999999999'),
+('Pro4TECH', 'São Paulo', '15999999999');
+
+#ADICIONAR FUNCIONARIO
+insert into funcionario(empresa, nome_func, email, senha, cpf, funcao, nivel_acesso) values
+("Pro4TECH", "Carlos Aparecido", "carlos@gmail.com", "Troca@123", 12147865201, "Administrador", 1),
+("Pro4TECH", "Soares Silva", "Soares@gmail.com", "Troca@123", 12147865204, "Administrador", 1),
+("Pro4TECH", "Bruno Souza", "Bruno@gmail.com", "Troca@123", 12147865202, "Administrador", 1);
 
 # ADICIONAR VAGAS DE EMPREGO
 insert into vaga (cargo_vaga, empresa_vaga, setor_vaga, id_vaga, periodo, experiencia, salario, descricao_vaga,endereco_vaga, cidade_vaga, remoto, status_vaga) values 

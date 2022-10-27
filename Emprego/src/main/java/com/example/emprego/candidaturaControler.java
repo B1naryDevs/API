@@ -2,20 +2,22 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.MenuButton;
 
-public class vagaControler2 {
+public class candidaturaControler {
+
+    // Nomeclatura dos botões
 
     @FXML
     private Button botaoHome;
 
-   @FXML
-    private Button botaoVaga;
-
     @FXML
     private Button botaoCargo;
+
+    @FXML
+    private Button botaoVaga;
 
     @FXML
     private Button botaoRH;
@@ -24,10 +26,13 @@ public class vagaControler2 {
     private Button botaoRelatorio;
 
     @FXML
-    private ToggleButton botaoSair;
+    private MenuButton botaoFiltrar;
 
     @FXML
-    private Button botaoCadastrar;
+    private Accordion accordionVagas;
+
+
+    // Definição das ações dos botões
 
     @FXML
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
@@ -47,6 +52,4 @@ public class vagaControler2 {
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
-    }
-
-
+}

@@ -1,19 +1,21 @@
 package com.example.emprego;
 
-import javafx.collections.FXCollections;
+
+import AcessoDAO.RhDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.cell.PropertyValueFactory;
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class rhControler4  {
+public class rhControler4 implements Initializable {
 
     // Nomeclatura dos botões
 
@@ -55,9 +57,7 @@ public class rhControler4  {
 
     @FXML
     private TableColumn<RH, String>  colunaEmpresa;
-
-    private List<RH> listRh = new ArrayList<>();
-    private ObservableList<RH> observablerh;
+    ObservableList <RH> ListaM;
 
 
     // Definição das ações dos botões
@@ -66,11 +66,7 @@ public class rhControler4  {
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void Selecionar (ActionEvent event) {
-
-        colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        colunaEmail.setCellValueFactory((new PropertyValueFactory<>("email")));
-        colunaEmpresa.setCellValueFactory(new PropertyValueFactory<>("empresa"));
+    void Selecionar (ActionEvent event) throws SQLException {
 
     }
 
@@ -95,5 +91,17 @@ public class rhControler4  {
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colunaNome.setCellValueFactory(new PropertyValueFactory<RH,String>("Nome"));
+        colunaEmail.setCellValueFactory(new PropertyValueFactory<RH,String>("Email"));
+        colunaEmpresa.setCellValueFactory(new PropertyValueFactory<RH,String>("Empresa"));
+
+        ObservableList<RH> ListaM = RhDAO.Datauser();
+        tabelaFuncionarios.setItems(ListaM);
+
+    }
 }
 

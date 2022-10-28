@@ -274,7 +274,7 @@ public class vagaControler implements Initializable {
                                 Pattern NUMERO_PATTERN = Pattern.compile(NUMERO_REGEX);
                                 if (NUMERO_PATTERN.matcher(num_s).matches()) {
                                     int numero = Integer.parseInt(num_s);
-                                    vaga.setRemote("Sim");
+                                    vaga.setRemote("Não");
                                     vaga.setEndereco(endereco + ", " + numero + ", " + bairro + ", " + complemento + ", " + cep);
                                     vaga.setCidade(cidade + " - " + estado);
                                     vagaDAO.save(vaga);
@@ -296,7 +296,7 @@ public class vagaControler implements Initializable {
                         }
                     }
                 }else{
-                    vaga.setRemote("Não");
+                    vaga.setRemote("Sim");
                     vaga.setEndereco("Remoto");
                     vaga.setCidade("Remoto");
                     vagaDAO.save(vaga);

@@ -30,7 +30,7 @@
                <font>
                   <Font size="63.0" />
                </font></Label>
-            <Button layoutX="79.0" layoutY="586.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarAreaCandidato" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
             <Accordion layoutX="368.0" layoutY="240.0" prefHeight="298.0" prefWidth="654.0">
               <panes>
                 <TitledPane animated="false" text="untitled 1" />

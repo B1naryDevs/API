@@ -125,7 +125,7 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-          <TextArea fx:id="campoDescricao" layoutX="928.0" layoutY="386.0" prefHeight="170.0" prefWidth="300.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+          <TextArea fx:id="campoDescricao" layoutX="928.0" layoutY="386.0" prefHeight="170.0" prefWidth="300.0" />
             <ChoiceBox fx:id="campoCargo" layoutX="93.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />
             <ChoiceBox fx:id="campoPeriodo" layoutX="521.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />
             <CheckBox fx:id="campoExperiencia" layoutX="928.0" layoutY="283.0" mnemonicParsing="false" text="EXPERIÊNCIA PROFISSIONAL*" textFill="WHITE">

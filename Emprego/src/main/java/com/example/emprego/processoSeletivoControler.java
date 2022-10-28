@@ -24,6 +24,10 @@ public class processoSeletivoControler  {
     private Button botaoSobre;
 
     @FXML
+    private Button botaoVoltar;
+
+
+    @FXML
     private ToggleButton botaoSair;
 
 
@@ -34,6 +38,9 @@ public class processoSeletivoControler  {
 
     @FXML
     void AvancarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("areacandidato");}
+
+    @FXML
+    void VoltarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}

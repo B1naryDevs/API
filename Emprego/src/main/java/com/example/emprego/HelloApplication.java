@@ -23,6 +23,7 @@ public class HelloApplication extends Application {
     private static Scene rh2;
     private static Scene rh3;
     private static Scene rh4;
+    private static Scene rh5;
     private static Scene processoseletivo;
     private static Scene candidatura;
     private static Scene areacandidato;
@@ -75,6 +76,9 @@ public class HelloApplication extends Application {
 
         Parent layout_rh4 = FXMLLoader.load(getClass().getResource("layout_rh4.fxml"));
         rh4 = new Scene(layout_rh4);
+
+        Parent layout_rh5 = FXMLLoader.load(getClass().getResource("layout_rh5.fxml"));
+        rh5 = new Scene(layout_rh5);
 
         Parent layout_processoseletivo = FXMLLoader.load(getClass().getResource("layout_processoSeletivo.fxml"));
         processoseletivo = new Scene(layout_processoseletivo);
@@ -147,6 +151,10 @@ public class HelloApplication extends Application {
                 break;
             case "rh4":
                 stage.setScene(rh4);
+                stage.setFullScreen(true);
+                break;
+            case "rh5":
+                stage.setScene(rh5);
                 stage.setFullScreen(true);
                 break;
             case "processoseletivo":

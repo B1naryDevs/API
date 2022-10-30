@@ -75,6 +75,9 @@ public class rhControler4 implements Initializable {
 
     }
 
+    //@FXML
+    //void Selecionar(ActionEvent event) {HelloApplication.ChangeScene("rh5");}
+
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
 

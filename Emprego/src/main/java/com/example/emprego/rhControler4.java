@@ -35,9 +35,6 @@ public class rhControler4 implements Initializable {
     private Button botaoRelatorios;
 
     @FXML
-    private Button botaoSobre;
-
-    @FXML
     private ToggleButton botaoSair;
 
     @FXML
@@ -67,16 +64,7 @@ public class rhControler4 implements Initializable {
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void Selecionar (ActionEvent event) throws SQLException {
-
-    }
-
-    void selec (String full) {
-
-    }
-
-    //@FXML
-    //void Selecionar(ActionEvent event) {HelloApplication.ChangeScene("rh5");}
+    void Selecionar(ActionEvent event) {HelloApplication.ChangeScene("rh5");}
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
@@ -86,9 +74,6 @@ public class rhControler4 implements Initializable {
 
     @FXML
     void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
-
-    @FXML
-    void AvancarSobre(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}

@@ -45,9 +45,6 @@ public class rhControler2  {
     private Button botaoVisualizarFuncionarios;
 
     @FXML
-    private Button botaoSobre;
-
-    @FXML
     private ToggleButton botaoSair;
 
     @FXML
@@ -82,9 +79,6 @@ public class rhControler2  {
 
     @FXML
     void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
-
-    @FXML
-    void AvancarSobre(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}

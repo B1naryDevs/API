@@ -1,7 +1,7 @@
 package AcessoDAO;
 
 import ConnectionFA.ConnectionFactory;
-import com.example.emprego.RH;
+import com.example.emprego.Funcionario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.sql.Connection;
@@ -10,23 +10,22 @@ import java.sql.ResultSet;
 
 
 
-public class RhDAO {
+public class FuncionarioDAO {
 
-    public static ObservableList<RH> Datauser(){
+    public static ObservableList<Funcionario> Datauser(){
 
-        String sql = "select nome_func, email, empresa from funcionario";
         Connection conn = null;
         ResultSet rset = null;
 
-        ObservableList<RH> list = FXCollections.observableArrayList();
+        ObservableList<Funcionario> list = FXCollections.observableArrayList();
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-            PreparedStatement ps = conn.prepareStatement("select nome_func, email, empresa from funcionario");
+            PreparedStatement ps = conn.prepareStatement("select nome_func, email, telefone from funcionario");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                list.add((new RH(rs.getString("nome_func"), rs.getString("email"), rs.getString("empresa"))));
+                list.add((new Funcionario(rs.getString("nome_func"), rs.getString("email"), rs.getLong("telefone"))));
             }
 
         }catch (Exception e){

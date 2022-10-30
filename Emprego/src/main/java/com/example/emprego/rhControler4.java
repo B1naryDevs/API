@@ -1,7 +1,7 @@
 package com.example.emprego;
 
 
-import AcessoDAO.RhDAO;
+import AcessoDAO.FuncionarioDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,18 +47,18 @@ public class rhControler4 implements Initializable {
     // Definindo os itens da tabela
 
     @FXML
-    private TableView<RH> tabelaFuncionarios;
+    private TableView<Funcionario> tabelaFuncionarios;
 
     @FXML
-    private TableColumn<RH, String> colunaNome ;
+    private TableColumn<Funcionario, String> colunaNome ;
 
     @FXML
-    private TableColumn<RH, String>  colunaEmail;
+    private TableColumn<Funcionario, String>  colunaEmail;
 
     @FXML
-    private TableColumn<RH, String>  colunaEmpresa;
+    private TableColumn<Funcionario, String>  colunaTelefone;
 
-    ObservableList <RH> ListaM;
+    ObservableList <Funcionario> ListaM;
 
 
     // Definição das ações dos botões
@@ -96,11 +96,11 @@ public class rhControler4 implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        colunaNome.setCellValueFactory(new PropertyValueFactory<RH,String>("Nome"));
-        colunaEmail.setCellValueFactory(new PropertyValueFactory<RH,String>("Email"));
-        colunaEmpresa.setCellValueFactory(new PropertyValueFactory<RH,String>("Empresa"));
+        colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
+        colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
+        colunaTelefone.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Telefone"));
 
-        ObservableList<RH> ListaM = RhDAO.Datauser();
+        ObservableList<Funcionario> ListaM = FuncionarioDAO.Datauser();
         tabelaFuncionarios.setItems(ListaM);
 
     }

@@ -2,13 +2,18 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 
-public class rhControler5 {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class rhControler5{
 
     // Nomeclatura dos botões e campos
+
 
     @FXML
     private Button botaoHome;
@@ -72,6 +77,17 @@ public class rhControler5 {
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+   // @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText("campo vazio !");
+        alert.showAndWait();
+
+
+
+    }
 
 
 }

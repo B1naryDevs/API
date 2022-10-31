@@ -35,9 +35,10 @@ CREATE TABLE rh (
 CREATE TABLE funcionario (
 empresa VARCHAR(40),
 nome_func VARCHAR(60) not null,
-email VARCHAR(40) NOT NULL,
+email VARCHAR(40) NOT NULL UNIQUE,
 senha VARCHAR(40) NOT NULL,
 cpf BIGINT(11) NULL,
+telefone BIGINT NOT NULL,
 funcao ENUM ('Administrador', 'Publicador') not null,
 nivel_acesso ENUM('1', '2') NOT NULL,
 primary key (cpf)
@@ -204,10 +205,10 @@ insert into rh (nome_rh, local_rh, telefone) values
 ('Pro4TECH', 'São Paulo', '15999999999');
 
 #ADICIONAR FUNCIONARIO
-insert into funcionario(empresa, nome_func, email, senha, cpf, funcao, nivel_acesso) values
-("Pro4TECH", "Carlos Aparecido", "carlos@gmail.com", "Troca@123", 12147865201, "Administrador", 1),
-("Pro4TECH", "Soares Silva", "Soares@gmail.com", "Troca@123", 12147865204, "Administrador", 1),
-("Pro4TECH", "Bruno Souza", "Bruno@gmail.com", "Troca@123", 12147865202, "Administrador", 1);
+insert into funcionario(empresa, nome_func, email, senha, cpf, telefone, funcao, nivel_acesso) values
+("Pro4TECH", "Carlos Aparecido", "carlos@gmail.com", "Troca@123", 12147865201, 12996141485, "Administrador", 1),
+("Pro4TECH", "Soares Silva", "Soares@gmail.com", "Troca@123", 12147865204, 1239132458, "Administrador", 1),
+("Pro4TECH", "Bruno Souza", "Bruno@gmail.com", "Troca@123", 12147865202, 12997841475, "Administrador", 1);
 
 # ADICIONAR VAGAS DE EMPREGO
 insert into vaga (cargo_vaga, empresa_vaga, setor_vaga, id_vaga, periodo, experiencia, salario, descricao_vaga,endereco_vaga, cidade_vaga, remoto, status_vaga) values 

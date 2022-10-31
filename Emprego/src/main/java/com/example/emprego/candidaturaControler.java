@@ -1,6 +1,6 @@
 package com.example.emprego;
 
-import AcessoDAO.VagasDAO;
+import AcessoDAO.VagaDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -64,7 +64,7 @@ public class candidaturaControler implements Initializable{
         colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
         colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
 
-        ObservableList<Vaga> ListaP = VagasDAO.Datauser();
+        ObservableList<Vaga> ListaP = VagaDAO.Datauser();
         tabelaVagas.setItems(ListaP);
 
     }

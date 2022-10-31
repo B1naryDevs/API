@@ -6,13 +6,9 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class rhControler4 implements Initializable {
@@ -57,6 +53,8 @@ public class rhControler4 implements Initializable {
 
     ObservableList <Funcionario> ListaM;
 
+    public static String secemail;
+
 
     // Definição das ações dos botões
 
@@ -64,7 +62,13 @@ public class rhControler4 implements Initializable {
     void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void Selecionar(ActionEvent event) {HelloApplication.ChangeScene("rh5");}
+    void Selecionar(ActionEvent event) {
+
+        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+        secemail = String.valueOf(selecionado.getEmail());
+
+        HelloApplication.ChangeScene("rh5");
+    }
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}

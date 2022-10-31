@@ -26,6 +26,17 @@ public class Funcionario {
 
     }
 
+    public Funcionario() {
+        this.nome = nome;
+        this.email = email;
+        this.empresa = empresa;
+        this.telefone = telefone;
+        this.cpf = cpf;
+        this.senha = senha;
+        this.funcao = funcao;
+        this.acesso = acesso;
+    }
+
     public String getNome() {
         return nome;
     }

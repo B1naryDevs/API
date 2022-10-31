@@ -1,64 +1,73 @@
 package com.example.emprego;
 
 public class Vaga {
-    private static String cargo;
-    private static String periodo;
-    private static String expProfissional;
-    private static float salario;
-    private static String descricao;
-    private static String endereco;
-    private static String cidade;
-    private static String empresa_vaga;
-    private static String setor_vaga;
-    private static String remote;
-    private static String status_vaga;
+    private String cargo;
+    private String periodo;
+    private String experiencia;
+    private float salario;
+    private String descricao;
+    private String endereco;
+    private String cidade;
+    private String empresa_vaga;
+    private String setor_vaga;
+    private String remoto;
+    private String status_vaga;
 
     public Vaga(){}
 
-    public Vaga(String cargo,String periodo,String expProfissional,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remote,String status_vaga){
+    public Vaga(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remoto,String status_vaga){
         this.cargo = cargo;
         this.periodo = periodo;
-        this.expProfissional = expProfissional;
+        this.experiencia = experiencia;
         this.salario = salario;
         this.descricao = descricao;
         this.cidade = cidade;
         this.endereco = endereco;
         this.empresa_vaga = empresa_vaga;
         this.setor_vaga = setor_vaga;
-        this.remote = remote;
+        this.remoto = remoto;
         this.status_vaga = status_vaga;
     }
 
-    public static String getEmpresa_vaga() {
+    public Vaga(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto){
+        this.cargo = cargo;
+        this.periodo = periodo;
+        this.salario = salario;
+        this.experiencia = experiencia;
+        this.descricao = descricao;
+        this.remoto = remoto;
+    }
+
+    public String getEmpresa_vaga() {
         return empresa_vaga;
     }
 
-    public static void setEmpresa_vaga(String empresa_vaga) {
-        Vaga.empresa_vaga = empresa_vaga;
+    public void setEmpresa_vaga(String empresa_vaga) {
+        this.empresa_vaga = empresa_vaga;
     }
 
-    public static String getSetor_vaga() {
+    public String getSetor_vaga() {
         return setor_vaga;
     }
 
-    public static void setSetor_vaga(String setor_vaga) {
-        Vaga.setor_vaga = setor_vaga;
+    public void setSetor_vaga(String setor_vaga) {
+        this.setor_vaga = setor_vaga;
     }
 
-    public static String getRemote() {
-        return remote;
+    public String getRemoto() {
+        return remoto;
     }
 
-    public static void setRemote(String remote) {
-        Vaga.remote = remote;
+    public void setRemoto(String remoto) {
+        this.remoto = remoto;
     }
 
-    public static String getStatus_vaga() {
+    public String getStatus_vaga() {
         return status_vaga;
     }
 
-    public static void setStatus_vaga(String status_vaga) {
-        Vaga.status_vaga = status_vaga;
+    public void setStatus_vaga(String status_vaga) {
+        this.status_vaga = status_vaga;
     }
 
     public void setCargo(String cargo) {
@@ -77,12 +86,12 @@ public class Vaga {
         return this.periodo;
     }
 
-    public void setExpProfissional(String expProfissional) {
-        this.expProfissional = expProfissional;
+    public void setExperiencia(String experiencia) {
+        this.experiencia = experiencia;
     }
 
-    public String getExpProfissional() {
-        return this.expProfissional;
+    public String getExperiencia() {
+        return this.experiencia;
     }
 
     public void setSalario(float salario) {

@@ -90,7 +90,7 @@ public class HelloApplication extends Application {
         candidatura = new Scene(layout_candidatura);
 
 
-        primaryStage.setScene(login);
+        primaryStage.setScene(candidatura);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }

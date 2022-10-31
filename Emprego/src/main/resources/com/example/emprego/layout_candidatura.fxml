@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidaturaControler">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidaturaControler">
     <children>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
             <children>
@@ -53,25 +62,7 @@
                   <Font size="63.0" />
                </font>
             </Label>
-            <Accordion fx:id="accordionVagas" layoutX="436.0" layoutY="278.0" prefHeight="313.0" prefWidth="579.0">
-              <panes>
-                <TitledPane animated="false" text="untitled 2">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 3">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-                <TitledPane animated="false" text="untitled 1">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-                  </content>
-                </TitledPane>
-              </panes>
-            </Accordion>
+            <Accordion fx:id="accordionVagas" layoutX="436.0" layoutY="278.0" prefHeight="313.0" prefWidth="579.0" />
             <MenuButton fx:id="botaoFiltrar" layoutX="1172.0" layoutY="212.0" mnemonicParsing="false" style="-fx-background-color: #595E63;" text="FILTRAR" textFill="WHITE">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
@@ -81,6 +72,16 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </MenuButton>
+            <TableView fx:id="tabelaVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
+               <columns>
+                  <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
+                  <TableColumn fx:id="colunaPeriodo" prefWidth="150.0" text="PERÍODO" />
+                  <TableColumn fx:id="colunaSalario" prefWidth="150.0" text="SALÁRIO" />
+                  <TableColumn fx:id="colunaExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
+                  <TableColumn fx:id="colunaDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
+                  <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
+               </columns>
+            </TableView>
             </children>
         </AnchorPane>
     </children>

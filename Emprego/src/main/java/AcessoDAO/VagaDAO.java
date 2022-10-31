@@ -22,12 +22,12 @@ public class VagaDAO {
             pstm.setString(2, vaga.getEmpresa_vaga());
             pstm.setString(3, vaga.getSetor_vaga());
             pstm.setString(4, vaga.getPeriodo());
-            pstm.setString(5, vaga.getExpProfissional());
+            pstm.setString(5, vaga.getExperiencia());
             pstm.setFloat(6,vaga.getSalario());
             pstm.setString(7, vaga.getDescricao());
             pstm.setString(8, vaga.getEndereco());
             pstm.setString(9, vaga.getCidade());
-            pstm.setString(10, vaga.getRemote());
+            pstm.setString(10, vaga.getRemoto());
             pstm.setString(11, vaga.getStatus_vaga());
 
             pstm.execute();

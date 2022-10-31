@@ -208,9 +208,9 @@ public class vagaControler implements Initializable {
                 vaga.setSetor_vaga("Tecnologia e Informação");
                 vaga.setPeriodo(periodo);
                 if(campoExperiencia.isSelected()){
-                    vaga.setExpProfissional("Sim");
+                    vaga.setExperiencia("Sim");
                 }else{
-                    vaga.setExpProfissional("Não");
+                    vaga.setExperiencia("Não");
                 }
                 vaga.setSalario(sal);
                 vaga.setDescricao(descricao);
@@ -274,7 +274,7 @@ public class vagaControler implements Initializable {
                                 Pattern NUMERO_PATTERN = Pattern.compile(NUMERO_REGEX);
                                 if (NUMERO_PATTERN.matcher(num_s).matches()) {
                                     int numero = Integer.parseInt(num_s);
-                                    vaga.setRemote("Não");
+                                    vaga.setRemoto("Não");
                                     vaga.setEndereco(endereco + ", " + numero + ", " + bairro + ", " + complemento + ", " + cep);
                                     vaga.setCidade(cidade + " - " + estado);
                                     vagaDAO.save(vaga);
@@ -296,7 +296,7 @@ public class vagaControler implements Initializable {
                         }
                     }
                 }else{
-                    vaga.setRemote("Sim");
+                    vaga.setRemoto("Sim");
                     vaga.setEndereco("Remoto");
                     vaga.setCidade("Remoto");
                     vagaDAO.save(vaga);

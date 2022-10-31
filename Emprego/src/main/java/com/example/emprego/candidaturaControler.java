@@ -1,12 +1,19 @@
 package com.example.emprego;
 
+import AcessoDAO.VagasDAO;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Accordion;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class candidaturaControler {
+public class candidaturaControler implements Initializable{
 
     // Nomeclatura dos botões
 
@@ -28,9 +35,39 @@ public class candidaturaControler {
     @FXML
     private MenuButton botaoFiltrar;
 
-    @FXML
-    private Accordion accordionVagas;
+    // Definindo os itens da tabela
 
+    @FXML
+    private TableView<Vaga> tabelaVagas;
+    @FXML
+    private TableColumn<Vaga, String> colunaCargo ;
+    @FXML
+    private TableColumn<Vaga, String> colunaPeriodo ;
+    @FXML
+    private TableColumn<Vaga, String> colunaSalario ;
+    @FXML
+    private TableColumn<Vaga, String> colunaExperiencia ;
+    @FXML
+    private TableColumn<Vaga, String> colunaDescricao ;
+    @FXML
+    private TableColumn<Vaga, String> colunaRemoto ;
+
+    ObservableList<Vaga> ListaP;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Cargo"));
+        colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Periodo"));
+        colunaSalario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Salario"));
+        colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Experiencia"));
+        colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
+        colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
+
+        ObservableList<Vaga> ListaP = VagasDAO.Datauser();
+        tabelaVagas.setItems(ListaP);
+
+    }
 
     // Definição das ações dos botões
 

@@ -2,6 +2,7 @@ package com.example.emprego;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -10,7 +11,7 @@ import javafx.scene.control.ToggleButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class rhControler5{
+public class rhControler5 implements Initializable {
 
     // Nomeclatura dos botões e campos
 

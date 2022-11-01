@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -84,7 +85,21 @@ public class rhControler2  {
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
-    void CadastrarFuncionario(ActionEvent event) {HelloApplication.ChangeScene("rh3");}
+    void CadastrarFuncionario(ActionEvent event) {
+
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
+        Funcionario funcionario = new Funcionario();
+        funcionario.setNome(campoNome.getText());
+        funcionario.setEmail(campoEmail.getText());
+        funcionario.setSenha(campoSenha.getText());
+        funcionario.setCpf(Long.parseLong(campoCpf.getText()));
+        funcionario.setTelefone(Long.parseLong(campoTelefone.getText()));
+
+        funcionarioDAO.savefunc(funcionario);
+
+
+        HelloApplication.ChangeScene("rh3");}
 
     @FXML
     void VoltarTela(ActionEvent event) {HelloApplication.ChangeScene("rh");}

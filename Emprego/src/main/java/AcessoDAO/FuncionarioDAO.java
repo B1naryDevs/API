@@ -98,4 +98,39 @@ public class FuncionarioDAO {
 
     }
 
+public void savefunc(Funcionario func){
+    String sql = "INSERT INTO funcionario (nome_func, email, senha, cpf, telefone) VALUES (?, ?, ?, ?, ?)";
+    Connection conn = null;
+    PreparedStatement pstm = null;
+
+    try{
+        conn = ConnectionFactory.createConnectionToMySQL();
+        pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+        pstm.setString(1, func.getNome());
+        pstm.setString(2, func.getEmail());
+        pstm.setString(3, func.getSenha());
+        pstm.setLong(4, func.getCpf());
+        pstm.setLong(5, func.getTelefone());
+
+        pstm.execute();
+
+    }catch (Exception e){
+        e.printStackTrace();
+    }finally {
+        try {
+            if (pstm!=null){
+                pstm.close();
+            }
+
+            if (conn != null){
+                conn.close();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
 }

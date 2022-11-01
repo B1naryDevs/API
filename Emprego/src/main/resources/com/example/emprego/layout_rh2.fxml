@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler2">
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler2">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles.css">
          <children>
@@ -67,7 +72,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
             <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="37.0" prefWidth="116.0" text="CADASTRAR" />
             <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css">
                <font>

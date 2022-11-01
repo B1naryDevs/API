@@ -33,6 +33,9 @@ public class candidaturaControler implements Initializable{
     private Button botaoRelatorio;
 
     @FXML
+    private Button botaoCandidatar;
+
+    @FXML
     private MenuButton botaoFiltrar;
 
     // Definindo os itens da tabela
@@ -52,7 +55,7 @@ public class candidaturaControler implements Initializable{
     @FXML
     private TableColumn<Vaga, String> colunaRemoto ;
 
-    ObservableList<Vaga> ListaP;
+    public static String selcargo;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -88,5 +91,14 @@ public class candidaturaControler implements Initializable{
 
     @FXML
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void Candidatar(ActionEvent event) {
+
+        Vaga selecionado = tabelaVagas.getSelectionModel().getSelectedItem();
+        selcargo = String.valueOf(selecionado.getCargo());
+
+        HelloApplication.ChangeScene("candidatura2");
+    }
 
 }

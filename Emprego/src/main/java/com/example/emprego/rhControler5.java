@@ -80,15 +80,7 @@ public class rhControler5 implements Initializable {
     void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
    // @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setHeaderText("campo vazio !");
-        alert.showAndWait();
-
-
-
-    }
+    public void initialize(URL url, ResourceBundle resourceBundle) {}
 
 
 }

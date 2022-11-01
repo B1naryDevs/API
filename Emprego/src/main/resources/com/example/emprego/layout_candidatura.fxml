@@ -82,6 +82,7 @@
                   <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
                </columns>
             </TableView>
+            <Button fx:id="botaoCandidatar" layoutX="1152.0" layoutY="698.0" mnemonicParsing="false" onAction="#Candidatar" prefHeight="30.0" prefWidth="160.0" stylesheets="@../../../styles/Styles2.css" text="CANDIDATAR-SE" />
             </children>
         </AnchorPane>
     </children>

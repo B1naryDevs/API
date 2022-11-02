@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -85,14 +88,19 @@ public class rhControler2  {
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
-    void CadastrarFuncionario(ActionEvent event) {
+    void CadastrarFuncionario(ActionEvent event) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        //Encriptar senha
+        MessageDigest algorithm = MessageDigest.getInstance("MD5");
+        String senhaMD = campoSenha.getText();
+        byte messageDigest[] = algorithm.digest(senhaMD.getBytes("UTF-8"));
 
+        //Inserir funcionario no banco
         FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
         Funcionario funcionario = new Funcionario();
         funcionario.setNome(campoNome.getText());
         funcionario.setEmail(campoEmail.getText());
-        funcionario.setSenha(campoSenha.getText());
+        funcionario.setSenha(messageDigest);
         funcionario.setCpf(Long.parseLong(campoCpf.getText()));
         funcionario.setTelefone(Long.parseLong(campoTelefone.getText()));
 

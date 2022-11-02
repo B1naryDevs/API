@@ -81,8 +81,8 @@ public class Funcionario {
         return senha;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setSenha(byte[] senha) {
+        this.senha = String.valueOf(senha);
     }
 
     public String getFuncao() {

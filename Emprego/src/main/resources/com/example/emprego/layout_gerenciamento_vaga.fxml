@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.gerenciamentoVagaControler">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
+            <Button fx:id="botaoCargos" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RH" />
+            <Button fx:id="botaoVagas" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGAS" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image></ImageView>
+               </graphic>
+            </ToggleButton>
+            <Label layoutX="280.0" layoutY="166.0" text="GERENCIAMENTO DE VAGAS" textFill="WHITE">
+               <font>
+                  <Font size="63.0" />
+               </font></Label>
+            <TableView fx:id="tabelaGerenciamentoVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
+              <columns>
+                <TableColumn fx:id="colunaGerCargo" prefWidth="150.0" text="CARGO" />
+                <TableColumn fx:id="colunaGerPeriodo" prefWidth="150.0" text="PERÍODO" />
+                  <TableColumn fx:id="colunaGerSalario" prefWidth="150.0" text="SALÁRIO" />
+                  <TableColumn fx:id="colunaGerExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
+                  <TableColumn fx:id="colunaGerDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
+                  <TableColumn fx:id="colunaGerRemoto" prefWidth="150.0" text="REMOTO" />
+              </columns>
+            </TableView>
+            <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="135.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
+         </children></AnchorPane>
+   </children>
+</VBox>

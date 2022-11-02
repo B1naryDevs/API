@@ -30,6 +30,7 @@ public class HelloApplication extends Application {
     private static Scene areacandidato;
     private static Scene home;
     private static Scene sobre;
+    private static Scene gerenciamentovaga;
 
 
     @Override
@@ -100,6 +101,9 @@ public class HelloApplication extends Application {
 
         Parent layout_sobre_nos = FXMLLoader.load(getClass().getResource("layout_sobre_nos.fxml"));
         sobre = new Scene(layout_sobre_nos);
+
+        Parent layout_gerenciamento_vaga = FXMLLoader.load(getClass().getResource("layout_gerenciamento_vaga.fxml"));
+        gerenciamentovaga = new Scene(layout_gerenciamento_vaga);
 
         primaryStage.setScene(login);
         primaryStage.show();
@@ -190,6 +194,10 @@ public class HelloApplication extends Application {
                 break;
             case "sobre":
                 stage.setScene(sobre);
+                stage.setFullScreen(true);
+                break;
+            case "gerenciamentovaga":
+                stage.setScene(gerenciamentovaga);
                 stage.setFullScreen(true);
         }
     }

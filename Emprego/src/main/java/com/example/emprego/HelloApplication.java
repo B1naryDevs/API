@@ -28,6 +28,8 @@ public class HelloApplication extends Application {
     private static Scene candidatura;
     private static Scene candidatura2;
     private static Scene areacandidato;
+    private static Scene home;
+    private static Scene sobre;
 
 
     @Override
@@ -93,8 +95,13 @@ public class HelloApplication extends Application {
         Parent layout_candidatura2 = FXMLLoader.load(getClass().getResource("layout_candidatura2.fxml"));
         candidatura2 = new Scene(layout_candidatura2);
 
+        Parent layout_home = FXMLLoader.load(getClass().getResource("layout_home.fxml"));
+        home = new Scene(layout_home);
 
-        primaryStage.setScene(rh4);
+        Parent layout_sobre_nos = FXMLLoader.load(getClass().getResource("layout_sobre_nos.fxml"));
+        sobre = new Scene(layout_sobre_nos);
+
+        primaryStage.setScene(login);
         primaryStage.show();
         primaryStage.setFullScreen(true);
     }
@@ -175,6 +182,14 @@ public class HelloApplication extends Application {
                 break;
             case "candidatura2":
                 stage.setScene(candidatura2);
+                stage.setFullScreen(true);
+                break;
+            case "home":
+                stage.setScene(home);
+                stage.setFullScreen(true);
+                break;
+            case "sobre":
+                stage.setScene(sobre);
                 stage.setFullScreen(true);
         }
     }

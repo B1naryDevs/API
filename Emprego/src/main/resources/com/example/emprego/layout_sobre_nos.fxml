@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.sobreNosControler">
+   <children/>
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;">
+         <children>
+            <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../imagens/+empregosemfundo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
+            <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="263.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" />
+            <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGAS" />
+            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false"  onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/exit.png" />
+                     </image></ImageView>
+               </graphic>
+            </ToggleButton>
+            <AnchorPane layoutY="101.0" prefHeight="670.0" prefWidth="683.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="40.0" layoutY="140.0" text="DESENVOLVEMOS SOLUÇÕES DE " textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font></Label>
+                  <Label layoutX="15.0" layoutY="180.0" text="SOB MEDIDA, AJUDANDO NOSSOS" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="220.0" text="CLIENTES A INOVAR, SE DESTACAR" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="260.0" text="E CRESCER. COM EXPERIÊNCIA EM" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="300.0" text="VÁRIAS TECNOLOGIAS, CRIAMOS" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="340.0" text="APLICAÇÕES TANTO WEB QUANTO" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="380.0" text="MOBILE LIGADAS EM CONTEXTOS" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="420.0" text="DE ALTA COMPLEXIDADE E MUITAS" textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="460.0" text="NECESSIDADES ESPECÍFICAS DE " textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="15.0" layoutY="500.0" text="CADA NEGÓCIO." textAlignment="JUSTIFY">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="683.0" layoutY="101.0" prefHeight="670.0" prefWidth="683.0" style="-fx-background-color: #58595A;">
+               <children>
+                  <Label layoutX="204.0" layoutY="41.0" text="CONTATO" textFill="#f57c00">
+                     <font>
+                        <Font size="60.0" />
+                     </font></Label>
+                  <Label layoutX="88.0" layoutY="240.0" text="TELEFONES: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="280.0" text="+55 11 2548-2320" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="440.0" text="Rua: MMDC, 450, 3° andar - conj. 318 Butantã" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="400.0" text="ENDEREÇO: " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="305.0" text="+55 11 2548-2320" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="88.0" layoutY="465.0" text="Cep: 05510-020 - São Paulo - SP" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="370.0" layoutY="240.0" text="EMAIL:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="370.0" layoutY="280.0" text="contato@pro4tech.com.br" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+         </children></AnchorPane>
+   </children>
+</VBox>

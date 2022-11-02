@@ -21,7 +21,7 @@
                         <Font size="60.0" />
                      </font>
                   </Label>
-                  <Label layoutX="14.0" layoutY="290.0" text="AO PROCESSO SELETIVO" textFill="#f57c00">
+                  <Label layoutX="10.0" layoutY="290.0" text="AO PROCESSO SELETIVO" textFill="#f57c00">
                      <font>
                         <Font size="60.0" />
                      </font>
@@ -32,61 +32,51 @@
                      </font>
                   </Label>
                </children></AnchorPane>
-            <AnchorPane layoutX="683.0" layoutY="101.0" prefHeight="670.0" prefWidth="683.0" style="-fx-background-color: #58595A;">
+            <AnchorPane layoutX="674.0" layoutY="101.0" prefHeight="670.0" prefWidth="693.0" style="-fx-background-color: #58595A;">
                <children>
-                  <Label layoutX="40.0" layoutY="100.0" prefHeight="60.0" prefWidth="631.0" text="Criamos soluções digitais, ágeis" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="25.0" layoutY="180.0" text="Criamos soluções digitais, ágeis e modernas" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="140.0" prefHeight="60.0" prefWidth="631.0" text="e inovadoras que impactam na " textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="210.0" text="que impactam na criação de valores das " textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="180.0" prefHeight="60.0" prefWidth="631.0" text="criação de valores das empresas" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="240.0" text="empresas por meio do desenvolvimento de" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="220.0" prefHeight="60.0" prefWidth="631.0" text="através do desenvolvimento de" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="270.0" text="pessoas! Essa tecnologia está fortemente" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="260.0" prefHeight="65.0" prefWidth="659.0" text="pessoas! A tecnologia está muito" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="300.0" text="integrada às atividades diárias, melhorando" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="300.0" prefHeight="65.0" prefWidth="659.0" text="ajustada às atividades cotidianas, " textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="330.0" text="a forma como as pessoas vivem, trabalham " textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="340.0" prefHeight="65.0" prefWidth="659.0" text="melhorando a forma como vivem," textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="360.0" text="e experimentam o mundo, impulsionando a" textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="380.0" prefHeight="65.0" prefWidth="659.0" text="estudam, trabalham nesse mundo " textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="390.0" text="transformação que transcende o digital e " textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
-                  <Label layoutX="20.0" layoutY="420.0" prefHeight="65.0" prefWidth="659.0" text="impulsionando uma transformação" textAlignment="JUSTIFY" textFill="WHITE">
+                  <Label layoutX="10.0" layoutY="420.0" text="passa a fazer parte de todas as interações." textAlignment="JUSTIFY" textFill="WHITE">
                      <font>
-                        <Font size="42.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="20.0" layoutY="460.0" prefHeight="65.0" prefWidth="659.0" text="que transcende o digital e passa a " textAlignment="JUSTIFY" textFill="WHITE">
-                     <font>
-                        <Font size="42.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="20.0" layoutY="500.0" prefHeight="65.0" prefWidth="659.0" text="fazer parte de todas as interações." textAlignment="JUSTIFY" textFill="WHITE">
-                     <font>
-                        <Font size="42.0" />
+                        <Font size="34.0" />
                      </font>
                   </Label>
                </children></AnchorPane>

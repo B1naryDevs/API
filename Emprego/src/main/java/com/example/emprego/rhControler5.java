@@ -58,11 +58,14 @@ public class rhControler5 implements Initializable {
     @FXML
     private TextField getCampoConfirmarSenha;
 
+    @FXML
+    private TextField campoteste;
+
 
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}

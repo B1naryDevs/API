@@ -23,12 +23,13 @@
     -fx-background-color: #8B8989;
 }
 
-.table-row-cell:odd{
+.table-row-cell:even{
     -fx-background-color: #58595A;
 }
 
 .table-row-cell:hover {
     -fx-background-color: #f57c00;
+    -fx-text-fill: white;
 }
 
 .table-row-cell:selected {

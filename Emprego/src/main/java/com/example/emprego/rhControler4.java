@@ -59,7 +59,7 @@ public class rhControler4 implements Initializable {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
 
     @FXML
     void Selecionar(ActionEvent event) {

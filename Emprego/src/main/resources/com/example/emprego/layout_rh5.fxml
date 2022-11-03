@@ -69,6 +69,7 @@
                <font>
                   <Font size="63.0" />
                </font></Label>
+            <TextField fx:id="campoteste" layoutX="1123.0" layoutY="645.0" />
          </children></AnchorPane>
    </children>
 </VBox>

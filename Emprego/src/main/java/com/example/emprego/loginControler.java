@@ -45,6 +45,7 @@ public class loginControler {
     void entrarLogin(ActionEvent event){
 
         //validação de campos em branco
+        String senhaMd5 = Md5.getHashMd5(campoSenha.getText());
 
         if (campoEmail.getText() == "" || campoSenha.getText() == ""){
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -57,7 +58,7 @@ public class loginControler {
             // conexão com banco
 
             CandidatoDAO dao = new CandidatoDAO();
-            if( dao.checklogin(campoEmail.getText(), campoSenha.getText())){
+            if( dao.checklogin(campoEmail.getText(), senhaMd5)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Bem Vindo !");
                 alert.showAndWait();

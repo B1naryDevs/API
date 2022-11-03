@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidaturaDAO;
 import AcessoDAO.VagaDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.fxml.Initializable;
 import java.net.URL;
+import java.util.Calendar;
 import java.util.ResourceBundle;
 
 public class candidaturaControler implements Initializable{
@@ -54,7 +56,10 @@ public class candidaturaControler implements Initializable{
     private TableColumn<Vaga, String> colunaDescricao ;
     @FXML
     private TableColumn<Vaga, String> colunaRemoto ;
+    @FXML
+    private TableColumn<Vaga, String> colunaId;
 
+    public static Integer selid;
     public static String selcargo;
 
     @Override
@@ -66,6 +71,7 @@ public class candidaturaControler implements Initializable{
         colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Experiencia"));
         colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
         colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
+        colunaId.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Id"));
 
         ObservableList<Vaga> ListaP = VagaDAO.Datauser();
         tabelaVagas.setItems(ListaP);
@@ -75,7 +81,7 @@ public class candidaturaControler implements Initializable{
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarVaga(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
@@ -96,7 +102,14 @@ public class candidaturaControler implements Initializable{
     void Candidatar(ActionEvent event) {
 
         Vaga selecionado = tabelaVagas.getSelectionModel().getSelectedItem();
+        selid = Integer.valueOf(selecionado.getId());
         selcargo = String.valueOf(selecionado.getCargo());
+        String data = (Calendar.getInstance().get(Calendar.YEAR)+"-"+Calendar.getInstance().get(Calendar.MONTH)+"-"+Calendar.getInstance().get(Calendar.DATE));
+
+        CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
+        Candidatura candidatura = new Candidatura(selcargo,selid,data,"Em andamento");
+        Candidato candidato = new Candidato();
+        candidaturaDAO.save(candidatura);
 
         HelloApplication.ChangeScene("candidatura2");
     }

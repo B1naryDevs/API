@@ -61,11 +61,11 @@ public class VagaDAO {
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-            PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto from vaga order by salario asc");
+            PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga order by salario asc");
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()){
-                list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"))));
+                list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
             }
 
         }catch (Exception e){

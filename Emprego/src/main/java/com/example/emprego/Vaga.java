@@ -13,6 +13,8 @@ public class Vaga {
     private String remoto;
     private String status_vaga;
 
+    private Integer Id;
+
     public Vaga(){}
 
     public Vaga(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remoto,String status_vaga){
@@ -29,13 +31,14 @@ public class Vaga {
         this.status_vaga = status_vaga;
     }
 
-    public Vaga(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto){
+    public Vaga(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto, Integer Id){
         this.cargo = cargo;
         this.periodo = periodo;
         this.salario = salario;
         this.experiencia = experiencia;
         this.descricao = descricao;
         this.remoto = remoto;
+        this.Id = Id;
     }
 
     public String getEmpresa_vaga() {
@@ -124,6 +127,14 @@ public class Vaga {
 
     public String getCidade() {
         return this.cidade;
+    }
+
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
+
+    public Integer getId() {
+        return this.Id;
     }
 
 }

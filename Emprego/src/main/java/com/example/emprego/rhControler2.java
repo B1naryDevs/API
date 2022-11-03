@@ -52,6 +52,12 @@ public class rhControler2  {
     private ToggleButton botaoSair;
 
     @FXML
+    private ToggleButton tgbtMostrarSenha;
+
+    @FXML
+    private ToggleButton tgbtMostrarSenha2;
+
+    @FXML
     private TextField campoNome;
 
     @FXML
@@ -61,19 +67,25 @@ public class rhControler2  {
     private TextField campoEmail;
 
     @FXML
-    private TextField campoSenha;
-
-    @FXML
     private TextField campoTelefone;
 
     @FXML
+    private TextField campoSenha;
+
+    @FXML
+    private PasswordField campoSenha2;
+
+    @FXML
     private TextField campoConfirmarSenha;
+
+    @FXML
+    private PasswordField campoConfirmarSenha2;
 
 
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
@@ -86,6 +98,12 @@ public class rhControler2  {
 
     @FXML
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+
+    @FXML
+    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
 
     @FXML
     void CadastrarFuncionario(ActionEvent event){
@@ -108,10 +126,60 @@ public class rhControler2  {
         HelloApplication.ChangeScene("rh3");}
 
     @FXML
-    void VoltarTela(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    private void mascaraTel() {
+        Formatter tff = new Formatter();
+        tff.setMask("(##)#####-####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(campoTelefone);
+        tff.formatter();
+    }
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    private void mascaraCpf() {
+        Formatter cpf = new Formatter();
+        cpf.setMask("###.###.###-##");
+        cpf.setCaracteresValidos("0123456789");
+        cpf.setTf(campoCpf);
+        cpf.formatter();
+    }
 
+    //imagem ação
+    @FXML
+    Image img_MostrarSenha = new Image("file:src/main/resources/imagens/iconMostrar.png",25,25,true,true);
+    Image img_OcultarSenha = new Image("file:src/main/resources/imagens/iconApagar.png",25,25,true,true);
+
+    @FXML
+    Image img_MostrarSenha2 = new Image("file:src/main/resources/imagens/iconMostrar.png",25,25,true,true);
+    Image img_OcultarSenha2 = new Image("file:src/main/resources/imagens/iconApagar.png",25,25,true,true);
+
+    //ocultar/mostrar senha
+    @FXML
+    void mostrarSenha(ActionEvent event){
+        if(tgbtMostrarSenha.isSelected()){
+            tgbtMostrarSenha.setGraphic(new ImageView(img_MostrarSenha));
+            campoSenha.setText(campoSenha2.getText());
+            campoSenha.setVisible(true);
+            campoSenha2.setVisible(false);
+        }else{
+            tgbtMostrarSenha.setGraphic(new ImageView(img_OcultarSenha));
+            campoSenha2.setText(campoSenha.getText());
+            campoSenha2.setVisible(true);
+            campoSenha.setVisible(false);
+        }
+    }
+    @FXML
+    void mostrarSenha2(ActionEvent event) {
+        if (tgbtMostrarSenha2.isSelected()) {
+            tgbtMostrarSenha2.setGraphic(new ImageView(img_MostrarSenha2));
+            campoConfirmarSenha.setText(campoConfirmarSenha2.getText());
+            campoConfirmarSenha.setVisible(true);
+            campoConfirmarSenha2.setVisible(false);
+        } else {
+            tgbtMostrarSenha2.setGraphic(new ImageView(img_OcultarSenha2));
+            campoConfirmarSenha2.setText(campoConfirmarSenha.getText());
+            campoConfirmarSenha2.setVisible(true);
+            campoConfirmarSenha.setVisible(false);
+        }
+    }
 }
 

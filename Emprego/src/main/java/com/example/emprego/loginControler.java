@@ -9,6 +9,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.control.ToggleButton;
 
 import javax.swing.*;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class loginControler {
 
@@ -39,7 +42,7 @@ public class loginControler {
     }
 
     @FXML
-    void entrarLogin(ActionEvent event) {
+    void entrarLogin(ActionEvent event){
 
         //validação de campos em branco
 
@@ -49,6 +52,7 @@ public class loginControler {
             alert.showAndWait();
 
         } else {
+
 
             // conexão com banco
 

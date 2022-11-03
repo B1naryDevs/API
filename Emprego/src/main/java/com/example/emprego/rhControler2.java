@@ -88,19 +88,17 @@ public class rhControler2  {
     void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
 
     @FXML
-    void CadastrarFuncionario(ActionEvent event) throws NoSuchAlgorithmException, UnsupportedEncodingException {
-        //Encriptar senha
-        MessageDigest algorithm = MessageDigest.getInstance("MD5");
-        String senhaMD = campoSenha.getText();
-        byte messageDigest[] = algorithm.digest(senhaMD.getBytes("UTF-8"));
+    void CadastrarFuncionario(ActionEvent event){
 
+        //Cifrar Senha
+        String senhaMd5 = Md5.getHashMd5(campoSenha.getText());
         //Inserir funcionario no banco
         FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
         Funcionario funcionario = new Funcionario();
         funcionario.setNome(campoNome.getText());
         funcionario.setEmail(campoEmail.getText());
-        funcionario.setSenha(messageDigest);
+        funcionario.setSenha(senhaMd5);
         funcionario.setCpf(Long.parseLong(campoCpf.getText()));
         funcionario.setTelefone(Long.parseLong(campoTelefone.getText()));
 

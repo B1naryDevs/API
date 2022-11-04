@@ -39,8 +39,8 @@ email VARCHAR(40) NOT NULL UNIQUE,
 senha VARCHAR(40) NOT NULL,
 cpf BIGINT(11) NULL,
 telefone BIGINT NOT NULL,
-funcao ENUM ('Administrador', 'Publicador') not null,
-nivel_acesso ENUM('1', '2') NOT NULL,
+funcao ENUM ('Administrador', 'Publicador'),
+nivel_acesso ENUM('1', '2'),
 primary key (cpf)
 );
 

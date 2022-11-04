@@ -1,6 +1,7 @@
 package com.example.emprego;
 
 import AcessoDAO.CandidatoDAO;
+import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -54,9 +55,9 @@ public class loginControler {
 
         } else {
 
-
             // conexão com banco
 
+            //busca candidato
             CandidatoDAO dao = new CandidatoDAO();
             if( dao.checklogin(campoEmail.getText(), senhaMd5)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -66,10 +67,21 @@ public class loginControler {
 
             } else{
 
-                // USUARIO NÃO ENCONTRADO
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setHeaderText("E-mail ou Senha incorretos !");
-                alert.showAndWait();
+                // busca funcionario
+                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                if( funcionarioDAO.checklogin(campoEmail.getText(), senhaMd5)) {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("Bem Vindo !");
+                    alert.showAndWait();
+                    HelloApplication.ChangeScene("menu");
+                }else{
+
+                    // USUARIO NÃO ENCONTRADO
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText("E-mail ou Senha incorretos !");
+                    alert.showAndWait();
+
+                }
             }
         }
     }

@@ -70,6 +70,7 @@ public class FuncionarioDAO {
                 funciona.setCpf(rset.getLong("cpf"));
                 funciona.setEmail(rset.getString("email"));
                 funciona.setAcesso(rset.getString("funcao"));
+                funciona.setSenha(rset.getString("senha"));
 
                 funclist.add(funciona);
 
@@ -131,6 +132,45 @@ public void savefunc(Funcionario func){
         }
     }
 }
+
+    public boolean checklogin (String email, String senha){
+
+        String sql = "Select email, senha from funcionario where email = ? and senha = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        boolean check = false;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+            pstm.setString(1, email);
+            pstm.setString(2,senha);
+            rs = pstm.executeQuery();
+
+            if (rs.next()){
+                check = true;
+            }
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        return check;
+    }
 
 
 }

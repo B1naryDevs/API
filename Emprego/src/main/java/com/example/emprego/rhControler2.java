@@ -114,6 +114,8 @@ public class rhControler2  {
         String telefone_not = campoTelefone.getText();
         String senha = campoSenha2.getText();
         String senha2 = campoConfirmarSenha2.getText();
+        String cpf = "";
+        String telefone = "";
 
         if (nome.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -161,7 +163,7 @@ public class rhControler2  {
 
                 }
                 cpf_long = Long.parseLong(remover);
-                String cpf = String.valueOf(cpf_long);
+                cpf = String.valueOf(cpf_long);
                 String SIZ2_REGEX = ".{14}";
                 Pattern SIZ2_PATTERN = Pattern.compile(SIZ2_REGEX);
                 if (SIZ2_PATTERN.matcher(telefone_not.trim()).matches()) {
@@ -183,7 +185,7 @@ public class rhControler2  {
 
                     }
                     telefone_long = Long.parseLong(remover2);
-                    String telefone = String.valueOf(telefone_long);
+                    telefone = String.valueOf(telefone_long);
                     //Validação de cpf
                     String CPF_REGEX = "\\d{11}";
                     Pattern CPF_PATTERN = Pattern.compile(CPF_REGEX);
@@ -313,23 +315,33 @@ public class rhControler2  {
                 alert.showAndWait();
             }
         }
+
+        try {
+
+            //Cifrar Senha
+
+            String senhaMd5 = Md5.getHashMd5(senha);
+            //Inserir funcionario no banco
+
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            Funcionario funcionario = new Funcionario();
+            funcionario.setNome(nome);
+            funcionario.setEmail(email);
+            funcionario.setSenha(senhaMd5);
+            funcionario.setCpf(Long.parseLong(cpf));
+            funcionario.setTelefone(Long.parseLong(telefone));
+            funcionarioDAO.savefunc(funcionario);
+
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("NÃO FOI POSSÍVEL CADASTRAR ! TENTE NOVAMENTE !\n" + e);
+            alert.showAndWait();
+        }
+
+        HelloApplication.ChangeScene("rh3");
     }
 
-        /*Cifrar Senha
-        String senhaMd5 = Md5.getHashMd5(campoSenha2.getText());
-        //Inserir funcionario no banco
-        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome(campoNome.getText());
-        funcionario.setEmail(campoEmail.getText());
-        funcionario.setSenha(senhaMd5);
-        funcionario.setCpf(Long.parseLong(campoCpf.getText()));
-        funcionario.setTelefone(Long.parseLong(campoTelefone.getText()));
-
-        funcionarioDAO.savefunc(funcionario);
-
-        HelloApplication.ChangeScene("rh3");*/
 
     @FXML
     private void mascaraTel() {

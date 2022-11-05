@@ -41,10 +41,9 @@ public class FuncionarioDAO {
 
     }
 
-    public List<Funcionario> Func()
+    public List<Funcionario> Func( String email)
 
     {
-        String email = secemail;
         String sql = "Select * from funcionario where email = ?";
         Connection conn = null;
         PreparedStatement pstm = null;

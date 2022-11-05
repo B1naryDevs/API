@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -84,7 +85,22 @@ public class rhControler5 implements Initializable {
    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rhControler4 rh4 = new rhControler4();
-        campoteste.setText(rh4.getSecemail());
+       FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+
+       for (Funcionario rh : funcionarioDAO.Func(rh4.getSecemail())){
+           getCampoNome.setText(rh.getNome());
+           getCampoEmail.setText(rh.getEmail());
+           getCampoCpf.setText(String.valueOf(rh.getCpf()));
+           getCampoTelefone.setText(String.valueOf(rh.getTelefone()));
+
+           // string senha está com a senha do funcionario em codigo hash(lembre - se
+           //de cadastrar um novo funcionario ! Pois os pré cadastrados do banco não possuem Hash !!)
+           String senha = rh.getSenha();
+
+           //senha sem hash
+           String hash = "coloca aqui a senha sem hash";
+
+       }
    }
 
 

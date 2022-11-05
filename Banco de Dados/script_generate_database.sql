@@ -1,5 +1,5 @@
-CREATE USER 'binary'@'localhost' IDENTIFIED BY 'binary123';
-GRANT ALL PRIVILEGES ON * . * TO 'binary'@'localhost';
+#CREATE USER 'binary'@'localhost' IDENTIFIED BY 'binary123';
+#GRANT ALL PRIVILEGES ON * . * TO 'binary'@'localhost';
 
 create database api
 default character set utf8

@@ -38,12 +38,12 @@ public class loginControler {
     private ToggleButton tgbtMostrarSenha;
 
     @FXML
-    void cadastrarLogin(ActionEvent event) {
+    void cadastrarLogin(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato");
     }
 
     @FXML
-    void entrarLogin(ActionEvent event){
+    void entrarLogin(ActionEvent event) throws Exception{
 
         //validação de campos em branco
         String senhaMd5 = Md5.getHashMd5(campoSenha.getText());

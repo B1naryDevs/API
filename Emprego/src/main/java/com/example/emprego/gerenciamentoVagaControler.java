@@ -56,22 +56,22 @@ public class gerenciamentoVagaControler {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargos(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 
 }

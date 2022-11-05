@@ -27,14 +27,14 @@ public class candidatoControler4 {
     private ToggleButton botaoSair;
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void AvancarLogin(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 
     @FXML
-    void VoltarInicio(ActionEvent event) throws FileNotFoundException {
+    void VoltarInicio(ActionEvent event) throws Exception{
         Candidato candidato = new Candidato(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);;
         HelloApplication.ChangeScene("candidato");
     }

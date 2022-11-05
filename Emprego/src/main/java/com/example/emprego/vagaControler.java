@@ -108,22 +108,22 @@ public class vagaControler implements Initializable {
     private ChoiceBox<String> campoPeriodo;
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void AvancarVaga(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargo(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargo(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     private String[] estados = {"AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
 "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"};
@@ -171,7 +171,7 @@ public class vagaControler implements Initializable {
         cep.formatter();
     }
     @FXML
-    void finalizarVaga(ActionEvent event) {
+    void finalizarVaga(ActionEvent event) throws Exception {
         String cargo = campoCargo.getValue();
         String periodo = campoPeriodo.getValue();
         String salario = campoSalario.getText();

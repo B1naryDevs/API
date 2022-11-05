@@ -59,16 +59,16 @@ public class candidatoControler {
     private TextField campoTelefone;
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("candidato");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidato");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void AvancarLogin(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarTela(ActionEvent event) throws FileNotFoundException {
+    void AvancarTela(ActionEvent event) throws Exception{
         String nome = campoNome.getText();
         String cpf_not = campoCpf.getText();
         String data = campoData.getText();
@@ -368,7 +368,7 @@ public class candidatoControler {
 
     //ocultar/mostrar senha
     @FXML
-    void mostrarSenha1(ActionEvent event){
+    void mostrarSenha1(ActionEvent event) throws Exception{
         if(tgbtMostrarSenha1.isSelected()){
             tgbtMostrarSenha1.setGraphic(new ImageView(img_MostrarSenha));
             campoSenha4.setText(campoSenha3.getText());
@@ -382,7 +382,7 @@ public class candidatoControler {
         }
     }
     @FXML
-    void mostrarSenha2(ActionEvent event) {
+    void mostrarSenha2(ActionEvent event) throws Exception {
         if (tgbtMostrarSenha2.isSelected()) {
             tgbtMostrarSenha2.setGraphic(new ImageView(img_MostrarSenha2));
             campoConfirmarsenha2.setText(campoConfirmarsenha.getText());

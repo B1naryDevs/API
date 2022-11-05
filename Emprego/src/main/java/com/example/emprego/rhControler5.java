@@ -3,7 +3,6 @@ package com.example.emprego;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
@@ -65,25 +64,28 @@ public class rhControler5 implements Initializable {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception{HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargos(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
-   // @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {}
+   @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        rhControler4 rh4 = new rhControler4();
+        campoteste.setText(rh4.getSecemail());
+   }
 
 
 }

@@ -28,18 +28,18 @@ public class homeControler {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
-    void AvancarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("areacandidato");}
+    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarSobre(ActionEvent event) {HelloApplication.ChangeScene("sobre");}
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 }

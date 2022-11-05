@@ -100,16 +100,16 @@ public class candidatoControler2 implements Initializable {
     }
     
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception{HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("candidato");}
+    void AvancarHome(ActionEvent event) throws Exception{HelloApplication.ChangeScene("candidato");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void AvancarLogin(ActionEvent event) throws Exception{HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarTela(ActionEvent event) throws FileNotFoundException {
+    void AvancarTela(ActionEvent event) throws Exception {
         String empresa = campoEmpresa.getText();
         String cargo = campoCargo.getText();
         String cargos = campoCargoInteresse.getValue();
@@ -185,7 +185,7 @@ public class candidatoControler2 implements Initializable {
         }
     }
     @FXML
-    void VoltarTela(ActionEvent event) {
+    void VoltarTela(ActionEvent event)throws Exception {
         HelloApplication.ChangeScene("candidato");
     }
 

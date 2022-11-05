@@ -26,32 +26,32 @@ public class candidaturaControler2 {
     private Button botaoVagas;
 
     @FXML
-    void AvancarCargos(ActionEvent event) {
+    void AvancarCargos(ActionEvent event) throws Exception {
 
     }
 
     @FXML
-    void AvancarHome(ActionEvent event) {
+    void AvancarHome(ActionEvent event) throws Exception {
 
     }
 
     @FXML
-    void AvancarRH(ActionEvent event) {
+    void AvancarRH(ActionEvent event) throws Exception {
 
     }
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) {
+    void AvancarRelatorios(ActionEvent event) throws Exception {
 
     }
 
     @FXML
-    void AvancarVagas(ActionEvent event) {
+    void AvancarVagas(ActionEvent event) throws Exception {
 
     }
 
     @FXML
-    void SairTela(ActionEvent event) {
+    void SairTela(ActionEvent event) throws Exception {
 
     }
 

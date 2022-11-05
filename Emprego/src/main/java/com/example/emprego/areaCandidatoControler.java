@@ -48,22 +48,22 @@ public class areaCandidatoControler {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("menu");}
 
     @FXML
-    void AvancarAreaCandidato(ActionEvent event) {HelloApplication.ChangeScene("areacandidato");}
+    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarProcessoSeletivo(ActionEvent event) {HelloApplication.ChangeScene("processoseletivo");}
+    void AvancarProcessoSeletivo(ActionEvent event) throws Exception {HelloApplication.ChangeScene("processoseletivo");}
 
     @FXML
-    void AvancarSobre(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 }
 

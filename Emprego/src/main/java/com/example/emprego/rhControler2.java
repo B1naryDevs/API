@@ -86,28 +86,28 @@ public class rhControler2  {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargos(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void VoltarTela(ActionEvent event) {HelloApplication.ChangeScene("rh");}
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void CadastrarFuncionario(ActionEvent event) throws FileNotFoundException {
+    void CadastrarFuncionario(ActionEvent event) throws Exception{
         String nome = campoNome.getText();
         String cpf_not = campoCpf.getText();
         String email = campoEmail.getText();
@@ -386,7 +386,7 @@ public class rhControler2  {
         }
     }
     @FXML
-    void mostrarSenha2(ActionEvent event) {
+    void mostrarSenha2(ActionEvent event) throws Exception {
         if (tgbtMostrarSenha2.isSelected()) {
             tgbtMostrarSenha2.setGraphic(new ImageView(img_MostrarSenha2));
             campoConfirmarSenha.setText(campoConfirmarSenha2.getText());

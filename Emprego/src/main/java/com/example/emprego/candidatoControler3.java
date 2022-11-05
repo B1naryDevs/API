@@ -56,20 +56,20 @@ public class candidatoControler3 implements Initializable{
         campoIngles.getItems().addAll(nivel);
 
     }
-    public void getNivel(ActionEvent event){
+    public void getNivel(ActionEvent event) throws Exception{
         String NivelSelecionado = campoIngles.getValue();
         labelIngles.setText(NivelSelecionado);
 
     }
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("candidato");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidato");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void AvancarLogin(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
     private TextField campoCompetencia;
@@ -87,7 +87,7 @@ public class candidatoControler3 implements Initializable{
     private TextField campoTermino;
 
     @FXML
-    void FinalizarCadastro(ActionEvent event) throws FileNotFoundException {
+    void FinalizarCadastro(ActionEvent event) throws Exception{
         String competencia = campoCompetencia.getText();
         String idioma = campoIngles.getValue();
         String instituicao = campoInstituicao.getText();
@@ -205,7 +205,7 @@ public class candidatoControler3 implements Initializable{
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
+    void VoltarTela(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato2");
     }
 }

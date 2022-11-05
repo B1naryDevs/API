@@ -105,7 +105,7 @@
   
   ### VISUALIZAÇÃO DE DETALHADA
   
-  ![22](https://user-images.githubusercontent.com/101594950/200096412-4e18af34-e798-48ad-a2d8-fbd03018d06b.jpeg)
+  ![22](https://user-images.githubusercontent.com/102266928/200098721-268cb48e-9b01-4e64-ba2c-a6d64afbb902.png)
 
   </summary>
   
@@ -142,7 +142,8 @@
   
  <div align="center">
  
-  ![WhatsApp Image 2022-10-08 at 12 28 31 (4)](https://user-images.githubusercontent.com/101594950/194791188-72e1c561-7959-4716-b6f8-49b5a07781da.jpeg)
+ ![26](https://user-images.githubusercontent.com/102266928/200098795-472b8afc-c0e2-4f49-96da-7d2a7021787f.png)
+
 
  </details>
    

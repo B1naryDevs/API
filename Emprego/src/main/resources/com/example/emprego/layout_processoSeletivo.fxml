@@ -24,7 +24,7 @@
                </graphic></ToggleButton>
             <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
             <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" />
-            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="143.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" />
+            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="143.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" />
             <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGAS" />
             <Label layoutX="360.0" layoutY="60.0" text="PROCESSOS SELETIVOS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>

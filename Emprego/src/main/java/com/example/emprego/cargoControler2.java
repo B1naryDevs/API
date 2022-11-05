@@ -28,7 +28,7 @@ public class cargoControler2 {
     private ToggleButton botaoSair;
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}

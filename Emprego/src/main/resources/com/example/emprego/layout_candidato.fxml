@@ -106,17 +106,17 @@
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="545.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
+                <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="850.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
+                <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
+                <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>

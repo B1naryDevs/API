@@ -48,7 +48,7 @@ public class areaCandidatoControler {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
@@ -60,7 +60,7 @@ public class areaCandidatoControler {
     void AvancarProcessoSeletivo(ActionEvent event) throws Exception {HelloApplication.ChangeScene("processoseletivo");}
 
     @FXML
-    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

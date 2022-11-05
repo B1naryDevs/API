@@ -38,7 +38,7 @@ public class cargoControler {
 
     @FXML
     void AvancarHome(ActionEvent event) throws Exception {
-        HelloApplication.ChangeScene("menu");
+        HelloApplication.ChangeScene("home");
     }
 
     @FXML

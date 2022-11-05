@@ -16,12 +16,18 @@ public class candidatoControler4 {
 
     @FXML
     private Button botaoHome;
+
+    @FXML
+    private Button botaoAreaCandidato;
+
+    @FXML
+    private Button botaoVagas;
+
+    @FXML
+    private Button botaoSobre;
     
     @FXML
     private Button botaoAvancar;
-
-    @FXML
-    private Button botaoLogin;
 
     @FXML
     private ToggleButton botaoSair;
@@ -30,12 +36,17 @@ public class candidatoControler4 {
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
+    @FXML
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+
+    @FXML
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
 
     @FXML
     void VoltarInicio(ActionEvent event) throws Exception{
         Candidato candidato = new Candidato(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);;
-        HelloApplication.ChangeScene("candidato");
+        HelloApplication.ChangeScene("home");
     }
 }

@@ -63,7 +63,7 @@ public class loginControler {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Bem Vindo !");
                 alert.showAndWait();
-                HelloApplication.ChangeScene("menu");
+                HelloApplication.ChangeScene("home");
 
             } else{
 
@@ -73,7 +73,7 @@ public class loginControler {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText("Bem Vindo !");
                     alert.showAndWait();
-                    HelloApplication.ChangeScene("menu");
+                    HelloApplication.ChangeScene("home");
                 }else{
 
                     // USUARIO NÃO ENCONTRADO

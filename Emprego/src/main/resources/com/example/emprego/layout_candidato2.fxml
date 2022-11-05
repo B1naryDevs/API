@@ -22,17 +22,17 @@
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="545.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
+            <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="850.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
+            <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
+            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
@@ -161,7 +161,7 @@
                      </image>
                   </ImageView>
                </graphic></ToggleButton>
-            <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" stylesheets="@../../../styles/Styles4.css" style="-fx-background-color: #58595A;"/>
+            <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #58595A;" stylesheets="@../../../styles/Styles4.css" />
             <TextField fx:id="campoInicio" layoutX="162.0" layoutY="357.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <TextField fx:id="campoTermino" layoutX="403.0" layoutY="357.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
       </children>

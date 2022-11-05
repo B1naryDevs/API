@@ -20,12 +20,7 @@
             </ImageView>
             <AnchorPane layoutY="101.0" prefHeight="670.0" prefWidth="683.0" style="-fx-background-color: white;">
                <children>
-                  <Label layoutX="73.0" layoutY="175.0" prefHeight="88.0" prefWidth="595.0" text="SEJA BEM VINDO(A) AO" textFill="#f57c00">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="36.0" layoutY="251.0" text="NOSSO PROCESSO SELETIVO!" textFill="#f57c00">
+                  <Label layoutX="88.0" layoutY="199.0" prefHeight="88.0" prefWidth="595.0" text="SEJA BEM VINDO(A)!" textFill="#f57c00">
                      <font>
                         <Font size="45.0" />
                      </font>
@@ -35,19 +30,25 @@
                         <Image url="@../../../imagens/pro4tech.png" />
                      </image>
                   </ImageView>
+                  <Label layoutX="68.0" layoutY="282.0" prefHeight="88.0" prefWidth="595.0" textFill="#f57c00">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
             <AnchorPane layoutX="674.0" layoutY="101.0" prefHeight="670.0" prefWidth="693.0" style="-fx-background-color: #58595A;">
                <children>
                   <ImageView fitHeight="469.0" fitWidth="648.0" layoutX="31.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../imagens/textohome.png" />
+                        <Image url="@../../../imagens/textohomerh.png" />
                      </image>
                   </ImageView>
                </children></AnchorPane>
             <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
-            <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="263.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" />
-            <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGAS" />
-            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="164.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" />
+            <Button fx:id="botaoCargos" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
+            <Button fx:id="botaoVagas" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGA" />
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RH" />
+            <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">

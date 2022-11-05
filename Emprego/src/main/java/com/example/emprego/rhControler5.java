@@ -38,6 +38,9 @@ public class rhControler5 implements Initializable {
     private Button botaoReprovados;
 
     @FXML
+    private Button botaoSalvar;
+
+    @FXML
     private ToggleButton botaoSair;
 
     @FXML
@@ -75,6 +78,9 @@ public class rhControler5 implements Initializable {
 
     @FXML
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void SalvarAlteracoes(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

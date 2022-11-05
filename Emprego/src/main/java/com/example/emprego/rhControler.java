@@ -67,10 +67,10 @@ public class rhControler {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void AvancarVisualizarFuncionarios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void VisualizarFuncionarios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
 
     @FXML
-    void AvancarCadastrarFuncionarios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh2");}
+    void CadastrarFuncionarios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh2");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

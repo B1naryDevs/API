@@ -58,9 +58,6 @@ public class rhControler5 implements Initializable {
     @FXML
     private TextField getCampoConfirmarSenha;
 
-    @FXML
-    private TextField campoteste;
-
 
     // Definição das ações dos botões
 
@@ -102,6 +99,4 @@ public class rhControler5 implements Initializable {
 
        }
    }
-
-
 }

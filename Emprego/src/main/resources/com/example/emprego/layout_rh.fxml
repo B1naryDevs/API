@@ -43,12 +43,16 @@
                   </ImageView>
                </graphic>
             </ToggleButton>
-            <Button fx:id="botaoVisualizarFuncionarios" layoutX="188.0" layoutY="350.0" mnemonicParsing="false" onAction="#AvancarVisualizarFuncionarios" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="VISUALIZAR FUNCIONÁRIOS" textFill="WHITE">
+            <Button fx:id="botaoVisualizarFuncionarios" layoutX="188.0" layoutY="350.0" mnemonicParsing="false" onAction="#VisualizarFuncionarios" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="VISUALIZAR FUNCIONÁRIOS" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
             </Button>
-            <Button fx:id="botaoCadastrarFuncionarios" layoutX="821.0" layoutY="350.0" mnemonicParsing="false" onAction="#AvancarCadastrarFuncionarios" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="CADASTRAR FUNCIONÁRIOS" />
+            <Button fx:id="botaoCadastrarFuncionarios" layoutX="820.0" layoutY="350.0" mnemonicParsing="false" onAction="#CadastrarFuncionarios" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="CADASTRAR FUNCIONÁRIOS" textFill="WHITE">
+               <font>
+               <Font size="25.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
    </children>
 </VBox>

@@ -82,14 +82,14 @@
                   <TextField fx:id="campoSenha" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
                   <PasswordField fx:id="campoSenha2" prefHeight="30.0" prefWidth="330.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                </children></StackPane>
-            <ToggleButton fx:id="tgbtMostrarSenha" layoutX="1268.0" layoutY="380.0" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="30.0" prefWidth="45.0" textFill="WHITE">
+            <ToggleButton fx:id="tgbtMostrarSenha" layoutX="1268.0" layoutY="380.0" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="30.0" prefWidth="45.0" textFill=style="-fx-background-color: #58595A;">
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/iconApagar.png" />
                      </image></ImageView>
                </graphic></ToggleButton>
-            <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="1268.0" layoutY="480.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" textFill="WHITE">
+            <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="1268.0" layoutY="480.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #58595A;">
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>

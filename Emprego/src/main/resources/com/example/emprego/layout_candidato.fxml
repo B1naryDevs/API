@@ -166,7 +166,7 @@
                             </image>
                         </ImageView>
                     </graphic></ToggleButton>
-                <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="828.0" layoutY="499.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="828.0" layoutY="499.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #58595A;">
                     <graphic>
                         <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -174,7 +174,7 @@
                             </image>
                         </ImageView>
                     </graphic></ToggleButton>
-                <ToggleButton fx:id="tgbtMostrarSenha1" layoutX="829.0" layoutY="420.0" mnemonicParsing="false" onAction="#mostrarSenha1" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: white;">
+                <ToggleButton fx:id="tgbtMostrarSenha1" layoutX="829.0" layoutY="420.0" mnemonicParsing="false" onAction="#mostrarSenha1" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #58595A;">
                     <graphic>
                         <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>

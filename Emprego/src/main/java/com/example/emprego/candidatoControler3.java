@@ -165,7 +165,7 @@ public class candidatoControler3 implements Initializable{
                     float sal = Float.valueOf(pretensao);
 
                     CandidatoDAO candidatoDAO = new CandidatoDAO();
-
+                    String senhaMd5 = Md5.getHashMd5(senha);
                     Candidato candidatobanc = new Candidato();
                     candidatobanc.setNome(nome);
                     candidatobanc.setCpf(cpf);
@@ -179,7 +179,7 @@ public class candidatoControler3 implements Initializable{
                     Candidato candusu = new Candidato();
 
                     candusu.setEmail(email);
-                    candusu.setSenha(senha);
+                    candusu.setSenha(senhaMd5);
                     candusu.setCpf(cpf);
 
                     candidatoUsuDAO.saveusucand(candusu);

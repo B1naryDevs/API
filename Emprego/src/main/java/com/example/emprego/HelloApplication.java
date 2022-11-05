@@ -94,12 +94,6 @@ public class HelloApplication extends Application {
                 stage.setScene(login);
                 stage.setFullScreen(true);
                 break;
-            case "menu":
-                Parent layout_menu = FXMLLoader.load(HelloApplication.class.getResource("layout_menu.fxml"));
-                menu = new Scene(layout_menu);
-                stage.setScene(menu);
-                stage.setFullScreen(true);
-                break;
             case "cargo":
                 Parent layout_cargo = FXMLLoader.load(HelloApplication.class.getResource("layout_cargo.fxml"));
                 cargo = new Scene(layout_cargo);
@@ -164,6 +158,12 @@ public class HelloApplication extends Application {
                 Parent layout_candidatura2 = FXMLLoader.load(HelloApplication.class.getResource("layout_candidatura2.fxml"));
                 candidatura2 = new Scene(layout_candidatura2);
                 stage.setScene(candidatura2);
+                stage.setFullScreen(true);
+                break;
+            case "homerh":
+                Parent layout_homerh = FXMLLoader.load(HelloApplication.class.getResource("layout_homerh.fxml"));
+                home = new Scene(layout_homerh);
+                stage.setScene(home);
                 stage.setFullScreen(true);
                 break;
             case "home":

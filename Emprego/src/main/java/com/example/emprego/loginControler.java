@@ -61,7 +61,7 @@ public class loginControler {
             CandidatoDAO dao = new CandidatoDAO();
             if( dao.checklogin(campoEmail.getText(), senhaMd5)){
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("Bem Vindo !");
+                alert.setHeaderText("Bem Vindo!");
                 alert.showAndWait();
                 HelloApplication.ChangeScene("home");
 
@@ -71,7 +71,7 @@ public class loginControler {
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
                 if( funcionarioDAO.checklogin(campoEmail.getText(), senhaMd5)) {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Bem Vindo !");
+                    alert.setHeaderText("Bem Vindo Funcionario!");
                     alert.showAndWait();
                     HelloApplication.ChangeScene("home");
                 }else{

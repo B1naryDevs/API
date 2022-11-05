@@ -33,7 +33,7 @@ public class rhControler3 {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}

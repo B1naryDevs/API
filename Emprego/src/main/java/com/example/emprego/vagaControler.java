@@ -108,7 +108,7 @@ public class vagaControler implements Initializable {
     private ChoiceBox<String> campoPeriodo;
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}

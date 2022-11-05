@@ -84,19 +84,17 @@ public class candidaturaControler implements Initializable{
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
-    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
-    void AvancarCargo(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidatura");}
 
     @FXML
-    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
-
-    @FXML
-    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+
 
     @FXML
     void Candidatar(ActionEvent event) throws Exception {

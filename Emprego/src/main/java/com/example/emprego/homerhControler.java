@@ -5,8 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 
-public class menuControler {
+public class homerhControler {
 
+    //Nomeclatura dos botões
     @FXML
     private Button botaoHome;
 
@@ -25,8 +26,11 @@ public class menuControler {
     @FXML
     private ToggleButton botaoSair;
 
+
+    // Definição das ações dos botões
+
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
@@ -42,5 +46,6 @@ public class menuControler {
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+
 
 }

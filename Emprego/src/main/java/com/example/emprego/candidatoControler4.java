@@ -39,7 +39,7 @@ public class candidatoControler4 {
     void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidatura");}
 
     @FXML
     void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}

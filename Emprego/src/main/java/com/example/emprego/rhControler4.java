@@ -65,7 +65,7 @@ public class rhControler4 implements Initializable {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void Selecionar(ActionEvent event) throws Exception{

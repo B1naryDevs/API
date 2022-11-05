@@ -257,4 +257,4 @@ insert into candidatura(empresa_candidatura, cargo_candidatura, id_candidatura, 
 ('Pro4TECH', 'Desenvolvedor', default, '01010101011', 2, '2022-09-30', 'Entrevista Online' );
 
 insert into usuario (email, senha, cpf_candidato_usu) values 
-('Adm@123', '123', 48615448696 );
+('Adm@123', '202cb962ac59075b964b07152d234b70', 48615448696 );

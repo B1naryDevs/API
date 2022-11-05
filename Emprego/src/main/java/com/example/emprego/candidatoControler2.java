@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CargoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -84,12 +85,16 @@ public class candidatoControler2 implements Initializable {
     @FXML
     private ChoiceBox<String> campoCargoInteresse;
 
-    private String[] setores = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+    //private String[] setores = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        campoCargoInteresse.getItems().addAll(setores);
+        for (String c : CargoDAO.carg()){
+
+            campoCargoInteresse.getItems().addAll(c);
+
+        }
 
     }
 

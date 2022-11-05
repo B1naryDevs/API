@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler2">
   <children>
     <AnchorPane layoutX="986.0" layoutY="272.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
@@ -87,20 +98,20 @@
             <Circle fill="#78777500" layoutX="565.0" layoutY="604.0" radius="30.0" stroke="#ff891c" strokeType="INSIDE" />
             <Line endX="29.0" layoutX="740.0" layoutY="603.0" startX="-28.0" stroke="#ff891c" />
             <Circle fill="#78777500" layoutX="800.0" layoutY="604.0" radius="30.0" stroke="#ff891c" strokeType="INSIDE" />
-            <Line endX="29.0" layoutX="623.0" layoutY="604.0" startX="-28.0" stroke="#ff891c" />
-            <Label layoutX="555.0" layoutY="580.0" text="1" textFill="WHITE">
+            <Line endX="29.0" layoutX="624.0" layoutY="604.0" startX="-28.0" stroke="#ff891c" />
+            <Label layoutX="555.0" layoutY="579.0" text="1" textFill="WHITE">
                <font>
                   <Font name="Cambria" size="40.0" />
                </font>
             </Label>
-            <Label layoutX="789.0" layoutY="580.0" text="3" textFill="WHITE">
+            <Label layoutX="790.0" layoutY="580.0" text="3" textFill="WHITE">
                <font>
                   <Font name="Cambria" size="40.0" />
                </font>
             </Label>
             <Label layoutX="543.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
             <Label layoutX="525.0" layoutY="646.0" text="OBRIGATÓRIOS" textFill="WHITE" />
-            <Label layoutX="664.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
+            <Label layoutX="663.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
             <Label layoutX="653.0" layoutY="646.0" text="OPCIONAIS" textFill="WHITE" />
             <Label layoutX="768.0" layoutY="634.0" text="FINALIZAÇÃO" textFill="WHITE" />
             <Button fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="AVANÇAR" textFill="WHITE">

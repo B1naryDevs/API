@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler4">
+<VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler4">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles8.css">
          <children>
@@ -42,7 +42,7 @@
               </columns>
             </TableView>
             <Button fx:id="botaoSelecionar" layoutX="1152.0" layoutY="698.0" mnemonicParsing="false" onAction="#Selecionar" prefHeight="30.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
-            <Label layoutX="459.0" layoutY="144.0" text="FUNCIONÁRIOS" textFill="WHITE" AnchorPane.topAnchor="144.0">
+            <Label layoutX="480.0" layoutY="144.0" text="FUNCIONÁRIOS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
                </font></Label>

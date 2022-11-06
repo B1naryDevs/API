@@ -19,7 +19,6 @@ public class HelloApplication extends Application {
     private static Scene vaga;
     private static Scene vagafinal;
     private static Scene login;
-    private static Scene menu;
     private static Scene cargo;
     private static Scene cargofinal;
     private static Scene rh;

@@ -2,11 +2,11 @@ package com.example.emprego;
 
 public class Candidatura {
 
-    private static String empresa = "Pro4tech";
-    private static String cargo;
-    private static Integer codigo;
-    private static String data;
-    private static String status;
+    private String empresa = "Pro4tech";
+    private String cargo;
+    private Integer codigo;
+    private String data;
+    private String status;
 
     public Candidatura(String cargo, Integer codigo, String data, String status){
         this.cargo = cargo;
@@ -21,43 +21,43 @@ public class Candidatura {
         this.status = status;
     }
 
-    public static String getEmpresa() {
+    public String getEmpresa() {
         return empresa;
     }
 
-    public static void setEmpresa(String empresa) {
-        Candidatura.empresa = empresa;
+    public void setEmpresa(String empresa) {
+        this.empresa = empresa;
     }
 
-    public static String getCargo() {
+    public String getCargo() {
         return cargo;
     }
 
-    public static void setCargo(String cargo) {
-        Candidatura.cargo = cargo;
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
     }
 
-    public static Integer getCodigo() {
+    public Integer getCodigo() {
         return codigo;
     }
 
-    public static void setCodigo(Integer codigo) {
-        Candidatura.codigo = codigo;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
     }
 
-    public static String getData() {
+    public String getData() {
         return data;
     }
 
-    public static void setData(String data) {
-        Candidatura.data = data;
+    public void setData(String data) {
+        this.data = data;
     }
 
-    public static String getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public static void setStatus(String status) {
-        Candidatura.status = status;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

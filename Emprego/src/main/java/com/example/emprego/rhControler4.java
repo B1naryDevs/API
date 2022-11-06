@@ -36,6 +36,12 @@ public class rhControler4 implements Initializable {
     private ToggleButton botaoSair;
 
     @FXML
+    private ToggleButton botaoRemover;
+
+    @FXML
+    private ToggleButton botaoEditar;
+
+    @FXML
     private Button botaoSelecionar;
 
 

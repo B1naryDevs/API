@@ -112,7 +112,6 @@ public class candidaturaControler implements Initializable{
             selid = Integer.valueOf(selecionado.getId());
             selcargo = String.valueOf(selecionado.getCargo());
             String data = (Calendar.getInstance().get(Calendar.YEAR) + "-" + (Calendar.getInstance().get(Calendar.MONTH) + 1) + "-" + Calendar.getInstance().get(Calendar.DATE));
-            System.out.println(data);
             CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
             Candidatura candidatura = new Candidatura(selcargo, selid, data, "Em andamento");
             Candidato candidato = new Candidato();

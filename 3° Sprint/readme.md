@@ -23,7 +23,7 @@
   
 <br>
   
-![modelagemFinal](https://user-images.githubusercontent.com/101594950/194715022-a4b6c7ea-5488-4289-8508-291294453158.jpeg)
+![conceitual](https://user-images.githubusercontent.com/101594950/200155447-f1edb825-0d4a-4f8d-88e3-829d6e03743f.png)
   
 </summary>
   
@@ -32,7 +32,7 @@
 <details> 
   <summary> MODELO LÓGICO </summary>
   
-  ![ModeloLogico2 jpg](https://user-images.githubusercontent.com/101594950/194786325-a649b49f-f9a5-4d65-b561-824df828d2ba.png)
+  ![ModeloLogico 2 0 (2)](https://user-images.githubusercontent.com/101594950/200155442-8b80e933-8982-41d8-8a7d-fb7991f57375.jpg)
 
   </summary>
 </details>

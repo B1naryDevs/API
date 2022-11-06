@@ -4,13 +4,11 @@ import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleButton;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class rhControler5 implements Initializable {
@@ -90,59 +88,77 @@ public class rhControler5 implements Initializable {
     @FXML
     void SalvarAlteracoes(ActionEvent event) throws Exception {
 
-        //update do candidato
+        try{
+
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("AVISO");
+            alert.setHeaderText("VOCÊ REALMENTE DESEJA ALETRAR AS INFORMAÇÕOES");
+            ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getDialogPane().getButtonTypes().add(cancelButton);
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK) {
+
+                //update do candidato
 
 
-        //campo senha incorreta
-        if (!Objects.equals(getCampoConfirmarSenha.getText(), getCampoSenha.getText())){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("SENHA DIGITADA INCORRETA !");
-            alert.showAndWait();
+                //campo senha incorreta
+                if (!Objects.equals(getCampoConfirmarSenha.getText(), getCampoSenha.getText())){
+                    Alert alert0 = new Alert(Alert.AlertType.ERROR);
+                    alert0.setHeaderText("SENHA DIGITADA INCORRETA !");
+                    alert0.showAndWait();
 
-        }else {
+                }else {
 
 
-            //Alteração de senha (+ dados caso tenha)
-            if (Objects.equals(getCampoSenha.getText(), getCampoConfirmarSenha.getText()) && !Objects.equals(getCampoSenha.getText(), "") && !Objects.equals(getCampoConfirmarSenha.getText(), ""))
-            {
-                String senhaMd5 = Md5.getHashMd5(getCampoSenha.getText());
-                //Inserir funcionario no banco
+                    //Alteração de senha (+ dados caso tenha)
+                    if (Objects.equals(getCampoSenha.getText(), getCampoConfirmarSenha.getText()) && !Objects.equals(getCampoSenha.getText(), "") && !Objects.equals(getCampoConfirmarSenha.getText(), ""))
+                    {
+                        String senhaMd5 = Md5.getHashMd5(getCampoSenha.getText());
+                        //Inserir funcionario no banco
 
-                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                Funcionario funcionario = new Funcionario();
-                funcionario.setNome(getCampoNome.getText());
-                funcionario.setEmail(getCampoEmail.getText());
-                funcionario.setSenha(senhaMd5);
-                funcionario.setCpf(cpf);
-                funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
-                funcionarioDAO.updfunc(funcionario);
+                        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                        Funcionario funcionario = new Funcionario();
+                        funcionario.setNome(getCampoNome.getText());
+                        funcionario.setEmail(getCampoEmail.getText());
+                        funcionario.setSenha(senhaMd5);
+                        funcionario.setCpf(cpf);
+                        funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                        funcionarioDAO.updfunc(funcionario);
 
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
-                alert.showAndWait();
+                        Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                        alert2.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                        alert2.showAndWait();
 
-            }else {
+                    }else {
 
-                // alteração de dados
-                if(Objects.equals(getCampoSenha.getText(), "") && Objects.equals(getCampoConfirmarSenha.getText(), "")){
-                    //Inserir funcionario no banco
+                        // alteração de dados
+                        if(Objects.equals(getCampoSenha.getText(), "") && Objects.equals(getCampoConfirmarSenha.getText(), "")){
+                            //Inserir funcionario no banco
 
-                    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                    Funcionario funcionario = new Funcionario();
-                    funcionario.setNome(getCampoNome.getText());
-                    funcionario.setEmail(getCampoEmail.getText());
-                    funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
-                    funcionario.setCpf(cpf);
-                    funcionarioDAO.updfuncse(funcionario);
+                            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                            Funcionario funcionario = new Funcionario();
+                            funcionario.setNome(getCampoNome.getText());
+                            funcionario.setEmail(getCampoEmail.getText());
+                            funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                            funcionario.setCpf(cpf);
+                            funcionarioDAO.updfuncse(funcionario);
 
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
-                    alert.showAndWait();
+                            Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                            alert3.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                            alert3.showAndWait();
+                        }
+
+                    }
                 }
 
             }
-        }
 
+        }catch (Exception e){
+            Alert alert0 = new Alert(Alert.AlertType.ERROR);
+            alert0.setHeaderText("NÃO FOI POSSíVEL ATALIZAR AS INFORMAÇÕES !\nTENTE NOVAMENTE");
+            alert0.showAndWait();
+        }
     }
 
     @FXML

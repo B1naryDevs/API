@@ -98,32 +98,38 @@ public class rhControler4 implements Initializable {
     @FXML
     void RemoverFunc(ActionEvent event) throws Exception {
 
-        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
-        secemail = String.valueOf(selecionado.getEmail());
-        String nome =  String.valueOf(selecionado.getNome());
+        try{
+            Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+            secemail = String.valueOf(selecionado.getEmail());
+            String nome =  String.valueOf(selecionado.getNome());
 
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("AVISO");
-        alert.setHeaderText("VOCÊ REALMENTE DESEJA REMOVER\n" + nome + " ?");
-        ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
-        alert.getDialogPane().getButtonTypes().add(cancelButton);
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("AVISO");
+            alert.setHeaderText("VOCÊ REALMENTE DESEJA REMOVER\n" + nome + " ?");
+            ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+            alert.getDialogPane().getButtonTypes().add(cancelButton);
 
-        Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK){
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.isPresent() && result.get() == ButtonType.OK){
 
-            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-            Funcionario funcionario = new Funcionario();
-            funcionario.setEmail(secemail);
-            funcionarioDAO.deletefunc(funcionario);
+                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                Funcionario funcionario = new Funcionario();
+                funcionario.setEmail(secemail);
+                funcionarioDAO.deletefunc(funcionario);
 
-            colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
-            colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
-            colunaTelefone.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Telefone"));
+                colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
+                colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
+                colunaTelefone.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Telefone"));
 
+            }
+
+            ObservableList<Funcionario> ListaM = FuncionarioDAO.Datauser();
+            tabelaFuncionarios.setItems(ListaM);
+        } catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("SELECIONE UM COLABORADOR !");
+            alert.showAndWait();
         }
-
-        ObservableList<Funcionario> ListaM = FuncionarioDAO.Datauser();
-        tabelaFuncionarios.setItems(ListaM);
 
     }
 

@@ -259,7 +259,7 @@ public class candidatoControler {
                                                         } else if((year-a)==16) {
                                                             String mes = data.substring(3,5);
                                                             int m = Integer.parseInt(mes);
-                                                            int month = Calendar.getInstance().get(Calendar.MONTH);;
+                                                            int month = Calendar.getInstance().get(Calendar.MONTH)+1;;
                                                             if((month-m)>=0) {
                                                                 String dia = data.substring(0,2);
                                                                 int d = Integer.parseInt(dia);

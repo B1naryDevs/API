@@ -2,6 +2,7 @@ package com.example.emprego;
 
 import AcessoDAO.CandidatoDAO;
 import AcessoDAO.FuncionarioDAO;
+import AcessoDAO.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -60,6 +61,8 @@ public class loginControler {
             //busca candidato
             CandidatoDAO dao = new CandidatoDAO();
             if( dao.checklogin(campoEmail.getText(), senhaMd5)){
+                Usuario usuario = new Usuario();
+                UsuarioDAO.Usua(campoEmail.getText());
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Bem Vindo!");
                 alert.showAndWait();

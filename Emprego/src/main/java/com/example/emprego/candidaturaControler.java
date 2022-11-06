@@ -99,17 +99,24 @@ public class candidaturaControler implements Initializable{
     @FXML
     void Candidatar(ActionEvent event) throws Exception {
 
-        Vaga selecionado = tabelaVagas.getSelectionModel().getSelectedItem();
-        selid = Integer.valueOf(selecionado.getId());
-        selcargo = String.valueOf(selecionado.getCargo());
-        String data = (Calendar.getInstance().get(Calendar.YEAR)+"-"+Calendar.getInstance().get(Calendar.MONTH)+"-"+Calendar.getInstance().get(Calendar.DATE));
+        try {
+            Vaga selecionado = tabelaVagas.getSelectionModel().getSelectedItem();
+            selid = Integer.valueOf(selecionado.getId());
+            selcargo = String.valueOf(selecionado.getCargo());
+            String data = (Calendar.getInstance().get(Calendar.YEAR) + "-" + (Calendar.getInstance().get(Calendar.MONTH) + 1) + "-" + Calendar.getInstance().get(Calendar.DATE));
+            System.out.println(data);
+            CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
+            Candidatura candidatura = new Candidatura(selcargo, selid, data, "Em andamento");
+            Candidato candidato = new Candidato();
+            Usuario usuario = new Usuario();
+            candidaturaDAO.save(candidatura,usuario);
 
-        CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
-        Candidatura candidatura = new Candidatura(selcargo,selid,data,"Em andamento");
-        Candidato candidato = new Candidato();
-        candidaturaDAO.save(candidatura);
-
-        HelloApplication.ChangeScene("candidatura2");
+            HelloApplication.ChangeScene("candidatura2");
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("SELECIONE UMA VAGA!");
+            alert.showAndWait();
+        }
     }
 
 }

@@ -184,6 +184,10 @@ public class candidatoControler3 implements Initializable{
 
                     candidatoUsuDAO.saveusucand(candusu);
 
+                    Usuario usuario = new Usuario();
+                    usuario.setEmail(email);
+                    usuario.setCpf(cpf);
+
                     HelloApplication.ChangeScene("candidatofinal");
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);

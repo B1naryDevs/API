@@ -199,3 +199,12 @@
   </summary>
   
 </details>
+
+<details>
+<summary> CADASTRO DE VAGA </summary>
+  
+  //gif
+
+  </summary>
+  
+</details>

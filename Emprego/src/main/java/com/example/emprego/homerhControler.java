@@ -12,16 +12,16 @@ public class homerhControler {
     private Button botaoHome;
 
     @FXML
-    private Button botaoVaga;
+    private Button botaoVagas;
 
     @FXML
-    private Button botaoCargo;
+    private Button botaoCargos;
 
     @FXML
     private Button botaoRH;
 
     @FXML
-    private Button botaoRelatorio;
+    private Button botaoRelatorios;
 
     @FXML
     private ToggleButton botaoSair;
@@ -33,7 +33,7 @@ public class homerhControler {
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
     void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}

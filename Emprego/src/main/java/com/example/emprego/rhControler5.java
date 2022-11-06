@@ -4,11 +4,13 @@ import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class rhControler5 implements Initializable {
@@ -61,11 +63,17 @@ public class rhControler5 implements Initializable {
     @FXML
     private TextField getCampoConfirmarSenha;
 
+    long cpf = 0L;
+
+    rhControler4 rh4 = new rhControler4(); //usuario do rh4
 
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
+    void AvancarHome(ActionEvent event) throws Exception {
+
+
+        HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void AvancarVagas(ActionEvent event) throws Exception{HelloApplication.ChangeScene("vaga");}
@@ -80,28 +88,78 @@ public class rhControler5 implements Initializable {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SalvarAlteracoes(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
+    void SalvarAlteracoes(ActionEvent event) throws Exception {
+
+        //update do candidato
+
+
+        //campo senha incorreta
+        if (!Objects.equals(getCampoConfirmarSenha.getText(), getCampoSenha.getText())){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("SENHA DIGITADA INCORRETA !");
+            alert.showAndWait();
+
+        }else {
+
+
+            //Alteração de senha (+ dados caso tenha)
+            if (Objects.equals(getCampoSenha.getText(), getCampoConfirmarSenha.getText()) && !Objects.equals(getCampoSenha.getText(), "") && !Objects.equals(getCampoConfirmarSenha.getText(), ""))
+            {
+                String senhaMd5 = Md5.getHashMd5(getCampoSenha.getText());
+                //Inserir funcionario no banco
+
+                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                Funcionario funcionario = new Funcionario();
+                funcionario.setNome(getCampoNome.getText());
+                funcionario.setEmail(getCampoEmail.getText());
+                funcionario.setSenha(senhaMd5);
+                funcionario.setCpf(cpf);
+                funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                funcionarioDAO.updfunc(funcionario);
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                alert.showAndWait();
+
+            }else {
+
+                // alteração de dados
+                if(Objects.equals(getCampoSenha.getText(), "") && Objects.equals(getCampoConfirmarSenha.getText(), "")){
+                    //Inserir funcionario no banco
+
+                    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                    Funcionario funcionario = new Funcionario();
+                    funcionario.setNome(getCampoNome.getText());
+                    funcionario.setEmail(getCampoEmail.getText());
+                    funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                    funcionario.setCpf(cpf);
+                    funcionarioDAO.updfuncse(funcionario);
+
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                    alert.showAndWait();
+                }
+
+            }
+        }
+
+    }
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        rhControler4 rh4 = new rhControler4();
+
+
        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
-       for (Funcionario rh : funcionarioDAO.Func(rh4.getSecemail())){
+       for (Funcionario rh : funcionarioDAO.Func(rhControler4.getSecemail())){
            getCampoNome.setText(rh.getNome());
            getCampoEmail.setText(rh.getEmail());
            getCampoCpf.setText(String.valueOf(rh.getCpf()));
+           cpf = rh.getCpf();
            getCampoTelefone.setText(String.valueOf(rh.getTelefone()));
-
-           // string senha está com a senha do funcionario em codigo hash(lembre - se
-           //de cadastrar um novo funcionario ! Pois os pré cadastrados do banco não possuem Hash !!)
-           String senha = rh.getSenha();
-
-           //senha sem hash
-           String hash = "coloca aqui a senha sem hash";
 
        }
    }

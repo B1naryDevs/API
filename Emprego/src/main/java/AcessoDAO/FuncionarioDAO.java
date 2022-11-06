@@ -132,6 +132,75 @@ public void savefunc(Funcionario func){
     }
 }
 
+    public void updfunc(Funcionario func){
+
+        String sql = "UPDATE funcionario SET nome_func = ?, email = ?, senha = ?, telefone = ? WHERE cpf = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, func.getNome());
+            pstm.setString(2, func.getEmail());
+            pstm.setString(3, func.getSenha());
+            pstm.setLong(4, func.getTelefone());
+            pstm.setLong(5, func.getCpf());
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updfuncse(Funcionario func){
+
+        String sql = "UPDATE funcionario SET nome_func = ?, email = ?, telefone = ? WHERE cpf = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, func.getNome());
+            pstm.setString(2, func.getEmail());
+            pstm.setLong(3, func.getTelefone());
+            pstm.setLong(4, func.getCpf());
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
     public boolean checklogin (String email, String senha){
 
         String sql = "Select email, senha from funcionario where email = ? and senha = ?";

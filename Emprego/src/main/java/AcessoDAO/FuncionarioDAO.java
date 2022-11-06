@@ -201,6 +201,38 @@ public void savefunc(Funcionario func){
         }
     }
 
+    public void deletefunc(Funcionario func){
+
+        String sql = "DELETE FROM funcionario WHERE email = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, func.getEmail());
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+
     public boolean checklogin (String email, String senha){
 
         String sql = "Select email, senha from funcionario where email = ? and senha = ?";

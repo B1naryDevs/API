@@ -2,9 +2,8 @@
 
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleButton?>
@@ -42,15 +41,6 @@
                </font>
             </Label>
             <Accordion fx:id="accordionVagas" layoutX="436.0" layoutY="278.0" prefHeight="313.0" prefWidth="579.0" />
-            <MenuButton fx:id="botaoFiltrar" layoutX="1172.0" layoutY="212.0" mnemonicParsing="false" style="-fx-background-color: #595E63;" text="FILTRAR" textFill="WHITE">
-              <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
-                <MenuItem mnemonicParsing="false" text="Action 2" />
-              </items>
-               <font>
-                  <Font name="System Bold" size="12.0" />
-               </font>
-            </MenuButton>
             <TableView fx:id="tabelaVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
                <columns>
                   <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
@@ -63,6 +53,16 @@
                </columns>
             </TableView>
             <Button fx:id="botaoCandidatar" layoutX="1152.0" layoutY="698.0" mnemonicParsing="false" onAction="#Candidatar" prefHeight="30.0" prefWidth="160.0" stylesheets="@../../../styles/Styles2.css" text="CANDIDATAR-SE" />
+            <ChoiceBox fx:id="campoFiltrar" layoutX="1172.0" layoutY="212.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />
+            <ToggleButton fx:id="botaoFiltrar" layoutX="1113.0" layoutY="203.0" mnemonicParsing="false" onAction="#Filtrar" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/lupa.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             </children>
         </AnchorPane>
     </children>

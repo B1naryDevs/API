@@ -1,6 +1,7 @@
 package com.example.emprego;
 
 import AcessoDAO.CandidaturaDAO;
+import AcessoDAO.CargoDAO;
 import AcessoDAO.VagaDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,7 +39,7 @@ public class candidaturaControler implements Initializable{
     private Button botaoCandidatar;
 
     @FXML
-    private MenuButton botaoFiltrar;
+    private ChoiceBox<String> campoFiltrar;
 
     // Definindo os itens da tabela
 
@@ -64,6 +65,13 @@ public class candidaturaControler implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        for (String c : CargoDAO.carg()){
+
+            //adicionar cargos
+            campoFiltrar.getItems().add(c);
+
+        }
 
         colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Cargo"));
         colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Periodo"));
@@ -115,6 +123,27 @@ public class candidaturaControler implements Initializable{
         }catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("SELECIONE UMA VAGA!");
+            alert.showAndWait();
+        }
+    }
+
+    @FXML
+    void Filtrar(ActionEvent event) throws Exception {
+
+        try {
+            String filtro = campoFiltrar.getValue();
+
+            if(filtro==null){
+                FiltroVagas filtrovagas = new FiltroVagas();
+                filtrovagas.setFiltro(null);
+            }else{
+                FiltroVagas filtrovagas = new FiltroVagas();
+                filtrovagas.setFiltro(filtro);
+            }
+            HelloApplication.ChangeScene("candidatura");
+        }catch (Exception e){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("SELECIONE UM FILTRO!");
             alert.showAndWait();
         }
     }

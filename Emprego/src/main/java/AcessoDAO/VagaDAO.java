@@ -1,6 +1,7 @@
 package AcessoDAO;
 
 import ConnectionFA.ConnectionFactory;
+import com.example.emprego.FiltroVagas;
 import com.example.emprego.Vaga;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -61,13 +62,21 @@ public class VagaDAO {
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-            PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga order by salario asc");
-            ResultSet rs = ps.executeQuery();
-
-            while (rs.next()){
-                list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+            FiltroVagas filtroVagas = new FiltroVagas();
+            if(filtroVagas.getFiltro()!=null) {
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga where cargo_vaga = ? order by salario asc");
+                ps.setString(1, filtroVagas.getFiltro());
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                }
+            }else{
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga order by salario asc");
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                }
             }
-
         }catch (Exception e){
 
             e.printStackTrace();

@@ -200,8 +200,10 @@
   
 </details>
 
+### FUNCIONÁRIO
+
 <details>
-<summary> CADASTRO DE VAGA </summary>
+<summary> CADASTRO DE FUNCIONÁRIO </summary>
   
   //gif
 

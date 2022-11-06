@@ -73,7 +73,7 @@ public class loginControler {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText("Bem Vindo Funcionario!");
                     alert.showAndWait();
-                    HelloApplication.ChangeScene("home");
+                    HelloApplication.ChangeScene("homerh");
                 }else{
 
                     // USUARIO NÃO ENCONTRADO

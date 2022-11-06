@@ -32,6 +32,7 @@ public class HelloApplication extends Application {
     private static Scene candidatura2;
     private static Scene areacandidato;
     private static Scene home;
+    private static Scene homerh;
     private static Scene sobre;
     private static Scene gerenciamentovaga;
 
@@ -162,8 +163,8 @@ public class HelloApplication extends Application {
                 break;
             case "homerh":
                 Parent layout_homerh = FXMLLoader.load(HelloApplication.class.getResource("layout_homerh.fxml"));
-                home = new Scene(layout_homerh);
-                stage.setScene(home);
+                homerh = new Scene(layout_homerh);
+                stage.setScene(homerh);
                 stage.setFullScreen(true);
                 break;
             case "home":

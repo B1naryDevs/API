@@ -36,13 +36,13 @@ public class homerhControler {
     void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargo(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

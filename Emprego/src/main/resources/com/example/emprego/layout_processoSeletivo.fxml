@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.processoSeletivoControler">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.processoSeletivoControler">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;">
          <children>
@@ -37,12 +37,13 @@
                   <Font size="63.0" />
                </font></Label>
             <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarAreaCandidato" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
-            <Accordion layoutX="319.0" layoutY="243.0" prefHeight="298.0" prefWidth="654.0">
-              <panes>
-                <TitledPane animated="false" text="untitled 1" />
-                <TitledPane animated="false" text="untitled 2" />
-              </panes>
-            </Accordion>
+            <TableView fx:id="tabelaCandidaturas" layoutX="319.0" layoutY="243.0" prefHeight="298.0" prefWidth="654.0" stylesheets="@../../../styles/Styles8.css">
+               <columns>
+                  <TableColumn fx:id="colunaCargo" prefWidth="218.0" text="CARGO" />
+                  <TableColumn fx:id="colunaData" prefWidth="218.0" text="DATA" />
+                  <TableColumn fx:id="colunaStatus" prefWidth="218.0" text="STATUS" />
+               </columns>
+            </TableView>
          </children></AnchorPane>
    </children>
 </VBox>

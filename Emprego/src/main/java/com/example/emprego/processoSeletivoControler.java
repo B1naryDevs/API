@@ -1,12 +1,22 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidaturaDAO;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-public class processoSeletivoControler  {
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class processoSeletivoControler  implements Initializable {
 
 
     // Nomeclatura dos botões
@@ -29,6 +39,27 @@ public class processoSeletivoControler  {
 
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private TableView<Candidatura> tabelaCandidaturas;
+    @FXML
+    private TableColumn<Candidatura, String> colunaCargo ;
+    @FXML
+    private TableColumn<Candidatura, String> colunaData ;
+    @FXML
+    private TableColumn<Candidatura, String> colunaStatus ;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colunaCargo.setCellValueFactory(new PropertyValueFactory<Candidatura,String>("Cargo"));
+        colunaData.setCellValueFactory(new PropertyValueFactory<Candidatura,String>("Data"));
+        colunaStatus.setCellValueFactory(new PropertyValueFactory<Candidatura, String>("Status"));
+
+        ObservableList<Candidatura> ListaP = CandidaturaDAO.Datauser();
+        tabelaCandidaturas.setItems(ListaP);
+
+    }
 
 
     // Definição das ações dos botões

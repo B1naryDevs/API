@@ -15,6 +15,12 @@ public class Candidatura {
         this.status = status;
     }
 
+    public Candidatura(String cargo, String data, String status){
+        this.cargo = cargo;
+        this.data = data;
+        this.status = status;
+    }
+
     public static String getEmpresa() {
         return empresa;
     }

@@ -1,8 +1,8 @@
-[//]: # (CAPA 2° SPRINT)
+[//]: # (CAPA 3° SPRINT)
 
 <div align="center">
 
-<img src = "https://user-images.githubusercontent.com/101594950/200087164-6b43f8c4-5d25-44bc-9cfb-54f11c3f7416.png" width="800" height="200" /> <br>
+<img src = "https://user-images.githubusercontent.com/101594950/200206251-020446fa-190d-4697-bda7-39393b2dbc77.png" width="800" height="200" /> <br>
   
 <hr>
 
@@ -134,6 +134,8 @@
   
  <div align="center">
  
+[//]: # (BURNDONW)
+ 
 ![40](https://user-images.githubusercontent.com/101594950/200095006-fa07e04e-d752-4b32-bb36-8d7195c0f9a1.jpeg)
 
  </div>
@@ -152,20 +154,12 @@
    
   <img src = "https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png" width="800" height="200" /> <br>
  
-![burnd](https://user-images.githubusercontent.com/101594950/194786519-a3758f70-7764-424d-b288-c1f2d1f24c06.png)
+![WhatsApp Image 2022-11-06 at 22 01 11](https://user-images.githubusercontent.com/101594950/200206589-704278b8-0ef6-408a-97b5-badff9c91d80.jpeg)
+
 
   <hr>
 
   <img src = "https://user-images.githubusercontent.com/101594950/190481974-a6584ad8-9cd7-447b-8678-9ce2fa191fa9.png" width="800" height="200" /> <br>
-    
-### LOGIN 
-<details>  
-  
-  <summary> USUÁRIO </summary>
-  
-  ![Login](https://user-images.githubusercontent.com/101594950/194787397-bd2f8c5f-7e80-433b-88bb-7fb607a07761.gif)
-  
-</details>
     
  ### CANDIDATO
 
@@ -173,8 +167,18 @@
   
   <summary> CANDIDATURA </summary>
   
-  //gif
-  
+ ### CADASTRO
+ 
+ ![cad](https://user-images.githubusercontent.com/101594950/200205495-6d9c9d7c-3105-4997-8805-18ebcb1e4fb2.gif)
+
+ ### LOGIN DO CANDIDATO
+ 
+ ![login](https://user-images.githubusercontent.com/101594950/200205589-aed0d715-9dfd-4e39-9e71-0c260f178bac.gif)
+
+### CANDIDATURA
+
+![candidatura](https://user-images.githubusercontent.com/101594950/200205659-d84a763d-287f-421f-960a-f08e3979e0b3.gif)
+
   </summary>
   
 </details>
@@ -183,7 +187,7 @@
 
 <details> <summary> CADASTRO DE CARGO </summary> 
   
-  //gif
+  ![Cadastro_Cargo](https://user-images.githubusercontent.com/101594950/200205852-1470c72f-b203-40a4-833a-648fbedc4e0d.gif)
  
   </summary> </details>
  
@@ -194,7 +198,7 @@
 <details>
 <summary> CADASTRO DE VAGA </summary>
   
-  //gif
+  ![Cadastro_Vaga](https://user-images.githubusercontent.com/101594950/200205873-0f51b563-e081-4a0f-ad19-641fb946a14d.gif)
 
   </summary>
   
@@ -203,9 +207,19 @@
 ### FUNCIONÁRIO
 
 <details>
-<summary> CADASTRO DE FUNCIONÁRIO </summary>
-  
-  //gif
+<summary> ADMINISTRATIVO </summary>
+
+### CADASTRO DE FUNCIONÁRIO
+   
+  ![Cadastrando_Funcionario](https://user-images.githubusercontent.com/101594950/200205952-cc85867b-7d6f-47e7-aea4-611e7e160387.gif)
+
+### LOGIN DO FUNCIONÁRIO
+
+![Logando_Funcionario](https://user-images.githubusercontent.com/101594950/200206031-b32ac14b-1bc6-4e6c-bb99-4693a4acbb45.gif)
+
+### ATUALIZANDO DADOS DO FUNCIONÁRIO
+
+![Atualiazando_Funcionario](https://user-images.githubusercontent.com/101594950/200206075-4ab6f17e-f658-46b1-8dd4-55286779538c.gif)
 
   </summary>
   

@@ -16,83 +16,37 @@ public class candidatoControler4 {
 
     @FXML
     private Button botaoHome;
+
+    @FXML
+    private Button botaoAreaCandidato;
+
+    @FXML
+    private Button botaoVagas;
+
+    @FXML
+    private Button botaoSobre;
     
     @FXML
     private Button botaoAvancar;
 
     @FXML
-    private Button botaoLogin;
-
-    @FXML
     private ToggleButton botaoSair;
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
-
+    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
 
     @FXML
-    void VoltarInicio(ActionEvent event) throws FileNotFoundException {
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidatura");}
+
+    @FXML
+    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
+
+    @FXML
+    void VoltarInicio(ActionEvent event) throws Exception{
         Candidato candidato = new Candidato(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);;
-        String nome = candidato.getNome();
-        long cpf = candidato.getCpf();
-        String data = candidato.getDataNac();
-        String email = candidato.getEmail();
-        String senha = candidato.getSenha();
-        long telefone = candidato.getTelefone();
-        String empresa = candidato.getExpEmpresa();
-        String cargo = candidato.getCargo();
-        String expinicio = candidato.getExpInicio();
-        String exptermino = candidato.getExpTermino();
-        String descricao = candidato.getDescricao();
-        String cargos = candidato.getCargoInteresse();
-        float pretensao = candidato.getPretSalarial();
-        String competencia = candidato.getCompetencia();
-        String idioma = candidato.getIdioma();
-        String instituicao = candidato.getInstituicao();
-        String inicio = candidato.getCursoInicio();
-        String termino = candidato.getCursoTermino();
-        String curso = candidato.getCurso();
-
-        // Objeto para receber os arquivos
-        File arquivoCSV = new File("dados_candidato.csv");
-
-        // - lista que irá receber todos valores do csv
-        List<String> dados = new ArrayList();
-
-        // variavel para receber as linhas por linhas
-        String linha = new String();
-        Scanner read = new Scanner(arquivoCSV);
-
-        // Correr todas as linhas do arquivo
-        while (read.hasNext()) {
-
-            linha = read.nextLine();
-            dados.add(linha);
-        }
-
-        // incremento do novo índice na lista que contém os itens do csv
-        dados.add(nome + "," + cpf + "," + data + "," + email + "," + senha + "," + telefone + "," + empresa + "," + cargo + "," + expinicio + "," + exptermino + "," + descricao + "," + cargos + "," + pretensao + "," +competencia + "," + idioma + "," + instituicao + "," + inicio + "," + termino + "," + curso);
-
-        // criação de novo objeto para escrever os novos valores
-        PrintWriter pw = new PrintWriter(new File("dados_candidato.csv"));
-
-        // Criação da lista para aplicar os valores no csv
-        StringBuilder sb = new StringBuilder();
-
-        // laço para inserir linha(indice) por linha
-        for (String lin : dados) {
-            sb.append(lin);
-            sb.append("\r\n");
-        }
-
-        // objeto adicionar os valores no arquivo
-        pw.write(sb.toString());
-
-        // fecha conexão com arquivo
-        pw.close();
-        HelloApplication.ChangeScene("candidato");
+        HelloApplication.ChangeScene("home");
     }
 }

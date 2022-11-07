@@ -28,21 +28,21 @@ public class cargoControler2 {
     private ToggleButton botaoSair;
 
     @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVaga(ActionEvent event) {HelloApplication.ChangeScene("vaga");}
+    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
 
     @FXML
-    void AvancarCargo(ActionEvent event) { HelloApplication.ChangeScene("cargo");}
+    void AvancarCargo(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
 
     @FXML
-    void AvancarRH(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) {HelloApplication.ChangeScene("");}
+    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 }

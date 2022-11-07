@@ -56,18 +56,18 @@
                 </Button>
                 <HBox layoutX="560.0" layoutY="288.0" prefHeight="25.0" prefWidth="279.0">
                     <children>
-                        <TextField fx:id="campoEmail" prefHeight="40.0" prefWidth="287.0" />
+                        <TextField fx:id="campoEmail" prefHeight="40.0" prefWidth="287.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
                     </children>
                 </HBox>
                 <HBox layoutX="560.0" layoutY="343.0" prefHeight="25.0" prefWidth="279.0">
                     <children>
                         <StackPane>
                             <children>
-                                <TextField fx:id="campoSenha2" prefHeight="36.0" prefWidth="223.0" />
-                                <PasswordField fx:id="campoSenha" prefHeight="40.0" prefWidth="228.0" />
+                                <TextField fx:id="campoSenha2" prefHeight="36.0" prefWidth="223.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
+                                <PasswordField fx:id="campoSenha" prefHeight="40.0" prefWidth="228.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white"/>
                             </children>
                         </StackPane>
-                        <ToggleButton fx:id="tgbtMostrarSenha" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="51.0" prefWidth="61.0" style="-fx-background-color: white;">
+                        <ToggleButton fx:id="tgbtMostrarSenha" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="51.0" prefWidth="61.0" style="-fx-background-color: #58595A;">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -15,27 +14,22 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button fx:id="botaoHome" layoutX="343.0" layoutY="19.0" mnemonicParsing="false" onAction="#VoltarInicio" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#VoltarInicio" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="botaoLogin" layoutX="480.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarLogin" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="LOGIN" textFill="WHITE">
+            <Button fx:id="botaoAreaCandidato" layoutX="545.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarAreaCandidato" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="615.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="263.0" stylesheets="@../../../styles/Styles3.css" text="ÁREA DO CANDIDATO" textFill="WHITE">
+            <Button fx:id="botaoVagas" layoutX="850.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button layoutX="914.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="VAGAS" textFill="WHITE">
-               <font>
-                  <Font size="23.0" />
-               </font>
-            </Button>
-            <Button layoutX="1055.0" layoutY="19.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
+            <Button fx:id="botaoSobre" layoutX="1000.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarSobre" prefHeight="50.0" prefWidth="164.0" stylesheets="@../../../styles/Styles3.css" text="SOBRE NÓS" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
@@ -62,7 +56,7 @@
             </ImageView>
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/exit.png" />
                      </image></ImageView>

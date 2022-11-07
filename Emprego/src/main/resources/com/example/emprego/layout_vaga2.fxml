@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.vagaControler2">
   <children>
@@ -15,32 +18,32 @@
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image>
             </ImageView>
-            <Button fx:id="botaoHome" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" textFill="WHITE">
+            <Button fx:id="botaoVaga" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" textFill="WHITE">
+            <Button fx:id="botaoCargo" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="botaoRH" layoutX="881.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="RH" textFill="WHITE">
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="RH" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="20.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" textFill="WHITE">
+            <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" textFill="WHITE">
                <font>
                   <Font size="23.0" />
                </font>
             </Button>
-            <Label alignment="CENTER" graphicTextGap="60.0" layoutX="390.0" layoutY="381.0" prefHeight="80.0" prefWidth="557.0" text="CADASTRO DE VAGA EFETUADO COM SUCESSO!" textFill="#ebebeb">
+            <Label alignment="CENTER" graphicTextGap="60.0" layoutX="390.0" layoutY="370.0" prefHeight="80.0" prefWidth="557.0" text="CADASTRO DE VAGA EFETUADO COM SUCESSO!" textFill="#ebebeb">
                <font>
                   <Font size="25.0" />
                </font>
@@ -52,7 +55,7 @@
             </ImageView>
             <ToggleButton fx:id="botaoSair" layoutX="1244.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/exit.png" />
                      </image>

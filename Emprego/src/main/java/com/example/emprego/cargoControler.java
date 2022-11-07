@@ -37,37 +37,37 @@ public class cargoControler {
     private ToggleButton botaoSair;
 
     @FXML
-    void AvancarHome(ActionEvent event) {
-        HelloApplication.ChangeScene("menu");
+    void AvancarHome(ActionEvent event) throws Exception {
+        HelloApplication.ChangeScene("homerh");
     }
 
     @FXML
-    void AvancarVaga(ActionEvent event) {
+    void AvancarVaga(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("vaga");
     }
 
     @FXML
-    void AvancarCargo(ActionEvent event) {
+    void AvancarCargo(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("cargo");
     }
 
     @FXML
-    void AvancarRH(ActionEvent event) {
+    void AvancarRH(ActionEvent event) throws Exception {
+        HelloApplication.ChangeScene("rh");
+    }
+
+    @FXML
+    void AvancarRelatorio(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("");
     }
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) {
-        HelloApplication.ChangeScene("");
-    }
-
-    @FXML
-    void SairTela(ActionEvent event) {
+    void SairTela(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("login");
     }
 
     @FXML
-    void CadastrarCargo(ActionEvent event) {
+    void CadastrarCargo(ActionEvent event) throws Exception {
         String cargo2 = campoCargo2.getText();
         if (cargo2.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

@@ -88,7 +88,7 @@
 
 ### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)
 ### [2º Sprint - 19/09 á 09/10](https://github.com/B1naryDevs/API/tree/dev/2%C2%B0%20Sprint)
-### 3º Sprint - 13/10 á 06/11
+### [3º Sprint - 17/10 á 06/11](https://github.com/B1naryDevs/API/tree/dev/3%C2%B0%20Sprint)
 ### 4º Sprint - 07/11 á 27/11
 
 </div>
@@ -105,7 +105,8 @@
 
 <img src = "https://user-images.githubusercontent.com/101594950/190707696-035a5f66-af2e-4263-9a20-fdfe3d82695a.png" width="900" height="200" /> <br>
 
-<img src = "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" width="160" height="30"/><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" width="110" height="30"/><img src = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" width="75" height="30"/><img src = "https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="110" height="30"/>
+<img src = "https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white" width="160" height="30"/><img src = "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" width="110" height="30"/><img src = "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" width="75" height="30"/><img src = "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" width="100" height="30"/><img src = "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" width="90" height="30"/><img src = "https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" width="110" height="30"/>
+
 
 <div align="center">
 
@@ -167,20 +168,8 @@ Siga nosso passo a passo e aplique conforme as especificações da sua máquina!
 
 5° Passo:<br> Abra o projeto na IDE.<br>
 
-6° Passo:<br> Instale as [Bibliotecas](https://github.com/B1naryDevs/API/raw/dev/bibliotecas/Libraries.rar) e depois adicione em [File / Project Structure / Global Libraries / + ] <br>
+6° Passo:<br> Instale o [Conectivo do Banco](https://github.com/B1naryDevs/API/raw/dev/Banco%20de%20Dados/mysql-connector-5.1.18.jar) e depois adicione em [File / Project Structure / Libraries / + ] com o banco funcionando na porta 3306.
 
-7° Passo:<br> Instale o [Conectivo do Banco](https://github.com/B1naryDevs/API/raw/dev/Banco%20de%20Dados/mysql-connector-5.1.18.jar) e depois adicione em [File / Project Structure / Libraries / + ]
-    
-8° Passo:<br> Baixe o [instalador do MySQL e MySQL Workbench](https://dev.mysql.com/downloads/file/?id=512698) 
-
-9° Passo:<br> Baixe o [XAMMP](https://www.apachefriends.org/pt_br/download.html) para fazer conexão com Banco
-
-10° Passo:<br> Abra o XAMMP e aperte em Start nas opções MySQL e Apache
-    
-11° Passo:<br> Abra o MySQL Workbench e abra a conexão Local Instance e verifique se está na porta 3306
-    
-12° Passo:<br> Copie e cole o [Script](https://github.com/B1naryDevs/API/blob/dev/Banco%20de%20Dados/script_generate_database.sql) e clique no primeiro raio no canto superior a esquerda da janela de código
-
-13° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
+7° Passo:<br> Execute o projeto com o seguinte caminho: Emprego/src/main/java/com/example/emprego/HelloApplication.java
 
 </div>

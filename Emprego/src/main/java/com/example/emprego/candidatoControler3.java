@@ -29,16 +29,6 @@ public class candidatoControler3 implements Initializable{
 
     @FXML
     private Button botaoFinalizar;
-
-    @FXML
-    private Button botaoVoltar;
-    
-    @FXML
-    private Button botaoHome;
-
-    @FXML
-    private Button botaoLogin;
-
     @FXML
     private ToggleButton botaoSair;
 
@@ -56,20 +46,14 @@ public class candidatoControler3 implements Initializable{
         campoIngles.getItems().addAll(nivel);
 
     }
-    public void getNivel(ActionEvent event){
+    public void getNivel(ActionEvent event) throws Exception{
         String NivelSelecionado = campoIngles.getValue();
         labelIngles.setText(NivelSelecionado);
 
     }
 
     @FXML
-    void SairTela(ActionEvent event) {HelloApplication.ChangeScene("login");}
-
-    @FXML
-    void AvancarHome(ActionEvent event) {HelloApplication.ChangeScene("menu");}
-
-    @FXML
-    void AvancarLogin(ActionEvent event) {HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
     @FXML
     private TextField campoCompetencia;
@@ -78,23 +62,21 @@ public class candidatoControler3 implements Initializable{
     private TextField campoCurso;
 
     @FXML
-    private DatePicker campoInicio;
+    private TextField campoInicio;
 
     @FXML
     private TextField campoInstituicao;
 
     @FXML
-    private DatePicker campoTermino;
+    private TextField campoTermino;
 
     @FXML
-    void FinalizarCadastro(ActionEvent event) throws FileNotFoundException {
+    void FinalizarCadastro(ActionEvent event) throws Exception{
         String competencia = campoCompetencia.getText();
         String idioma = campoIngles.getValue();
         String instituicao = campoInstituicao.getText();
-        LocalDate inicioinicial = campoInicio.getValue();
-        LocalDate terminoinicial = campoTermino.getValue();
-        String inicio = String.valueOf(inicioinicial);
-        String termino = String.valueOf(terminoinicial);
+        String inicio = campoInicio.getText();
+        String termino = campoTermino.getText();
         String curso = campoCurso.getText();
 
         if (competencia.isEmpty()) {
@@ -123,11 +105,11 @@ public class candidatoControler3 implements Initializable{
             alert.showAndWait();
         } else {
             // Validação data inicio
-            String INICIO_REGEX = "^\\d{4}-\\d{2}-\\d{2}$";
+            String INICIO_REGEX = "^\\d{2}/\\d{2}/\\d{4}$";
             Pattern INICIO_PATTERN = Pattern.compile(INICIO_REGEX);
             if (INICIO_PATTERN.matcher(inicio).matches()) {
                 // Validação data termino
-                String TERMINO_REGEX = "^\\d{4}-\\d{2}-\\d{2}$";
+                String TERMINO_REGEX = "^\\d{2}/\\d{2}/\\d{4}$";
                 Pattern TERMINO_PATTERN = Pattern.compile(TERMINO_REGEX);
                 if (TERMINO_PATTERN.matcher(termino).matches()) {
                     Candidato candidato = new Candidato();
@@ -155,7 +137,7 @@ public class candidatoControler3 implements Initializable{
                     float sal = Float.valueOf(pretensao);
 
                     CandidatoDAO candidatoDAO = new CandidatoDAO();
-
+                    String senhaMd5 = Md5.getHashMd5(senha);
                     Candidato candidatobanc = new Candidato();
                     candidatobanc.setNome(nome);
                     candidatobanc.setCpf(cpf);
@@ -169,10 +151,14 @@ public class candidatoControler3 implements Initializable{
                     Candidato candusu = new Candidato();
 
                     candusu.setEmail(email);
-                    candusu.setSenha(senha);
+                    candusu.setSenha(senhaMd5);
                     candusu.setCpf(cpf);
 
                     candidatoUsuDAO.saveusucand(candusu);
+
+                    Usuario usuario = new Usuario();
+                    usuario.setEmail(email);
+                    usuario.setCpf(cpf);
 
                     HelloApplication.ChangeScene("candidatofinal");
                 } else {
@@ -189,7 +175,25 @@ public class candidatoControler3 implements Initializable{
     }
 
     @FXML
-    void VoltarTela(ActionEvent event) {
+    private void mascaraData() {
+        Formatter data = new Formatter();
+        data.setMask("##/##/####");
+        data.setCaracteresValidos("0123456789");
+        data.setTf(campoInicio);
+        data.formatter();
+    }
+
+    @FXML
+    private void mascaraData2() {
+        Formatter data = new Formatter();
+        data.setMask("##/##/####");
+        data.setCaracteresValidos("0123456789");
+        data.setTf(campoTermino);
+        data.formatter();
+    }
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato2");
     }
 }

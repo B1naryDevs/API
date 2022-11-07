@@ -1,20 +1,22 @@
+// Style CSS para os choice-box
+
 // Cor de fundo de todo o menu de contexto
-.choice-box .context-menu { -fx-background-color: white; }
+.choice-box .context-menu { -fx-background-color: #58595A; }
 
 // Cor de fundo do item em destaque na lista
 .choice-box .menu-item:focused { -fx-background-color: orange; }
 
 // Cor do texto de itens não focados na lista
-.choice-box .menu-item > .label { -fx-text-fill: black; }
+.choice-box .menu-item > .label { -fx-text-fill: white; }
 
 // Cor do texto do item focado na lista
 .choice-box .menu-item:focused > .label { -fx-text-fill: white; }
 
 // Cor de fundo do próprio controle
-.choice-box {-fx-background-color: white; }
+.choice-box {-fx-background-color: #58595A; }
 
 // Cor da seta
 .choice-box {-fx-mark-color: orange; }
 
 // Cor do texto do item selecionado no próprio controle
-.choice-box > .label { -fx-text-fill: black; }
+.choice-box > .label { -fx-text-fill: white; }

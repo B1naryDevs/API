@@ -92,7 +92,7 @@ public class rhControler5 implements Initializable {
 
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("AVISO");
-            alert.setHeaderText("VOCÊ REALMENTE DESEJA ALETRAR AS INFORMAÇÕOES");
+            alert.setHeaderText("VOCÊ REALMENTE DESEJA ALTERAR AS INFORMAÇÕOES");
             ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
             alert.getDialogPane().getButtonTypes().add(cancelButton);
 

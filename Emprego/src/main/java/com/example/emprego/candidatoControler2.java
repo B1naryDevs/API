@@ -27,22 +27,6 @@ public class candidatoControler2 implements Initializable {
 
     @FXML
     private Button botaoAvancar;
-
-    @FXML
-    private Button botaoVoltar;
-    
-    @FXML
-    private Button botaoHome;
-
-    @FXML
-    private Button botaoAreaCandidato;
-
-    @FXML
-    private Button botaoVagas;
-
-    @FXML
-    private Button botaoSobre;
-
     @FXML
     private Button botaoAdicionar;
 
@@ -112,19 +96,6 @@ public class candidatoControler2 implements Initializable {
     
     @FXML
     void SairTela(ActionEvent event) throws Exception{HelloApplication.ChangeScene("login");}
-
-    @FXML
-    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
-
-    @FXML
-    void AvancarAreaCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("areacandidato");}
-
-    @FXML
-    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("candidatura");}
-
-    @FXML
-    void AvancarSobre(ActionEvent event) throws Exception {HelloApplication.ChangeScene("sobre");}
-
     @FXML
     void AvancarTela(ActionEvent event) throws Exception {
         String empresa = campoEmpresa.getText();

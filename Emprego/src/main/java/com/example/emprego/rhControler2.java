@@ -261,13 +261,28 @@ public class rhControler2  {
                                                 String TELEPHONE_REGEX = "\\d{11}";
                                                 Pattern TELEPHONE_PATTERN = Pattern.compile(TELEPHONE_REGEX);
                                                 if (TELEPHONE_PATTERN.matcher(telefone).matches()) {
-                                                            Candidato candidato = new Candidato();
-                                                            candidato.setNome(nome);
-                                                            candidato.setCpf(cpf_long);
-                                                            candidato.setEmail(email);
-                                                            candidato.setSenha(senha);
-                                                            candidato.setTelefone(telefone_long);
-                                                            HelloApplication.ChangeScene("candidato2");
+                                                    try {
+
+                                                        //Cifrar Senha
+
+                                                        String senhaMd5 = Md5.getHashMd5(senha);
+                                                        //Inserir funcionario no banco
+
+                                                        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                                                        Funcionario funcionario = new Funcionario();
+                                                        funcionario.setNome(nome);
+                                                        funcionario.setEmail(email);
+                                                        funcionario.setSenha(senhaMd5);
+                                                        funcionario.setCpf(Long.parseLong(cpf));
+                                                        funcionario.setTelefone(Long.parseLong(telefone));
+                                                        funcionarioDAO.savefunc(funcionario);
+                                                        HelloApplication.ChangeScene("rh3");
+
+                                                    }catch (Exception e){
+                                                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                                                        alert.setHeaderText("NÃO FOI POSSÍVEL CADASTRAR ! TENTE NOVAMENTE !\n" + e);
+                                                        alert.showAndWait();
+                                                    }
                                                 } else {
                                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                                     alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO!");
@@ -315,30 +330,6 @@ public class rhControler2  {
                 alert.showAndWait();
             }
         }
-
-        try {
-
-            //Cifrar Senha
-
-            String senhaMd5 = Md5.getHashMd5(senha);
-            //Inserir funcionario no banco
-
-            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-            Funcionario funcionario = new Funcionario();
-            funcionario.setNome(nome);
-            funcionario.setEmail(email);
-            funcionario.setSenha(senhaMd5);
-            funcionario.setCpf(Long.parseLong(cpf));
-            funcionario.setTelefone(Long.parseLong(telefone));
-            funcionarioDAO.savefunc(funcionario);
-
-        }catch (Exception e){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("NÃO FOI POSSÍVEL CADASTRAR ! TENTE NOVAMENTE !\n" + e);
-            alert.showAndWait();
-        }
-
-        HelloApplication.ChangeScene("rh3");
     }
 
 

@@ -1,15 +1,16 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidatoDAO;
 import AcessoDAO.FuncionarioDAO;
+import AcessoDAO.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.regex.Pattern;
 
 public class rhControler5 implements Initializable {
 
@@ -51,9 +52,6 @@ public class rhControler5 implements Initializable {
 
     @FXML
     private TextField getCampoTelefone;
-
-    @FXML
-    private TextField getCampoCpf;
 
     @FXML
     private TextField getCampoSenha;
@@ -114,39 +112,156 @@ public class rhControler5 implements Initializable {
                     //Alteração de senha (+ dados caso tenha)
                     if (Objects.equals(getCampoSenha.getText(), getCampoConfirmarSenha.getText()) && !Objects.equals(getCampoSenha.getText(), "") && !Objects.equals(getCampoConfirmarSenha.getText(), ""))
                     {
-                        String senhaMd5 = Md5.getHashMd5(getCampoSenha.getText());
-                        //Inserir funcionario no banco
+                        if (getCampoNome.getText().isEmpty()) {
+                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setHeaderText("PREENCHA O NOME!");
+                            alert.showAndWait();
+                        } else if (getCampoEmail.getText().isEmpty()) {
+                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setHeaderText("PREENCHA O EMAIL!");
+                            alert.showAndWait();
+                        } else if (getCampoTelefone.getText().isEmpty()) {
+                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                            alert.setHeaderText("PREENCHA O TELEFONE!");
+                            alert.showAndWait();
+                        } else {
+                            String SIZ_REGEX = ".{14}";
+                            Pattern SIZ_PATTERN = Pattern.compile(SIZ_REGEX);
+                            if (SIZ_PATTERN.matcher(getCampoTelefone.getText().trim()).matches()) {
+                                String[] char_telefone = getCampoTelefone.getText().split("");
+                                List<String> chars2 = new ArrayList();
+                                String remover2 = "";
 
-                        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                        Funcionario funcionario = new Funcionario();
-                        funcionario.setNome(getCampoNome.getText());
-                        funcionario.setEmail(getCampoEmail.getText());
-                        funcionario.setSenha(senhaMd5);
-                        funcionario.setCpf(cpf);
-                        funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
-                        funcionarioDAO.updfunc(funcionario);
+                                long telefone_long = 0L;
 
-                        Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
-                        alert2.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
-                        alert2.showAndWait();
+                                chars2.addAll(Arrays.asList(char_telefone));
 
+                                for (String sss : chars2){
+
+                                    if (!"-".equals(sss) && !"(".equals(sss) && !")".equals(sss)){
+
+                                        remover2 += sss;
+
+                                    }
+
+                                }
+                                telefone_long = Long.parseLong(remover2);
+                                String telefone = String.valueOf(telefone_long);
+                                //Validação de email
+                                String EMAIL_REGEX = ".+@.+\\.[a-z]+";
+                                Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
+                                if (EMAIL_PATTERN.matcher(getCampoEmail.getText()).matches()) {
+                                    //Validação de telefone
+                                    String TELEPHONE_REGEX = "\\d{11}";
+                                    Pattern TELEPHONE_PATTERN = Pattern.compile(TELEPHONE_REGEX);
+                                    if (TELEPHONE_PATTERN.matcher(telefone).matches()) {
+                                        String senhaMd5 = Md5.getHashMd5(getCampoSenha.getText());
+                                        //Inserir funcionario no banco
+
+                                        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                                        Funcionario funcionario = new Funcionario();
+                                        funcionario.setNome(getCampoNome.getText());
+                                        funcionario.setEmail(getCampoEmail.getText());
+                                        funcionario.setSenha(senhaMd5);
+                                        funcionario.setCpf(cpf);
+                                        funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                                        funcionarioDAO.updfunc(funcionario);
+
+                                        Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                                        alert2.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                                        alert2.showAndWait();
+                                    } else {
+                                        Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                        alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO!");
+                                        alert.showAndWait();
+                                    }
+                                } else {
+                                    Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                    alert.setHeaderText("FORMATO DE EMAIL INVÁLIDO!");
+                                    alert.showAndWait();
+                                }
+                            }else {
+                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO");
+                                alert.showAndWait();
+                            }
+                        }
                     }else {
 
                         // alteração de dados
                         if(Objects.equals(getCampoSenha.getText(), "") && Objects.equals(getCampoConfirmarSenha.getText(), "")){
-                            //Inserir funcionario no banco
+                            if (getCampoNome.getText().isEmpty()) {
+                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setHeaderText("PREENCHA O NOME!");
+                                alert.showAndWait();
+                            } else if (getCampoEmail.getText().isEmpty()) {
+                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setHeaderText("PREENCHA O EMAIL!");
+                                alert.showAndWait();
+                            } else if (getCampoTelefone.getText().isEmpty()) {
+                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                alert.setHeaderText("PREENCHA O TELEFONE!");
+                                alert.showAndWait();
+                            } else {
+                                String SIZ_REGEX = ".{14}";
+                                Pattern SIZ_PATTERN = Pattern.compile(SIZ_REGEX);
+                                if (SIZ_PATTERN.matcher(getCampoTelefone.getText().trim()).matches()) {
+                                    String[] char_telefone = getCampoTelefone.getText().split("");
+                                    List<String> chars2 = new ArrayList();
+                                    String remover2 = "";
 
-                            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                            Funcionario funcionario = new Funcionario();
-                            funcionario.setNome(getCampoNome.getText());
-                            funcionario.setEmail(getCampoEmail.getText());
-                            funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
-                            funcionario.setCpf(cpf);
-                            funcionarioDAO.updfuncse(funcionario);
+                                    long telefone_long = 0L;
 
-                            Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
-                            alert3.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
-                            alert3.showAndWait();
+                                    chars2.addAll(Arrays.asList(char_telefone));
+
+                                    for (String sss : chars2){
+
+                                        if (!"-".equals(sss) && !"(".equals(sss) && !")".equals(sss)){
+
+                                            remover2 += sss;
+
+                                        }
+
+                                    }
+                                    telefone_long = Long.parseLong(remover2);
+                                    String telefone = String.valueOf(telefone_long);
+                                    //Validação de email
+                                    String EMAIL_REGEX = ".+@.+\\.[a-z]+";
+                                    Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
+                                    if (EMAIL_PATTERN.matcher(getCampoEmail.getText()).matches()) {
+                                        //Validação de telefone
+                                        String TELEPHONE_REGEX = "\\d{11}";
+                                        Pattern TELEPHONE_PATTERN = Pattern.compile(TELEPHONE_REGEX);
+                                        if (TELEPHONE_PATTERN.matcher(telefone).matches()) {
+                                            //Inserir funcionario no banco
+
+                                            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                                            Funcionario funcionario = new Funcionario();
+                                            funcionario.setNome(getCampoNome.getText());
+                                            funcionario.setEmail(getCampoEmail.getText());
+                                            funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                                            funcionario.setCpf(cpf);
+                                            funcionarioDAO.updfuncse(funcionario);
+
+                                            Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                                            alert3.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
+                                            alert3.showAndWait();
+                                        } else {
+                                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                            alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO!");
+                                            alert.showAndWait();
+                                        }
+                                    } else {
+                                        Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                        alert.setHeaderText("FORMATO DE EMAIL INVÁLIDO!");
+                                        alert.showAndWait();
+                                    }
+                                }else {
+                                    Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
+                                    alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO");
+                                    alert.showAndWait();
+                                }
+                            }
                         }
 
                     }
@@ -173,10 +288,17 @@ public class rhControler5 implements Initializable {
        for (Funcionario rh : funcionarioDAO.Func(rhControler4.getSecemail())){
            getCampoNome.setText(rh.getNome());
            getCampoEmail.setText(rh.getEmail());
-           getCampoCpf.setText(String.valueOf(rh.getCpf()));
-           cpf = rh.getCpf();
            getCampoTelefone.setText(String.valueOf(rh.getTelefone()));
 
        }
    }
+
+   @FXML
+   private void mascaraTel() {
+        Formatter tff = new Formatter();
+        tff.setMask("(##)#####-####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(getCampoTelefone);
+        tff.formatter();
+    }
 }

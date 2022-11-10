@@ -159,7 +159,7 @@ ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
 
 #ADICIONAR FUNCIONARIO
 insert into funcionario(nome_func, email, senha, cpf, telefone) values
-("Carlos Aparecido", "Adm@gmail.com", "202cb962ac59075b964b07152d234b70", 12147865201, 12996141485);
+("Carlos Aparecido", "Adm@gmail.com", "652f1ba612e65639e279dd156d93b401", 12147865201, 12996141485);
 
 #ADICIONAR CANDIDATO
 insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) values 
@@ -167,7 +167,7 @@ insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) 
 
 #ADICIONAR FUNCIONARIO
 insert into usuario (email, senha, cpf_candidato_usu) values 
-('Gabriel@gmail.com', '202cb962ac59075b964b07152d234b70', 48615448696);
+('Gabriel@gmail.com', '652f1ba612e65639e279dd156d93b401', 48615448696);
 
 select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Aprovados from funcionario as f inner join candidatura as c
 on f.cpf = c.funcionario_cpf where c.status_cand = 'Contratado' group by funcionario_cpf order by count(c.status_cand) desc;

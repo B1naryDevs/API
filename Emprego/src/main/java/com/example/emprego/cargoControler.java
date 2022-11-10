@@ -43,7 +43,7 @@ public class cargoControler {
 
     @FXML
     void AvancarVaga(ActionEvent event) throws Exception {
-        HelloApplication.ChangeScene("vaga");
+        HelloApplication.ChangeScene("telavaga");
     }
 
     @FXML

@@ -5,17 +5,18 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 
-public class homerhControler {
+public class telaVagaControler3 {
 
     //Nomeclatura dos botões
+
     @FXML
     private Button botaoHome;
 
     @FXML
-    private Button botaoVagas;
+    private Button botaoCargos;
 
     @FXML
-    private Button botaoCargos;
+    private Button botaoVagas;
 
     @FXML
     private Button botaoRH;
@@ -25,6 +26,9 @@ public class homerhControler {
 
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private Button botaoSelecionar;
 
 
     // Definição das ações dos botões
@@ -45,7 +49,9 @@ public class homerhControler {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+    void SelecionarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga4");}
 
+    @FXML
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 }

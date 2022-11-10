@@ -34,7 +34,11 @@ public class HelloApplication extends Application {
     private static Scene homerh;
     private static Scene sobre;
     private static Scene gerenciamentovaga;
+    private static Scene telavaga;
+    private static Scene telavaga2;
+    private static Scene telavaga3;
 
+    private static Scene telavaga4;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -182,6 +186,30 @@ public class HelloApplication extends Application {
                 Parent layout_gerenciamento_vaga = FXMLLoader.load(HelloApplication.class.getResource("layout_gerenciamento_vaga.fxml"));
                 gerenciamentovaga = new Scene(layout_gerenciamento_vaga);
                 stage.setScene(gerenciamentovaga);
+                stage.setFullScreen(true);
+                break;
+            case "telavaga":
+                Parent layout_telavaga = FXMLLoader.load(HelloApplication.class.getResource("layout_telavaga.fxml"));
+                telavaga = new Scene(layout_telavaga);
+                stage.setScene(telavaga);
+                stage.setFullScreen(true);
+                break;
+            case "telavaga2":
+                Parent layout_telavaga2 = FXMLLoader.load(HelloApplication.class.getResource("layout_telavaga2.fxml"));
+                telavaga2 = new Scene(layout_telavaga2);
+                stage.setScene(telavaga2);
+                stage.setFullScreen(true);
+                break;
+            case "telavaga3":
+                Parent layout_telavaga3 = FXMLLoader.load(HelloApplication.class.getResource("layout_telavaga3.fxml"));
+                telavaga3 = new Scene(layout_telavaga3);
+                stage.setScene(telavaga3);
+                stage.setFullScreen(true);
+                break;
+            case "telavaga4":
+                Parent layout_telavaga4 = FXMLLoader.load(HelloApplication.class.getResource("layout_telavaga4.fxml"));
+                telavaga4 = new Scene(layout_telavaga4);
+                stage.setScene(telavaga4);
                 stage.setFullScreen(true);
         }
     }

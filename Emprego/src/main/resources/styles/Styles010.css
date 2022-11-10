@@ -1,0 +1,5 @@
+// Style CSS para os textos Modo Claro
+
+.label{
+     -fx-text-fill: #f57c00;
+}

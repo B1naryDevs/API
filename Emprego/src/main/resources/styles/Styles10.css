@@ -1,0 +1,5 @@
+// Style CSS para os textos Modo Escuro
+
+.label{
+     -fx-text-fill: white;
+}

@@ -10,6 +10,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.Parent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 
 
 public class candidatoControler {
@@ -25,6 +28,9 @@ public class candidatoControler {
 
     @FXML
     private ToggleButton tgbtMostrarSenha2;
+
+    @FXML
+    private ToggleButton tgbtModo;
 
     @FXML
     private PasswordField campoConfirmarsenha;
@@ -51,6 +57,12 @@ public class candidatoControler {
 
     @FXML
     private TextField campoTelefone;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
@@ -383,6 +395,42 @@ public class candidatoControler {
         }
     }
 
+    Image img_ModoEscuro = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+    Image img_ModoClaro = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+
+    private boolean isModoEscuro = true;
+
+    public void alterarModo(ActionEvent event){
+        isModoEscuro =! isModoEscuro;
+        if(isModoEscuro) {
+            setModoEscuro();
+        }else{
+            setModoClaro();
+        }
+    }
+
+    private void setModoEscuro(){
+        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles09.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/Styles9.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles010.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/Styles10.css");
+        botaoAvancar.getStylesheets().remove("file:src/main/resources/styles/Styles01.css");
+        botaoAvancar.getStylesheets().add("file:src/main/resources/styles/Styles.css");
+        Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+        imgModo.setImage(image);
+    }
+
+    private void setModoClaro(){
+        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles9.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/Styles09.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles10.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/Styles010.css");
+        botaoAvancar.getStylesheets().remove("file:src/main/resources/styles/Styles.css");
+        botaoAvancar.getStylesheets().add("file:src/main/resources/styles/Styles01.css");
+        Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+        imgModo.setImage(image);
+    }
 }
+
 
 

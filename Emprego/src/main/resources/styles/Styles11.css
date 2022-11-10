@@ -1,0 +1,17 @@
+// Style CSS para o toggle button Modo Claro
+
+.toggle-button {
+    -fx-text-fill: transparent;
+    -fx-base: transparent;
+
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: transparent;
+    -fx-base: transparent;
+
+    -fx-focus-color: transparent;
+    -fx-border-color: transparent;
+}

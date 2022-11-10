@@ -161,10 +161,11 @@ ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
 insert into funcionario(nome_func, email, senha, cpf, telefone) values
 ("Carlos Aparecido", "Adm@gmail.com", "202cb962ac59075b964b07152d234b70", 12147865201, 12996141485);
 
-#ADICIONAR VAGA DE CANDIDATOS
+#ADICIONAR CANDIDATO
 insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) values 
 ('Gabriel', 48615448696, '2003-12-17', 12992545421, 200.50);
 
+#ADICIONAR FUNCIONARIO
 insert into usuario (email, senha, cpf_candidato_usu) values 
 ('Gabriel@gmail.com', '202cb962ac59075b964b07152d234b70', 48615448696);
 

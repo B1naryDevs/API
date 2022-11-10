@@ -23,24 +23,14 @@ CREATE TABLE usuario (
     senha VARCHAR(40) NOT NULL,
     cpf_candidato_usu BIGINT(11) NULL,
     PRIMARY KEY (email)
-);
-
-CREATE TABLE rh (
-    nome_rh VARCHAR(40) NOT NULL, #NOME_RH - EMPRESA
-    local_rh VARCHAR(40) NOT NULL,
-    telefone bigint (11) NOT NULL,
-    PRIMARY KEY (nome_rh)
 ); 
 
 CREATE TABLE funcionario (
-empresa VARCHAR(40),
 nome_func VARCHAR(60) not null,
 email VARCHAR(40) NOT NULL UNIQUE,
 senha VARCHAR(40) NOT NULL,
-cpf BIGINT(11) NULL,
+cpf BIGINT(11) NOT NULL,
 telefone BIGINT NOT NULL,
-funcao ENUM ('Administrador', 'Publicador'),
-nivel_acesso ENUM('1', '2'),
 primary key (cpf)
 );
 
@@ -51,8 +41,8 @@ CREATE TABLE setor (
 
 CREATE TABLE vaga (
     cargo_vaga VARCHAR(32) NOT NULL,
-    empresa_vaga VARCHAR(40) NOT NULL,
-    setor_vaga VARCHAR(30) NOT NULL,
+    funcionario_cpf BIGINT(11) NULL,
+    setor_vaga VARCHAR(30) NULL,
     id_vaga INT(5) NOT NULL AUTO_INCREMENT,
     periodo VARCHAR(20) NOT NULL,
     experiencia ENUM('Sim', 'Não') NOT NULL,
@@ -108,7 +98,7 @@ CREATE TABLE competencia (
 -----------------------------------------------------------------------------------------------
 
 CREATE TABLE candidatura (
-	empresa_candidatura VARCHAR(40) NOT NULL,
+	funcionario_cpf BIGINT(11) NULL,
     cargo_candidatura VARCHAR(30) NOT NULL,
     id_candidatura INT(5) AUTO_INCREMENT,
     cpf_candidatura BIGINT(11) NOT NULL,
@@ -128,15 +118,8 @@ CREATE TABLE pretensao_cargo (
 
 # CRIAÇÃO DE CHAVES ESTRANGEIRAS (FK) ----------------------------------------------------
 ------------------------------------------------------------------------------------------
-
-# CHAVE ESTRANGEIRA FK - EMPRESA PARA RH
-ALTER TABLE funcionario ADD FOREIGN KEY (empresa) REFERENCES rh (nome_rh);
-
 # CHAVE ESTRANGEIRA FK - EMAIL DE USUARIO
 ALTER TABLE usuario ADD FOREIGN KEY (cpf_candidato_usu) REFERENCES candidato (cpf);
-
-# CHAVE ESTRANGEIRA FK - EMPRESA´PARA VAGA
-ALTER TABLE vaga ADD FOREIGN KEY (empresa_vaga) REFERENCES rh (nome_rh);
 
 # CHAVE ESTRANGEIRA FK - CARGO PARA VAGA 
 ALTER TABLE vaga ADD FOREIGN KEY (cargo_vaga) REFERENCES cargo (nome_cargo);
@@ -144,14 +127,13 @@ ALTER TABLE vaga ADD FOREIGN KEY (cargo_vaga) REFERENCES cargo (nome_cargo);
 # CHAVE ESTRANGEIRA FK - CPF DO CANDIDATO PARA CANDIDATURA
 ALTER TABLE candidatura ADD FOREIGN KEY (cpf_candidatura) REFERENCES candidato (cpf);
 
+ALTER TABLE candidatura ADD FOREIGN KEY (funcionario_cpf) REFERENCES funcionario(cpf);
+
 # CHAVE ESTRANGEIRA FK - CODIGO DA VAGA PARA CANDIDATURA
 ALTER TABLE candidatura ADD FOREIGN KEY (cod_vaga) REFERENCES vaga (id_vaga);
 
 # CHAVE ESTRANGEIRA FK - CARGO DA CANDIDATURA PARA CARGO 
 ALTER TABLE candidatura ADD FOREIGN KEY (cargo_candidatura) REFERENCES cargo(nome_cargo);
-
-# CHAVE ESTRANGEIRA FK - CANDIDATURA PARA EMPRESA
-ALTER TABLE candidatura ADD FOREIGN KEY (empresa_candidatura) REFERENCES rh(nome_rh);
 
 # CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA FORMAÇÃO 
 ALTER TABLE formacao ADD FOREIGN KEY (cpf_candidato_form) REFERENCES candidato (cpf);
@@ -175,39 +157,19 @@ ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
 # ACRESCENTAMENTO DE INFORMAÇÕES TESTES ---------------------------------------
 ------------------------------------------------------------------------------
 
-# ADICIONAR SETORES
-insert into setor(nome_setor) values 
-('Transporte'),
-('Tecnologia e Informação'),
-('Jurídico'),
-('Atendimento'),
-('Publicidade'),
-('Financeiro');
-
-# ADICIONAR CARGOS
-insert into cargo (nome_cargo, setor_cargo) values 
-('DESENVOLVEDOR BACK-END', 'Tecnologia e Informação'),
-('DESENVOLVEDOR FRONT-END', 'Tecnologia e Informação'),
-('Analista de Sistemas Junior', 'Tecnologia e Informação'),
-('Suporte Técnico', 'Tecnologia e Informação'),
-('Gerente Financeiro', 'Financeiro'),
-('Recepcionista', 'Atendimento'),
-('Desenvolvedor', 'Tecnologia e Informação'),
-('Analista de Sistemas Pleno', 'Tecnologia e Informação'),
-('Motorista', 'Transporte'),
-('Advogado', 'Jurídico');
-
-#ADICIONAR RH
-insert into rh (nome_rh, local_rh, telefone) values
-('Pro4TECH', 'São Paulo', '15999999999');
-
 #ADICIONAR FUNCIONARIO
-insert into funcionario(empresa, nome_func, email, senha, cpf, telefone, funcao, nivel_acesso) values
-("Pro4TECH", "Administrador", "Adm@123", "202cb962ac59075b964b07152d234b70", 12147865201, 12996141485, "Administrador", 1);
+insert into funcionario(nome_func, email, senha, cpf, telefone) values
+("Carlos Aparecido", "Adm@gmail.com", "202cb962ac59075b964b07152d234b70", 12147865201, 12996141485);
 
-# ADICIONAR VAGAS DE EMPREGO
-insert into vaga (cargo_vaga, empresa_vaga, setor_vaga, id_vaga, periodo, experiencia, salario, descricao_vaga,endereco_vaga, cidade_vaga, remoto, status_vaga) values 
-('Recepcionista', 'Pro4Tech', 'Atendimento', default, 'Manhã', 'Não', 1250.22, 'Corta o zap', 'Rua AIDE Josefa Andrade Diacov 23 Bosque dos Ipês', 'São José dos Campos', 'Não', 'Encerrada'),
-('Desenvolvedor', 'Pro4TECH', 'Tecnologia e Informação', default, 'Manhã', 'Sim', 3500.00, 'Desenvolver sites e aplicativos.', 'Rua Celso Júnior 45 - Jardim das Estrelas', 'São José dos Campos', 'Sim', 'Aberta'),
-('Motorista', 'Pro4Tech', 'Transporte', default, 'Integral', 'Sim', 2000.00, 'Transporte de cargas alimenticias.', 'Rua Maria Silva Medeiros 45 - Paraiso da Lua', 'São José dos Campos', 'Não', 'Encerrada'),
-('Suporte Técnico', 'Pro4Tech', 'Tecnologia e Informação', default, 'Tarde', 'Não', 900.00, 'Prestar serviços de suporte ao usuário.', 'Rua Galo Preto 421 Velho Horizonte', 'São José dos Campos', 'Sim', 'Aberta');
+#ADICIONAR VAGA DE CANDIDATOS
+insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) values 
+('Gabriel', 48615448696, '2003-12-17', 12992545421, 200.50);
+
+insert into usuario (email, senha, cpf_candidato_usu) values 
+('Adm@123', '202cb962ac59075b964b07152d234b70', 48615448696 );
+
+select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Aprovados from funcionario as f inner join candidatura as c
+on f.cpf = c.funcionario_cpf where c.status_cand = 'Contratado' group by funcionario_cpf order by count(c.status_cand) desc;
+
+select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Desclassificados from funcionario as f inner join candidatura as c
+on f.cpf = c.funcionario_cpf where c.status_cand = 'Desclassificado' group by funcionario_cpf order by count(c.status_cand) desc;

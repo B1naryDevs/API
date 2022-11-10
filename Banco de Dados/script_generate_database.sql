@@ -166,7 +166,7 @@ insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) 
 ('Gabriel', 48615448696, '2003-12-17', 12992545421, 200.50);
 
 insert into usuario (email, senha, cpf_candidato_usu) values 
-('Adm@123', '202cb962ac59075b964b07152d234b70', 48615448696 );
+('Gabriel@gmail.com', '202cb962ac59075b964b07152d234b70', 48615448696);
 
 select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Aprovados from funcionario as f inner join candidatura as c
 on f.cpf = c.funcionario_cpf where c.status_cand = 'Contratado' group by funcionario_cpf order by count(c.status_cand) desc;

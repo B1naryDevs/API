@@ -38,6 +38,8 @@ public class loginControler {
     @FXML
     private ToggleButton tgbtMostrarSenha;
 
+    public static String emailrh;
+
     @FXML
     void cadastrarLogin(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato");
@@ -46,47 +48,67 @@ public class loginControler {
     @FXML
     void entrarLogin(ActionEvent event) throws Exception{
 
-        //validação de campos em branco
-        String senhaMd5 = Md5.getHashMd5(campoSenha.getText());
+        try {
 
-        if (campoEmail.getText() == "" || campoSenha.getText() == ""){
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("campo vazio !");
-            alert.showAndWait();
+            Usuario emf = new Usuario();
+            Usuario.setEmail(campoEmail.getText());
 
-        } else {
 
-            // conexão com banco
+            //validação de campos em branco
+            String senhaMd5 = Md5.getHashMd5(campoSenha.getText());
 
-            //busca candidato
-            CandidatoDAO dao = new CandidatoDAO();
-            if( dao.checklogin(campoEmail.getText(), senhaMd5)){
-                Usuario usuario = new Usuario();
-                UsuarioDAO.Usua(campoEmail.getText());
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("Bem Vindo!");
+            if (campoEmail.getText() == "" || campoSenha.getText() == ""){
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("campo vazio !");
                 alert.showAndWait();
-                HelloApplication.ChangeScene("home");
 
-            } else{
+            } else {
 
-                // busca funcionario
-                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                if( funcionarioDAO.checklogin(campoEmail.getText(), senhaMd5)) {
+                // conexão com banco
+
+                //busca candidato
+                CandidatoDAO dao = new CandidatoDAO();
+                if( dao.checklogin(campoEmail.getText(), senhaMd5)){
+                    Usuario usuario = new Usuario();
+                    UsuarioDAO.Usua(campoEmail.getText());
+
+
+
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setHeaderText("Bem Vindo Funcionario!");
+                    alert.setHeaderText("Bem Vindo!");
                     alert.showAndWait();
-                    HelloApplication.ChangeScene("homerh");
-                }else{
+                    HelloApplication.ChangeScene("home");
 
-                    // USUARIO NÃO ENCONTRADO
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setHeaderText("E-mail ou Senha incorretos !");
-                    alert.showAndWait();
+                } else{
 
+                    // busca funcionario
+                    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                    if( funcionarioDAO.checklogin(campoEmail.getText(), senhaMd5)) {
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setHeaderText("Bem Vindo Funcionario!");
+                        alert.showAndWait();
+                        HelloApplication.ChangeScene("homerh");
+                    }else{
+
+                        // USUARIO NÃO ENCONTRADO
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setHeaderText("E-mail ou Senha incorretos !");
+                        alert.showAndWait();
+
+                    }
                 }
             }
+
+        }catch (Exception e){
+
+            // USUARIO NÃO ENCONTRADO
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("FALHA NA CONEXÃO");
+            alert.showAndWait();
+
         }
+
+
     }
 
     //imagem ação

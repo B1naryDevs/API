@@ -1,6 +1,7 @@
 package com.example.emprego;
 
 public class Usuario {
+
     public static String email;
     public static Long cpf;
 

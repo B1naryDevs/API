@@ -80,7 +80,23 @@ public class rhControler4 implements Initializable {
         Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
         secemail = String.valueOf(selecionado.getEmail());
 
-        HelloApplication.ChangeScene("rh5");
+        Usuario emg = new Usuario();
+        emg.getEmail();
+
+        if (emg.getEmail().equals("Adm@gmail.com")){
+
+            HelloApplication.ChangeScene("rh5");
+        }
+
+        else{
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("ACESSO NEGADO!");
+            alert.showAndWait();
+
+        }
+
+
     }
 
     @FXML
@@ -99,32 +115,48 @@ public class rhControler4 implements Initializable {
     void RemoverFunc(ActionEvent event) throws Exception {
 
         try{
-            Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
-            secemail = String.valueOf(selecionado.getEmail());
-            String nome =  String.valueOf(selecionado.getNome());
 
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("AVISO");
-            alert.setHeaderText("VOCÊ REALMENTE DESEJA REMOVER\n" + nome + " ?");
-            ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
-            alert.getDialogPane().getButtonTypes().add(cancelButton);
+            Usuario emg = new Usuario();
+            emg.getEmail();
 
-            Optional<ButtonType> result = alert.showAndWait();
-            if (result.isPresent() && result.get() == ButtonType.OK){
+            if (emg.getEmail().equals("Adm@gmail.com")){
 
-                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                Funcionario funcionario = new Funcionario();
-                funcionario.setEmail(secemail);
-                funcionarioDAO.deletefunc(funcionario);
+                Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+                secemail = String.valueOf(selecionado.getEmail());
+                String nome =  String.valueOf(selecionado.getNome());
 
-                colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
-                colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
-                colunaTelefone.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Telefone"));
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("AVISO");
+                alert.setHeaderText("VOCÊ REALMENTE DESEJA REMOVER\n" + nome + " ?");
+                ButtonType cancelButton = new ButtonType("Cancelar", ButtonBar.ButtonData.CANCEL_CLOSE);
+                alert.getDialogPane().getButtonTypes().add(cancelButton);
+
+                Optional<ButtonType> result = alert.showAndWait();
+                if (result.isPresent() && result.get() == ButtonType.OK){
+
+                    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                    Funcionario funcionario = new Funcionario();
+                    funcionario.setEmail(secemail);
+                    funcionarioDAO.deletefunc(funcionario);
+
+                    colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
+                    colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
+                    colunaTelefone.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Telefone"));
+
+                }
+
+                ObservableList<Funcionario> ListaM = FuncionarioDAO.Datauser();
+                tabelaFuncionarios.setItems(ListaM);
+
+            }else {
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("ACESSO NEGADO!");
+                alert.showAndWait();
 
             }
 
-            ObservableList<Funcionario> ListaM = FuncionarioDAO.Datauser();
-            tabelaFuncionarios.setItems(ListaM);
+
         } catch (Exception e){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText("SELECIONE UM COLABORADOR !");
@@ -136,17 +168,41 @@ public class rhControler4 implements Initializable {
     @FXML
     void Edit(ActionEvent event) throws Exception {
 
-        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
-        secemail = String.valueOf(selecionado.getEmail());
+        try {
 
-        HelloApplication.ChangeScene("rh5");
+            Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+            secemail = String.valueOf(selecionado.getEmail());
+
+            Usuario emg = new Usuario();
+            emg.getEmail();
+
+            if (emg.getEmail().equals("Adm@gmail.com")){
+
+                HelloApplication.ChangeScene("rh5");
+            }
+
+            else{
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("ACESSO NEGADO!");
+                alert.showAndWait();
+
+            }
+
+        }catch (Exception e){
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("SELECIONE UM USUÁRIO");
+            alert.showAndWait();
+
+        }
+
+
+
     }
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
-
-    @FXML
-
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

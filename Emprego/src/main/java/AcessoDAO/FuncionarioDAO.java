@@ -64,11 +64,9 @@ public class FuncionarioDAO {
 
                 Funcionario funciona = new Funcionario();
                 funciona.setNome(rset.getString("nome_func"));
-                funciona.setEmpresa(rset.getString("empresa"));
                 funciona.setTelefone(rset.getLong("telefone"));
                 funciona.setCpf(rset.getLong("cpf"));
                 funciona.setEmail(rset.getString("email"));
-                funciona.setAcesso(rset.getString("funcao"));
                 funciona.setSenha(rset.getString("senha"));
 
                 funclist.add(funciona);

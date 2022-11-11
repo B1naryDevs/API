@@ -113,15 +113,12 @@ public class rhControler5 implements Initializable {
                     if (Objects.equals(getCampoSenha.getText(), getCampoConfirmarSenha.getText()) && !Objects.equals(getCampoSenha.getText(), "") && !Objects.equals(getCampoConfirmarSenha.getText(), ""))
                     {
                         if (getCampoNome.getText().isEmpty()) {
-                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                             alert.setHeaderText("PREENCHA O NOME!");
                             alert.showAndWait();
                         } else if (getCampoEmail.getText().isEmpty()) {
-                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                             alert.setHeaderText("PREENCHA O EMAIL!");
                             alert.showAndWait();
                         } else if (getCampoTelefone.getText().isEmpty()) {
-                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                             alert.setHeaderText("PREENCHA O TELEFONE!");
                             alert.showAndWait();
                         } else {
@@ -164,24 +161,21 @@ public class rhControler5 implements Initializable {
                                         funcionario.setEmail(getCampoEmail.getText());
                                         funcionario.setSenha(senhaMd5);
                                         funcionario.setCpf(cpf);
-                                        funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                                        funcionario.setTelefone(Long.parseLong(telefone));
                                         funcionarioDAO.updfunc(funcionario);
 
                                         Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
                                         alert2.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
                                         alert2.showAndWait();
                                     } else {
-                                        Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                         alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO!");
                                         alert.showAndWait();
                                     }
                                 } else {
-                                    Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                     alert.setHeaderText("FORMATO DE EMAIL INVÁLIDO!");
                                     alert.showAndWait();
                                 }
                             }else {
-                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                 alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO");
                                 alert.showAndWait();
                             }
@@ -191,15 +185,12 @@ public class rhControler5 implements Initializable {
                         // alteração de dados
                         if(Objects.equals(getCampoSenha.getText(), "") && Objects.equals(getCampoConfirmarSenha.getText(), "")){
                             if (getCampoNome.getText().isEmpty()) {
-                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                 alert.setHeaderText("PREENCHA O NOME!");
                                 alert.showAndWait();
                             } else if (getCampoEmail.getText().isEmpty()) {
-                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                 alert.setHeaderText("PREENCHA O EMAIL!");
                                 alert.showAndWait();
                             } else if (getCampoTelefone.getText().isEmpty()) {
-                                Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                 alert.setHeaderText("PREENCHA O TELEFONE!");
                                 alert.showAndWait();
                             } else {
@@ -239,7 +230,7 @@ public class rhControler5 implements Initializable {
                                             Funcionario funcionario = new Funcionario();
                                             funcionario.setNome(getCampoNome.getText());
                                             funcionario.setEmail(getCampoEmail.getText());
-                                            funcionario.setTelefone(Long.parseLong(getCampoTelefone.getText()));
+                                            funcionario.setTelefone(Long.parseLong(telefone));
                                             funcionario.setCpf(cpf);
                                             funcionarioDAO.updfuncse(funcionario);
 
@@ -247,23 +238,19 @@ public class rhControler5 implements Initializable {
                                             alert3.setHeaderText("ALTERAÇÃO REALIZADA COM SUCESSO !");
                                             alert3.showAndWait();
                                         } else {
-                                            Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                             alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO!");
                                             alert.showAndWait();
                                         }
                                     } else {
-                                        Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                         alert.setHeaderText("FORMATO DE EMAIL INVÁLIDO!");
                                         alert.showAndWait();
                                     }
                                 }else {
-                                    Alert alert0 = new Alert(Alert.AlertType.INFORMATION);
                                     alert.setHeaderText("FORMATO DE TELEFONE INVÁLIDO");
                                     alert.showAndWait();
                                 }
                             }
                         }
-
                     }
                 }
 
@@ -279,22 +266,27 @@ public class rhControler5 implements Initializable {
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
-   @Override
+    @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
 
-       FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
 
-       for (Funcionario rh : funcionarioDAO.Func(rhControler4.getSecemail())){
-           getCampoNome.setText(rh.getNome());
-           getCampoEmail.setText(rh.getEmail());
-           getCampoTelefone.setText(String.valueOf(rh.getTelefone()));
+        for (Funcionario rh : funcionarioDAO.Func(rhControler4.getSecemail())){
+            cpf = rh.getCpf();
+            getCampoNome.setText(rh.getNome());
+            getCampoEmail.setText(rh.getEmail());
+            Formatter tff = new Formatter();
+            tff.setMask("(##)#####-####");
+            tff.setTf(getCampoTelefone);
+            getCampoTelefone.setText(String.valueOf(rh.getTelefone()));
+            tff.formatter();
 
-       }
-   }
+        }
+    }
 
-   @FXML
-   private void mascaraTel() {
+    @FXML
+    private void mascaraTel() {
         Formatter tff = new Formatter();
         tff.setMask("(##)#####-####");
         tff.setCaracteresValidos("0123456789");

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.gerenciamentoVagaControler">
    <children>
@@ -32,7 +26,7 @@
                      </image></ImageView>
                </graphic>
             </ToggleButton>
-            <Label layoutX="280.0" layoutY="166.0" text="GERENCIAMENTO DE VAGAS" textFill="WHITE" AnchorPane.topAnchor="120.0">
+            <Label layoutX="280.0" layoutY="120.0" text="GERENCIAMENTO DE VAGAS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
                </font></Label>
@@ -47,6 +41,31 @@
               </columns>
             </TableView>
             <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="135.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
+            <ToggleButton fx:id="botaoEditar" layoutX="1008.0" layoutY="212.0" mnemonicParsing="false" onAction="#EditarVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/edit.png" />
+                     </image></ImageView>
+               </graphic>
+            </ToggleButton>
+            <ToggleButton fx:id="botaoRemover" layoutX="1061.0" layoutY="212.0" mnemonicParsing="false" onAction="#RemoverVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/delete2.png" />
+                     </image></ImageView>
+               </graphic>
+            </ToggleButton>
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font></Button>
+            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarVaga" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children></AnchorPane>
    </children>
 </VBox>

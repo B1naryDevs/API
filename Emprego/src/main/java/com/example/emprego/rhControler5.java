@@ -14,8 +14,8 @@ import java.util.regex.Pattern;
 
 public class rhControler5 implements Initializable {
 
-    // Nomeclatura dos botões e campos
 
+    // Nomeclatura dos botões e campos
 
     @FXML
     private Button botaoHome;
@@ -72,7 +72,7 @@ public class rhControler5 implements Initializable {
         HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) throws Exception{HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception{HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}

@@ -33,10 +33,13 @@ public class telaVagaControler2 {
     private Button botaoVisualizarVagas;
 
     @FXML
-    private ToggleButton botaoSair;
+    private Button botaoSelecionar;
 
     @FXML
-    private Button botaoVisualizar;
+    private Button botaoVoltar;
+
+    @FXML
+    private ToggleButton botaoSair;
 
 
     // Definição dos itens da tabela
@@ -81,7 +84,10 @@ public class telaVagaControler2 {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void VisualizarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga3");}
+    void SelecionarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga3");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

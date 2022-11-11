@@ -55,7 +55,7 @@ public class rhControler {
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}

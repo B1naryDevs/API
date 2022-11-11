@@ -28,7 +28,13 @@ public class telaVagaControler {
     private Button botaoCadastrarVagas;
 
     @FXML
-    private Button botaoVisualizarVagas;
+    private Button botaoGerenciarVagas;
+
+    @FXML
+    private Button botaoAvaliar;
+
+    @FXML
+    private Button botaoVoltar;
 
     @FXML
     private ToggleButton botaoSair;
@@ -51,10 +57,16 @@ public class telaVagaControler {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void VisualizarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga2");}
+    void AvaliarCandidaturas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga2");}
 
     @FXML
     void CadastrarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+
+    @FXML
+    void GerenciarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("gerenciamentovaga");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

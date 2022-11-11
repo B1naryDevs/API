@@ -27,7 +27,21 @@ public class gerenciamentoVagaControler {
     private Button botaoRelatorios;
 
     @FXML
+    private Button botaoSelecionar;
+
+    @FXML
+    private Button botaoVoltar;
+
+    @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private Button botaoRemover;
+
+    @FXML
+    private Button botaoEditar;
+
+
 
     // Definindo os itens da tabela
 
@@ -59,7 +73,7 @@ public class gerenciamentoVagaControler {
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void AvancarCargos(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}
@@ -71,7 +85,18 @@ public class gerenciamentoVagaControler {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
+    @FXML
+    void RemoverVaga(ActionEvent event) throws Exception {}
+
+    @FXML
+    void EditarVaga(ActionEvent event) throws Exception {}
+
+    @FXML
+    void SelecionarVaga(ActionEvent event) throws Exception {}
+
+    @FXML
+    void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
 }

@@ -18,8 +18,8 @@
             <Button fx:id="botaoCargos" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
             <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="RH" />
             <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="140.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
-            <Button fx:id="botaoCadastrarVagas" layoutX="820.0" layoutY="350.0" mnemonicParsing="false" onAction="#CadastrarVagas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="CADASTRAR VAGAS" />
-            <Button fx:id="botaoVisualizarVagas" layoutX="188.0" layoutY="350.0" mnemonicParsing="false" onAction="#VisualizarVagas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="VISUALIZAR VAGAS" />
+            <Button fx:id="botaoCadastrarVagas" layoutX="500.0" layoutY="220.0" mnemonicParsing="false" onAction="#CadastrarVagas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="CADASTRAR VAGAS" />
+            <Button fx:id="botaoAvaliar" layoutX="500.0" layoutY="420.0" mnemonicParsing="false" onAction="#AvaliarCandidaturas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="AVALIAR CANDIDATURAS" />
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
@@ -29,6 +29,8 @@
                </graphic>
             </ToggleButton>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoGerenciarVagas" layoutX="500.0" layoutY="320.0" mnemonicParsing="false" onAction="#GerenciarVagas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="GERENCIAR VAGAS" />
          </children></AnchorPane>
    </children>
 </VBox>

@@ -23,6 +23,9 @@ public class telaVagaControler4 {
     private Button botaoRelatorios;
 
     @FXML
+    private Button botaoVoltar;
+
+    @FXML
     private ToggleButton botaoSair;
 
 
@@ -42,6 +45,9 @@ public class telaVagaControler4 {
 
     @FXML
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga3");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

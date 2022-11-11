@@ -43,6 +43,7 @@
               </columns>
             </TableView>
             <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="686.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
          </children></AnchorPane>
    </children>
 </VBox>

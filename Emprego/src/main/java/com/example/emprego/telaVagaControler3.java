@@ -3,11 +3,13 @@ package com.example.emprego;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 
 public class telaVagaControler3 {
 
-    //Nomeclatura dos botões
+    // Nomeclatura dos botões
 
     @FXML
     private Button botaoHome;
@@ -29,6 +31,14 @@ public class telaVagaControler3 {
 
     @FXML
     private Button botaoSelecionar;
+
+    // Definição dos itens da tabela;
+
+    @FXML
+    private TableView tabelaCandidatos;
+
+    @FXML
+    private TableColumn colunaNome;
 
 
     // Definição das ações dos botões

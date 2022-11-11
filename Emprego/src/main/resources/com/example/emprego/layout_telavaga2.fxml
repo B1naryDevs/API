@@ -28,14 +28,14 @@
                </graphic>
             </ToggleButton>
             <Button fx:id="botaoVisualizar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#VisualizarVaga" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VISUALIZAR" />
-            <TableView layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
+            <TableView fx:id="tabelaVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
               <columns>
-                <TableColumn prefWidth="150.0" text="CARGO" />
-                <TableColumn prefWidth="150.0" text="PERÍODO" />
-                  <TableColumn prefWidth="150.0" text="SALÁRIO" />
-                  <TableColumn prefWidth="150.0" text="EXPERIÊNCIA" />
-                  <TableColumn prefWidth="150.0" text="DESCRIÇÃO" />
-                  <TableColumn prefWidth="150.0" text="REMOTO" />
+                <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
+                <TableColumn fx:id="colunaPeriodo" prefWidth="150.0" text="PERÍODO" />
+                  <TableColumn fx:id="colunaSalario" prefWidth="150.0" text="SALÁRIO" />
+                  <TableColumn fx:id="colunaExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
+                  <TableColumn fx:id="colunaDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
+                  <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
               </columns>
             </TableView>
          </children></AnchorPane>

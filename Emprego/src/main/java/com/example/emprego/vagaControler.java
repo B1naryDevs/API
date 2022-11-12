@@ -2,21 +2,30 @@ package com.example.emprego;
 
 import AcessoDAO.CargoDAO;
 import AcessoDAO.VagaDAO;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.fxml.Initializable;
 import java.net.URL;
 import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.regex.Pattern;
 
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
+
+import java.net.URL;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.io.SAXReader;
+import org.dom4j.Element;
+
+
+
+
 
 public class vagaControler implements Initializable {
 
@@ -85,6 +94,10 @@ public class vagaControler implements Initializable {
 
     @FXML
     private Button botaoVaga;
+
+    //Botão de busca do cep
+    @FXML
+    private Button btnCep;
 
     @FXML
     private Button botaoCargo;
@@ -344,4 +357,42 @@ public class vagaControler implements Initializable {
                 labelEstado.setVisible(true);
             }
         }
+
+    @FXML
+    void BuscaCep(ActionEvent event){
+        String logradouro = "";
+        String tipoLogradouro = "";
+        String resultado = null;
+        String cep = campoCep.getText();
+        try{
+            URL url = new URL("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=xml");
+            SAXReader xml = new SAXReader();
+            Document documento = xml.read(url);
+            Element root = documento.getRootElement();
+            for (Iterator<Element> it = root.elementIterator(); it.hasNext();) {
+                Element element = it.next();
+                if(element.getQualifiedName().equals("cidade")){
+                    campoCidade.setText(element.getText());
+                }
+                if(element.getQualifiedName().equals("bairro")) {
+                    campoBairro.setText(element.getText());
+                }
+                if(element.getQualifiedName().equals("uf")) {
+                    campoEstado.setValue(element.getText());
+                }
+                if(element.getQualifiedName().equals("tipo_logradouro")) {
+                    tipoLogradouro = element.getText();
+
+                }
+                if(element.getQualifiedName().equals("logradouro")) {
+                    logradouro = element.getText();
+                }
+            }
+            //setar o campo endereco
+            campoEndereco.setText(tipoLogradouro + " " + logradouro);
+
+        } catch(Exception e){
+            System.out.println(e);
+        }
+    }
 }

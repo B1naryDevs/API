@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,6 +32,9 @@
                         <Image url="@../../../imagens/exit.png" />
                      </image></ImageView>
                </graphic>
+               <tooltip>
+                  <Tooltip text="Sair" />
+               </tooltip>
             </ToggleButton>
             <Label layoutX="94.0" layoutY="280.0" text="NOME" textFill="WHITE">
                <font>

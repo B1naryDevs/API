@@ -8,13 +8,14 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.vagaControler">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.vagaControler">
   <children>
     <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
       <children>
@@ -133,6 +134,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <tooltip>
+                  <Tooltip text="Sair" />
+               </tooltip>
             </ToggleButton>
           <TextArea fx:id="campoDescricao" layoutX="928.0" layoutY="386.0" prefHeight="170.0" prefWidth="300.0" />
             <ChoiceBox fx:id="campoCargo" layoutX="93.0" layoutY="285.0" prefHeight="25.0" prefWidth="275.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />

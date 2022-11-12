@@ -27,19 +27,16 @@ public class gerenciamentoVagaControler {
     private Button botaoRelatorios;
 
     @FXML
-    private Button botaoSelecionar;
-
-    @FXML
     private Button botaoVoltar;
 
     @FXML
     private ToggleButton botaoSair;
 
     @FXML
-    private Button botaoRemover;
+    private ToggleButton botaoRemover;
 
     @FXML
-    private Button botaoEditar;
+    private ToggleButton botaoEditar;
 
 
 
@@ -92,9 +89,6 @@ public class gerenciamentoVagaControler {
 
     @FXML
     void EditarVaga(ActionEvent event) throws Exception {}
-
-    @FXML
-    void SelecionarVaga(ActionEvent event) throws Exception {}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

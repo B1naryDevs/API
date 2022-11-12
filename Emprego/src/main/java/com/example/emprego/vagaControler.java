@@ -111,7 +111,7 @@ public class vagaControler implements Initializable {
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("vaga");}
+    void AvancarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void AvancarCargo(ActionEvent event) throws Exception { HelloApplication.ChangeScene("cargo");}

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToggleButton?>
@@ -9,6 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.telaVagaControler2">
    <children>
@@ -48,6 +50,11 @@
               </columns>
             </TableView>
             <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Label layoutX="580.0" layoutY="120.0" text="VAGAS" textFill="WHITE" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="63.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </VBox>

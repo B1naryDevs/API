@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
@@ -37,23 +38,101 @@
                   <Tooltip text="Sair" />
                </tooltip>
             </ToggleButton>
-            <Label layoutX="770.0" layoutY="120.0" text="CANDIDATOS" textFill="WHITE" AnchorPane.topAnchor="120.0">
+            <Label layoutX="825.0" layoutY="120.0" text="CANDIDATOS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
                </font>
             </Label>
-            <Label layoutX="300.0" layoutY="120.0" text="VAGA" textFill="WHITE" AnchorPane.topAnchor="120.0">
+            <Label layoutX="275.0" layoutY="120.0" text="VAGA" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
                </font>
             </Label>
-            <TableView fx:id="tabelaCandidatos" layoutX="694.0" layoutY="261.0" prefHeight="400.0" prefWidth="540.0" stylesheets="@../../../styles/Styles8.css">
+            <TableView fx:id="tabelaCandidatos" layoutX="747.0" layoutY="261.0" prefHeight="320.0" prefWidth="540.0" stylesheets="@../../../styles/Styles8.css">
               <columns>
                 <TableColumn fx:id="colunaNome" prefWidth="540.0" text="NOME" />
               </columns>
             </TableView>
-            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="686.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
+            <Button fx:id="botaoVoltar" layoutX="40.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Label layoutX="40.0" layoutY="258.0" prefHeight="30.0" prefWidth="80.0" text="Cargo" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="603.0" layoutY="328.0" prefHeight="30.0" prefWidth="80.0" text="Remoto" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Cep" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="398.0" prefHeight="30.0" prefWidth="103.0" text="Cidade" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="480.0" layoutY="258.0" prefHeight="30.0" prefWidth="95.0" text="Período" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="258.0" prefHeight="30.0" prefWidth="80.0" text="Salário" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="468.0" prefHeight="30.0" prefWidth="103.0" text="Endereço" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="310.0" layoutY="398.0" prefHeight="30.0" prefWidth="64.0" text="UF" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="480.0" layoutY="328.0" prefHeight="30.0" prefWidth="103.0" text="Experiência" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="40.0" layoutY="328.0" prefHeight="30.0" prefWidth="103.0" text="Descrição" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="440.0" layoutY="398.0" prefHeight="30.0" prefWidth="80.0" text="Bairro" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="480.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Número" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="603.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Compl." textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="CargoVaga" layoutX="40.0" layoutY="288.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="DescricaoVaga" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="PeriodoVaga" layoutX="480.0" layoutY="288.0" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="SalarioVaga" layoutX="310.0" layoutY="288.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="RemotoVaga" layoutX="603.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="ExpVaga" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="CidadeVaga" layoutX="40.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="CepVaga" layoutX="310.0" layoutY="498.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="UfVaga" layoutX="310.0" layoutY="428.0" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="BairroVaga" layoutX="440.0" layoutY="428.0" prefHeight="25.0" prefWidth="245.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="EnderecoVaga" layoutX="40.0" layoutY="498.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="NumeroVaga" layoutX="480.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="ComplVaga" layoutX="603.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
          </children></AnchorPane>
    </children>
 </VBox>

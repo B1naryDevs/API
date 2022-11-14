@@ -95,10 +95,6 @@ public class vagaControler implements Initializable {
     @FXML
     private Button botaoVaga;
 
-    //Botão de busca do cep
-    @FXML
-    private Button btnCep;
-
     @FXML
     private Button botaoCargo;
 
@@ -107,6 +103,9 @@ public class vagaControler implements Initializable {
 
     @FXML
     private Button botaoRelatorio;
+
+    @FXML
+    private Button botaoVoltar;
 
     @FXML
     private ToggleButton botaoSair;
@@ -134,6 +133,9 @@ public class vagaControler implements Initializable {
 
     @FXML
     void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

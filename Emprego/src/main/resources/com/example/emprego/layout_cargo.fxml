@@ -34,7 +34,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoCargo2" layoutX="205.0" layoutY="357.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <TextField fx:id="campoCargo2" layoutX="205.0" layoutY="357.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
             <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="37.0" prefWidth="44.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">

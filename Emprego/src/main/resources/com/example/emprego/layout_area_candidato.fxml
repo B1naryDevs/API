@@ -58,10 +58,10 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoNome" layoutX="353.0" layoutY="320.0" prefHeight="30.0" prefWidth="329.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" />
-            <TextField fx:id="campoEmail" layoutX="353.0" layoutY="387.0" prefHeight="30.0" prefWidth="329.0" promptText="seuemail@gmail.com" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" />
-            <TextField fx:id="campoData" layoutX="814.0" layoutY="320.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" />
-            <TextField fx:id="campoTelefone" layoutX="814.0" layoutY="387.0" onKeyReleased="#mascaraTel" prefHeight="30.0" prefWidth="329.0" promptText="99999-9999" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" />
+            <TextField fx:id="campoNome" layoutX="353.0" layoutY="320.0" prefHeight="30.0" prefWidth="329.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" stylesheets="@../../../styles/Styles7.css" />
+            <TextField fx:id="campoEmail" layoutX="353.0" layoutY="387.0" prefHeight="30.0" prefWidth="329.0" promptText="seuemail@gmail.com" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" stylesheets="@../../../styles/Styles7.css" />
+            <TextField fx:id="campoData" layoutX="814.0" layoutY="320.0" onKeyReleased="#mascaraNascimento" prefHeight="30.0" prefWidth="329.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" stylesheets="@../../../styles/Styles7.css" />
+            <TextField fx:id="campoTelefone" layoutX="814.0" layoutY="387.0" onKeyReleased="#mascaraTel" prefHeight="30.0" prefWidth="329.0" promptText="99999-9999" style="-fx-background-color: #58595A; -fx-text-inner-color: white;" stylesheets="@../../../styles/Styles7.css" />
             <Label layoutX="353.0" layoutY="360.0" text="E-MAIL" textFill="WHITE">
                <font>
                   <Font size="20.0" />

@@ -15,6 +15,7 @@ public class Candidato {
     private static String expInicio;
     private static String expTermino;
     private static String descricao;
+    private static String cargoAtual;
     private static String cargoInteresse;
     private static String pretSalarial;
 
@@ -28,7 +29,7 @@ public class Candidato {
     public Candidato(){}
 
     public Candidato(String nome, Long cpf,String dataNac,String email,String senha,Long telefone,String expEmpresa,
-                     String cargo,String expInicio,String expTermino,String descricao,String cargoInteresse,String pretSalarial,String competencia,
+                     String cargo,String expInicio,String expTermino,String descricao,String cargoAtual,String cargoInteresse,String pretSalarial,String competencia,
                      String instituicao,String cursoInicio,String cursoTermino,String idioma,String curso){
         this.nome = nome;
         this.cpf = cpf;
@@ -41,6 +42,7 @@ public class Candidato {
         this.expInicio = expInicio;
         this.expTermino = expTermino;
         this.descricao = descricao;
+        this.cargoAtual = cargoAtual;
         this.cargoInteresse = cargoInteresse;
         this.pretSalarial = pretSalarial;
         this.competencia = competencia;
@@ -72,6 +74,13 @@ public class Candidato {
 
     public void setDataNac(String dataNac) {
         this.dataNac = dataNac;
+    }
+    public String getCargoAtual() {
+        return this.cargoAtual;
+    }
+
+    public void setCargoAtual(String cargoAtual) {
+        this.cargoAtual = cargoAtual;
     }
 
     public String getEmail() {

@@ -15,7 +15,7 @@ import javax.swing.*;
 public class CandidatoDAO {
 
     public void savecand (Candidato candidato){
-        String sql = "INSERT INTO candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO candidato (nome_candidato, cpf, data_nasc, telefone) VALUES (?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 
@@ -27,7 +27,6 @@ public class CandidatoDAO {
             pstm.setLong(2, candidato.getCpf());
             pstm.setString(3, candidato.getDataNac());
             pstm.setLong(4, candidato.getTelefone());
-            pstm.setFloat(5, candidato.getPretSalarial());
 
             pstm.execute();
 
@@ -63,6 +62,112 @@ public class CandidatoDAO {
 
             System.out.println("hello");
 
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void saveexpcand (Candidato candidato){
+        String sql = "INSERT INTO experiencia_profissional (cpf_candidato_exp, cargo_exercido, inicio_exp, termino_exp, cargo_atual, desc_atividades) VALUES (?, ?, ?, ?, ?, ?)";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, String.valueOf(candidato.getCpf()));
+            pstm.setString(2, candidato.getCargo());
+            pstm.setString(3, candidato.getExpInicio());
+            pstm.setString(4, candidato.getExpTermino());
+            pstm.setString(5, candidato.getCargoAtual());
+            pstm.setString(6, candidato.getDescricao());
+
+            System.out.println("hello");
+
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updateprefcand (Candidato candidato){
+        String sql = "UPDATE candidato set pret_salarial = ?, pret_cargo = ? where cpf = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, String.valueOf(candidato.getPretSalarial()));
+            pstm.setString(2, candidato.getCargoInteresse());
+            pstm.setLong(3, candidato.getCpf());
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updateformcand (Candidato candidato){
+        String sql = "UPDATE candidato set nome_comp = ?, instituicao = ?, inicio_curso = ?, termino_curso = ?, nivel = ?, curso = ? where cpf = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, candidato.getCompetencia());
+            pstm.setString(2, candidato.getInstituicao());
+            pstm.setString(3, candidato.getCursoInicio());
+            pstm.setString(4, candidato.getCursoTermino());
+            pstm.setString(5, candidato.getIdioma());
+            pstm.setString(6, candidato.getCurso());
+            pstm.setLong(7, candidato.getCpf());
 
             pstm.execute();
 

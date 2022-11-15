@@ -60,12 +60,12 @@
                </font>
             </Label>
             <TextField fx:id="campoCargo" layoutX="181.0" layoutY="316.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <CheckBox fx:id="campoExperiencia" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="NÃO POSSUO EXPERIÊNCIA" textFill="WHITE">
+            <CheckBox fx:id="campoAtual" layoutX="82.0" layoutY="500.0" mnemonicParsing="false" onAction="#CheckEmprego" prefHeight="45.0" prefWidth="290.0" text="EMPREGO ATUAL" textFill="WHITE">
                <font>
                   <Font size="19.0" />
                </font>
             </CheckBox>
-            <Button fx:id="botaoAdicionar" layoutX="398.0" layoutY="504.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
+            <Button fx:id="botaoAdicionar" layoutX="398.0" layoutY="504.0" mnemonicParsing="false" onAction="#AdicionarExp" prefHeight="38.0" prefWidth="140.0" stylesheets="@../../../styles/Styles2.css" text="ADICIONAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>

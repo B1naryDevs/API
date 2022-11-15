@@ -3,6 +3,8 @@ package com.example.emprego;
 import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.regex.Pattern;
+
+import AcessoDAO.CandidatoDAO;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -233,15 +235,24 @@ public class candidatoControler {
                                                         int a = Integer.parseInt(ano);
                                                         int year = Calendar.getInstance().get(Calendar.YEAR);;
                                                         if((year-a)>16) {
-                                                                    Candidato candidato = new Candidato();
-                                                                    candidato.setNome(nome);
-                                                                    candidato.setCpf(cpf_long);
-                                                                    candidato.setDataNac(data);
-                                                                    candidato.setEmail(email);
-                                                                    candidato.setSenha(senha);
-                                                                    candidato.setTelefone(telefone_long);
+                                                            Candidato candidato = new Candidato();
+                                                            candidato.setNome(nome);
+                                                            candidato.setCpf(cpf_long);
+                                                            candidato.setDataNac(data);
+                                                            candidato.setEmail(email);
+                                                            String senhaMd5 = Md5.getHashMd5(senha);
+                                                            candidato.setSenha(senhaMd5);
+                                                            candidato.setTelefone(telefone_long);
 
-                                                                    HelloApplication.ChangeScene("candidato2");
+                                                            CandidatoDAO candidatoDAO = new CandidatoDAO();
+                                                            candidatoDAO.savecand(candidato);
+                                                            candidatoDAO.saveusucand(candidato);
+
+                                                            Usuario usuario = new Usuario();
+                                                            usuario.setEmail(email);
+                                                            usuario.setCpf(cpf_long);
+
+                                                            HelloApplication.ChangeScene("candidato2");
                                                         } else if((year-a)==16) {
                                                             String mes = data.substring(3,5);
                                                             int m = Integer.parseInt(mes);
@@ -256,23 +267,32 @@ public class candidatoControler {
                                                                     candidato.setCpf(cpf_long);
                                                                     candidato.setDataNac(data);
                                                                     candidato.setEmail(email);
-                                                                    candidato.setSenha(senha);
+                                                                    String senhaMd5 = Md5.getHashMd5(senha);
+                                                                    candidato.setSenha(senhaMd5);
                                                                     candidato.setTelefone(telefone_long);
+
+                                                                    CandidatoDAO candidatoDAO = new CandidatoDAO();
+                                                                    candidatoDAO.savecand(candidato);
+                                                                    candidatoDAO.saveusucand(candidato);
+
+                                                                    Usuario usuario = new Usuario();
+                                                                    usuario.setEmail(email);
+                                                                    usuario.setCpf(cpf_long);
 
                                                                     HelloApplication.ChangeScene("candidato2");
                                                                 } else {
                                                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                                                    alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                    alert.setHeaderText("PROCESSO DISPONÍVEL APENAS PARA MAIORES DE 16 ANOS!");
                                                                     alert.showAndWait();
                                                                 }
                                                             } else {
                                                                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                                                alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                alert.setHeaderText("PROCESSO DISPONÍVEL APENAS PARA MAIORES DE 16 ANOS!");
                                                                 alert.showAndWait();
                                                             }
                                                         } else {
                                                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                                                                    alert.setHeaderText("APENAS MAIORES DE 16 ANOS!");
+                                                                    alert.setHeaderText("PROCESSO DISPONÍVEL APENAS PARA MAIORES DE 16 ANOS!");
                                                                     alert.showAndWait();
                                                                 }
                                                     } else {

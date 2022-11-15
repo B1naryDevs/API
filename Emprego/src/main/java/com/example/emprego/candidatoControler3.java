@@ -85,7 +85,7 @@ public class candidatoControler3 implements Initializable{
             alert.showAndWait();
         } else if (idioma.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText("PREENCHA O IDIOMA!");
+            alert.setHeaderText("PREENCHA O NÍVEL DE IDIOMA!");
             alert.showAndWait();
         } else if (instituicao.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -120,45 +120,8 @@ public class candidatoControler3 implements Initializable{
                     candidato.setCursoTermino(termino);
                     candidato.setCurso(curso);
 
-                    String nome = candidato.getNome();
-                    long cpf = candidato.getCpf();
-                    String data = candidato.getDataNac();
-                    String email = candidato.getEmail();
-                    String senha = candidato.getSenha();
-                    long telefone = candidato.getTelefone();
-                    String empresa = candidato.getExpEmpresa();
-                    String cargo = candidato.getCargo();
-                    String expinicio = candidato.getExpInicio();
-                    String exptermino = candidato.getExpTermino();
-                    String descricao = candidato.getDescricao();
-                    String cargos = candidato.getCargoInteresse();
-                    String pretensao = String.valueOf(candidato.getPretSalarial());
-
-                    float sal = Float.valueOf(pretensao);
-
                     CandidatoDAO candidatoDAO = new CandidatoDAO();
-                    String senhaMd5 = Md5.getHashMd5(senha);
-                    Candidato candidatobanc = new Candidato();
-                    candidatobanc.setNome(nome);
-                    candidatobanc.setCpf(cpf);
-                    candidatobanc.setDataNac(data);
-                    candidatobanc.setTelefone(telefone);
-                    candidatobanc.setPretSalarial(String.valueOf(sal));
-
-                    candidatoDAO.savecand(candidatobanc);
-
-                    CandidatoDAO candidatoUsuDAO = new CandidatoDAO();
-                    Candidato candusu = new Candidato();
-
-                    candusu.setEmail(email);
-                    candusu.setSenha(senhaMd5);
-                    candusu.setCpf(cpf);
-
-                    candidatoUsuDAO.saveusucand(candusu);
-
-                    Usuario usuario = new Usuario();
-                    usuario.setEmail(email);
-                    usuario.setCpf(cpf);
+                    candidatoDAO.updateformcand(candidato);
 
                     HelloApplication.ChangeScene("candidatofinal");
                 } else {

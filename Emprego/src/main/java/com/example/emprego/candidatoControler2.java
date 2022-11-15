@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidatoDAO;
 import AcessoDAO.CargoDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -52,7 +53,7 @@ public class candidatoControler2 implements Initializable {
     private Label labelCargoInteresse;
 
     @FXML
-    private CheckBox campoExperiencia;
+    private CheckBox campoAtual;
 
     @FXML
     private TextField campoCargo;
@@ -73,16 +74,16 @@ public class candidatoControler2 implements Initializable {
     private TextField campoTermino;
 
     @FXML
-    private ChoiceBox<String> campoCargoInteresse;
-
-    //private String[] setores = {"DESENVOLVEDOR FRONT-END", "DESENVOLVEDOR BACK-END", "ADMINISTRADOR DE BANCO DE DADOS" };
+    public ChoiceBox<String> campoCargoInteresse;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        // laço para percorrer a lista e adicionar os componentes
         for (String c : CargoDAO.carg()){
 
-            campoCargoInteresse.getItems().addAll(c);
+            //adicionar cargos
+            campoCargoInteresse.getItems().add(c);
 
         }
 
@@ -98,12 +99,7 @@ public class candidatoControler2 implements Initializable {
     void SairTela(ActionEvent event) throws Exception{HelloApplication.ChangeScene("login");}
     @FXML
     void AvancarTela(ActionEvent event) throws Exception {
-        String empresa = campoEmpresa.getText();
-        String cargo = campoCargo.getText();
         String cargos = campoCargoInteresse.getValue();
-        String inicio = campoInicio.getText();
-        String termino = campoTermino.getText();
-        String descricao = campoDescricao.getText();
         String pretensao = campoPretensao.getText();
 
         if (cargos.isEmpty()) {
@@ -120,13 +116,11 @@ public class candidatoControler2 implements Initializable {
             Pattern PRETENSAO_PATTERN = Pattern.compile(PRETENSAO_REGEX);
             if (PRETENSAO_PATTERN.matcher(pretensao).matches()) {
                 Candidato candidato = new Candidato();
-                candidato.setExpEmpresa(empresa);
-                candidato.setCargo(cargo);
-                candidato.setExpInicio(inicio);
-                candidato.setExpTermino(termino);
-                candidato.setDescricao(descricao);
                 candidato.setCargoInteresse(cargos);
                 candidato.setPretSalarial(pretensao);
+
+                CandidatoDAO candidatoDAO = new CandidatoDAO();
+                candidatoDAO.updateprefcand(candidato);
 
                 HelloApplication.ChangeScene("candidato3");
 
@@ -138,40 +132,89 @@ public class candidatoControler2 implements Initializable {
         }
     }
 
+    @FXML
+    void AdicionarExp(ActionEvent event) throws Exception {
+        String empresa = campoEmpresa.getText();
+        String cargo = campoCargo.getText();
+        String inicio = campoInicio.getText();
+        String termino = campoTermino.getText();
+        String descricao = campoDescricao.getText();
 
+        if (empresa.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA A EMPRESA!");
+            alert.showAndWait();
+        } else if (cargo.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O CARGO OCUPADO!");
+            alert.showAndWait();
+        } else if (inicio.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O INÍCIO!");
+            alert.showAndWait();
+        } else if (!campoAtual.isSelected() && termino.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA O TÉRMINO!");
+            alert.showAndWait();
+        } else if (descricao.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("PREENCHA A DESCRIÇÃO!");
+            alert.showAndWait();
+        } else {
+            //Validação de data
+            String DATE_REGEX = "^\\d{2}/\\d{2}/\\d{4}$";
+            Pattern DATE_PATTERN = Pattern.compile(DATE_REGEX);
+            if (DATE_PATTERN.matcher(inicio).matches()) {
+                if (campoAtual.isSelected() || DATE_PATTERN.matcher(termino).matches()) {
+                    Candidato candidato = new Candidato();
+                    candidato.setExpEmpresa(empresa);
+                    candidato.setCargo(cargo);
+                    candidato.setExpInicio(inicio);
+                    candidato.setExpTermino(termino);
+                    candidato.setDescricao(descricao);
+                    if(campoAtual.isSelected()){
+                        candidato.setCargoAtual("Sim");
+                    } else {
+                        candidato.setCargoAtual("Não");
+                    }
 
+                    CandidatoDAO candidatoDAO = new CandidatoDAO();
+                    candidatoDAO.saveexpcand(candidato);
+
+                    campoEmpresa.setText("");
+                    campoCargo.setText("");
+                    campoInicio.setText("");
+                    campoTermino.setText("");
+                    campoDescricao.setText("");
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("FORMATO DE DATA(TÉRMINO) INVÁLIDO!");
+                    alert.showAndWait();
+                }
+            } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("FORMATO DE DATA(INÍCIO) INVÁLIDO!");
+            alert.showAndWait();
+        }
+        }
+    }
 
     public void CheckEmprego (ActionEvent event){
 
-        if (campoExperiencia.isSelected()) {
-            campoEmpresa.setVisible(false);
-            campoCargo.setVisible(false);
-            campoInicio.setVisible(false);
+        if (campoAtual.isSelected()) {
             campoTermino.setVisible(false);
-            campoDescricao.setVisible(false);
-            labelEmpresa.setVisible(false);
-            labelCargo.setVisible(false);
-            labelInicio.setVisible(false);
             labelTermino.setVisible(false);
-            labelDescricao.setVisible(false);
-            botaoAdicionar.setVisible(false);
 
 
 
         } else {
-            campoEmpresa.setVisible(true);
-            campoCargo.setVisible(true);
-            campoInicio.setVisible(true);
             campoTermino.setVisible(true);
-            campoDescricao.setVisible(true);
-            labelEmpresa.setVisible(true);
-            labelCargo.setVisible(true);
-            labelInicio.setVisible(true);
             labelTermino.setVisible(true);
-            labelDescricao.setVisible(true);
-            botaoAdicionar.setVisible(true);
         }
     }
+
+
+
     @FXML
     void VoltarTela(ActionEvent event)throws Exception {
         HelloApplication.ChangeScene("candidato");

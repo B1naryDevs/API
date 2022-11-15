@@ -15,7 +15,14 @@ nome_candidato varchar(30) not null,
 cpf bigint (11) not null,
 data_nasc varchar(10) not null,
 telefone bigint (11) not null,
-pret_salarial decimal(7,2) not null,
+pret_salarial decimal(7,2) null,
+pret_cargo varchar(30) null,
+nome_comp VARCHAR(35) NULL,
+instituicao VARCHAR(50) NULL,
+inicio_curso varchar(10) null,
+termino_curso varchar(10) null,
+nivel ENUM('Básico', 'Intermediário', 'Avançado') null,
+curso VARCHAR(30) NULL,
 primary key (cpf)) default charset = utf8;
 
 CREATE TABLE usuario (
@@ -62,35 +69,15 @@ CREATE TABLE cargo (
     PRIMARY KEY (nome_cargo)
 );
 
-CREATE TABLE formacao (
-    id_formacao INT(5) AUTO_INCREMENT NOT NULL,
-    cpf_candidato_form BIGINT(11) NOT NULL,
-    instituicao VARCHAR(50) NOT NULL,
-    curso VARCHAR(30) NOT NULL,
-    inicio_curso varchar(10) not null,
-    termino_curso varchar(10) not null,
-    incompleto ENUM('Sim', 'Não') NOT NULL,
-    PRIMARY KEY (id_formacao)
-);
-
 CREATE TABLE experiencia_profissional (
-    id_cargo INT(5) AUTO_INCREMENT NOT NULL,
+    id_exp INT(5) AUTO_INCREMENT NOT NULL,
     cpf_candidato_exp BIGINT(11) NOT NULL,
     cargo_exercido VARCHAR(40) NOT NULL,
     inicio_exp varchar(10) not null,
-    termino_exp varchar(10) not null,
+    termino_exp varchar(10) null,
     cargo_atual ENUM('Sim', 'Não') NOT NULL,
     desc_atividades VARCHAR(80) NOT NULL,
-    PRIMARY KEY (id_cargo)
-);
-
-CREATE TABLE competencia (
-    id_comp INT(5) NOT NULL AUTO_INCREMENT,
-    cpf_candidato_comp BIGINT(11) NOT NULL,
-    nome_comp VARCHAR(35) NOT NULL,
-    area_comp VARCHAR(35) NOT NULL,
-    nivel ENUM('Básico', 'Intermediário', 'Avançado'),
-    PRIMARY KEY (id_comp)
+    PRIMARY KEY (id_exp)
 );
 
 
@@ -107,13 +94,6 @@ CREATE TABLE candidatura (
     status_cand ENUM('Em andamento', 'Desclassificado', 'Entrevista Online', 'Entrevista Presencial', 
     'Entrevista com Diretoria', 'Em Contratação' , 'Contratado'),
     PRIMARY KEY (id_candidatura)
-);
-
-CREATE TABLE pretensao_cargo (
-    id_pret INT(5) AUTO_INCREMENT NOT NULL,
-    cpf_candidato_pret BIGINT(11) NOT NULL,
-    nome_cargo_pret VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id_pret)
 );
 
 # CRIAÇÃO DE CHAVES ESTRANGEIRAS (FK) ----------------------------------------------------
@@ -135,17 +115,8 @@ ALTER TABLE candidatura ADD FOREIGN KEY (cod_vaga) REFERENCES vaga (id_vaga);
 # CHAVE ESTRANGEIRA FK - CARGO DA CANDIDATURA PARA CARGO 
 ALTER TABLE candidatura ADD FOREIGN KEY (cargo_candidatura) REFERENCES cargo(nome_cargo);
 
-# CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA FORMAÇÃO 
-ALTER TABLE formacao ADD FOREIGN KEY (cpf_candidato_form) REFERENCES candidato (cpf);
-
-# CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA PRETENÇÃO DE CARGO 
-ALTER TABLE pretensao_cargo ADD FOREIGN KEY (cpf_candidato_pret) REFERENCES candidato (cpf);
-
 # CHAVE ESTRANGEIRA FK - NOME DO CARGO PARA PRETENÇÃO DE CARGO PRETENDIDO DO CANDIDATO
-ALTER TABLE pretensao_cargo ADD FOREIGN KEY (nome_cargo_pret) REFERENCES cargo(nome_cargo);
-
-# CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA COMPETÊNCIA
-ALTER TABLE competencia ADD FOREIGN KEY (cpf_candidato_comp) REFERENCES candidato (cpf);
+ALTER TABLE candidato ADD FOREIGN KEY (pret_cargo) REFERENCES cargo(nome_cargo);
 
 # CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA EXPERIÊNCIA PROFISSIONAL
 ALTER TABLE experiencia_profissional ADD FOREIGN KEY (cpf_candidato_exp) REFERENCES candidato (cpf);
@@ -161,16 +132,15 @@ ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
 insert into funcionario(nome_func, email, senha, cpf, telefone) values
 ("Carlos Aparecido", "Adm@gmail.com", "652f1ba612e65639e279dd156d93b401", 12147865201, 12996141485);
 
-#ADICIONAR CANDIDATO
-insert into candidato (nome_candidato, cpf, data_nasc, telefone, pret_salarial) values 
-('Gabriel', 48615448696, '2003-12-17', 12992545421, 200.50);
+#ADICIONAR SETOR
+insert into setor(nome_setor) values
+("T.I");
 
-#ADICIONAR FUNCIONARIO
-insert into usuario (email, senha, cpf_candidato_usu) values 
-('Gabriel@gmail.com', '652f1ba612e65639e279dd156d93b401', 48615448696);
+#ADICIONAR CARGOS
+insert into cargo(nome_cargo, setor_cargo) values
+("Desenvolvedor Back-end", "T.I"),
+("Desenvolvedor Front-end", "T.I"),
+("Admnistrador de Banco de dados", "T.I"),
+("Analista de Sistemas", "T.I");
 
-select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Aprovados from funcionario as f inner join candidatura as c
-on f.cpf = c.funcionario_cpf where c.status_cand = 'Contratado' group by funcionario_cpf order by count(c.status_cand) desc;
 
-select f.nome_func as nome, c.funcionario_cpf as cpf, count(c.status_cand) as N°_Desclassificados from funcionario as f inner join candidatura as c
-on f.cpf = c.funcionario_cpf where c.status_cand = 'Desclassificado' group by funcionario_cpf order by count(c.status_cand) desc;

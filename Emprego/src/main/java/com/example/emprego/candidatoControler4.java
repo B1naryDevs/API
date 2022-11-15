@@ -46,7 +46,6 @@ public class candidatoControler4 {
 
     @FXML
     void VoltarInicio(ActionEvent event) throws Exception{
-        Candidato candidato = new Candidato(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null);;
         HelloApplication.ChangeScene("home");
     }
 }

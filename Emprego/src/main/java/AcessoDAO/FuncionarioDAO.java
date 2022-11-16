@@ -2,6 +2,7 @@ package AcessoDAO;
 
 import ConnectionFA.ConnectionFactory;
 import com.example.emprego.Funcionario;
+import com.example.emprego.FuncionarioUsuario;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.sql.Connection;
@@ -70,6 +71,61 @@ public class FuncionarioDAO {
                 funciona.setSenha(rset.getString("senha"));
 
                 funclist.add(funciona);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rset != null) {
+                    rset.close();
+                }
+
+                if (pstm != null) {
+                    pstm.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return funclist;
+
+    }
+
+    public List<FuncionarioUsuario> Usua( String email)
+
+    {
+        String sql = "Select * from funcionario where email = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rset = null;
+
+        List<FuncionarioUsuario> funclist = new ArrayList<FuncionarioUsuario>();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+            pstm.setString(1, email);
+            //objeto para ler os dados do banco
+            rset = pstm.executeQuery();
+
+
+            // laço para percorrer o objeto de acesso ao dados do banco
+            while (rset.next()) {
+
+                FuncionarioUsuario funcionariousuario = new FuncionarioUsuario();
+                funcionariousuario.setNome(rset.getString("nome_func"));
+                funcionariousuario.setTelefone(rset.getLong("telefone"));
+                funcionariousuario.setCpf(rset.getLong("cpf"));
+                funcionariousuario.setEmail(rset.getString("email"));
+                funcionariousuario.setSenha(rset.getString("senha"));
+
+                funclist.add(funcionariousuario);
 
             }
         } catch (Exception e) {

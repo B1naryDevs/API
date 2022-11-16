@@ -84,6 +84,7 @@ public class loginControler {
                     // busca funcionario
                     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
                     if( funcionarioDAO.checklogin(campoEmail.getText(), senhaMd5)) {
+                        funcionarioDAO.Usua(campoEmail.getText());
                         Alert alert = new Alert(Alert.AlertType.INFORMATION);
                         alert.setHeaderText("Bem Vindo Funcionario!");
                         alert.showAndWait();

@@ -7,8 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import ConnectionFA.ConnectionFactory;
-import com.example.emprego.Candidato;
-import com.example.emprego.Usuario;
+import com.example.emprego.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import javax.swing.*;
 
@@ -312,6 +313,30 @@ public class CandidatoDAO {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static ObservableList<CandidatoTabela> Datauser(){
+
+        Connection conn = null;
+        ResultSet rset = null;
+
+        ObservableList<CandidatoTabela> list = FXCollections.observableArrayList();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+                PreparedStatement ps = conn.prepareStatement("select nome_candidato from candidato order by nome_candidato asc");
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    list.add((new CandidatoTabela(rs.getString("nome_candidato"))));
+                }
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+
     }
 
 }

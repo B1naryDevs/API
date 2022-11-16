@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 public class CandidaturaDAO {
 
     public void save (Candidatura candidatura, Usuario usuario){
-        String sql = "INSERT INTO candidatura (empresa_candidatura, cargo_candidatura, cpf_candidatura, cod_vaga, data_cand, status_cand) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO candidatura (cargo_candidatura, cpf_candidatura, cod_vaga, data_cand, status_cand, funcionario_cpf) VALUES ( ?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 
@@ -20,13 +20,13 @@ public class CandidaturaDAO {
             conn = ConnectionFactory.createConnectionToMySQL();
             pstm = (PreparedStatement) conn.prepareStatement(sql);
 
-            pstm.setString(1, candidatura.getEmpresa());
-            pstm.setString(2, candidatura.getCargo());
-            Candidato candidato = new Candidato();
-            pstm.setLong(3, usuario.getCpf());
-            pstm.setInt(4, candidatura.getCodigo());
-            pstm.setString(5, candidatura.getData());
-            pstm.setString(6, candidatura.getStatus());
+            pstm.setString(1, candidatura.getCargo());
+            pstm.setLong(2, usuario.getCpf());
+            pstm.setInt(3, candidatura.getCodigo());
+            pstm.setString(4, candidatura.getData());
+            pstm.setString(5, candidatura.getStatus());
+            VagaStatic vagastatic = new VagaStatic();
+            pstm.setString(6, String.valueOf(vagastatic.getFuncionario()));
 
             pstm.execute();
 

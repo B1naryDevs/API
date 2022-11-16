@@ -1,14 +1,21 @@
 package com.example.emprego;
 
+import AcessoDAO.VagaDAO;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class telaVagaControler3 {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class telaVagaControler3 implements Initializable {
 
     // Nomeclatura dos botões
 
@@ -86,6 +93,18 @@ public class telaVagaControler3 {
 
     @FXML
     private TextField UfVaga;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        VagaStatic vagastatic = new VagaStatic();
+        CargoVaga.setText(vagastatic.getCargo());
+        SalarioVaga.setText(String.valueOf(vagastatic.getSalario()));
+        DescricaoVaga.setText(vagastatic.getDescricao());
+        ExpVaga.setText(vagastatic.getExperiencia());
+        RemotoVaga.setText(vagastatic.getRemoto());
+
+
+    }
 
 
     // Definição das ações dos botões

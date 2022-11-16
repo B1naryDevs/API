@@ -1,25 +1,25 @@
 package com.example.emprego;
 
-public class Vaga {
-    private String cargo;
-    private String periodo;
-    private String experiencia;
-    private float salario;
-    private String descricao;
-    private String endereco;
-    private String cidade;
-    private String empresa_vaga;
-    private String setor_vaga;
-    private String remoto;
-    private String status_vaga;
+public class VagaStatic {
+    private static String cargo;
+    private static String periodo;
+    private static String experiencia;
+    private static float salario;
+    private static String descricao;
+    private static String endereco;
+    private static String cidade;
+    private static String empresa_vaga;
+    private static String setor_vaga;
+    private static String remoto;
+    private static String status_vaga;
 
-    private long funcionario;
+    private static long funcionario;
 
-    private Integer Id;
+    private static Integer Id;
 
-    public Vaga(){}
+    public VagaStatic(){}
 
-    public Vaga(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remoto,String status_vaga){
+    public VagaStatic(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remoto,String status_vaga){
         this.cargo = cargo;
         this.periodo = periodo;
         this.experiencia = experiencia;
@@ -33,7 +33,7 @@ public class Vaga {
         this.status_vaga = status_vaga;
     }
 
-    public Vaga(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto, Integer Id){
+    public VagaStatic(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto, Integer Id){
         this.cargo = cargo;
         this.periodo = periodo;
         this.salario = salario;

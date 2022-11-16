@@ -41,11 +41,6 @@ telefone BIGINT NOT NULL,
 primary key (cpf)
 );
 
-CREATE TABLE setor (
-    nome_setor VARCHAR(40) NOT NULL,
-    PRIMARY KEY (nome_setor)
-);
-
 CREATE TABLE vaga (
     cargo_vaga VARCHAR(32) NOT NULL,
     funcionario_cpf BIGINT(11) NULL,
@@ -65,7 +60,6 @@ CREATE TABLE vaga (
 CREATE TABLE cargo (
     nome_cargo VARCHAR(32) NOT NULL,
     id_cargo INT(5) AUTO_INCREMENT UNIQUE,
-    setor_cargo VARCHAR(40) NOT NULL,
     PRIMARY KEY (nome_cargo)
 );
 
@@ -121,10 +115,6 @@ ALTER TABLE candidato ADD FOREIGN KEY (pret_cargo) REFERENCES cargo(nome_cargo);
 # CHAVE ESTRANGEIRA FK - CPF CANDIDATO PARA EXPERIÊNCIA PROFISSIONAL
 ALTER TABLE experiencia_profissional ADD FOREIGN KEY (cpf_candidato_exp) REFERENCES candidato (cpf);
 
-# CHAVE ESTRANGEIRA FK - NOME SETOR PARA SETOR DO CARGO
-ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
-
-
 # ACRESCENTAMENTO DE INFORMAÇÕES TESTES ---------------------------------------
 ------------------------------------------------------------------------------
 
@@ -132,15 +122,11 @@ ALTER TABLE cargo ADD FOREIGN KEY (setor_cargo) REFERENCES setor (nome_setor);
 insert into funcionario(nome_func, email, senha, cpf, telefone) values
 ("Carlos Aparecido", "Adm@gmail.com", "652f1ba612e65639e279dd156d93b401", 12147865201, 12996141485);
 
-#ADICIONAR SETOR
-insert into setor(nome_setor) values
-("T.I");
-
 #ADICIONAR CARGOS
 insert into cargo(nome_cargo, setor_cargo) values
-("Desenvolvedor Back-end", "T.I"),
-("Desenvolvedor Front-end", "T.I"),
-("Admnistrador de Banco de dados", "T.I"),
-("Analista de Sistemas", "T.I");
+("Desenvolvedor Back-end"),
+("Desenvolvedor Front-end"),
+("Admnistrador de Banco de dados"),
+("Analista de Sistemas");
 
 

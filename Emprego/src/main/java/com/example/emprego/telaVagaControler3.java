@@ -99,11 +99,10 @@ public class telaVagaControler3 implements Initializable {
         VagaStatic vagastatic = new VagaStatic();
         CargoVaga.setText(vagastatic.getCargo());
         SalarioVaga.setText(String.valueOf(vagastatic.getSalario()));
+        PeriodoVaga.setText(vagastatic.getPeriodo());
         DescricaoVaga.setText(vagastatic.getDescricao());
         ExpVaga.setText(vagastatic.getExperiencia());
         RemotoVaga.setText(vagastatic.getRemoto());
-
-
     }
 
 

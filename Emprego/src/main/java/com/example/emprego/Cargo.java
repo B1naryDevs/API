@@ -2,13 +2,10 @@ package com.example.emprego;
 
 public class Cargo {
     public static String nome;
-    public static String setor;
-
     public Cargo(){}
 
-    public Cargo(String nome,String setor){
+    public Cargo(String nome){
         this.nome=nome;
-        this.setor=setor;
     }
 
     public static String getNome() {
@@ -17,14 +14,6 @@ public class Cargo {
 
     public static void setNome(String nome) {
         Cargo.nome = nome;
-    }
-
-    public static String getSetor() {
-        return setor;
-    }
-
-    public static void setSetor(String setor) {
-        Cargo.setor = setor;
     }
 
 }

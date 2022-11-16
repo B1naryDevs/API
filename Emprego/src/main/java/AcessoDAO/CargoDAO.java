@@ -13,7 +13,7 @@ public class CargoDAO {
 
 
     public void save (Cargo cargo){
-        String sql = "INSERT INTO cargo (nome_cargo,setor_cargo) VALUES (?, ?)";
+        String sql = "INSERT INTO cargo (nome_cargo) VALUES (?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 
@@ -23,7 +23,6 @@ public class CargoDAO {
             pstm = (PreparedStatement) conn.prepareStatement(sql);
 
             pstm.setString(1,cargo.getNome());
-            pstm.setString(2, cargo.getSetor());
 
             pstm.execute();
 

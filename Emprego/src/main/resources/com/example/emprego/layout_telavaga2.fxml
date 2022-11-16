@@ -47,6 +47,7 @@
                   <TableColumn fx:id="colunaExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
                   <TableColumn fx:id="colunaDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
                   <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
+                  <TableColumn fx:id="colunaId" prefWidth="150.0" text="ID" visible="false" />
               </columns>
             </TableView>
             <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />

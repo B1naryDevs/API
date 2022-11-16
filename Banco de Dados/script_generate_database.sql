@@ -123,7 +123,7 @@ insert into funcionario(nome_func, email, senha, cpf, telefone) values
 ("Carlos Aparecido", "Adm@gmail.com", "652f1ba612e65639e279dd156d93b401", 12147865201, 12996141485);
 
 #ADICIONAR CARGOS
-insert into cargo(nome_cargo, setor_cargo) values
+insert into cargo(nome_cargo) values
 ("Desenvolvedor Back-end"),
 ("Desenvolvedor Front-end"),
 ("Admnistrador de Banco de dados"),

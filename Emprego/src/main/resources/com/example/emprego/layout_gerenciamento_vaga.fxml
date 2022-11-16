@@ -73,7 +73,7 @@
                   <Tooltip text="Remover" />
                </tooltip>
             </ToggleButton>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" textFill="WHITE">
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font></Button>

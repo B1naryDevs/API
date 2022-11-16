@@ -53,8 +53,8 @@
                 <TableColumn fx:id="colunaNome" prefWidth="540.0" text="NOME" />
               </columns>
             </TableView>
-            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
-            <Button fx:id="botaoVoltar" layoutX="40.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoSelecionar" layoutX="1167.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
+            <Button fx:id="botaoVoltar" layoutX="40.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
             <Label layoutX="40.0" layoutY="258.0" prefHeight="30.0" prefWidth="80.0" text="Cargo" textFill="WHITE">
                <font>
                   <Font size="20.0" />

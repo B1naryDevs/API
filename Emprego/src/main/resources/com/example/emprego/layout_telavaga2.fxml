@@ -38,7 +38,7 @@
                   <Tooltip text="Sair" />
                </tooltip>
             </ToggleButton>
-            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarVaga" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
+            <Button fx:id="botaoSelecionar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarVaga" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
             <TableView fx:id="tabelaVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
               <columns>
                 <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
@@ -49,7 +49,7 @@
                   <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
               </columns>
             </TableView>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
             <Label layoutX="580.0" layoutY="120.0" text="VAGAS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />

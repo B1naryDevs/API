@@ -60,7 +60,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="botaoFinalizar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#finalizarVaga" prefHeight="38.0" prefWidth="110.0" stylesheets="@../../../styles/Styles2.css" text="FINALIZAR" textFill="WHITE">
+            <Button fx:id="botaoFinalizar" layoutX="1152.0" layoutY="586.0" mnemonicParsing="false" onAction="#finalizarVaga" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="FINALIZAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -75,7 +75,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoSalario" layoutX="571.0" layoutY="298.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+            <TextField fx:id="campoSalario" layoutX="571.0" layoutY="298.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
             <Label layoutX="928.0" layoutY="354.0" text="DESCRIÇÃO*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -115,7 +115,7 @@
                </font>
             </Label>
             <TextField fx:id="campoComplemento" layoutX="333.0" layoutY="552.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
-            <TextField fx:id="campoEndereco" layoutX="571.0" layoutY="473.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+            <TextField fx:id="campoEndereco" layoutX="571.0" layoutY="473.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
             <Label fx:id="labelEndereco" layoutX="571.0" layoutY="446.0" text="ENDEREÇO*" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -148,7 +148,7 @@
                </font></CheckBox>
             <ComboBox fx:id="campoEstado" layoutX="697.0" layoutY="552.0" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles5.css" />
             <TextFlow layoutX="304.0" layoutY="473.0" />
-            <Button fx:id="botaoVoltar" layoutX="94.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="110.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="94.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
       </children>
     </AnchorPane>
   </children>

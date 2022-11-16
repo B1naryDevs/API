@@ -36,7 +36,7 @@
                </tooltip>
             </ToggleButton>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
             <Button fx:id="botaoGerenciarVagas" layoutX="500.0" layoutY="320.0" mnemonicParsing="false" onAction="#GerenciarVagas" prefHeight="50.0" prefWidth="360.0" stylesheets="@../../../styles/Styles6.css" text="GERENCIAR VAGAS" />
          </children></AnchorPane>
    </children>

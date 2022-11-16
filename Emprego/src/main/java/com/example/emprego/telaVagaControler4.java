@@ -138,6 +138,12 @@ public class telaVagaControler4  {
     private Button botaoVoltar;
 
     @FXML
+    private Button botaoAprovar;
+
+    @FXML
+    private Button botaoReprovar;
+
+    @FXML
     private AnchorPane pane1;
 
     @FXML
@@ -163,6 +169,12 @@ public class telaVagaControler4  {
 
     @FXML
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void AprovarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+
+    @FXML
+    void ReprovarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga3");}

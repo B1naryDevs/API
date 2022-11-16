@@ -23,6 +23,9 @@ public class candidatoControler {
     private Button botaoAvancar;
 
     @FXML
+    private Button botaoVoltar;
+
+    @FXML
     private ToggleButton botaoSair;
 
     @FXML
@@ -48,6 +51,7 @@ public class candidatoControler {
 
     @FXML
     private TextField campoSenha4;
+
     @FXML
     private TextField campoCpf;
 
@@ -68,6 +72,10 @@ public class candidatoControler {
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
+
     @FXML
     void AvancarTela(ActionEvent event) throws Exception{
         String nome = campoNome.getText();
@@ -430,23 +438,15 @@ public class candidatoControler {
     }
 
     private void setModoEscuro(){
-        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles09.css");
-        anchor.getStylesheets().add("file:src/main/resources/styles/Styles9.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles010.css");
-        anchor.getStylesheets().add("file:src/main/resources/styles/Styles10.css");
-        botaoAvancar.getStylesheets().remove("file:src/main/resources/styles/Styles01.css");
-        botaoAvancar.getStylesheets().add("file:src/main/resources/styles/Styles.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
         Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
         imgModo.setImage(image);
     }
 
     private void setModoClaro(){
-        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles9.css");
-        anchor.getStylesheets().add("file:src/main/resources/styles/Styles09.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/Styles10.css");
-        anchor.getStylesheets().add("file:src/main/resources/styles/Styles010.css");
-        botaoAvancar.getStylesheets().remove("file:src/main/resources/styles/Styles.css");
-        botaoAvancar.getStylesheets().add("file:src/main/resources/styles/Styles01.css");
+        anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
         Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
         imgModo.setImage(image);
     }

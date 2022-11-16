@@ -1,0 +1,95 @@
+
+#anchor{
+    -fx-background-color: white;
+}
+
+.label{
+     -fx-text-fill: #343A40;
+}
+
+#botaoAvancar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAvancar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoAvancar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoVoltar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoVoltar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoVoltar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #58595A;
+    -fx-text-inner-color: black;
+}
+
+.text-field: focused {
+    -fx-border-color: #f57c00;
+    -fx-text-inner-color: black;
+}
+
+.password-field {
+    -fx-background-color: white;
+    -fx-border-color: #58595A;
+    -fx-text-inner-color: black;
+}
+
+.password-field: focused {
+    -fx-border-color: #f57c00;
+    -fx-text-inner-color: black;
+}
+
+.toggle-button {
+    -fx-base: white;
+    -fx-border-color: white;
+}

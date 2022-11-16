@@ -17,7 +17,7 @@
          <children>
             <AnchorPane fx:id="pane2" layoutX="770.0" layoutY="250.0" prefHeight="320.0" prefWidth="500.0" style="-fx-background-color: #343A40;" visible="false">
                <children>
-                  <Label layoutX="52.0" text="EXPERIÊNCIA PROFISSIONAL" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="10.0" text="EXPERIÊNCIA PROFISSIONAL" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -85,7 +85,7 @@
                   <Font size="63.0" />
                </font>
             </Label>
-            <Button fx:id="botaoVoltar" layoutX="40.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+            <Button fx:id="botaoVoltar" layoutX="40.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
             <Label layoutX="40.0" layoutY="258.0" text="Cargo" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -188,7 +188,7 @@
             </ToggleButton>
             <AnchorPane fx:id="pane3" layoutX="770.0" layoutY="250.0" prefHeight="320.0" prefWidth="500.0" visible="false">
                <children>
-                  <Label layoutX="52.0" text="FORMAÇÃO" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="10.0" text="FORMAÇÃO" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
@@ -265,13 +265,15 @@
                      </font>
                   </Label>
                   <TextField fx:id="DataCandidato" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <Label layoutX="52.0" text="DADOS PESSOAIS" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="10.0" text="DADOS PESSOAIS" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
+            <Button fx:id="botaoReprovar" layoutX="563.0" layoutY="586.0" mnemonicParsing="false" onAction="#ReprovarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="REPROVAR" />
+            <Button fx:id="botaoAprovar" layoutX="820.0" layoutY="586.0" mnemonicParsing="false" onAction="#AprovarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="APROVAR" />
          </children></AnchorPane>
    </children>
 </VBox>

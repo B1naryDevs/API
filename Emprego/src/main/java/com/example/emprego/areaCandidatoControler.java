@@ -64,7 +64,11 @@ public class areaCandidatoControler implements Initializable {
         campoNome.setText(candidato.getNome());
         campoEmail.setText(usuario.getEmail());
         campoData.setText(candidato.getDataNac());
+        Formatter tff = new Formatter();
+        tff.setMask("(##)#####-####");
+        tff.setTf(campoTelefone);
         campoTelefone.setText(String.valueOf(candidato.getTelefone()));
+        tff.formatter();
     }
 
     @FXML

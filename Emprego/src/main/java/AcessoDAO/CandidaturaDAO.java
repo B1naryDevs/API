@@ -25,8 +25,7 @@ public class CandidaturaDAO {
             pstm.setInt(3, candidatura.getCodigo());
             pstm.setString(4, candidatura.getData());
             pstm.setString(5, candidatura.getStatus());
-            VagaStatic vagastatic = new VagaStatic();
-            pstm.setString(6, String.valueOf(vagastatic.getFuncionario()));
+            pstm.setString(6, String.valueOf(candidatura.getFuncionario()));
 
             pstm.execute();
 

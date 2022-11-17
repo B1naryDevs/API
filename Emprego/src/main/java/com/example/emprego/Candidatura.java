@@ -2,31 +2,25 @@ package com.example.emprego;
 
 public class Candidatura {
 
-    private String empresa = "Pro4tech";
     private String cargo;
     private Integer codigo;
     private String data;
     private String status;
 
-    public Candidatura(String cargo, Integer codigo, String data, String status){
+    private long funcionario;
+
+    public Candidatura(String cargo, Integer codigo, String data, String status, long funcionario){
         this.cargo = cargo;
         this.codigo = codigo;
         this.data = data;
         this.status = status;
+        this.funcionario = funcionario;
     }
 
     public Candidatura(String cargo, String data, String status){
         this.cargo = cargo;
         this.data = data;
         this.status = status;
-    }
-
-    public String getEmpresa() {
-        return empresa;
-    }
-
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
     }
 
     public String getCargo() {
@@ -59,5 +53,13 @@ public class Candidatura {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public long getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(long funcionario) {
+        this.funcionario = funcionario;
     }
 }

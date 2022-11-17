@@ -9,7 +9,6 @@ public class Vaga {
     private String endereco;
     private String cidade;
     private String empresa_vaga;
-    private String setor_vaga;
     private String remoto;
     private String status_vaga;
 
@@ -19,7 +18,7 @@ public class Vaga {
 
     public Vaga(){}
 
-    public Vaga(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String setor_vaga,String remoto,String status_vaga){
+    public Vaga(String cargo,String periodo,String experiencia,float salario,String descricao,String cidade,String endereco,String empresa_vaga, String remoto,String status_vaga){
         this.cargo = cargo;
         this.periodo = periodo;
         this.experiencia = experiencia;
@@ -28,13 +27,13 @@ public class Vaga {
         this.cidade = cidade;
         this.endereco = endereco;
         this.empresa_vaga = empresa_vaga;
-        this.setor_vaga = setor_vaga;
         this.remoto = remoto;
         this.status_vaga = status_vaga;
     }
 
-    public Vaga(String cargo,String periodo,float salario,String experiencia,String descricao,String remoto, Integer Id){
+    public Vaga(String cargo, long funcionario, String periodo,float salario,String experiencia,String descricao,String remoto, Integer Id){
         this.cargo = cargo;
+        this.funcionario = funcionario;
         this.periodo = periodo;
         this.salario = salario;
         this.experiencia = experiencia;
@@ -57,14 +56,6 @@ public class Vaga {
 
     public void setFuncionario(long funcionario) {
         this.funcionario = funcionario;
-    }
-
-    public String getSetor_vaga() {
-        return setor_vaga;
-    }
-
-    public void setSetor_vaga(String setor_vaga) {
-        this.setor_vaga = setor_vaga;
     }
 
     public String getRemoto() {

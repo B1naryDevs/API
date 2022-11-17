@@ -14,7 +14,7 @@ import java.util.List;
 public class VagaDAO {
 
     public void save (Vaga vaga){
-        String sql = "INSERT INTO vaga (cargo_vaga, funcionario_cpf, setor_vaga, periodo, experiencia, salario, descricao_vaga, endereco_vaga, cidade_vaga, remoto, status_vaga) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO vaga (cargo_vaga, funcionario_cpf, periodo, experiencia, salario, descricao_vaga, endereco_vaga, cidade_vaga, remoto, status_vaga) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 
@@ -26,15 +26,14 @@ public class VagaDAO {
             pstm.setString(1, vaga.getCargo());
             FuncionarioUsuario funcionariousuario = new FuncionarioUsuario();
             pstm.setString(2, String.valueOf(funcionariousuario.getCpf()));
-            pstm.setString(3, vaga.getSetor_vaga());
-            pstm.setString(4, vaga.getPeriodo());
-            pstm.setString(5, vaga.getExperiencia());
-            pstm.setFloat(6,vaga.getSalario());
-            pstm.setString(7, vaga.getDescricao());
-            pstm.setString(8, vaga.getEndereco());
-            pstm.setString(9, vaga.getCidade());
-            pstm.setString(10, vaga.getRemoto());
-            pstm.setString(11, vaga.getStatus_vaga());
+            pstm.setString(3, vaga.getPeriodo());
+            pstm.setString(4, vaga.getExperiencia());
+            pstm.setFloat(5,vaga.getSalario());
+            pstm.setString(6, vaga.getDescricao());
+            pstm.setString(7, vaga.getEndereco());
+            pstm.setString(8, vaga.getCidade());
+            pstm.setString(9, vaga.getRemoto());
+            pstm.setString(10, vaga.getStatus_vaga());
 
             pstm.execute();
 
@@ -66,17 +65,17 @@ public class VagaDAO {
             conn = ConnectionFactory.createConnectionToMySQL();
             FiltroVagas filtroVagas = new FiltroVagas();
             if(filtroVagas.getFiltro()!=null) {
-                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga where cargo_vaga = ? order by salario asc");
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, funcionario_cpf, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga where cargo_vaga = ? order by salario asc");
                 ps.setString(1, filtroVagas.getFiltro());
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()){
-                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
                 }
             }else{
-                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga order by salario asc");
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, funcionario_cpf, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga order by salario asc");
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()){
-                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
                 }
             }
         }catch (Exception e){

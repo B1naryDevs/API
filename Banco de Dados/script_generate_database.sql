@@ -44,7 +44,6 @@ primary key (cpf)
 CREATE TABLE vaga (
     cargo_vaga VARCHAR(32) NOT NULL,
     funcionario_cpf BIGINT(11) NULL,
-    setor_vaga VARCHAR(30) NULL,
     id_vaga INT(5) NOT NULL AUTO_INCREMENT,
     periodo VARCHAR(20) NOT NULL,
     experiencia ENUM('Sim', 'Não') NOT NULL,

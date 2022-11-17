@@ -220,7 +220,6 @@ public class vagaControler implements Initializable {
                 Vaga vaga = new Vaga();
                 vaga.setCargo(cargo);
                 vaga.setEmpresa_vaga("Pro4TECH");
-                vaga.setSetor_vaga("Tecnologia e Informação");
                 vaga.setPeriodo(periodo);
                 if(campoExperiencia.isSelected()){
                     vaga.setExperiencia("Sim");

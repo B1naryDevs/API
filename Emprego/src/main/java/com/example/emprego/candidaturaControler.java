@@ -59,9 +59,13 @@ public class candidaturaControler implements Initializable{
     private TableColumn<Vaga, String> colunaRemoto ;
     @FXML
     private TableColumn<Vaga, String> colunaId;
+    @FXML
+    private TableColumn<Vaga, String> colunaFuncionario;
 
     public static Integer selid;
     public static String selcargo;
+
+    public static long selfuncionario;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -80,6 +84,7 @@ public class candidaturaControler implements Initializable{
         colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
         colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
         colunaId.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Id"));
+        colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Funcionario"));
 
         ObservableList<Vaga> ListaP = VagaDAO.Datauser();
         tabelaVagas.setItems(ListaP);
@@ -111,10 +116,10 @@ public class candidaturaControler implements Initializable{
             Vaga selecionado = tabelaVagas.getSelectionModel().getSelectedItem();
             selid = Integer.valueOf(selecionado.getId());
             selcargo = String.valueOf(selecionado.getCargo());
+            selfuncionario = Long.valueOf(selecionado.getFuncionario());
             String data = (Calendar.getInstance().get(Calendar.YEAR) + "-" + (Calendar.getInstance().get(Calendar.MONTH) + 1) + "-" + Calendar.getInstance().get(Calendar.DATE));
             CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
-            Candidatura candidatura = new Candidatura(selcargo, selid, data, "Em andamento");
-            Candidato candidato = new Candidato();
+            Candidatura candidatura = new Candidatura(selcargo, selid, data, "Em andamento", selfuncionario);
             Usuario usuario = new Usuario();
             candidaturaDAO.save(candidatura,usuario);
 

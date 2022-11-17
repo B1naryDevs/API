@@ -52,8 +52,9 @@ public class CandidatoTabela {
         this.idioma = idioma;
         this.curso = curso;
     }
-    public CandidatoTabela(String nome){
+    public CandidatoTabela(String nome, long telefone){
         this.nome = nome;
+        this.telefone = telefone;
     }
     public String getNome() {
         return this.nome;

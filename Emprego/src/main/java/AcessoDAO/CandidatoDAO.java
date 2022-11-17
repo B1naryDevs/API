@@ -324,10 +324,10 @@ public class CandidatoDAO {
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-                PreparedStatement ps = conn.prepareStatement("select nome_candidato from candidato order by nome_candidato asc");
+                PreparedStatement ps = conn.prepareStatement("select nome_candidato, telefone from candidato order by nome_candidato asc");
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()){
-                    list.add((new CandidatoTabela(rs.getString("nome_candidato"))));
+                    list.add((new CandidatoTabela(rs.getString("nome_candidato"), rs.getLong("telefone"))));
                 }
         }catch (Exception e){
 

@@ -1,5 +1,6 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidatoDAO;
 import AcessoDAO.VagaDAO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -47,6 +48,9 @@ public class telaVagaControler3 implements Initializable {
 
     @FXML
     private TableColumn colunaNome;
+
+    @FXML
+    private TableColumn colunaTelefone;
 
 
     // Definição dos campos da vaga;
@@ -99,6 +103,12 @@ public class telaVagaControler3 implements Initializable {
         DescricaoVaga.setText(vagastatic.getDescricao());
         ExpVaga.setText(vagastatic.getExperiencia());
         RemotoVaga.setText(vagastatic.getRemoto());
+
+        colunaNome.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Nome"));
+        colunaTelefone.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Telefone"));
+
+        ObservableList<CandidatoTabela> ListaP = CandidatoDAO.Datauser();
+        tabelaCandidatos.setItems(ListaP);
     }
 
 

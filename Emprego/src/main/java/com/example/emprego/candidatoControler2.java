@@ -102,7 +102,7 @@ public class candidatoControler2 implements Initializable {
         String cargos = campoCargoInteresse.getValue();
         String pretensao = campoPretensao.getText();
 
-        if (cargos.isEmpty()) {
+        if (cargos==null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O CARGO DE INTERESSE!");
             alert.showAndWait();

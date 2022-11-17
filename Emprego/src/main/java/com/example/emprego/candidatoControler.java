@@ -223,7 +223,7 @@ public class candidatoControler {
                                 } else {
                                     //Validação de senha
                                     if (senha.equals(senha2)) {
-                                        String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[-._@#$%^&+=])(?=\\S+$).{8,16}$";
+                                        String PASSWORD_REGEX = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[-._@#$%^&+=*!~|])(?=\\S+$).{8,16}$";
                                         Pattern PASSWORD_PATTERN = Pattern.compile(PASSWORD_REGEX);
                                         if (PASSWORD_PATTERN.matcher(senha).matches()) {
                                             //Validação de email

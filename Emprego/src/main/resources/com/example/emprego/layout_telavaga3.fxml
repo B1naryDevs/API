@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
@@ -120,19 +119,71 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="CargoVaga" layoutX="40.0" layoutY="288.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="DescricaoVaga" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="PeriodoVaga" layoutX="480.0" layoutY="288.0" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="SalarioVaga" layoutX="310.0" layoutY="288.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="RemotoVaga" layoutX="603.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="ExpVaga" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="CidadeVaga" layoutX="40.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="CepVaga" layoutX="310.0" layoutY="498.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="UfVaga" layoutX="310.0" layoutY="428.0" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="BairroVaga" layoutX="440.0" layoutY="428.0" prefHeight="25.0" prefWidth="245.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="EnderecoVaga" layoutX="40.0" layoutY="498.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="NumeroVaga" layoutX="480.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="ComplVaga" layoutX="603.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <Label fx:id="SalarioVaga" layoutX="310.0" layoutY="288.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="CargoVaga" layoutX="40.0" layoutY="288.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="PeriodoVaga" layoutX="480.0" layoutY="288.0" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="DescricaoVaga" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ExpVaga" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="RemotoVaga" layoutX="603.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="CidadeVaga" layoutX="40.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="UfVaga" layoutX="310.0" layoutY="428.0" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="BairroVaga" layoutX="440.0" layoutY="428.0" prefHeight="25.0" prefWidth="245.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="EnderecoVaga" layoutX="40.0" layoutY="498.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="CepVaga" layoutX="310.0" layoutY="498.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="NumeroVaga" layoutX="480.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ComplVaga" layoutX="603.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </VBox>

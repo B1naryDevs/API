@@ -5,11 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
@@ -56,43 +52,43 @@ public class telaVagaControler3 implements Initializable {
     // Definição dos campos da vaga;
 
     @FXML
-    private TextField BairroVaga;
+    private Label BairroVaga;
 
     @FXML
-    private TextField CargoVaga;
+    private Label CargoVaga;
 
     @FXML
-    private TextField CepVaga;
+    private Label CepVaga;
 
     @FXML
-    private TextField CidadeVaga;
+    private Label CidadeVaga;
 
     @FXML
-    private TextField ComplVaga;
+    private Label ComplVaga;
 
     @FXML
-    private TextField DescricaoVaga;
+    private Label DescricaoVaga;
 
     @FXML
-    private TextField EnderecoVaga;
+    private Label EnderecoVaga;
 
     @FXML
-    private TextField ExpVaga;
+    private Label ExpVaga;
 
     @FXML
-    private TextField NumeroVaga;
+    private Label NumeroVaga;
 
     @FXML
-    private TextField PeriodoVaga;
+    private Label PeriodoVaga;
 
     @FXML
-    private TextField RemotoVaga;
+    private Label RemotoVaga;
 
     @FXML
-    private TextField SalarioVaga;
+    private Label SalarioVaga;
 
     @FXML
-    private TextField UfVaga;
+    private Label UfVaga;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -23,9 +23,6 @@ public class candidatoControler {
     private Button botaoAvancar;
 
     @FXML
-    private Button botaoVoltar;
-
-    @FXML
     private ToggleButton botaoSair;
 
     @FXML
@@ -72,9 +69,6 @@ public class candidatoControler {
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
-
-    @FXML
-    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("home");}
 
     @FXML
     void AvancarTela(ActionEvent event) throws Exception{
@@ -426,11 +420,11 @@ public class candidatoControler {
     Image img_ModoEscuro = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
     Image img_ModoClaro = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
 
-    private boolean isModoEscuro = true;
+    private boolean modo = true;
 
     public void alterarModo(ActionEvent event){
-        isModoEscuro =! isModoEscuro;
-        if(isModoEscuro) {
+        modo =! modo;
+        if(modo) {
             setModoEscuro();
         }else{
             setModoClaro();

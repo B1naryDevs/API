@@ -41,7 +41,7 @@
                   <Font size="63.0" />
                </font></Label>
             <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="135.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
-            <ToggleButton fx:id="botaoEditar" layoutX="1008.0" layoutY="212.0" mnemonicParsing="false" onAction="#EditarVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
+            <ToggleButton fx:id="botaoEditar" layoutX="1109.0" layoutY="212.0" mnemonicParsing="false" onAction="#EditarVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -52,7 +52,7 @@
                   <Tooltip text="Editar" />
                </tooltip>
             </ToggleButton>
-            <ToggleButton fx:id="botaoRemover" layoutX="1061.0" layoutY="212.0" mnemonicParsing="false" onAction="#RemoverVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
+            <ToggleButton fx:id="botaoRemover" layoutX="1160.0" layoutY="212.0" mnemonicParsing="false" onAction="#RemoverVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -67,7 +67,7 @@
                <font>
                   <Font size="17.0" />
                </font></Button>
-            <TableView fx:id="tabelaVagas" layoutX="236.0" layoutY="276.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
+            <TableView fx:id="tabelaVagas" layoutX="209.0" layoutY="276.0" prefHeight="400.0" prefWidth="1050.0" stylesheets="@../../../styles/Styles8.css">
                <columns>
                   <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
                   <TableColumn fx:id="colunaPeriodo" prefWidth="150.0" text="PERÍODO" />
@@ -77,6 +77,7 @@
                   <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
                   <TableColumn fx:id="colunaId" prefWidth="150.0" text="ID" visible="false" />
                   <TableColumn fx:id="colunaFuncionario" prefWidth="150.0" text="FUNCIONARIO" visible="false" />
+                  <TableColumn fx:id="colunaStatus" prefWidth="150.0" text="STATUS" />
                </columns>
             </TableView>
          </children></AnchorPane>

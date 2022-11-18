@@ -34,6 +34,7 @@ public class HelloApplication extends Application {
     private static Scene homerh;
     private static Scene sobre;
     private static Scene gerenciamentovaga;
+    private static Scene gerenciamentovaga2;
     private static Scene telavaga;
     private static Scene telavaga2;
     private static Scene telavaga3;
@@ -186,6 +187,12 @@ public class HelloApplication extends Application {
                 Parent layout_gerenciamento_vaga = FXMLLoader.load(HelloApplication.class.getResource("layout_gerenciamento_vaga.fxml"));
                 gerenciamentovaga = new Scene(layout_gerenciamento_vaga);
                 stage.setScene(gerenciamentovaga);
+                stage.setFullScreen(true);
+                break;
+            case "gerenciamentovaga2":
+                Parent layout_gerenciamento_vaga2 = FXMLLoader.load(HelloApplication.class.getResource("layout_gerenciamento_vaga2.fxml"));
+                gerenciamentovaga2 = new Scene(layout_gerenciamento_vaga2);
+                stage.setScene(gerenciamentovaga2);
                 stage.setFullScreen(true);
                 break;
             case "telavaga":

@@ -75,6 +75,9 @@ public class gerenciamentoVagaControler implements Initializable {
     @FXML
     private TableColumn<Vaga, String> colunaFuncionario;
 
+    @FXML
+    private TableColumn<Vaga, String> colunaStatus;
+
 
     // Definição das ações dos botões
 
@@ -140,7 +143,7 @@ public class gerenciamentoVagaControler implements Initializable {
     }
 
     @FXML
-    void EditarVaga(ActionEvent event) throws Exception {}
+    void EditarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("gerenciamentovaga2");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

@@ -113,7 +113,7 @@ public class telaVagaControler3 implements Initializable {
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Telefone"));
         colunaCpf.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Cpf"));
 
-        ObservableList<CandidatoTabela> ListaP = CandidatoDAO.Datauser();
+        ObservableList<CandidatoTabela> ListaP = CandidatoDAO.Datauser(vagastatic.getId());
         tabelaCandidatos.setItems(ListaP);
     }
 
@@ -147,7 +147,7 @@ public class telaVagaControler3 implements Initializable {
             HelloApplication.ChangeScene("telavaga4");
         } catch (Exception e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText("SELECIONE UMA VAGA!");
+            alert.setHeaderText("SELECIONE UM CANDIDATO!");
             alert.showAndWait();
         }
     }

@@ -110,6 +110,7 @@ public class VagaDAO {
             while (rset.next()) {
 
                 VagaStatic vagastatic = new VagaStatic();
+                vagastatic.setId(rset.getInt("id_vaga"));
                 vagastatic.setFuncionario(rset.getLong("funcionario_cpf"));
                 vagastatic.setCargo(rset.getString("cargo_vaga"));
                 vagastatic.setSalario(rset.getFloat("salario"));

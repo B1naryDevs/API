@@ -1,10 +1,12 @@
 package com.example.emprego;
 
+import AcessoDAO.CandidaturaDAO;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.TextField;
@@ -197,10 +199,28 @@ public class telaVagaControler4  implements  Initializable{
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void AprovarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AprovarCandidato(ActionEvent event) throws Exception {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("CANDIDATO APROVADO!");
+        alert.showAndWait();
+        HelloApplication.ChangeScene("telavaga3");
+        VagaStatic vagaStatic = new VagaStatic();
+        Candidato candidato = new Candidato();
+        CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
+        candidaturaDAO.aprovcand(candidato.getCpf(),vagaStatic.getId());
+    }
 
     @FXML
-    void ReprovarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void ReprovarCandidato(ActionEvent event) throws Exception {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText("CANDIDATO REPROVADO!");
+        alert.showAndWait();
+        VagaStatic vagaStatic = new VagaStatic();
+        Candidato candidato = new Candidato();
+        CandidaturaDAO candidaturaDAO = new CandidaturaDAO();
+        candidaturaDAO.reprovcand(candidato.getCpf(),vagaStatic.getId());
+        HelloApplication.ChangeScene("telavaga3");
+    }
 
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga3");}

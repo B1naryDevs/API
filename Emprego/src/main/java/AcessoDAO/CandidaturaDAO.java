@@ -71,4 +71,66 @@ public class CandidaturaDAO {
         return list;
 
     }
+
+    public void aprovcand (long cpf, int vaga){
+        String sql = "UPDATE candidatura set status_cand = 'Aprovado' where cpf_candidatura = ? and cod_vaga = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, String.valueOf(cpf));
+            pstm.setString(2, String.valueOf(vaga));
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void reprovcand (long cpf, int vaga){
+        String sql = "UPDATE candidatura set status_cand = 'Reprovado' where cpf_candidatura = ? and cod_vaga = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, String.valueOf(cpf));
+            pstm.setString(2, String.valueOf(vaga));
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
 }

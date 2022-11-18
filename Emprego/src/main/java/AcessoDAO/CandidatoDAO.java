@@ -315,17 +315,18 @@ public class CandidatoDAO {
         }
     }
 
-    public static ObservableList<CandidatoTabela> Datauser(){
+    public static ObservableList<CandidatoTabela> Datauser(Integer vaga){
 
         Connection conn = null;
-        ResultSet rset = null;
+        ResultSet rs = null;
 
         ObservableList<CandidatoTabela> list = FXCollections.observableArrayList();
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-                PreparedStatement ps = conn.prepareStatement("select nome_candidato, telefone, cpf from candidato order by nome_candidato asc");
-                ResultSet rs = ps.executeQuery();
+                PreparedStatement ps = conn.prepareStatement("select * from candidato join candidatura where candidatura.cpf_candidatura = candidato.cpf and candidatura.cod_vaga = ? and candidatura.status_cand = 'Em andamento'");
+                ps.setString(1, String.valueOf(vaga));
+                rs = ps.executeQuery();
                 while (rs.next()){
                     list.add((new CandidatoTabela(rs.getString("nome_candidato"), rs.getLong("telefone") , rs.getLong("cpf"))));
                 }

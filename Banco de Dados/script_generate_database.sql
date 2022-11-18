@@ -84,8 +84,7 @@ CREATE TABLE candidatura (
     cpf_candidatura BIGINT(11) NOT NULL,
     cod_vaga INT(5) NOT NULL,
     data_cand varchar(10) not null,
-    status_cand ENUM('Em andamento', 'Desclassificado', 'Entrevista Online', 'Entrevista Presencial', 
-    'Entrevista com Diretoria', 'Em Contratação' , 'Contratado'),
+    status_cand ENUM('Em andamento', 'Aprovado', 'Reprovado'),
     PRIMARY KEY (id_candidatura)
 );
 

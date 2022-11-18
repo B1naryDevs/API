@@ -57,21 +57,8 @@ public class telaVagaControler3 implements Initializable {
 
 
     // Definição dos campos da vaga;
-
-    @FXML
-    private Label BairroVaga;
-
     @FXML
     private Label CargoVaga;
-
-    @FXML
-    private Label CepVaga;
-
-    @FXML
-    private Label CidadeVaga;
-
-    @FXML
-    private Label ComplVaga;
 
     @FXML
     private Label DescricaoVaga;
@@ -81,9 +68,6 @@ public class telaVagaControler3 implements Initializable {
 
     @FXML
     private Label ExpVaga;
-
-    @FXML
-    private Label NumeroVaga;
 
     @FXML
     private Label PeriodoVaga;
@@ -108,6 +92,7 @@ public class telaVagaControler3 implements Initializable {
         DescricaoVaga.setText(vagastatic.getDescricao());
         ExpVaga.setText(vagastatic.getExperiencia());
         RemotoVaga.setText(vagastatic.getRemoto());
+        EnderecoVaga.setText(vagastatic.getEndereco());
 
         colunaNome.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Nome"));
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Telefone"));

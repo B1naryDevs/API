@@ -1,13 +1,22 @@
 package com.example.emprego;
 
+import AcessoDAO.CargoDAO;
+import AcessoDAO.FuncionarioDAO;
+import AcessoDAO.VagaDAO;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class gerenciamentoVagaControler {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class gerenciamentoVagaControler implements Initializable {
 
     // Nomeclatura dos botões
 
@@ -43,25 +52,31 @@ public class gerenciamentoVagaControler {
     // Definindo os itens da tabela
 
     @FXML
-    private TableView tabelaGerenciamentoVagas;
+    private TableView tabelaVagas;
 
     @FXML
-    private TableColumn colunaGerCargo ;
+    private TableColumn colunaCargo ;
 
     @FXML
-    private TableColumn colunaGerPeriodo ;
+    private TableColumn colunaPeriodo ;
 
     @FXML
-    private TableColumn colunaGerSalario ;
+    private TableColumn colunaSalario ;
 
     @FXML
-    private TableColumn colunaGerExperiencia ;
+    private TableColumn colunaExperiencia ;
 
     @FXML
-    private TableColumn colunaGerDescricao ;
+    private TableColumn colunaDescricao ;
 
     @FXML
-    private TableColumn colunaGerRemoto ;
+    private TableColumn colunaRemoto ;
+
+    @FXML
+    private TableColumn colunaId;
+
+    @FXML
+    private TableColumn colunaFuncionario;
 
 
     // Definição das ações dos botões
@@ -92,5 +107,22 @@ public class gerenciamentoVagaControler {
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Cargo"));
+        colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Periodo"));
+        colunaSalario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Salario"));
+        colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Experiencia"));
+        colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
+        colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
+        colunaId.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Id"));
+        colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Funcionario"));
+
+        ObservableList<Vaga> vagaList = VagaDAO.Vga();
+        tabelaVagas.setItems(vagaList);
+
+    }
 
 }

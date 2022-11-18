@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.gerenciamentoVagaControler">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.gerenciamentoVagaControler">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;">
          <children>
@@ -40,16 +40,6 @@
                <font>
                   <Font size="63.0" />
                </font></Label>
-            <TableView fx:id="tabelaGerenciamentoVagas" layoutX="243.0" layoutY="260.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
-              <columns>
-                <TableColumn fx:id="colunaGerCargo" prefWidth="150.0" text="CARGO" />
-                <TableColumn fx:id="colunaGerPeriodo" prefWidth="150.0" text="PERÍODO" />
-                  <TableColumn fx:id="colunaGerSalario" prefWidth="150.0" text="SALÁRIO" />
-                  <TableColumn fx:id="colunaGerExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
-                  <TableColumn fx:id="colunaGerDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
-                  <TableColumn fx:id="colunaGerRemoto" prefWidth="150.0" text="REMOTO" />
-              </columns>
-            </TableView>
             <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="135.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" />
             <ToggleButton fx:id="botaoEditar" layoutX="1008.0" layoutY="212.0" mnemonicParsing="false" onAction="#EditarVaga" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
                <graphic>
@@ -77,6 +67,18 @@
                <font>
                   <Font size="17.0" />
                </font></Button>
+            <TableView fx:id="tabelaVagas" layoutX="236.0" layoutY="276.0" prefHeight="400.0" prefWidth="900.0" stylesheets="@../../../styles/Styles8.css">
+               <columns>
+                  <TableColumn fx:id="colunaCargo" prefWidth="150.0" text="CARGO" />
+                  <TableColumn fx:id="colunaPeriodo" prefWidth="150.0" text="PERÍODO" />
+                  <TableColumn fx:id="colunaSalario" prefWidth="150.0" text="SALÁRIO" />
+                  <TableColumn fx:id="colunaExperiencia" prefWidth="150.0" text="EXPERIÊNCIA" />
+                  <TableColumn fx:id="colunaDescricao" prefWidth="150.0" text="DESCRIÇÃO" />
+                  <TableColumn fx:id="colunaRemoto" prefWidth="150.0" text="REMOTO" />
+                  <TableColumn fx:id="colunaId" prefWidth="150.0" text="ID" visible="false" />
+                  <TableColumn fx:id="colunaFuncionario" prefWidth="150.0" text="FUNCIONARIO" visible="false" />
+               </columns>
+            </TableView>
          </children></AnchorPane>
    </children>
 </VBox>

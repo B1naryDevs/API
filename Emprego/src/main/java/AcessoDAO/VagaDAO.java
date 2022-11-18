@@ -147,4 +147,32 @@ public class VagaDAO {
 
     }
 
+
+    //SELECT UNIVERSAL DE VAGAS
+    public static ObservableList<Vaga> Vga(){
+
+        Connection conn = null;
+        ResultSet rset = null;
+
+        ObservableList<Vaga> vagalist = FXCollections.observableArrayList();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            PreparedStatement ps = conn.prepareStatement("select * from vaga");
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()){
+                vagalist.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return vagalist;
+
+    }
+
 }

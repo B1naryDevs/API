@@ -57,6 +57,7 @@ public class telaVagaControler3 implements Initializable {
 
 
     // Definição dos campos da vaga;
+
     @FXML
     private Label CargoVaga;
 

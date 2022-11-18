@@ -66,16 +66,6 @@
                   <Font size="19.0" />
                </font>
             </Label>
-            <Label layoutX="310.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Cep" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="40.0" layoutY="398.0" prefHeight="30.0" prefWidth="103.0" text="Cidade" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
             <Label layoutX="480.0" layoutY="258.0" prefHeight="30.0" prefWidth="95.0" text="Período" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -86,12 +76,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="468.0" prefHeight="30.0" prefWidth="103.0" text="Endereço" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="310.0" layoutY="398.0" prefHeight="30.0" prefWidth="64.0" text="UF" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="398.0" prefHeight="30.0" prefWidth="103.0" text="Endereço" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -102,21 +87,6 @@
                </font>
             </Label>
             <Label layoutX="40.0" layoutY="328.0" prefHeight="30.0" prefWidth="103.0" text="Descrição" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="440.0" layoutY="398.0" prefHeight="30.0" prefWidth="80.0" text="Bairro" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="480.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Número" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="603.0" layoutY="468.0" prefHeight="30.0" prefWidth="80.0" text="Compl." textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -141,7 +111,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="ExpVaga" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+            <Label fx:id="ExpVaga" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #58595A;" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -151,37 +121,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Label fx:id="CidadeVaga" layoutX="40.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="UfVaga" layoutX="310.0" layoutY="428.0" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="BairroVaga" layoutX="440.0" layoutY="428.0" prefHeight="25.0" prefWidth="245.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="EnderecoVaga" layoutX="40.0" layoutY="498.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="CepVaga" layoutX="310.0" layoutY="498.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="NumeroVaga" layoutX="480.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Label fx:id="ComplVaga" layoutX="603.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+            <Label fx:id="EnderecoVaga" layoutX="40.0" layoutY="428.0" prefHeight="75.0" prefWidth="645.0" style="-fx-background-color: #58595A;" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>

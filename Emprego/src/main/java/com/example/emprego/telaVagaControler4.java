@@ -6,10 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ToggleButton;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.Initializable;
 import javafx.util.Duration;
@@ -19,98 +16,94 @@ import java.util.ResourceBundle;
 
 public class telaVagaControler4  implements  Initializable{
 
-    // Definições dos campos do candidato
+    // Definição dos dados pessoais do candidato
 
     @FXML
-    private TextField CpfCandidato;
+    private Label CpfCandidato;
 
     @FXML
-    private TextField DataCandidato;
+    private Label DataCandidato;
 
     @FXML
-    private TextField EmailCandidato;
+    private Label EmailCandidato;
 
     @FXML
-    private TextField NomeCandidato;
+    private Label NomeCandidato;
 
     @FXML
-    private TextField TelefoneCandidato;
+    private Label TelefoneCandidato;
+
+
+    // Definição dos dados de formação do candidato
 
     @FXML
-    private TextField CargoCandidato;
+    private Label CompetenciaCandidato;
 
     @FXML
-    private TextField CompetenciaCandidato;
+    private Label CursoCandidato;
 
     @FXML
-    private TextField CursoCandidato;
+    private Label FormacaoInicio;
 
     @FXML
-    private TextField DescricaoCandidato;
+    private Label FormacaoTermino;
 
     @FXML
-    private TextField EmpresaCandidato;
+    private Label InglesCandidato;
 
     @FXML
-    private TextField ExpInicio;
+    private Label InstituicaoCandidato;
+
+
+    // Definição dos dados profissionais do candidato
 
     @FXML
-    private TextField ExpTermino;
+    private Label CargoCandidato;
 
     @FXML
-    private TextField FormacaoInicio;
+    private Label DescricaoCandidato;
 
     @FXML
-    private TextField FormacaoTermino;
+    private Label EmpresaCandidato;
 
     @FXML
-    private TextField InglesCandidato;
+    private Label ExpInicio;
 
     @FXML
-    private TextField InstituicaoCandidato;
+    private Label ExpTermino;
 
+    @FXML
+    private Label CargoInteresse;
+
+    @FXML
+    private Label PretensaoSalarial;
 
 
     // Definição dos campos da vaga;
 
     @FXML
-    private TextField BairroVaga2;
+    private Label CargoVaga2;
 
     @FXML
-    private TextField CargoVaga2;
+    private Label DescricaoVaga2;
 
     @FXML
-    private TextField CepVaga2;
+    private Label ExpVaga2;
 
     @FXML
-    private TextField CidadeVaga2;
+    private Label PeriodoVaga2;
 
     @FXML
-    private TextField ComplVaga2;
+    private Label RemotoVaga2;
 
     @FXML
-    private TextField DescricaoVaga2;
+    private Label SalarioVaga2;
 
     @FXML
-    private TextField EnderecoVaga2;
+    private Label EnderecoVaga2;
 
-    @FXML
-    private TextField ExpVaga2;
 
-    @FXML
-    private TextField NumeroVaga2;
-
-    @FXML
-    private TextField PeriodoVaga2;
-
-    @FXML
-    private TextField RemotoVaga2;
-
-    @FXML
-    private TextField SalarioVaga2;
-
-    @FXML
-    private TextField UfVaga2;
+    // Definição dos botões
 
     @FXML
     private Button botaoCargo;

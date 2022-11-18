@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
@@ -22,36 +21,76 @@
                         <Font name="System Bold" size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="CargoCandidato" layoutX="52.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <Label layoutX="52.0" layoutY="74.0" text="Cargo" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="44.0" text="Cargo" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="264.0" layoutY="74.0" text="Empresa" textFill="WHITE">
+                  <Label layoutX="264.0" layoutY="44.0" text="Empresa" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="DescricaoCandidato" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="392.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <Label layoutX="52.0" layoutY="214.0" text="Descrição" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="254.0" text="Descrição" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <Label layoutX="52.0" layoutY="144.0" text="Data de início" textFill="WHITE">
+                  <Label layoutX="52.0" layoutY="114.0" text="Data de início" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="ExpInicio" layoutX="52.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <Label layoutX="264.0" layoutY="144.0" text="Data de término" textFill="WHITE">
+                  <Label layoutX="264.0" layoutY="114.0" text="Data de término" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="ExpTermino" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <TextField fx:id="EmpresaCandidato" layoutX="264.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+                  <Label fx:id="CargoCandidato" layoutX="52.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EmpresaCandidato" layoutX="264.0" layoutY="74.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ExpInicio" layoutX="52.0" layoutY="144.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="ExpTermino" layoutX="264.0" layoutY="144.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="52.0" layoutY="184.0" text="Cargo de interesse" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CargoInteresse" layoutX="52.0" layoutY="214.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="264.0" layoutY="184.0" text="Pretensão Salarial" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PretensaoSalarial" layoutX="264.0" layoutY="214.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DescricaoCandidato" layoutX="53.0" layoutY="284.0" prefHeight="25.0" prefWidth="390.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </children></AnchorPane>
             <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -96,16 +135,6 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="398.0" text="Cidade" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="310.0" layoutY="468.0" text="Cep" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
             <Label layoutX="480.0" layoutY="258.0" text="Período" textFill="WHITE">
                <font>
                   <Font size="20.0" />
@@ -116,12 +145,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="310.0" layoutY="398.0" prefHeight="30.0" prefWidth="35.0" text="UF" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="40.0" layoutY="468.0" text="Endereço" textFill="WHITE">
+            <Label layoutX="40.0" layoutY="398.0" text="Endereço" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -131,37 +155,11 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="603.0" layoutY="468.0" text="Compl." textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="440.0" layoutY="398.0" text="Bairro" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
-            <Label layoutX="480.0" layoutY="468.0" text="Número" textFill="WHITE">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </Label>
             <Label layoutX="603.0" layoutY="328.0" text="Remoto" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="CargoVaga2" layoutX="40.0" layoutY="288.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="SalarioVaga2" layoutX="310.0" layoutY="288.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="CidadeVaga2" layoutX="40.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="CepVaga2" layoutX="310.0" layoutY="498.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="PeriodoVaga2" layoutX="480.0" layoutY="288.0" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="DescricaoVaga2" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="ExpVaga2" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="RemotoVaga2" layoutX="603.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="Numero2" layoutX="480.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="ComplVaga2" layoutX="603.0" layoutY="498.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="EnderecoVaga2" layoutX="40.0" layoutY="498.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <ToggleButton fx:id="botaoBack" layoutX="724.0" layoutY="380.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
                <graphic>
                   <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
@@ -198,26 +196,21 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="CursoCandidato" layoutX="264.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="74.0" text="Instituição" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="InstituicaoCandidato" layoutX="52.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="214.0" text="Competência" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="CompetenciaCandidato" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="264.0" layoutY="214.0" text="Inglês" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="InglesCandidato" layoutX="264.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <TextField fx:id="FormacaoInicio" layoutX="52.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="144.0" text="Data de início" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
@@ -228,11 +221,38 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="FormacaoTermino" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+                  <Label fx:id="InstituicaoCandidato" layoutX="52.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CursoCandidato" layoutX="264.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FormacaoInicio" layoutX="52.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="FormacaoTermino" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CompetenciaCandidato" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="InglesCandidato" layoutX="264.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
-            <TextField fx:id="BairroVaga2" layoutX="440.0" layoutY="428.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="UfVaga2" layoutX="310.0" layoutY="428.0" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
             <AnchorPane fx:id="pane1" layoutX="770.0" layoutY="250.0" prefHeight="320.0" prefWidth="500.0">
                <children>
                   <Label layoutX="52.0" layoutY="74.0" text="Nome" textFill="WHITE">
@@ -240,20 +260,16 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="NomeCandidato" layoutX="52.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-                  <TextField fx:id="CpfCandidato" layoutX="264.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="264.0" layoutY="74.0" text="Cpf" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="TelefoneCandidato" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="214.0" text="Telefone" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="EmailCandidato" layoutX="52.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="144.0" text="Email" textFill="WHITE">
                      <font>
                         <Font size="20.0" />
@@ -264,16 +280,75 @@
                         <Font size="20.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="DataCandidato" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
                   <Label layoutX="52.0" layoutY="10.0" text="DADOS PESSOAIS" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="NomeCandidato" layoutX="52.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="CpfCandidato" layoutX="264.0" layoutY="104.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EmailCandidato" layoutX="52.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="DataCandidato" layoutX="264.0" layoutY="174.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="TelefoneCandidato" layoutX="52.0" layoutY="244.0" prefHeight="25.0" prefWidth="180.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
                      </font>
                   </Label>
                </children>
             </AnchorPane>
             <Button fx:id="botaoReprovar" layoutX="563.0" layoutY="586.0" mnemonicParsing="false" onAction="#ReprovarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="REPROVAR" />
             <Button fx:id="botaoAprovar" layoutX="820.0" layoutY="586.0" mnemonicParsing="false" onAction="#AprovarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="APROVAR" />
+            <Label fx:id="EnderecoVaga2" layoutX="40.0" layoutY="428.0" prefHeight="75.0" prefWidth="645.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="CargoVaga2" layoutX="40.0" layoutY="288.0" prefHeight="25.0" prefWidth="240.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="SalarioVaga2" layoutX="310.0" layoutY="288.0" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="PeriodoVaga2" layoutX="480.0" layoutY="288.0" prefHeight="25.0" prefWidth="202.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="DescricaoVaga2" layoutX="40.0" layoutY="358.0" prefHeight="25.0" prefWidth="400.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="ExpVaga2" layoutX="480.0" layoutY="358.0" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="RemotoVaga2" layoutX="603.0" layoutY="358.0" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #58595A;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children></AnchorPane>
    </children>
 </VBox>

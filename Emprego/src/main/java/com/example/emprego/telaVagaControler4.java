@@ -15,7 +15,7 @@ import javafx.util.Duration;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class telaVagaControler4  {
+public class telaVagaControler4  implements  Initializable{
 
     // Definições dos campos do candidato
 
@@ -151,6 +151,32 @@ public class telaVagaControler4  {
 
     @FXML
     private AnchorPane pane3;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        VagaStatic vagastatic = new VagaStatic();
+        CargoVaga2.setText(vagastatic.getCargo());
+        SalarioVaga2.setText(String.valueOf(vagastatic.getSalario()));
+        PeriodoVaga2.setText(vagastatic.getPeriodo());
+        DescricaoVaga2.setText(vagastatic.getDescricao());
+        ExpVaga2.setText(vagastatic.getExperiencia());
+        RemotoVaga2.setText(vagastatic.getRemoto());
+
+        Candidato candidato = new Candidato();
+        NomeCandidato.setText(candidato.getNome());
+        CpfCandidato.setText(String.valueOf(candidato.getCpf()));
+        EmailCandidato.setText(candidato.getEmail());
+        DataCandidato.setText(candidato.getDataNac());
+        TelefoneCandidato.setText(String.valueOf(candidato.getTelefone()));
+
+        InstituicaoCandidato.setText(candidato.getInstituicao());
+        CursoCandidato.setText(candidato.getCurso());
+        FormacaoInicio.setText(candidato.getCursoInicio());
+        FormacaoTermino.setText(candidato.getCursoTermino());
+        CompetenciaCandidato.setText(candidato.getCompetencia());
+        InglesCandidato.setText(candidato.getIdioma());
+
+    }
 
 
     // Definição das ações dos botões

@@ -324,10 +324,10 @@ public class CandidatoDAO {
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-                PreparedStatement ps = conn.prepareStatement("select nome_candidato, telefone from candidato order by nome_candidato asc");
+                PreparedStatement ps = conn.prepareStatement("select nome_candidato, telefone, cpf from candidato order by nome_candidato asc");
                 ResultSet rs = ps.executeQuery();
                 while (rs.next()){
-                    list.add((new CandidatoTabela(rs.getString("nome_candidato"), rs.getLong("telefone"))));
+                    list.add((new CandidatoTabela(rs.getString("nome_candidato"), rs.getLong("telefone") , rs.getLong("cpf"))));
                 }
         }catch (Exception e){
 
@@ -336,6 +336,119 @@ public class CandidatoDAO {
         }
 
         return list;
+
+    }
+
+    public List<Candidato> Search(long cpf)
+
+    {
+        String sql = "Select * from candidato where cpf = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rset = null;
+
+        List<Candidato> funclist = new ArrayList<Candidato>();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+            pstm.setString(1, String.valueOf(cpf));
+            //objeto para ler os dados do banco
+            rset = pstm.executeQuery();
+
+
+            // laço para percorrer o objeto de acesso ao dados do banco
+            while (rset.next()) {
+
+                Candidato candidato = new Candidato();
+                candidato.setNome(rset.getString("nome_candidato"));
+                candidato.setCpf(rset.getLong("cpf"));
+                candidato.setDataNac(rset.getString("data_nasc"));
+                candidato.setTelefone(rset.getLong("telefone"));
+                candidato.setPretSalarial(rset.getString("pret_salarial"));
+                candidato.setCargoInteresse(rset.getString("pret_cargo"));
+                candidato.setCompetencia(rset.getString("nome_comp"));
+                candidato.setInstituicao(rset.getString("instituicao"));
+                candidato.setCursoInicio(rset.getString("inicio_curso"));
+                candidato.setCursoTermino(rset.getString("termino_curso"));
+                candidato.setIdioma(rset.getString("nivel"));
+                candidato.setCurso(rset.getString("curso"));
+
+                funclist.add(candidato);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rset != null) {
+                    rset.close();
+                }
+
+                if (pstm != null) {
+                    pstm.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return funclist;
+
+    }
+
+    public List<Candidato> Search2(long cpf)
+
+    {
+        String sql = "Select email from usuario where cpf_candidato_usu = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rset = null;
+
+        List<Candidato> funclist = new ArrayList<Candidato>();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+            pstm.setString(1, String.valueOf(cpf));
+            //objeto para ler os dados do banco
+            rset = pstm.executeQuery();
+
+
+            // laço para percorrer o objeto de acesso ao dados do banco
+            while (rset.next()) {
+
+                Candidato candidato = new Candidato();
+                candidato.setEmail(rset.getString("email"));
+
+                funclist.add(candidato);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rset != null) {
+                    rset.close();
+                }
+
+                if (pstm != null) {
+                    pstm.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return funclist;
 
     }
 

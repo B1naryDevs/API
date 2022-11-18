@@ -52,9 +52,10 @@ public class CandidatoTabela {
         this.idioma = idioma;
         this.curso = curso;
     }
-    public CandidatoTabela(String nome, long telefone){
+    public CandidatoTabela(String nome, long telefone, long cpf){
         this.nome = nome;
         this.telefone = telefone;
+        this.cpf = cpf;
     }
     public String getNome() {
         return this.nome;

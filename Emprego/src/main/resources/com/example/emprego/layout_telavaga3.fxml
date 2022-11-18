@@ -51,6 +51,7 @@
               <columns>
                 <TableColumn fx:id="colunaNome" prefWidth="270.0" text="NOME" />
                   <TableColumn fx:id="colunaTelefone" prefWidth="270.0" text="TELEFONE" />
+                  <TableColumn fx:id="colunaCpf" prefWidth="270.0" text="CPF" visible="false" />
               </columns>
             </TableView>
             <Button fx:id="botaoSelecionar" layoutX="1167.0" layoutY="586.0" mnemonicParsing="false" onAction="#SelecionarCandidato" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />

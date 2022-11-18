@@ -44,13 +44,16 @@ public class telaVagaControler3 implements Initializable {
     // Definição dos itens da tabela;
 
     @FXML
-    private TableView tabelaCandidatos;
+    private TableView<CandidatoTabela> tabelaCandidatos;
 
     @FXML
-    private TableColumn colunaNome;
+    private TableColumn<CandidatoTabela , String> colunaNome;
 
     @FXML
-    private TableColumn colunaTelefone;
+    private TableColumn<CandidatoTabela , String> colunaTelefone;
+
+    @FXML
+    private TableColumn<CandidatoTabela , String> colunaCpf;
 
 
     // Definição dos campos da vaga;
@@ -94,6 +97,8 @@ public class telaVagaControler3 implements Initializable {
     @FXML
     private Label UfVaga;
 
+    public static long selcpf;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         VagaStatic vagastatic = new VagaStatic();
@@ -104,8 +109,9 @@ public class telaVagaControler3 implements Initializable {
         ExpVaga.setText(vagastatic.getExperiencia());
         RemotoVaga.setText(vagastatic.getRemoto());
 
-        colunaNome.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Nome"));
-        colunaTelefone.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Telefone"));
+        colunaNome.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Nome"));
+        colunaTelefone.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Telefone"));
+        colunaCpf.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Cpf"));
 
         ObservableList<CandidatoTabela> ListaP = CandidatoDAO.Datauser();
         tabelaCandidatos.setItems(ListaP);
@@ -130,7 +136,21 @@ public class telaVagaControler3 implements Initializable {
     void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
 
     @FXML
-    void SelecionarCandidato(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga4");}
+    void SelecionarCandidato(ActionEvent event) throws Exception {
+        try {
+            CandidatoTabela selecionado = tabelaCandidatos.getSelectionModel().getSelectedItem();
+            selcpf = Long.valueOf(selecionado.getCpf());
+            CandidatoDAO candidatoDAO = new CandidatoDAO();
+            candidatoDAO.Search(selcpf);
+            candidatoDAO.Search2(selcpf);
+
+            HelloApplication.ChangeScene("telavaga4");
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("SELECIONE UMA VAGA!");
+            alert.showAndWait();
+        }
+    }
 
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga2");}

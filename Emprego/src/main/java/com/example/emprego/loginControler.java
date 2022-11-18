@@ -72,8 +72,6 @@ public class loginControler {
                     Usuario usuario = new Usuario();
                     UsuarioDAO.Usua(campoEmail.getText());
 
-
-
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setHeaderText("Bem Vindo!");
                     alert.showAndWait();

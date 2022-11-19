@@ -33,10 +33,7 @@ public class rhControler5 implements Initializable {
     private Button botaoRelatorios;
 
     @FXML
-    private Button botaoAprovados;
-
-    @FXML
-    private Button botaoReprovados;
+    private Button botaoRelatorio;
 
     @FXML
     private Button botaoSalvar;
@@ -66,10 +63,7 @@ public class rhControler5 implements Initializable {
     // Definição das ações dos botões
 
     @FXML
-    void AvancarHome(ActionEvent event) throws Exception {
-
-
-        HelloApplication.ChangeScene("homerh");}
+    void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
     void AvancarVagas(ActionEvent event) throws Exception{HelloApplication.ChangeScene("telavaga");}
@@ -81,7 +75,11 @@ public class rhControler5 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+
+    @FXML
+    void TelaRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
+
 
     @FXML
     void SalvarAlteracoes(ActionEvent event) throws Exception {

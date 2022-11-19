@@ -64,7 +64,7 @@ public class rhControler {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
 
     @FXML
     void VisualizarFuncionarios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}

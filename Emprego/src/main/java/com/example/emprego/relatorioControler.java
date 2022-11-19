@@ -1,13 +1,14 @@
 package com.example.emprego;
 
-import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
-import javafx.stage.Stage;
 
-public class rhControler3 {
+public class relatorioControler {
 
     // Nomeclatura dos botões
 
@@ -27,8 +28,27 @@ public class rhControler3 {
     private Button botaoRelatorios;
 
     @FXML
+    private Button botaoVoltar;
+
+    @FXML
     private ToggleButton botaoSair;
 
+    // Definição dos itens da tabela
+
+    @FXML
+    private TableView tabelaRelatorios;
+
+    @FXML
+    private TableColumn colunaFuncionario;
+
+    @FXML
+    private TableColumn colunaVagas;
+
+    @FXML
+    private TableColumn colunaAprovados;
+
+    @FXML
+    private TableColumn colunaReprovados;
 
     // Definição das ações dos botões
 
@@ -45,9 +65,12 @@ public class rhControler3 {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
+
+    @FXML
+    void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
-}
 
+}

@@ -43,7 +43,7 @@ public class rhControler4 implements Initializable {
     private ToggleButton botaoEditar;
 
     @FXML
-    private Button botaoSelecionar;
+    private Button botaoRelatorio;
 
 
     // Definindo os itens da tabela
@@ -75,31 +75,6 @@ public class rhControler4 implements Initializable {
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
 
     @FXML
-    void Selecionar(ActionEvent event) throws Exception{
-
-        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
-        secemail = String.valueOf(selecionado.getEmail());
-
-        Usuario emg = new Usuario();
-        emg.getEmail();
-
-        if (emg.getEmail().equals("Adm@gmail.com")){
-
-            HelloApplication.ChangeScene("rh5");
-        }
-
-        else{
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("ACESSO NEGADO!");
-            alert.showAndWait();
-
-        }
-
-
-    }
-
-    @FXML
     void AvancarVagas(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}
 
     @FXML
@@ -109,7 +84,29 @@ public class rhControler4 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+
+    @FXML
+    void TelaRelatorios(ActionEvent event) throws Exception {
+        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+        secemail = String.valueOf(selecionado.getEmail());
+
+        Usuario emg = new Usuario();
+        emg.getEmail();
+
+        if (emg.getEmail().equals("Adm@gmail.com")){
+
+            HelloApplication.ChangeScene("relatorio");
+        }
+
+        else{
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("ACESSO NEGADO!");
+            alert.showAndWait();
+
+        }
+    }
 
     @FXML
     void RemoverFunc(ActionEvent event) throws Exception {

@@ -38,8 +38,8 @@ public class HelloApplication extends Application {
     private static Scene telavaga;
     private static Scene telavaga2;
     private static Scene telavaga3;
-
     private static Scene telavaga4;
+    private static Scene relatorio;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -217,6 +217,12 @@ public class HelloApplication extends Application {
                 Parent layout_telavaga4 = FXMLLoader.load(HelloApplication.class.getResource("layout_telavaga4.fxml"));
                 telavaga4 = new Scene(layout_telavaga4);
                 stage.setScene(telavaga4);
+                stage.setFullScreen(true);
+                break;
+            case "relatorio":
+                Parent layout_relatorio = FXMLLoader.load(HelloApplication.class.getResource("layout_relatorio.fxml"));
+                relatorio = new Scene(layout_relatorio);
+                stage.setScene(relatorio);
                 stage.setFullScreen(true);
         }
     }

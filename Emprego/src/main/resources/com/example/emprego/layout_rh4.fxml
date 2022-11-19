@@ -45,7 +45,7 @@
                   <TableColumn fx:id="colunaTelefone" prefWidth="300.0" text="TELEFONE" />
               </columns>
             </TableView>
-            <Button fx:id="botaoSelecionar" layoutX="1152.0" layoutY="586.0" mnemonicParsing="false" onAction="#Selecionar" prefHeight="30.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SELECIONAR" />
+            <Button fx:id="botaoRelatorio" layoutX="1152.0" layoutY="586.0" mnemonicParsing="false" onAction="#TelaRelatorios" prefHeight="30.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="RELATÓRIOS" />
             <Label layoutX="480.0" layoutY="144.0" text="FUNCIONÁRIOS" textFill="WHITE" AnchorPane.topAnchor="120.0">
                <font>
                   <Font size="63.0" />
@@ -58,15 +58,21 @@
                      </image>
                   </ImageView>
                </graphic>
+               <tooltip>
+                  <Tooltip text="Editar" />
+               </tooltip>
             </ToggleButton>
             <ToggleButton fx:id="botaoRemover" layoutX="1061.0" layoutY="199.0" mnemonicParsing="false" onAction="#RemoverFunc" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #343A40;">
                <graphic>
-                  <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="Remover" fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/delete2.png" />
                      </image>
                   </ImageView>
                </graphic>
+               <tooltip>
+                  <Tooltip text="Remover" />
+               </tooltip>
             </ToggleButton>
          </children></AnchorPane>
    </children>

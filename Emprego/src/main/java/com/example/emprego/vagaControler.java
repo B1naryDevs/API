@@ -132,7 +132,7 @@ public class vagaControler implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
 
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("telavaga");}

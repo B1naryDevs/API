@@ -98,7 +98,7 @@ public class rhControler2  {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
 
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}

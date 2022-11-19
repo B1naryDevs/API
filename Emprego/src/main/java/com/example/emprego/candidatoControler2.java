@@ -22,12 +22,24 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 public class candidatoControler2 implements Initializable {
 
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
+
+    @FXML
+    private ToggleButton tgbtModo;
 
     @FXML
     private Button botaoAvancar;
+
     @FXML
     private Button botaoAdicionar;
 
@@ -80,7 +92,7 @@ public class candidatoControler2 implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         // laço para percorrer a lista e adicionar os componentes
-        for (String c : CargoDAO.carg()){
+        for (String c : CargoDAO.carg()) {
 
             //adicionar cargos
             campoCargoInteresse.getItems().add(c);
@@ -89,20 +101,23 @@ public class candidatoControler2 implements Initializable {
 
     }
 
-    public void getInteresse(ActionEvent event){
+    public void getInteresse(ActionEvent event) {
         String cargoSelecionado = campoCargoInteresse.getValue();
         labelCargoInteresse.setText(cargoSelecionado);
 
     }
-    
+
     @FXML
-    void SairTela(ActionEvent event) throws Exception{HelloApplication.ChangeScene("login");}
+    void SairTela(ActionEvent event) throws Exception {
+        HelloApplication.ChangeScene("login");
+    }
+
     @FXML
     void AvancarTela(ActionEvent event) throws Exception {
         String cargos = campoCargoInteresse.getValue();
         String pretensao = campoPretensao.getText();
 
-        if (cargos==null) {
+        if (cargos == null) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setHeaderText("PREENCHA O CARGO DE INTERESSE!");
             alert.showAndWait();
@@ -172,7 +187,7 @@ public class candidatoControler2 implements Initializable {
                     candidato.setExpInicio(inicio);
                     candidato.setExpTermino(termino);
                     candidato.setDescricao(descricao);
-                    if(campoAtual.isSelected()){
+                    if (campoAtual.isSelected()) {
                         candidato.setCargoAtual("Sim");
                     } else {
                         candidato.setCargoAtual("Não");
@@ -192,19 +207,18 @@ public class candidatoControler2 implements Initializable {
                     alert.showAndWait();
                 }
             } else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText("FORMATO DE DATA(INÍCIO) INVÁLIDO!");
-            alert.showAndWait();
-        }
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("FORMATO DE DATA(INÍCIO) INVÁLIDO!");
+                alert.showAndWait();
+            }
         }
     }
 
-    public void CheckEmprego (ActionEvent event){
+    public void CheckEmprego(ActionEvent event) {
 
         if (campoAtual.isSelected()) {
             campoTermino.setVisible(false);
             labelTermino.setVisible(false);
-
 
 
         } else {
@@ -214,9 +228,8 @@ public class candidatoControler2 implements Initializable {
     }
 
 
-
     @FXML
-    void VoltarTela(ActionEvent event)throws Exception {
+    void VoltarTela(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato");
     }
 
@@ -238,4 +251,32 @@ public class candidatoControler2 implements Initializable {
         data.formatter();
     }
 
+    Image img_ModoEscuro = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+    Image img_ModoClaro = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+
+    private boolean modo = true;
+
+    public void alterarModo(ActionEvent event) {
+        modo = !modo;
+        if (modo) {
+            setModoEscuro();
+        } else {
+            setModoClaro();
+        }
+    }
+
+    private void setModoEscuro() {
+        anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+        Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+        imgModo.setImage(image);
+    }
+
+    private void setModoClaro() {
+        anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+        Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+        imgModo.setImage(image);
+
+    }
 }

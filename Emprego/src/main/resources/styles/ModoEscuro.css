@@ -93,3 +93,33 @@
     -fx-base: #58595A;
     -fx-border-color: #58595A;
 }
+
+#botaoAdicionar {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size:17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAdicionar:hover {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAdicionar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}

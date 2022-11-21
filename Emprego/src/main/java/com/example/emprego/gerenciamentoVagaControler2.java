@@ -150,7 +150,7 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
     private String[] periodos = {"DIURNO", "NOTURNO", "INTEGRAL"};
 
-    private String[] status = {"ABERTA", "FECHADA"};
+    private String[] status = {"Aberta", "Encerrada", "Em Andamento"};
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

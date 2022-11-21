@@ -44,6 +44,8 @@ public class gerenciamentoVagaControler implements Initializable {
     @FXML
     private ToggleButton botaoEditar;
 
+    Vaga vag = new Vaga();
+
 
 
     // Definindo os itens da tabela
@@ -104,8 +106,8 @@ public class gerenciamentoVagaControler implements Initializable {
 
         //Coleta de identificador da vaga
 
-
         Vaga vg = tabelaVagas.getSelectionModel().getSelectedItem();
+
         int id = vg.getId();
 
         try{
@@ -122,13 +124,16 @@ public class gerenciamentoVagaControler implements Initializable {
 
                 //CÓDIGO AQUI ABAIXO
 
-
+                VagaDAO vagaDAO = new VagaDAO();
+                vagaDAO.deletevaga(id);
 
                 //POP-UP DE AVISO DE DELETE DA VAGA
 
                 Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
-                alert2.setHeaderText("VAGA DELETADA COM SUCESSO " + id);
+                alert2.setHeaderText("VAGA DELETADA COM SUCESSO ");
                 alert2.showAndWait();
+
+                tabela();
 
             }
 

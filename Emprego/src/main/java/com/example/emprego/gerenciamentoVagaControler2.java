@@ -18,12 +18,19 @@ import javafx.scene.control.ComboBox;
 
 import java.net.URL;
 
+import javafx.scene.control.cell.PropertyValueFactory;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
 import org.dom4j.Element;
 
+import static com.example.emprego.gerenciamentoVagaControler.id_vaga;
+
 public class gerenciamentoVagaControler2 implements Initializable {
+
+    String remo, end, cidest;
+
+
 
     @FXML
     private Label labelCep;
@@ -140,7 +147,31 @@ public class gerenciamentoVagaControler2 implements Initializable {
     void VoltarTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("gerenciamentovaga");}
 
     @FXML
-    void SalvarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("");}
+    void SalvarVaga(ActionEvent event) throws Exception {
+
+        int id = id_vaga;
+
+        VagaDAO vagaDAO = new VagaDAO();
+        Vaga vaga = new Vaga();
+
+        exp();
+        rem();
+
+        vaga.setCargo(campoCargo.getValue());
+        vaga.setCidade(cidest);
+        vaga.setDescricao(campoDescricao.getText());
+        vaga.setExperiencia(exp);
+        vaga.setRemoto(remo);
+        vaga.setEndereco(end);
+        vaga.setStatus_vaga(campoStatus.getValue());
+        vaga.setPeriodo(campoPeriodo.getValue());
+        vaga.setSalario(Float.parseFloat(campoSalario.getText()));
+
+        vagaDAO.updvaga(vaga, id);
+
+        HelloApplication.ChangeScene("");}
+
+    String exp = "";
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
@@ -155,9 +186,34 @@ public class gerenciamentoVagaControler2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+
+
+        VagaDAO vg = new VagaDAO();
+
         campoEstado.getItems().addAll(estados);
         campoPeriodo.getItems().addAll(periodos);
         campoStatus.getItems().addAll(status);
+
+        cargo();
+
+        int id = id_vaga;
+
+        for (VagaStatic c : vg.Search(id)){
+
+            campoCargo.setValue(c.getCargo());
+            campoSalario.setText(String.valueOf(c.getSalario()));
+            campoPeriodo.setValue(c.getPeriodo());
+            campoCidade.setText(c.getCidade());
+            campoDescricao.setText(c.getDescricao());
+            campoStatus.setValue(c.getStatus_vaga());
+
+            if (c.getRemoto().equals("Sim")){
+                campoRemoto.setSelected(true);
+            }
+            if (c.getExperiencia().equals("Sim")){
+                campoExperiencia.setSelected(true);
+            }
+        }
 
     }
 
@@ -267,5 +323,47 @@ public class gerenciamentoVagaControler2 implements Initializable {
             System.out.println(e);
         }
     }
+
+    void cargo(){
+
+        // laço para percorrer a lista e adicionar os componentes
+
+        for (String c : CargoDAO.carg()){
+
+            //adicionar cargos
+            campoCargo.getItems().add(c);
+        }
+
+    }
+
+    void exp(){
+
+        if (campoExperiencia.isSelected()){
+
+            exp = "Sim";
+
+        }else{
+
+            exp = "Não";
+        }
+
+    }
+
+    void rem(){
+        if (campoRemoto.isSelected()){
+
+            remo = "Sim";
+            end = "Remoto";
+            cidest = "Remoto";
+
+        }else{
+
+            cidest = campoCidade.getText() + " - " + campoEstado.getValue();
+            remo = "Não";
+            end = campoEndereco.getText() + ", " + campoBairro.getText() + ", " + campoNumero.getText() + ", " + campoCep.getText() + ", " + campoComplemento.getText();
+
+        }
+    }
+
 }
 

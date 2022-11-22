@@ -119,6 +119,7 @@ public class VagaDAO {
                 vagastatic.setExperiencia(rset.getString("experiencia"));
                 vagastatic.setRemoto(rset.getString("remoto"));
                 vagastatic.setEndereco(rset.getString("endereco_vaga"));
+                vagastatic.setStatus_vaga(rset.getString("status_vaga"));
 
                 funclist.add(vagastatic);
 
@@ -213,6 +214,47 @@ public class VagaDAO {
             pstm = (PreparedStatement) conn.prepareStatement(sql);
 
             pstm.setInt(1, id);
+
+            pstm.execute();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            try {
+                if (pstm!=null){
+                    pstm.close();
+                }
+
+                if (conn != null){
+                    conn.close();
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updvaga(Vaga vaga, int id){
+
+        String sql = "UPDATE vaga SET cargo_vaga = ?, funcionario_cpf = ?, periodo = ?, experiencia = ?, salario = ?, descricao_vaga = ?, endereco_vaga = ?, cidade_vaga = ?, remoto = ?, status_vaga = ? WHERE id_vaga = ?";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+
+        try{
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+
+            pstm.setString(1, vaga.getCargo());
+            pstm.setLong(2, vaga.getFuncionario());
+            pstm.setString(3, vaga.getPeriodo());
+            pstm.setString(4, vaga.getExperiencia());
+            pstm.setFloat(5, vaga.getSalario());
+            pstm.setString(6, vaga.getDescricao());
+            pstm.setString(7, vaga.getEndereco());
+            pstm.setString(8, vaga.getCidade());
+            pstm.setString(9, vaga.getRemoto());
+            pstm.setString(10, vaga.getStatus_vaga());
+            pstm.setLong(11, id);
 
             pstm.execute();
 

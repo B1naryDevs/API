@@ -44,10 +44,6 @@ public class gerenciamentoVagaControler implements Initializable {
     @FXML
     private ToggleButton botaoEditar;
 
-    Vaga vag = new Vaga();
-
-
-
     // Definindo os itens da tabela
 
     @FXML
@@ -80,6 +76,8 @@ public class gerenciamentoVagaControler implements Initializable {
     @FXML
     private TableColumn<Vaga, String> colunaStatus;
 
+    static int id_vaga;
+
 
     // Definição das ações dos botões
 
@@ -108,7 +106,7 @@ public class gerenciamentoVagaControler implements Initializable {
 
         Vaga vg = tabelaVagas.getSelectionModel().getSelectedItem();
 
-        int id = vg.getId();
+        id_vaga = vg.getId();
 
         try{
 
@@ -125,7 +123,7 @@ public class gerenciamentoVagaControler implements Initializable {
                 //CÓDIGO AQUI ABAIXO
 
                 VagaDAO vagaDAO = new VagaDAO();
-                vagaDAO.deletevaga(id);
+                vagaDAO.deletevaga(id_vaga);
 
                 //POP-UP DE AVISO DE DELETE DA VAGA
 
@@ -148,7 +146,13 @@ public class gerenciamentoVagaControler implements Initializable {
     }
 
     @FXML
-    void EditarVaga(ActionEvent event) throws Exception {HelloApplication.ChangeScene("gerenciamentovaga2");}
+    void EditarVaga(ActionEvent event) throws Exception {
+
+        Vaga vg = tabelaVagas.getSelectionModel().getSelectedItem();
+        id_vaga = vg.getId();
+
+        HelloApplication.ChangeScene("gerenciamentovaga2");
+    }
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}

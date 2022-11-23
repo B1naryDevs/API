@@ -186,7 +186,9 @@ public class gerenciamentoVagaControler2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        List<String> tratamento = new ArrayList();
 
+        List<String> cidesta = new ArrayList();
 
         VagaDAO vg = new VagaDAO();
 
@@ -203,9 +205,25 @@ public class gerenciamentoVagaControler2 implements Initializable {
             campoCargo.setValue(c.getCargo());
             campoSalario.setText(String.valueOf(c.getSalario()));
             campoPeriodo.setValue(c.getPeriodo());
-            campoCidade.setText(c.getCidade());
             campoDescricao.setText(c.getDescricao());
             campoStatus.setValue(c.getStatus_vaga());
+
+
+
+            tratamento.addAll(List.of(c.getEndereco().split(",")));
+            cidesta.addAll(List.of(c.getCidade().split(" - ")));
+
+            campoBairro.setText(tratamento.get(2));
+            campoEndereco.setText(tratamento.get(0));
+            campoNumero.setText(tratamento.get(1));
+            campoCep.setText(tratamento.get(4));
+            campoComplemento.setText(tratamento.get(3));
+
+
+            campoCidade.setText(cidesta.get(0));
+            campoEstado.setValue(cidesta.get(1));
+
+            //System.out.println(cidesta);
 
             if (c.getRemoto().equals("Sim")){
                 campoRemoto.setSelected(true);
@@ -358,9 +376,7 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
         }else{
 
-            cidest = campoCidade.getText() + " - " + campoEstado.getValue();
             remo = "Não";
-            end = campoEndereco.getText() + ", " + campoBairro.getText() + ", " + campoNumero.getText() + ", " + campoCep.getText() + ", " + campoComplemento.getText();
 
         }
     }

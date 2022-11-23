@@ -120,6 +120,7 @@ public class VagaDAO {
                 vagastatic.setRemoto(rset.getString("remoto"));
                 vagastatic.setEndereco(rset.getString("endereco_vaga"));
                 vagastatic.setStatus_vaga(rset.getString("status_vaga"));
+                vagastatic.setCidade(rset.getString("cidade_vaga"));
 
                 funclist.add(vagastatic);
 

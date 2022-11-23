@@ -28,9 +28,7 @@ import static com.example.emprego.gerenciamentoVagaControler.id_vaga;
 
 public class gerenciamentoVagaControler2 implements Initializable {
 
-    String remo, end, cidest;
-
-
+    String end, cidest, exp;
 
     @FXML
     private Label labelCep;
@@ -149,29 +147,55 @@ public class gerenciamentoVagaControler2 implements Initializable {
     @FXML
     void SalvarVaga(ActionEvent event) throws Exception {
 
-        int id = id_vaga;
+        try{
 
-        VagaDAO vagaDAO = new VagaDAO();
-        Vaga vaga = new Vaga();
+            int id = id_vaga;
 
-        exp();
-        rem();
+            VagaDAO vagaDAO = new VagaDAO();
+            Vaga vaga = new Vaga();
 
-        vaga.setCargo(campoCargo.getValue());
-        vaga.setCidade(cidest);
-        vaga.setDescricao(campoDescricao.getText());
-        vaga.setExperiencia(exp);
-        vaga.setRemoto(remo);
-        vaga.setEndereco(end);
-        vaga.setStatus_vaga(campoStatus.getValue());
-        vaga.setPeriodo(campoPeriodo.getValue());
-        vaga.setSalario(Float.parseFloat(campoSalario.getText()));
+            if (campoRemoto.isSelected()){
 
-        vagaDAO.updvaga(vaga, id);
+                exp();
 
-        HelloApplication.ChangeScene("");}
+                vaga.setCargo(campoCargo.getValue());
+                vaga.setCidade("Remoto");
+                vaga.setDescricao(campoDescricao.getText());
+                vaga.setExperiencia(exp);
+                vaga.setRemoto("Sim");
+                vaga.setEndereco("Remoto");
+                vaga.setCidade("Remoto");
+                vaga.setStatus_vaga(campoStatus.getValue());
+                vaga.setPeriodo(campoPeriodo.getValue());
+                vaga.setSalario(Float.parseFloat(campoSalario.getText()));
 
-    String exp = "";
+                vagaDAO.updvaga(vaga, id);
+
+            }else {
+
+                vaga.setCargo(campoCargo.getValue());
+                vaga.setCidade(cidest);
+                vaga.setDescricao(campoDescricao.getText());
+                vaga.setExperiencia(exp);
+                vaga.setRemoto("Não");
+                vaga.setEndereco(end);
+                vaga.setStatus_vaga(campoStatus.getValue());
+                vaga.setPeriodo(campoPeriodo.getValue());
+                vaga.setSalario(Float.parseFloat(campoSalario.getText()));
+
+                vagaDAO.updvaga(vaga, id);
+
+            }
+
+        }catch (Exception e){
+            Alert alert3 = new Alert(Alert.AlertType.ERROR);
+            alert3.setHeaderText("ERRO AO TENTAR ATUALIZAR AS INFORMAÇÕES\n" + e );
+            alert3.showAndWait();
+
+        }
+
+        HelloApplication.ChangeScene("");
+    }
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
@@ -186,52 +210,66 @@ public class gerenciamentoVagaControler2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
-        List<String> tratamento = new ArrayList();
+        try{
 
-        List<String> cidesta = new ArrayList();
+            List<String> tratamento = new ArrayList();
 
-        VagaDAO vg = new VagaDAO();
+            List<String> cidesta = new ArrayList();
 
-        campoEstado.getItems().addAll(estados);
-        campoPeriodo.getItems().addAll(periodos);
-        campoStatus.getItems().addAll(status);
+            VagaDAO vg = new VagaDAO();
 
-        cargo();
+            campoEstado.getItems().addAll(estados);
+            campoPeriodo.getItems().addAll(periodos);
+            campoStatus.getItems().addAll(status);
 
-        int id = id_vaga;
+            cargo();
 
-        for (VagaStatic c : vg.Search(id)){
+            int id = id_vaga;
 
-            campoCargo.setValue(c.getCargo());
-            campoSalario.setText(String.valueOf(c.getSalario()));
-            campoPeriodo.setValue(c.getPeriodo());
-            campoDescricao.setText(c.getDescricao());
-            campoStatus.setValue(c.getStatus_vaga());
+            for (VagaStatic c : vg.Search(id)){
 
+                campoCargo.setValue(c.getCargo());
+                campoSalario.setText(String.valueOf(c.getSalario()));
+                campoPeriodo.setValue(c.getPeriodo());
+                campoDescricao.setText(c.getDescricao());
+                campoStatus.setValue(c.getStatus_vaga());
 
+                if (c.getExperiencia().equals("Sim")){
+                    campoExperiencia.setSelected(true);
+                }
 
-            tratamento.addAll(List.of(c.getEndereco().split(",")));
-            cidesta.addAll(List.of(c.getCidade().split(" - ")));
+                if (c.getRemoto().equals("Sim")){
 
-            campoBairro.setText(tratamento.get(2));
-            campoEndereco.setText(tratamento.get(0));
-            campoNumero.setText(tratamento.get(1));
-            campoCep.setText(tratamento.get(4));
-            campoComplemento.setText(tratamento.get(3));
+                    campoRemoto.setSelected(true);
+                    campos();
 
+                }else{
 
-            campoCidade.setText(cidesta.get(0));
-            campoEstado.setValue(cidesta.get(1));
+                    tratamento.addAll(List.of(c.getEndereco().split(",")));
+                    cidesta.addAll(List.of(c.getCidade().split(" - ")));
 
-            //System.out.println(cidesta);
+                    campoBairro.setText(tratamento.get(2));
+                    campoEndereco.setText(tratamento.get(0));
+                    campoNumero.setText(tratamento.get(1));
+                    campoCep.setText(tratamento.get(4));
+                    campoComplemento.setText(tratamento.get(3));
 
-            if (c.getRemoto().equals("Sim")){
-                campoRemoto.setSelected(true);
+                    campoCidade.setText(cidesta.get(0));
+                    campoEstado.setValue(cidesta.get(1));
+
+                }
+
             }
-            if (c.getExperiencia().equals("Sim")){
-                campoExperiencia.setSelected(true);
-            }
+
+        }catch (Exception e){
+
+            Alert alert3 = new Alert(Alert.AlertType.ERROR);
+            alert3.setHeaderText("ERRO AO TENTAR CARREGAR AS INFORMAÇÕES\n" + e );
+            alert3.showAndWait();
+
         }
+
+
 
     }
 
@@ -367,18 +405,30 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
     }
 
-    void rem(){
-        if (campoRemoto.isSelected()){
+    void ende(){
 
-            remo = "Sim";
-            end = "Remoto";
-            cidest = "Remoto";
+        end = campoEndereco.getText() + ", " + campoNumero.getText() + ", " + campoBairro.getText() + ", " + campoComplemento.getText() + ", " + campoCep.getText();
+        cidest = campoCidade.getText() + " - " + campoEstado.getValue();
 
-        }else{
+    }
 
-            remo = "Não";
+    void campos(){
 
-        }
+        campoCep.setVisible(false);
+        campoCidade.setVisible(false);
+        campoComplemento.setVisible(false);
+        campoEndereco.setVisible(false);
+        campoEstado.setVisible(false);
+        campoNumero.setVisible(false);
+        campoBairro.setVisible(false);
+        labelBairro.setVisible(false);
+        labelCep.setVisible(false);
+        labelCidade.setVisible(false);
+        labelComplemento.setVisible(false);
+        labelEndereco.setVisible(false);
+        labelNumero.setVisible(false);
+        labelEstado.setVisible(false);
+
     }
 
 }

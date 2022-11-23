@@ -42,6 +42,9 @@ public class Vaga {
         this.Id = Id;
     }
 
+    public Vaga(String cargo_vaga, long funcionario_cpf, String periodo, float salario, String experiencia, String descricao_vaga, String remoto, int id_vaga, String status_vaga) {
+    }
+
     public String getEmpresa_vaga() {
         return empresa_vaga;
     }

@@ -192,7 +192,7 @@ public class VagaDAO {
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
-                vagalist.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                vagalist.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"), rs.getString("status_vaga"))));
             }
 
         } catch (Exception e) {

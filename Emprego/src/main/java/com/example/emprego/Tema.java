@@ -1,17 +1,15 @@
 package com.example.emprego;
 
-public class Tema {
+import java.awt.*;
 
-    public static boolean modo;
+public class Tema{
+    static Boolean luz = false;
+    public Tema(){}
 
-    public Tema() {}
-
-    public Tema(boolean modo) {this.modo = modo;}
-
-    public static boolean getModo() {
-        return modo;
+    public static Boolean getLuz() {
+        return luz;
     }
-
-    public static void setModo(String nome) {Tema.modo = modo;}
+    public static void setLuz(Boolean luz) {
+        Tema.luz = luz;
+    }
 }
-

@@ -91,6 +91,17 @@ public class candidatoControler2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+
         // laço para percorrer a lista e adicionar os componentes
         for (String c : CargoDAO.carg()) {
 
@@ -251,32 +262,20 @@ public class candidatoControler2 implements Initializable {
         data.formatter();
     }
 
-    Image img_ModoEscuro = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
-    Image img_ModoClaro = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
-
-    private boolean modo = true;
-
-    public void alterarModo(ActionEvent event) {
-        modo = !modo;
-        if (modo) {
-            setModoEscuro();
-        } else {
-            setModoClaro();
+    public void alterarModo(ActionEvent event){
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
         }
-    }
-
-    private void setModoEscuro() {
-        anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
-        Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
-        imgModo.setImage(image);
-    }
-
-    private void setModoClaro() {
-        anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
-        Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
-        imgModo.setImage(image);
-
     }
 }

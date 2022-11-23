@@ -1,10 +1,12 @@
 package com.example.emprego;
 
 import java.io.FileNotFoundException;
+import java.net.URL;
 import java.util.*;
 import java.util.regex.Pattern;
 
 import AcessoDAO.CandidatoDAO;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,7 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 
-public class candidatoControler {
+public class candidatoControler implements Initializable {
 
     @FXML
     private Button botaoAvancar;
@@ -66,6 +68,20 @@ public class candidatoControler {
 
     @FXML
     private ImageView imgModo;
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1){
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+    }
 
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
@@ -416,33 +432,21 @@ public class candidatoControler {
             campoConfirmarsenha2.setVisible(false);
         }
     }
-
-    Image img_ModoEscuro = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
-    Image img_ModoClaro = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
-
-    private boolean modo = true;
-
     public void alterarModo(ActionEvent event){
-        modo =! modo;
-        if(modo) {
-            setModoEscuro();
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
         }else{
-            setModoClaro();
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
         }
-    }
-
-    private void setModoEscuro(){
-        anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
-        Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
-        imgModo.setImage(image);
-    }
-
-    private void setModoClaro(){
-        anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
-        anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
-        Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
-        imgModo.setImage(image);
     }
 }
 

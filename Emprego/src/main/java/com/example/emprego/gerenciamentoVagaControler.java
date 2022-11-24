@@ -1,5 +1,7 @@
 package com.example.emprego;
 
+
+
 import AcessoDAO.FuncionarioDAO;
 import AcessoDAO.VagaDAO;
 import javafx.collections.ObservableList;
@@ -14,6 +16,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class gerenciamentoVagaControler implements Initializable {
+
 
     // Nomeclatura dos botões
 
@@ -185,7 +188,8 @@ public class gerenciamentoVagaControler implements Initializable {
                 colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
                 colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
                 colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Funcionario"));
-                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("status_vaga"));
+                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Status"));
+
 
                 ObservableList<Vaga> vagaList = VagaDAO.Vga();
                 tabelaVagas.setItems(vagaList);
@@ -210,7 +214,7 @@ public class gerenciamentoVagaControler implements Initializable {
                 colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
                 colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
                 colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Funcionario"));
-                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("status_vaga"));
+                //colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("status"));
 
                 ObservableList<Vaga> vagaList = VagaDAO.VgaFilt(cpf);
                 tabelaVagas.setItems(vagaList);

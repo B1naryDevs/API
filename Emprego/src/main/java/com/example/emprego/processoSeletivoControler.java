@@ -11,6 +11,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -36,9 +39,17 @@ public class processoSeletivoControler  implements Initializable {
     @FXML
     private Button botaoVoltar;
 
-
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
     @FXML
     private TableView<Candidatura> tabelaCandidaturas;
@@ -51,6 +62,16 @@ public class processoSeletivoControler  implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
 
         colunaCargo.setCellValueFactory(new PropertyValueFactory<Candidatura,String>("Cargo"));
         colunaData.setCellValueFactory(new PropertyValueFactory<Candidatura,String>("Data"));
@@ -82,6 +103,22 @@ public class processoSeletivoControler  implements Initializable {
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
+        }
+    }
 }
 
 

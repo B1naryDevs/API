@@ -30,7 +30,7 @@
                     <font>
                         <Font size="20.0" />
                     </font></Label>
-                <Button id="botaoAvancar" fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="103.0" text="AVANÇAR" textFill="WHITE">
+                <Button id="botaoAvancar" fx:id="botaoAvancar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#AvancarTela" prefHeight="37.0" prefWidth="105.0" text="AVANÇAR" textFill="WHITE">
                     <font>
                         <Font size="1.0" />
                     </font>
@@ -189,7 +189,7 @@
                   <Font size="14.0" />
                </font>
             </TextField>
-            <ToggleButton fx:id="tgbtModo" layoutX="1260.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0" textFill="WHITE">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0" textFill="WHITE">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

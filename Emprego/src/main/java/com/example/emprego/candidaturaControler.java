@@ -12,6 +12,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+
 import java.net.URL;
 import java.util.Calendar;
 import java.util.ResourceBundle;
@@ -41,8 +45,16 @@ public class candidaturaControler implements Initializable{
     @FXML
     private ChoiceBox<String> campoFiltrar;
 
-    // Definindo os itens da tabela
+    @FXML
+    private ToggleButton tgbtModo;
 
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
+
+    // Definindo os itens da tabela
     @FXML
     private TableView<Vaga> tabelaVagas;
     @FXML
@@ -70,12 +82,23 @@ public class candidaturaControler implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);}
+
         for (String c : CargoDAO.carg()){
 
             //adicionar cargos
             campoFiltrar.getItems().add(c);
 
         }
+
 
         colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Cargo"));
         colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Periodo"));
@@ -151,5 +174,20 @@ public class candidaturaControler implements Initializable{
             alert.showAndWait();
         }
     }
-
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
+        }
+    }
 }

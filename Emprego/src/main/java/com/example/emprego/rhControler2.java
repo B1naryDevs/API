@@ -3,18 +3,17 @@ package com.example.emprego;
 import AcessoDAO.FuncionarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ToggleButton;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
@@ -23,8 +22,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
-public class rhControler2  {
+public class rhControler2 implements Initializable {
 
     // Nomeclatura dos botões e campos
     
@@ -82,8 +82,32 @@ public class rhControler2  {
     @FXML
     private PasswordField campoConfirmarSenha2;
 
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
+
 
     // Definição das ações dos botões
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+    }
 
     @FXML
     void AvancarHome(ActionEvent event) throws Exception {HelloApplication.ChangeScene("homerh");}
@@ -400,6 +424,23 @@ public class rhControler2  {
             campoConfirmarSenha2.setText(campoConfirmarSenha.getText());
             campoConfirmarSenha2.setVisible(true);
             campoConfirmarSenha.setVisible(false);
+        }
+    }
+
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
         }
     }
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
@@ -17,34 +18,34 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.gerenciamentoVagaControler2">
     <children>
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
+        <AnchorPane id="anchor" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" VBox.vgrow="ALWAYS">
             <children>
                 <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../imagens/+empregosemfundo.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="HOME" textFill="WHITE">
+                <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" text="HOME" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button fx:id="botaoVaga" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="VAGA" textFill="WHITE">
+                <Button fx:id="botaoVaga" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVaga" prefHeight="50.0" prefWidth="103.0" text="VAGA" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button fx:id="botaoCargo" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" stylesheets="@../../../styles/Styles3.css" text="CARGO" textFill="WHITE">
+                <Button fx:id="botaoCargo" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargo" prefHeight="50.0" prefWidth="103.0" text="CARGO" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" stylesheets="@../../../styles/Styles3.css" text="RH" textFill="WHITE">
+                <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="110.0" text="RH" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
                 </Button>
-                <Button fx:id="botaoRelatorio" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIO" textFill="WHITE">
+                <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorio" prefHeight="50.0" prefWidth="135.0" text="RELATÓRIO" textFill="WHITE">
                     <font>
                         <Font size="23.0" />
                     </font>
@@ -59,7 +60,7 @@
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <Button fx:id="botaoSalvar" layoutX="1152.0" layoutY="586.0" mnemonicParsing="false" onAction="#SalvarVaga" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="SALVAR" textFill="WHITE">
+                <Button fx:id="botaoSalvar" layoutX="1152.0" layoutY="586.0" mnemonicParsing="false" onAction="#SalvarVaga" prefHeight="38.0" prefWidth="120.0" text="SALVAR" textFill="WHITE">
                     <font>
                         <Font size="17.0" />
                     </font>
@@ -74,7 +75,7 @@
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoSalario" layoutX="571.0" layoutY="298.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+                <TextField fx:id="campoSalario" layoutX="571.0" layoutY="298.0" prefHeight="25.0" prefWidth="210.0" />
                 <Label layoutX="928.0" layoutY="354.0" text="DESCRIÇÃO*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
@@ -90,19 +91,19 @@
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoCep" layoutX="94.0" layoutY="473.0" onAction="#BuscaCep" onKeyReleased="#mascaraCep" prefHeight="25.0" prefWidth="170.0" promptText="99999-999" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+                <TextField fx:id="campoCep" layoutX="94.0" layoutY="473.0" onAction="#BuscaCep" onKeyReleased="#mascaraCep" prefHeight="25.0" prefWidth="170.0" promptText="99999-999" />
                 <Label fx:id="labelNumero" layoutX="571.0" layoutY="528.0" text="NÚMERO*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoNumero" layoutX="571.0" layoutY="552.0" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+                <TextField fx:id="campoNumero" layoutX="571.0" layoutY="552.0" prefHeight="25.0" prefWidth="82.0" />
                 <Label fx:id="labelCidade" layoutX="333.0" layoutY="446.0" text="CIDADE*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoCidade" layoutX="333.0" layoutY="473.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+                <TextField fx:id="campoCidade" layoutX="333.0" layoutY="473.0" prefHeight="25.0" prefWidth="170.0" />
                 <Label fx:id="labelEstado" layoutX="697.0" layoutY="528.0" text="ESTADO*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
@@ -113,8 +114,8 @@
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoComplemento" layoutX="333.0" layoutY="552.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
-                <TextField fx:id="campoEndereco" layoutX="571.0" layoutY="473.0" prefHeight="25.0" prefWidth="210.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
+                <TextField fx:id="campoComplemento" layoutX="333.0" layoutY="552.0" prefHeight="25.0" prefWidth="170.0" />
+                <TextField fx:id="campoEndereco" layoutX="571.0" layoutY="473.0" prefHeight="25.0" prefWidth="210.0" />
                 <Label fx:id="labelEndereco" layoutX="571.0" layoutY="446.0" text="ENDEREÇO*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
@@ -125,8 +126,8 @@
                         <Font size="20.0" />
                     </font>
                 </Label>
-                <TextField fx:id="campoBairro" layoutX="94.0" layoutY="552.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
-                <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="37.0" prefWidth="44.0" style="-fx-background-color: #343A40;">
+                <TextField fx:id="campoBairro" layoutX="94.0" layoutY="552.0" prefHeight="25.0" prefWidth="170.0" />
+                <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="37.0" prefWidth="44.0">
                     <graphic>
                         <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -138,15 +139,15 @@
                         <Tooltip text="Sair" />
                     </tooltip>
                 </ToggleButton>
-                <TextArea id="campoDescricao" fx:id="campoDescricao" layoutX="928.0" layoutY="386.0" prefHeight="190.0" prefWidth="300.0" stylesheets="@../../../styles/Styles12.css" />
-                <ChoiceBox fx:id="campoCargo" layoutX="94.0" layoutY="298.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />
-                <ChoiceBox fx:id="campoPeriodo" layoutX="333.0" layoutY="298.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles4.css" />
+                <TextArea fx:id="campoDescricao" layoutX="928.0" layoutY="386.0" prefHeight="190.0" prefWidth="300.0" />
+                <ChoiceBox fx:id="campoCargo" layoutX="94.0" layoutY="298.0" prefHeight="25.0" prefWidth="170.0" />
+                <ChoiceBox fx:id="campoPeriodo" layoutX="333.0" layoutY="298.0" prefHeight="25.0" prefWidth="170.0" />
                 <CheckBox fx:id="campoExperiencia" layoutX="928.0" layoutY="283.0" mnemonicParsing="false" text="EXPERIÊNCIA PROFISSIONAL*" textFill="WHITE">
                     <font>
                         <Font size="20.0" />
                     </font></CheckBox>
-                <ComboBox fx:id="campoEstado" layoutX="697.0" layoutY="552.0" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles5.css" />
-                <Button fx:id="botaoVoltar" layoutX="94.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" stylesheets="@../../../styles/Styles2.css" text="VOLTAR" />
+                <ComboBox fx:id="campoEstado" layoutX="697.0" layoutY="552.0" prefHeight="25.0" prefWidth="82.0" />
+                <Button fx:id="botaoVoltar" layoutX="94.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="38.0" prefWidth="120.0" text="VOLTAR" />
             <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagens/+empregosemfundo.png" />
@@ -157,8 +158,21 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="campoStatus" layoutX="333.0" layoutY="401.0" prefHeight="25.0" prefWidth="170.0" stylesheets="@../../../styles/Styles4.css" />
+            <ChoiceBox fx:id="campoStatus" layoutX="333.0" layoutY="401.0" prefHeight="25.0" prefWidth="170.0" />
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+               <graphic>
+                  <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/Lua.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
             </children>
+         <stylesheets>
+            <URL value="@../../../styles/ModoClaro.css" />
+            <URL value="@../../../styles/ModoEscuro.css" />
+         </stylesheets>
         </AnchorPane>
     </children>
 </VBox>

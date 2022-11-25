@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
@@ -18,7 +19,7 @@
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.candidatoControler3">
   <children>
-    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" VBox.vgrow="ALWAYS">
+    <AnchorPane id="anchor" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" VBox.vgrow="ALWAYS">
       <children>
             <Circle layoutX="800.0" layoutY="604.0" radius="30.0" smooth="false" strokeType="INSIDE" strokeWidth="0.0">
                <fill>
@@ -73,7 +74,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" textFill="WHITE">
+            <Button id="botaoVoltar" fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="105.0" text="VOLTAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -102,7 +103,7 @@
             <Label layoutX="663.0" layoutY="634.0" text="DADOS" textFill="WHITE" />
             <Label layoutX="653.0" layoutY="646.0" text="OPCIONAIS" textFill="WHITE" />
             <Label layoutX="768.0" layoutY="634.0" text="FINALIZAÇÃO" textFill="WHITE" />
-            <Button fx:id="botaoFinalizar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#FinalizarCadastro" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="FINALIZAR" textFill="WHITE">
+            <Button id="botaoFinalizar" fx:id="botaoFinalizar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#FinalizarCadastro" prefHeight="37.0" prefWidth="105.0" text="FINALIZAR" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
@@ -117,10 +118,10 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoInstituicao" layoutX="274.0" layoutY="411.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="campoCurso" layoutX="893.0" layoutY="412.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+            <TextField fx:id="campoInstituicao" layoutX="274.0" layoutY="411.0" prefHeight="25.0" prefWidth="301.0" />
+            <TextField fx:id="campoCurso" layoutX="893.0" layoutY="412.0" prefHeight="25.0" prefWidth="301.0" />
+            <TextField fx:id="campoCompetencia" layoutX="274.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -133,10 +134,23 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <ChoiceBox fx:id="campoIngles" layoutX="893.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" style="-fx-background-color: #58595A" stylesheets="@../../../styles/Styles4.css" />
-            <TextField fx:id="campoInicio" layoutX="199.0" layoutY="468.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
-            <TextField fx:id="campoTermino" layoutX="446.0" layoutY="469.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+            <ChoiceBox fx:id="campoIngles" layoutX="893.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" />
+            <TextField fx:id="campoInicio" layoutX="199.0" layoutY="468.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
+            <TextField fx:id="campoTermino" layoutX="446.0" layoutY="469.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+               <graphic>
+                  <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/Lua.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
       </children>
+         <stylesheets>
+            <URL value="@../../../styles/ModoClaro.css" />
+            <URL value="@../../../styles/ModoEscuro.css" />
+         </stylesheets>
     </AnchorPane>
   </children>
 </VBox>

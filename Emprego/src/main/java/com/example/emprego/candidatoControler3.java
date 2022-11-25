@@ -23,6 +23,9 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.control.Label;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 
 public class candidatoControler3 implements Initializable{
@@ -31,6 +34,15 @@ public class candidatoControler3 implements Initializable{
     private Button botaoFinalizar;
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
     @FXML
     private Label labelIngles;
@@ -42,10 +54,20 @@ public class candidatoControler3 implements Initializable{
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
-
         campoIngles.getItems().addAll(nivel);
 
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
     }
+
     public void getNivel(ActionEvent event) throws Exception{
         String NivelSelecionado = campoIngles.getValue();
         labelIngles.setText(NivelSelecionado);
@@ -158,5 +180,22 @@ public class candidatoControler3 implements Initializable{
     @FXML
     void VoltarTela(ActionEvent event) throws Exception {
         HelloApplication.ChangeScene("candidato2");
+    }
+
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
+        }
     }
 }

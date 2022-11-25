@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -15,18 +16,18 @@
 
 <VBox prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #343A40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.emprego.rhControler2">
    <children>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#mascaraTel" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles.css">
+      <AnchorPane id="anchor" fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#mascaraTel" prefHeight="768.0" prefWidth="1366.0">
          <children>
             <ImageView fitHeight="80.0" fitWidth="361.0" layoutX="49.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../imagens/+empregosemfundo.png" />
                </image></ImageView>
-            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="HOME" />
-            <Button fx:id="botaoCargos" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="CARGO" />
-            <Button fx:id="botaoVagas" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="VAGA" />
-            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RH" />
-            <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="151.0" style="-fx-background-color: #343A40;" stylesheets="@../../../styles/Styles3.css" text="RELATÓRIOS" />
-            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0" style="-fx-background-color: #343A40;">
+            <Button fx:id="botaoHome" layoutX="400.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarHome" prefHeight="50.0" prefWidth="103.0" text="HOME" />
+            <Button fx:id="botaoCargos" layoutX="725.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarCargos" prefHeight="50.0" prefWidth="103.0" text="CARGO" />
+            <Button fx:id="botaoVagas" layoutX="558.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarVagas" prefHeight="50.0" prefWidth="103.0" text="VAGA" />
+            <Button fx:id="botaoRH" layoutX="881.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRH" prefHeight="50.0" prefWidth="103.0" text="RH" />
+            <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="151.0" text="RELATÓRIOS" />
+            <ToggleButton fx:id="botaoSair" layoutX="1245.0" layoutY="22.0" mnemonicParsing="false" onAction="#SairTela" prefHeight="35.0" prefWidth="40.0">
                <graphic>
                   <ImageView fitHeight="37.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -41,7 +42,7 @@
                   <Font size="63.0" />
                </font>
             </Label>
-            <TextField fx:id="campoNome" layoutX="205.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css">
+            <TextField fx:id="campoNome" layoutX="205.0" layoutY="280.0" prefHeight="30.0" prefWidth="330.0">
                <font>
                   <Font size="14.0" />
                </font></TextField>
@@ -54,7 +55,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <TextField fx:id="campoEmail" layoutX="205.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" promptText="seuemail@email.com" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css">
+            <TextField fx:id="campoEmail" layoutX="205.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0" promptText="seuemail@email.com">
                <font>
                   <Font size="14.0" />
                </font></TextField>
@@ -78,29 +79,29 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" stylesheets="@../../../styles/Styles.css" text="VOLTAR" />
-            <Button fx:id="botaoCadastrar" layoutX="1157.0" layoutY="586.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="38.0" prefWidth="130.0" stylesheets="@../../../styles/Styles2.css" text="CADASTRAR" />
-            <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" promptText="(99)99999-9999" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css">
+            <Button fx:id="botaoVoltar" layoutX="79.0" layoutY="586.0" mnemonicParsing="false" onAction="#VoltarTela" prefHeight="37.0" prefWidth="103.0" text="VOLTAR" />
+            <Button fx:id="botaoCadastrar" layoutX="1147.0" layoutY="586.0" mnemonicParsing="false" onAction="#CadastrarFuncionario" prefHeight="38.0" prefWidth="130.0" text="CADASTRAR" />
+            <TextField fx:id="campoTelefone" layoutX="205.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0" promptText="(99)99999-9999">
                <font>
                   <Font size="14.0" />
                </font></TextField>
-            <TextField fx:id="campoCpf" layoutX="900.0" layoutY="280.0" onKeyReleased="#mascaraCpf" prefHeight="30.0" prefWidth="374.0" promptText="999.999.999-99" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css">
+            <TextField fx:id="campoCpf" layoutX="900.0" layoutY="280.0" onKeyReleased="#mascaraCpf" prefHeight="30.0" prefWidth="374.0" promptText="999.999.999-99">
                <font>
                   <Font size="14.0" />
                </font></TextField>
             <StackPane layoutX="900.0" layoutY="380.0" prefHeight="30.0" prefWidth="330.0">
                <children>
-                  <TextField fx:id="campoSenha" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
-                  <PasswordField fx:id="campoSenha2" prefHeight="30.0" prefWidth="330.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+                  <TextField fx:id="campoSenha" prefHeight="30.0" prefWidth="330.0" />
+                  <PasswordField fx:id="campoSenha2" prefHeight="30.0" prefWidth="330.0" promptText="MAIUSCULA. MINUSCULA, NUMERO E CARACTER ESPECIAL" />
                </children></StackPane>
-            <ToggleButton fx:id="tgbtMostrarSenha" layoutX="1230.0" layoutY="380.0" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #58595A;">
+            <ToggleButton fx:id="tgbtMostrarSenha" layoutX="1230.0" layoutY="380.0" mnemonicParsing="false" onAction="#mostrarSenha" prefHeight="30.0" prefWidth="45.0">
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/iconApagar.png" />
                      </image></ImageView>
                </graphic></ToggleButton>
-            <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="1230.0" layoutY="480.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: #58595A;">
+            <ToggleButton fx:id="tgbtMostrarSenha2" layoutX="1230.0" layoutY="480.0" mnemonicParsing="false" onAction="#mostrarSenha2" prefHeight="30.0" prefWidth="45.0">
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -111,10 +112,23 @@
             </ToggleButton>
             <StackPane layoutX="900.0" layoutY="480.0" prefHeight="30.0" prefWidth="330.0">
                <children>
-                  <TextField fx:id="campoConfirmarSenha" prefHeight="30.0" prefWidth="330.0" style="-fx-background-color: #58595A; -fx-text-inner-color: white" stylesheets="@../../../styles/Styles7.css" />
-                  <PasswordField fx:id="campoConfirmarSenha2" prefHeight="30.0" prefWidth="330.0" promptText="MAIÚSCULA, MINÚSCULA, NÚMERO E CARACTER ESPECIAL" style="-fx-background-color: #58595A; -fx-text-inner-color: white" />
+                  <TextField fx:id="campoConfirmarSenha" prefHeight="30.0" prefWidth="330.0" />
+                  <PasswordField fx:id="campoConfirmarSenha2" prefHeight="30.0" prefWidth="330.0" promptText="MAIÚSCULA, MINÚSCULA, NÚMERO E CARACTER ESPECIAL" />
                </children>
             </StackPane>
-         </children></AnchorPane>
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+               <graphic>
+                  <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../imagens/Lua.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </ToggleButton>
+         </children>
+         <stylesheets>
+            <URL value="@../../../styles/ModoClaro.css" />
+            <URL value="@../../../styles/ModoEscuro.css" />
+         </stylesheets></AnchorPane>
    </children>
 </VBox>

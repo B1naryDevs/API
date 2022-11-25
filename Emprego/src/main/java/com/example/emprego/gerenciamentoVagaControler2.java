@@ -19,6 +19,9 @@ import javafx.scene.control.ComboBox;
 import java.net.URL;
 
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
@@ -103,7 +106,7 @@ public class gerenciamentoVagaControler2 implements Initializable {
     private Button botaoRH;
 
     @FXML
-    private Button botaoRelatorio;
+    private Button botaoRelatorios;
 
     @FXML
     private Button botaoVoltar;
@@ -113,6 +116,15 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
     @FXML
     public ChoiceBox<String> campoCargo;
@@ -209,6 +221,17 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+
 
         try{
 
@@ -431,5 +454,21 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
     }
 
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
+        }
+    }
 }
 

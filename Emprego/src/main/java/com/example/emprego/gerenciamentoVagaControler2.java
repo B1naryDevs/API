@@ -183,7 +183,14 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
                 vagaDAO.updvaga(vaga, id);
 
+                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                alert3.setHeaderText("VAGA ATUALIZADA COM SUCESSO !");
+                alert3.showAndWait();
+
             }else {
+
+                ende();
+                exp();
 
                 vaga.setCargo(campoCargo.getValue());
                 vaga.setCidade(cidest);
@@ -197,6 +204,10 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
                 vagaDAO.updvaga(vaga, id);
 
+                Alert alert3 = new Alert(Alert.AlertType.INFORMATION);
+                alert3.setHeaderText("VAGA ATUALIZADA COM SUCESSO !");
+                alert3.showAndWait();
+
             }
 
         }catch (Exception e){
@@ -206,7 +217,7 @@ public class gerenciamentoVagaControler2 implements Initializable {
 
         }
 
-        HelloApplication.ChangeScene("");
+        HelloApplication.ChangeScene("gerenciamentovaga");
     }
 
     @FXML

@@ -156,7 +156,7 @@
             <ChoiceBox fx:id="campoCargoInteresse" layoutX="986.0" layoutY="272.0" prefHeight="25.0" prefWidth="275.0" />
             <TextField fx:id="campoInicio" layoutX="162.0" layoutY="357.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
             <TextField fx:id="campoTermino" layoutX="403.0" layoutY="357.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
-            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="100.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

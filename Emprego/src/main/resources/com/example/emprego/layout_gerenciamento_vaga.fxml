@@ -44,7 +44,7 @@
             <Button fx:id="botaoRelatorios" layoutX="1034.0" layoutY="19.0" mnemonicParsing="false" onAction="#AvancarRelatorios" prefHeight="50.0" prefWidth="135.0" text="RELATÓRIO" />
             <ToggleButton fx:id="botaoEditar" layoutX="1109.0" layoutY="212.0" mnemonicParsing="false" onAction="#EditarVaga" prefHeight="45.0" prefWidth="45.0">
                <graphic>
-                  <ImageView fitHeight="35.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="37.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../imagens/edit.png" />
                      </image></ImageView>
@@ -81,7 +81,7 @@
                   <TableColumn fx:id="colunaStatus" prefWidth="150.0" text="STATUS" />
                </columns>
             </TableView>
-            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="100.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

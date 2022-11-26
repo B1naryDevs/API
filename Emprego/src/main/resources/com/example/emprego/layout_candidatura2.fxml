@@ -45,7 +45,7 @@
                   <Font size="25.0" />
                </font>
             </Label>
-            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="100.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

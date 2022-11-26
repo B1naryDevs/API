@@ -8,6 +8,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -39,6 +42,15 @@ public class telaVagaControler3 implements Initializable {
 
     @FXML
     private Button botaoSelecionar;
+
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
 
     // Definição dos itens da tabela;
@@ -79,13 +91,22 @@ public class telaVagaControler3 implements Initializable {
     @FXML
     private Label SalarioVaga;
 
-    @FXML
-    private Label UfVaga;
-
     public static long selcpf;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+
         VagaStatic vagastatic = new VagaStatic();
         CargoVaga.setText(vagastatic.getCargo());
         SalarioVaga.setText(String.valueOf(vagastatic.getSalario()));
@@ -144,4 +165,20 @@ public class telaVagaControler3 implements Initializable {
     @FXML
     void SairTela(ActionEvent event) throws Exception {HelloApplication.ChangeScene("login");}
 
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
+        }
+    }
 }

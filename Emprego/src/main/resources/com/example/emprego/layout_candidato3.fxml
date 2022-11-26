@@ -137,7 +137,7 @@
             <ChoiceBox fx:id="campoIngles" layoutX="893.0" layoutY="354.0" prefHeight="25.0" prefWidth="301.0" />
             <TextField fx:id="campoInicio" layoutX="199.0" layoutY="468.0" onKeyReleased="#mascaraData" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
             <TextField fx:id="campoTermino" layoutX="446.0" layoutY="469.0" onKeyReleased="#mascaraData2" prefHeight="25.0" prefWidth="130.0" promptText="dd/mm/aaaa" />
-            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="100.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

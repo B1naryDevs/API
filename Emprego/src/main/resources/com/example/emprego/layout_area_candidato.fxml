@@ -80,7 +80,7 @@
             </Label>
             <Button fx:id="botaoSalvar" layoutX="1038.0" layoutY="490.0" mnemonicParsing="false" onAction="#AtualizarDados" prefHeight="37.0" prefWidth="105.0" text="SALVAR" />
             <Button fx:id="botaoAcompanhar" layoutX="870.0" layoutY="600.0" mnemonicParsing="false" onAction="#AvancarProcessoSeletivo" text="ACOMPANHAR PROCESSOS SELETIVOS" />
-            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="96.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
+            <ToggleButton fx:id="tgbtModo" layoutX="1256.0" layoutY="100.0" mnemonicParsing="false" onAction="#alterarModo" prefHeight="25.0" prefWidth="25.0">
                <graphic>
                   <ImageView fx:id="imgModo" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>

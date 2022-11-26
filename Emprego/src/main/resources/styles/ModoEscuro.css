@@ -361,6 +361,96 @@
     -fx-border-color: #f57c00;
 }
 
+#botaoSelecionar {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size:17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSelecionar:hover {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSelecionar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAprovar {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size:17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAprovar:hover {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAprovar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoReprovar {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size:17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoReprovar:hover {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoReprovar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size: 17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
 // Style CSS para os choice-box
 
 // Cor de fundo de todo o menu de contexto
@@ -474,4 +564,201 @@
 .table-column {
      -fx-font-weight: bold;
      -fx-text-fill: white;
+}
+
+#CargoVaga {
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+
+}
+
+#DescricaoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EnderecoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PeriodoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#RemotoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#SalarioVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CpfCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DataCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EmailCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#NomeCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#TelefoneCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CompetenciaCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CursoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#FormacaoInicio{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#FormacaoTermino{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#InglesCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#InstituicaoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DescricaoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EmpresaCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpInicio{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpTermino{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoInteresse{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PretensaoSalarial{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DescricaoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PeriodoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#RemotoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#SalarioVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EnderecoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#labelSobre{
+    -fx-text-fill: white;
+}
+
+#labelSobre2{
+    -fx-text-fill: white;
+}
+
+#labelSobre3{
+    -fx-text-fill: white;
+}
+
+#labelSobre4{
+    -fx-text-fill: white;
+}
+
+#labelSobre5{
+    -fx-text-fill: white;
+}
+
+#labelSobre6{
+    -fx-text-fill: white;
+}
+
+#labelSobre7{
+    -fx-text-fill: white;
+}
+
+#labelSobre8{
+    -fx-text-fill: white;
+}
+
+#labelSobre9{
+    -fx-text-fill: white;
 }

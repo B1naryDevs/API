@@ -18,14 +18,13 @@ import javafx.scene.control.ComboBox;
 
 import java.net.URL;
 
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.io.SAXReader;
 import org.dom4j.Element;
-
-
-
-
 
 public class vagaControler implements Initializable {
 
@@ -55,9 +54,6 @@ public class vagaControler implements Initializable {
 
     @FXML
     private Label labelPeriodo;
-
-    @FXML
-    private Button botaoFinalizar;
 
     @FXML
     private TextField campoBairro;
@@ -90,6 +86,9 @@ public class vagaControler implements Initializable {
     private CheckBox campoExperiencia;
 
     @FXML
+    private Button botaoFinalizar;
+
+    @FXML
     private Button botaoHome;
 
     @FXML
@@ -102,13 +101,22 @@ public class vagaControler implements Initializable {
     private Button botaoRH;
 
     @FXML
-    private Button botaoRelatorio;
+    private Button botaoRelatorios;
 
     @FXML
     private Button botaoVoltar;
 
     @FXML
     private ToggleButton botaoSair;
+
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
 
     @FXML
     public ChoiceBox<String> campoCargo;
@@ -145,6 +153,16 @@ public class vagaControler implements Initializable {
     private String[] periodos = {"DIURNO", "NOTURNO", "INTEGRAL"};
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
 
         // laço para percorrer a lista e adicionar os componentes
         for (String c : CargoDAO.carg()){
@@ -394,6 +412,22 @@ public class vagaControler implements Initializable {
 
         } catch(Exception e){
             System.out.println(e);
+        }
+    }
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
         }
     }
 }

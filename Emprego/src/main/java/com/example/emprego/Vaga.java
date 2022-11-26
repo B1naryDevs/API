@@ -1,5 +1,7 @@
 package com.example.emprego;
 
+import java.io.ObjectInputFilter;
+
 public class Vaga {
     private String cargo;
     private String periodo;
@@ -43,6 +45,15 @@ public class Vaga {
     }
 
     public Vaga(String cargo_vaga, long funcionario_cpf, String periodo, float salario, String experiencia, String descricao_vaga, String remoto, int id_vaga, String status_vaga) {
+        this.cargo = cargo_vaga;
+        this.funcionario = funcionario_cpf;
+        this.periodo = periodo;
+        this.salario = salario;
+        this.experiencia = experiencia;
+        this.descricao = descricao_vaga;
+        this.remoto = remoto;
+        this.Id = id_vaga;
+        this.status_vaga = status_vaga;
     }
 
     public String getEmpresa_vaga() {

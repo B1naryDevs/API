@@ -210,7 +210,7 @@ public class gerenciamentoVagaControler implements Initializable {
                 colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
                 colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
                 colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Funcionario"));
-                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Status"));
+                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Status_vaga"));
 
 
                 ObservableList<Vaga> vagaList = VagaDAO.Vga();
@@ -236,7 +236,7 @@ public class gerenciamentoVagaControler implements Initializable {
                 colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
                 colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
                 colunaFuncionario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Funcionario"));
-                //colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("status"));
+                colunaStatus.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Status_vaga"));
 
                 ObservableList<Vaga> vagaList = VagaDAO.VgaFilt(cpf);
                 tabelaVagas.setItems(vagaList);

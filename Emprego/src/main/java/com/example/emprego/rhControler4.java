@@ -142,10 +142,18 @@ public class rhControler4 implements Initializable {
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.isPresent() && result.get() == ButtonType.OK){
 
+                    vg_func();
+
                     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
                     Funcionario funcionario = new Funcionario();
                     funcionario.setEmail(secemail);
                     funcionarioDAO.deletefunc(funcionario);
+
+
+
+                    Alert alert2 = new Alert(Alert.AlertType.INFORMATION);
+                    alert2.setHeaderText("USUARIO DELETADO COM SUCESSO");
+                    alert2.showAndWait();
 
                     colunaNome.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Nome"));
                     colunaEmail.setCellValueFactory(new PropertyValueFactory<Funcionario,String>("Email"));
@@ -249,5 +257,21 @@ public class rhControler4 implements Initializable {
             tema.setLuz(false);
         }
     }
+
+    void vg_func(){
+
+        FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+        long cpf = 0L;
+        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+        String eml = String.valueOf(selecionado.getEmail());
+
+        for (Funcionario rh : funcionarioDAO.Func(eml)){
+            cpf = rh.getCpf();
+        }
+
+        funcionarioDAO.deletevg(cpf);
+
+    }
+
 }
 

@@ -89,7 +89,7 @@
 ### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/dev/1%C2%BA%20Sprint)
 ### [2º Sprint - 19/09 á 09/10](https://github.com/B1naryDevs/API/tree/dev/2%C2%B0%20Sprint)
 ### [3º Sprint - 17/10 á 06/11](https://github.com/B1naryDevs/API/tree/dev/3%C2%B0%20Sprint)
-### 4º Sprint - 07/11 á 27/11
+### [4º Sprint - 07/11 á 27/11](https://github.com/B1naryDevs/API/tree/dev/4%C2%B0%20Sprint)
 
 </div>
 
@@ -97,7 +97,7 @@
 
 <hr>
 
-<img src = "https://user-images.githubusercontent.com/101594950/190708500-d0a1594a-c6d8-47fa-a550-53e8393c87bf.png" width="900" height="200" /> <br>
+<img src = "https://user-images.githubusercontent.com/101594950/204066587-ed625bc0-42b3-4970-a036-e6f30cbc06d1.png" width="900" height="200" /> <br>
 
 <hr>
 

@@ -55,7 +55,7 @@
    
   <img src = "https://user-images.githubusercontent.com/101594950/190472217-16afc4a5-bbf4-4073-a0ae-4d122b896dfc.png" width="800" height="200" /> <br>
  
-![WhatsApp Image 2022-11-06 at 22 01 11](https://user-images.githubusercontent.com/101594950/200206589-704278b8-0ef6-408a-97b5-badff9c91d80.jpeg)
+![WhatsApp Image 2022-11-27 at 07 28 54](https://user-images.githubusercontent.com/101594950/204163289-06cb1ba8-85cd-4fa2-a204-d04252226a5d.jpeg)
 
   <hr>
 
@@ -66,7 +66,7 @@
 <details>
 <summary> GERENCIAMENTO DE VAGAS </summary>
   
-  ![Cadastro_Vaga](https://user-images.githubusercontent.com/101594950/200205873-0f51b563-e081-4a0f-ad19-641fb946a14d.gif)
+  ![2022-11-27 18-48-11_Trim (1)](https://user-images.githubusercontent.com/101594950/204163322-5c0b1b2c-367f-4991-8522-985d0a4bef1f.gif)
 
   </summary>
   

@@ -140,7 +140,7 @@ public class telaVagaControler3 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
 
     @FXML
     void SelecionarCandidato(ActionEvent event) throws Exception {

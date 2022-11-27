@@ -18,11 +18,47 @@ public class Funcionario {
 
      String acesso;
 
+    public Integer getVagas() {
+        return vagas;
+    }
+
+    public void setVagas(Integer vagas) {
+        this.vagas = vagas;
+    }
+
+    public Integer getAprovados() {
+        return aprovados;
+    }
+
+    public void setAprovados(Integer aprovados) {
+        this.aprovados = aprovados;
+    }
+
+    public Integer getReprovados() {
+        return reprovados;
+    }
+
+    public void setReprovados(Integer reprovados) {
+        this.reprovados = reprovados;
+    }
+
+    Integer vagas;
+     Integer aprovados;
+     Integer reprovados;
+
     public Funcionario(String nome_func, String email, long telefone) {
 
         this.nome = nome_func;
         this.email = email;
         this.telefone = telefone;
+
+    }
+
+    public Funcionario(String nome, Integer vagas, Integer aprovados, Integer reprovados) {
+        this.nome = nome;
+        this.vagas = vagas;
+        this.aprovados = aprovados;
+        this.reprovados = reprovados;
 
     }
 

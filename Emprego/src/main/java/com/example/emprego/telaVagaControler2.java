@@ -96,17 +96,32 @@ public class telaVagaControler2 implements Initializable {
             imgModo.setImage(image);
         }
 
-        colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Cargo"));
-        colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Periodo"));
-        colunaSalario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Salario"));
-        colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Experiencia"));
-        colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Descricao"));
-        colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Remoto"));
-        colunaId.setCellValueFactory(new PropertyValueFactory<Vaga,String>("Id"));
 
-        ObservableList<Vaga> ListaP = VagaDAO.Datauser();
-        tabelaVagas.setItems(ListaP);
+        FuncionarioUsuario funcionariousuario = new FuncionarioUsuario();
+        String email = funcionariousuario.getEmail();
+        if(email.equals("Adm@gmail.com")) {
+            colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Cargo"));
+            colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Periodo"));
+            colunaSalario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Salario"));
+            colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Experiencia"));
+            colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Descricao"));
+            colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
+            colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
 
+            ObservableList<Vaga> ListaP = VagaDAO.Datauser();
+            tabelaVagas.setItems(ListaP);
+        }else{
+            colunaCargo.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Cargo"));
+            colunaPeriodo.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Periodo"));
+            colunaSalario.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Salario"));
+            colunaExperiencia.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Experiencia"));
+            colunaDescricao.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Descricao"));
+            colunaRemoto.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Remoto"));
+            colunaId.setCellValueFactory(new PropertyValueFactory<Vaga, String>("Id"));
+
+            ObservableList<Vaga> ListaP = VagaDAO.Datavaga();
+            tabelaVagas.setItems(ListaP);
+        }
     }
 
 
@@ -125,7 +140,7 @@ public class telaVagaControler2 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
 
     @FXML
     void SelecionarVaga(ActionEvent event) throws Exception {

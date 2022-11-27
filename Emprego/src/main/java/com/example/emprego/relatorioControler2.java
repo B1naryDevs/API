@@ -15,7 +15,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class relatorioControler implements Initializable{
+public class relatorioControler2 implements Initializable{
 
     // Nomeclatura dos botões
 
@@ -64,7 +64,8 @@ public class relatorioControler implements Initializable{
         colunaAprovados.setCellValueFactory(new PropertyValueFactory<Funcionario,Integer>("Aprovados"));
         colunaReprovados.setCellValueFactory(new PropertyValueFactory<Funcionario,Integer>("Reprovados"));
 
-        ObservableList<Funcionario> ListaP = FuncionarioDAO.Datafunc();
+        rhControler4 rhControler4 = new rhControler4();
+        ObservableList<Funcionario> ListaP = FuncionarioDAO.Datafunc2(String.valueOf(rhControler4.getSeccpf()));
         tabelaRelatorios.setItems(ListaP);
     }
 

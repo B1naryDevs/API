@@ -16,6 +16,55 @@ import static com.example.emprego.rhControler4.*;
 
 public class FuncionarioDAO {
 
+    public static ObservableList<Funcionario> Datafunc(){
+
+        Connection conn = null;
+        ResultSet rset = null;
+
+        ObservableList<Funcionario> list = FXCollections.observableArrayList();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            PreparedStatement ps = conn.prepareStatement("SELECT nome_func as nome,COUNT(distinct vaga.id_vaga) as vagas,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Aprovado' and funcionario_cpf = a.funcionario_cpf) as aprovados,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Reprovado' and funcionario_cpf = a.funcionario_cpf) as reprovados FROM candidatura a join funcionario, vaga WHERE a.funcionario_cpf = funcionario.cpf and vaga.funcionario_cpf = a.funcionario_cpf and vaga.status_vaga = 'Aberta' group by a.funcionario_cpf");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                list.add((new Funcionario(rs.getString("nome"), rs.getInt("vagas"), rs.getInt("aprovados"), rs.getInt("reprovados"))));
+            }
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+
+    }
+
+    public static ObservableList<Funcionario> Datafunc2(String cpf){
+
+        Connection conn = null;
+        ResultSet rset = null;
+
+        ObservableList<Funcionario> list = FXCollections.observableArrayList();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            PreparedStatement ps = conn.prepareStatement("SELECT nome_func as nome,COUNT(distinct vaga.id_vaga) as vagas,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Aprovado' and funcionario_cpf = a.funcionario_cpf) as aprovados,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Reprovado' and funcionario_cpf = a.funcionario_cpf) as reprovados FROM candidatura a join funcionario, vaga WHERE a.funcionario_cpf = funcionario.cpf and vaga.funcionario_cpf = a.funcionario_cpf and vaga.status_vaga = 'Aberta' and a.funcionario_cpf = ? group by a.funcionario_cpf");
+            ps.setString(1, cpf);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()){
+                list.add((new Funcionario(rs.getString("nome"), rs.getInt("vagas"), rs.getInt("aprovados"), rs.getInt("reprovados"))));
+            }
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+
+    }
+
     public static ObservableList<Funcionario> Datauser(){
 
         Connection conn = null;

@@ -15,6 +15,8 @@ import java.net.URL;
 import java.util.*;
 import java.util.regex.Pattern;
 
+import static com.example.emprego.rhControler4.seccpf;
+
 public class rhControler5 implements Initializable {
 
 
@@ -87,10 +89,31 @@ public class rhControler5 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
 
     @FXML
-    void TelaRelatorio(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
+    void TelaRelatorio(ActionEvent event) throws Exception {try{
+
+        Usuario emg = new Usuario();
+        emg.getEmail();
+
+        if (emg.getEmail().equals("Adm@gmail.com")){
+            HelloApplication.ChangeScene("relatorio2");
+
+        }else {
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("ACESSO NEGADO!");
+            alert.showAndWait();
+
+        }
+
+
+    } catch (Exception e){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText("SELECIONE UM COLABORADOR !");
+        alert.showAndWait();
+    }}
 
 
     @FXML

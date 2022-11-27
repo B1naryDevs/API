@@ -88,6 +88,43 @@ public class VagaDAO {
 
     }
 
+    public static ObservableList<Vaga> Datavaga(){
+
+        Connection conn = null;
+        ResultSet rset = null;
+
+        ObservableList<Vaga> list = FXCollections.observableArrayList();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            FiltroVagas filtroVagas = new FiltroVagas();
+            FuncionarioUsuario funcionarioUsuario = new FuncionarioUsuario();
+            if(filtroVagas.getFiltro()!=null) {
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, funcionario_cpf, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga where cargo_vaga = ? and funcionario_cpf = ? order by salario asc");
+                ps.setString(1, filtroVagas.getFiltro());
+                ps.setString(2, String.valueOf(funcionarioUsuario.getCpf()));
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                }
+            }else{
+                PreparedStatement ps = conn.prepareStatement("select cargo_vaga, funcionario_cpf, periodo, salario, experiencia, descricao_vaga, remoto, id_vaga from vaga where funcionario_cpf = ? order by salario asc");
+                ps.setString(1, String.valueOf(funcionarioUsuario.getCpf()));
+                ResultSet rs = ps.executeQuery();
+                while (rs.next()){
+                    list.add((new Vaga(rs.getString("cargo_vaga"), rs.getLong("funcionario_cpf"), rs.getString("periodo"), rs.getFloat("salario"), rs.getString("experiencia"), rs.getString("descricao_vaga"), rs.getString("remoto"), rs.getInt("id_vaga"))));
+                }
+            }
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+
+    }
+
     public List<VagaStatic> Search(Integer id)
 
     {

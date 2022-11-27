@@ -3,6 +3,7 @@ package com.example.emprego;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 
@@ -40,6 +41,7 @@ public class HelloApplication extends Application {
     private static Scene telavaga3;
     private static Scene telavaga4;
     private static Scene relatorio;
+    private static Scene relatorio2;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -56,6 +58,7 @@ public class HelloApplication extends Application {
     }
 
     public static void ChangeScene(String tela) throws IOException {
+        FuncionarioUsuario funcionarioUsuario = new FuncionarioUsuario();
         switch (tela) {
             case "candidato":
                 Parent layout_candidato = FXMLLoader.load(HelloApplication.class.getResource("layout_candidato.fxml"));
@@ -220,10 +223,28 @@ public class HelloApplication extends Application {
                 stage.setFullScreen(true);
                 break;
             case "relatorio":
-                Parent layout_relatorio = FXMLLoader.load(HelloApplication.class.getResource("layout_relatorio.fxml"));
-                relatorio = new Scene(layout_relatorio);
-                stage.setScene(relatorio);
-                stage.setFullScreen(true);
+                if(funcionarioUsuario.getEmail().equals("Adm@gmail.com")){
+                    Parent layout_relatorio = FXMLLoader.load(HelloApplication.class.getResource("layout_relatorio.fxml"));
+                    relatorio = new Scene(layout_relatorio);
+                    stage.setScene(relatorio);
+                    stage.setFullScreen(true);
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("ACESSO NEGADO!");
+                    alert.showAndWait();
+                }
+                break;
+            case "relatorio2":
+                if(funcionarioUsuario.getEmail().equals("Adm@gmail.com")){
+                    Parent layout_relatorio2 = FXMLLoader.load(HelloApplication.class.getResource("layout_relatorio2.fxml"));
+                    relatorio2 = new Scene(layout_relatorio2);
+                    stage.setScene(relatorio2);
+                    stage.setFullScreen(true);
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setHeaderText("ACESSO NEGADO!");
+                    alert.showAndWait();
+                }
         }
     }
 

@@ -79,6 +79,12 @@ public class rhControler4 implements Initializable {
 
     public static String secemail;
 
+    public static Long getSeccpf() {
+        return seccpf;
+    }
+
+    public static Long seccpf;
+
 
     // Definição das ações dos botões
 
@@ -95,28 +101,11 @@ public class rhControler4 implements Initializable {
     void AvancarRH(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh");}
 
     @FXML
-    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("rh4");}
+    void AvancarRelatorios(ActionEvent event) throws Exception {HelloApplication.ChangeScene("relatorio");}
 
     @FXML
     void TelaRelatorios(ActionEvent event) throws Exception {
-        Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
-        secemail = String.valueOf(selecionado.getEmail());
-
-        Usuario emg = new Usuario();
-        emg.getEmail();
-
-        if (emg.getEmail().equals("Adm@gmail.com")){
-
-            HelloApplication.ChangeScene("relatorio");
-        }
-
-        else{
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("ACESSO NEGADO!");
-            alert.showAndWait();
-
-        }
+        HelloApplication.ChangeScene("relatorio");
     }
 
     @FXML
@@ -188,6 +177,7 @@ public class rhControler4 implements Initializable {
 
             Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
             secemail = String.valueOf(selecionado.getEmail());
+            seccpf = Long.valueOf(selecionado.getCpf());
 
             Usuario emg = new Usuario();
             emg.getEmail();

@@ -146,7 +146,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label layoutX="40.0" layoutY="398.0" text="Endereço" textFill="WHITE">
+            <Label fx:id="LabelEnderecoVaga2" layoutX="40.0" layoutY="398.0" text="Endereço" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>

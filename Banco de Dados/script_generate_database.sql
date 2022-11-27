@@ -66,6 +66,7 @@ CREATE TABLE experiencia_profissional (
     id_exp INT(5) AUTO_INCREMENT NOT NULL,
     cpf_candidato_exp BIGINT(11) NOT NULL,
     cargo_exercido VARCHAR(40) NOT NULL,
+    empresa_exp VARCHAR(40) NOT NULL,
     inicio_exp varchar(10) not null,
     termino_exp varchar(10) null,
     cargo_atual ENUM('Sim', 'Não') NOT NULL,

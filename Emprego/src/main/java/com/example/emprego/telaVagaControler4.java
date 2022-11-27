@@ -103,6 +103,8 @@ public class telaVagaControler4  implements  Initializable{
 
     @FXML
     private Label EnderecoVaga2;
+    @FXML
+    private Label LabelEnderecoVaga2;
 
 
     // Definição dos botões
@@ -177,6 +179,12 @@ public class telaVagaControler4  implements  Initializable{
         DescricaoVaga2.setText(vagastatic.getDescricao());
         ExpVaga2.setText(vagastatic.getExperiencia());
         RemotoVaga2.setText(vagastatic.getRemoto());
+        if(vagastatic.getEndereco().equals("Remoto")){
+            LabelEnderecoVaga2.setVisible(false);
+            EnderecoVaga2.setVisible(false);
+        }else{
+            EnderecoVaga2.setText(vagastatic.getEndereco());
+        }
 
         Candidato candidato = new Candidato();
         NomeCandidato.setText(candidato.getNome());
@@ -192,6 +200,17 @@ public class telaVagaControler4  implements  Initializable{
         CompetenciaCandidato.setText(candidato.getCompetencia());
         InglesCandidato.setText(candidato.getIdioma());
 
+        CargoCandidato.setText(candidato.getCargo());
+        EmpresaCandidato.setText(candidato.getExpEmpresa());
+        ExpInicio.setText(candidato.getExpInicio());
+        if(candidato.getCargoAtual().equals("Sim")){
+            ExpTermino.setText("Emprego Atual");
+        }else{
+            ExpTermino.setText(candidato.getExpTermino());
+        }
+        CargoInteresse.setText(candidato.getCargoInteresse());
+        PretensaoSalarial.setText(String.valueOf(candidato.getPretSalarial()));
+        DescricaoCandidato.setText(candidato.getDescricao());
     }
 
 

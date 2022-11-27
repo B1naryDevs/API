@@ -61,8 +61,6 @@ public class CandidatoDAO {
             pstm.setString(2, candidato.getSenha());
             pstm.setLong(3, candidato.getCpf());
 
-            System.out.println("hello");
-
 
             pstm.execute();
 
@@ -84,7 +82,7 @@ public class CandidatoDAO {
     }
 
     public void saveexpcand (Candidato candidato){
-        String sql = "INSERT INTO experiencia_profissional (cpf_candidato_exp, cargo_exercido, inicio_exp, termino_exp, cargo_atual, desc_atividades) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO experiencia_profissional (cpf_candidato_exp, cargo_exercido, empresa_exp, inicio_exp, termino_exp, cargo_atual, desc_atividades) VALUES (?, ?, ?, ?, ?, ?, ?)";
         Connection conn = null;
         PreparedStatement pstm = null;
 
@@ -94,12 +92,11 @@ public class CandidatoDAO {
 
             pstm.setString(1, String.valueOf(candidato.getCpf()));
             pstm.setString(2, candidato.getCargo());
-            pstm.setString(3, candidato.getExpInicio());
-            pstm.setString(4, candidato.getExpTermino());
-            pstm.setString(5, candidato.getCargoAtual());
-            pstm.setString(6, candidato.getDescricao());
-
-            System.out.println("hello");
+            pstm.setString(3, candidato.getCargo());
+            pstm.setString(4, candidato.getExpInicio());
+            pstm.setString(5, candidato.getExpTermino());
+            pstm.setString(6, candidato.getCargoAtual());
+            pstm.setString(7, candidato.getDescricao());
 
 
             pstm.execute();
@@ -374,6 +371,8 @@ public class CandidatoDAO {
                 candidato.setCursoTermino(rset.getString("termino_curso"));
                 candidato.setIdioma(rset.getString("nivel"));
                 candidato.setCurso(rset.getString("curso"));
+                candidato.setCargoInteresse(rset.getString("pret_cargo"));
+                candidato.setPretSalarial(rset.getString("pret_salarial"));
 
                 funclist.add(candidato);
 
@@ -425,6 +424,62 @@ public class CandidatoDAO {
 
                 Candidato candidato = new Candidato();
                 candidato.setEmail(rset.getString("email"));
+
+                funclist.add(candidato);
+
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (rset != null) {
+                    rset.close();
+                }
+
+                if (pstm != null) {
+                    pstm.close();
+                }
+
+                if (conn != null) {
+                    conn.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        return funclist;
+
+    }
+
+    public List<Candidato> Search3(long cpf)
+
+    {
+        String sql = "Select * from experiencia_profissional where cpf_candidato_exp = ? order by id_exp desc limit 1";
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rset = null;
+
+        List<Candidato> funclist = new ArrayList<Candidato>();
+
+        try {
+            conn = ConnectionFactory.createConnectionToMySQL();
+            pstm = (PreparedStatement) conn.prepareStatement(sql);
+            pstm.setString(1, String.valueOf(cpf));
+            //objeto para ler os dados do banco
+            rset = pstm.executeQuery();
+
+
+            // laço para percorrer o objeto de acesso ao dados do banco
+            while (rset.next()) {
+
+                Candidato candidato = new Candidato();
+                candidato.setCargo(rset.getString("cargo_exercido"));
+                candidato.setExpEmpresa(rset.getString("empresa_exp"));
+                candidato.setExpInicio(rset.getString("inicio_exp"));
+                candidato.setExpTermino(rset.getString("termino_exp"));
+                candidato.setDescricao(rset.getString("desc_atividades"));
+                candidato.setCargoAtual(rset.getString("cargo_atual"));
 
                 funclist.add(candidato);
 

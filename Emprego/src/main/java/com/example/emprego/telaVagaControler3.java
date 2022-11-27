@@ -78,6 +78,8 @@ public class telaVagaControler3 implements Initializable {
 
     @FXML
     private Label EnderecoVaga;
+    @FXML
+    private Label LabelEnderecoVaga;
 
     @FXML
     private Label ExpVaga;
@@ -114,7 +116,12 @@ public class telaVagaControler3 implements Initializable {
         DescricaoVaga.setText(vagastatic.getDescricao());
         ExpVaga.setText(vagastatic.getExperiencia());
         RemotoVaga.setText(vagastatic.getRemoto());
-        EnderecoVaga.setText(vagastatic.getEndereco());
+        if(vagastatic.getEndereco().equals("Remoto")){
+            LabelEnderecoVaga.setVisible(false);
+            EnderecoVaga.setVisible(false);
+        }else{
+            EnderecoVaga.setText(vagastatic.getEndereco());
+        }
 
         colunaNome.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Nome"));
         colunaTelefone.setCellValueFactory(new PropertyValueFactory<CandidatoTabela,String>("Telefone"));
@@ -150,6 +157,7 @@ public class telaVagaControler3 implements Initializable {
             CandidatoDAO candidatoDAO = new CandidatoDAO();
             candidatoDAO.Search(selcpf);
             candidatoDAO.Search2(selcpf);
+            candidatoDAO.Search3(selcpf);
 
             HelloApplication.ChangeScene("telavaga4");
         } catch (Exception e) {

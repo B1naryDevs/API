@@ -262,15 +262,19 @@ public class candidatoControler implements Initializable {
                                                             candidato.setSenha(senhaMd5);
                                                             candidato.setTelefone(telefone_long);
 
-                                                            CandidatoDAO candidatoDAO = new CandidatoDAO();
-                                                            candidatoDAO.savecand(candidato);
-                                                            candidatoDAO.saveusucand(candidato);
-
                                                             Usuario usuario = new Usuario();
                                                             usuario.setEmail(email);
                                                             usuario.setCpf(cpf_long);
 
-                                                            HelloApplication.ChangeScene("candidato2");
+                                                            CandidatoDAO candidatoDAO = new CandidatoDAO();
+                                                            try {
+                                                                candidatoDAO.savecand(candidato);
+                                                                candidatoDAO.saveusucand(candidato);
+                                                            }catch (Exception e){
+                                                                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                                                alert.setHeaderText("CANDIDATO JÁ CADASTRADO!");
+                                                                alert.showAndWait();
+                                                            }
                                                         } else if((year-a)==16) {
                                                             String mes = data.substring(3,5);
                                                             int m = Integer.parseInt(mes);
@@ -289,15 +293,19 @@ public class candidatoControler implements Initializable {
                                                                     candidato.setSenha(senhaMd5);
                                                                     candidato.setTelefone(telefone_long);
 
-                                                                    CandidatoDAO candidatoDAO = new CandidatoDAO();
-                                                                    candidatoDAO.savecand(candidato);
-                                                                    candidatoDAO.saveusucand(candidato);
-
                                                                     Usuario usuario = new Usuario();
                                                                     usuario.setEmail(email);
                                                                     usuario.setCpf(cpf_long);
 
-                                                                    HelloApplication.ChangeScene("candidato2");
+                                                                    CandidatoDAO candidatoDAO = new CandidatoDAO();
+                                                                    try {
+                                                                        candidatoDAO.savecand(candidato);
+                                                                        candidatoDAO.saveusucand(candidato);
+                                                                    }catch (Exception e){
+                                                                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                                                                        alert.setHeaderText("CANDIDATO JÁ CADASTRADO!");
+                                                                        alert.showAndWait();
+                                                                    }
                                                                 } else {
                                                                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                                                                     alert.setHeaderText("PROCESSO DISPONÍVEL APENAS PARA MAIORES DE 16 ANOS!");

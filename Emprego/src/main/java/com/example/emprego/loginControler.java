@@ -5,17 +5,21 @@ import AcessoDAO.FuncionarioDAO;
 import AcessoDAO.UsuarioDAO;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.ToggleButton;
+import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ResourceBundle;
 
-public class loginControler {
+public class loginControler implements Initializable {
 
     @FXML
     private Button botaoCadastrar;
@@ -38,7 +42,30 @@ public class loginControler {
     @FXML
     private ToggleButton tgbtMostrarSenha;
 
+    @FXML
+    private ToggleButton tgbtModo;
+
+    @FXML
+    private AnchorPane anchor;
+
+    @FXML
+    private ImageView imgModo;
+
     public static String emailrh;
+
+    @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        Tema tema = new Tema();
+        if(tema.getLuz()==false){
+            Image image = new Image("file:src/main/resources/imagens/Lua.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+        }else{
+            Image image = new Image("file:src/main/resources/imagens/Sol.png",25,25,true,true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+        }
+    }
 
     @FXML
     void cadastrarLogin(ActionEvent event) throws Exception {
@@ -129,6 +156,23 @@ public class loginControler {
             campoSenha.setText(campoSenha2.getText());
             campoSenha.setVisible(true);
             campoSenha2.setVisible(false);
+        }
+    }
+
+    public void alterarModo(ActionEvent event) {
+        Tema tema = new Tema();
+        if (tema.getLuz() == false) {
+            Image image = new Image("file:src/main/resources/imagens/Sol.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoClaro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoEscuro.css");
+            imgModo.setImage(image);
+            tema.setLuz(true);
+        } else {
+            Image image = new Image("file:src/main/resources/imagens/Lua.png", 25, 25, true, true);
+            anchor.getStylesheets().add("file:src/main/resources/styles/ModoEscuro.css");
+            anchor.getStylesheets().remove("file:src/main/resources/styles/ModoClaro.css");
+            imgModo.setImage(image);
+            tema.setLuz(false);
         }
     }
 }

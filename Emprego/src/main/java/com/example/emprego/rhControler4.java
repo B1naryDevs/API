@@ -79,10 +79,6 @@ public class rhControler4 implements Initializable {
 
     public static String secemail;
 
-    public static Long getSeccpf() {
-        return seccpf;
-    }
-
     public static Long seccpf;
 
 
@@ -105,7 +101,37 @@ public class rhControler4 implements Initializable {
 
     @FXML
     void TelaRelatorios(ActionEvent event) throws Exception {
-        HelloApplication.ChangeScene("relatorio");
+
+        try {
+
+            Funcionario selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+            secemail = String.valueOf(selecionado.getEmail());
+            seccpf = Long.valueOf(selecionado.getCpf());
+
+            Usuario emg = new Usuario();
+            emg.getEmail();
+            emg.setCpf(seccpf);
+
+            if (emg.getEmail().equals("Adm@gmail.com")){
+
+                HelloApplication.ChangeScene("relatorio2");
+            }
+
+            else{
+
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("ACESSO NEGADO!");
+                alert.showAndWait();
+
+            }
+
+        }catch (Exception e){
+
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText("SELECIONE UM USUÁRIO");
+            alert.showAndWait();
+
+        }
     }
 
     @FXML
@@ -181,6 +207,7 @@ public class rhControler4 implements Initializable {
 
             Usuario emg = new Usuario();
             emg.getEmail();
+            emg.setCpf(seccpf);
 
             if (emg.getEmail().equals("Adm@gmail.com")){
 

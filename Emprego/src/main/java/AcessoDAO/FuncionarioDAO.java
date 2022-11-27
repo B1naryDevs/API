@@ -3,6 +3,8 @@ package AcessoDAO;
 import ConnectionFA.ConnectionFactory;
 import com.example.emprego.Funcionario;
 import com.example.emprego.FuncionarioUsuario;
+import com.example.emprego.Usuario;
+import com.example.emprego.rhControler4;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import java.sql.Connection;
@@ -40,7 +42,7 @@ public class FuncionarioDAO {
 
     }
 
-    public static ObservableList<Funcionario> Datafunc2(String cpf){
+    public static ObservableList<Funcionario> Datafunc2(rhControler4 rhcontroler4){
 
         Connection conn = null;
         ResultSet rset = null;
@@ -49,8 +51,8 @@ public class FuncionarioDAO {
 
         try {
             conn = ConnectionFactory.createConnectionToMySQL();
-            PreparedStatement ps = conn.prepareStatement("SELECT nome_func as nome,COUNT(distinct vaga.id_vaga) as vagas,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Aprovado' and funcionario_cpf = a.funcionario_cpf) as aprovados,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Reprovado' and funcionario_cpf = a.funcionario_cpf) as reprovados FROM candidatura a join funcionario, vaga WHERE a.funcionario_cpf = funcionario.cpf and vaga.funcionario_cpf = a.funcionario_cpf and vaga.status_vaga = 'Aberta' and a.funcionario_cpf = ? group by a.funcionario_cpf");
-            ps.setString(1, cpf);
+            PreparedStatement ps = conn.prepareStatement("SELECT nome_func as nome,COUNT(distinct vaga.id_vaga) as vagas,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Aprovado' and funcionario_cpf = a.funcionario_cpf) as aprovados,(SELECT COUNT(*) FROM candidatura WHERE status_cand='Reprovado' and funcionario_cpf = a.funcionario_cpf) as reprovados FROM candidatura a join funcionario, vaga WHERE a.funcionario_cpf = funcionario.cpf and vaga.funcionario_cpf = a.funcionario_cpf and vaga.status_vaga = 'Aberta' and funcionario.email = ? group by a.funcionario_cpf");
+            ps.setString(1, rhcontroler4.getSecemail());
             ResultSet rs = ps.executeQuery();
             while (rs.next()){
                 list.add((new Funcionario(rs.getString("nome"), rs.getInt("vagas"), rs.getInt("aprovados"), rs.getInt("reprovados"))));

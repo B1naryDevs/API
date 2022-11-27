@@ -65,7 +65,7 @@ public class relatorioControler2 implements Initializable{
         colunaReprovados.setCellValueFactory(new PropertyValueFactory<Funcionario,Integer>("Reprovados"));
 
         rhControler4 rhControler4 = new rhControler4();
-        ObservableList<Funcionario> ListaP = FuncionarioDAO.Datafunc2(String.valueOf(rhControler4.getSeccpf()));
+        ObservableList<Funcionario> ListaP = FuncionarioDAO.Datafunc2(rhControler4);
         tabelaRelatorios.setItems(ListaP);
     }
 

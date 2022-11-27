@@ -99,7 +99,6 @@ public class rhControler5 implements Initializable {
 
         if (emg.getEmail().equals("Adm@gmail.com")){
             HelloApplication.ChangeScene("relatorio2");
-
         }else {
 
             Alert alert = new Alert(Alert.AlertType.ERROR);

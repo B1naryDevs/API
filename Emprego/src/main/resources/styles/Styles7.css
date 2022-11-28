@@ -1,7 +1,0 @@
-// Style CSS para os campos de texto
-
-// Inserir borda branca ao selecionar o campo!
-
-.text-field:focused {
-    -fx-border-color: white ;
-}

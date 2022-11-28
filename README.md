@@ -89,7 +89,7 @@
 ### [1º Sprint - 29/08 á 18/09](https://github.com/B1naryDevs/API/tree/main/1%C2%BA%20Sprint)
 ### [2º Sprint - 19/09 á 09/10](https://github.com/B1naryDevs/API/tree/main/2%C2%B0%20Sprint)
 ### [3º Sprint - 17/10 á 06/11](https://github.com/B1naryDevs/API/tree/main/3%C2%B0%20Sprint)
-### [4º Sprint - 07/11 á 27/11](https://github.com/B1naryDevs/API/tree/dev/4%C2%B0%20Sprint)
+### [4º Sprint - 07/11 á 27/11](https://github.com/B1naryDevs/API/tree/main/4%C2%B0%20Sprint)
 
 </div>
 

@@ -200,17 +200,19 @@ public class telaVagaControler4  implements  Initializable{
         CompetenciaCandidato.setText(candidato.getCompetencia());
         InglesCandidato.setText(candidato.getIdioma());
 
-        CargoCandidato.setText(candidato.getCargo());
-        EmpresaCandidato.setText(candidato.getExpEmpresa());
-        ExpInicio.setText(candidato.getExpInicio());
-        if(candidato.getCargoAtual().equals("Sim")){
-            ExpTermino.setText("Emprego Atual");
-        }else{
-            ExpTermino.setText(candidato.getExpTermino());
-        }
-        CargoInteresse.setText(candidato.getCargoInteresse());
-        PretensaoSalarial.setText(String.valueOf(candidato.getPretSalarial()));
-        DescricaoCandidato.setText(candidato.getDescricao());
+        try {
+            CargoCandidato.setText(candidato.getCargo());
+            EmpresaCandidato.setText(candidato.getExpEmpresa());
+            ExpInicio.setText(candidato.getExpInicio());
+            if (candidato.getCargoAtual().equals("Sim")) {
+                ExpTermino.setText("Emprego Atual");
+            } else {
+                ExpTermino.setText(candidato.getExpTermino());
+            }
+            CargoInteresse.setText(candidato.getCargoInteresse());
+            PretensaoSalarial.setText(String.valueOf(candidato.getPretSalarial()));
+            DescricaoCandidato.setText(candidato.getDescricao());
+        }catch (Exception e){}
     }
 
 

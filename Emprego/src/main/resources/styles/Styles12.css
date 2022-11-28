@@ -1,0 +1,9 @@
+// Styles CSS para o TextArea
+
+#campoDescricao {
+    -fx-background-color: #58595A;
+    -fx-control-inner-background: #58595A;
+}
+#campoDescricao:focused {
+    -fx-border-color: white ;
+}

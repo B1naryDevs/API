@@ -1,0 +1,14 @@
+// Style CSS para os combo-box
+
+// Cor da seta
+.combo-box-base {-fx-mark-color: orange; }
+
+.combo-box .list-cell{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #f57c00;
+    -fx-text-fill: white;
+}

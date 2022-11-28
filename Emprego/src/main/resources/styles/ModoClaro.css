@@ -1,0 +1,765 @@
+
+#anchor{
+    -fx-background-color: white;
+}
+
+.label{
+     -fx-text-fill: #343A40;
+}
+
+#labelDados{
+    -fx-text-fill: #ff891c;
+}
+
+#labelHome{
+    -fx-text-fill: #ff891c;
+}
+
+#labelHome2{
+    -fx-text-fill: #ff891c;
+}
+
+#labelHomerh{
+    -fx-text-fill: #ff891c;
+}
+
+#botaoAvancar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAvancar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoAvancar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoVoltar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoVoltar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoVoltar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-control-inner-background: white;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+}
+
+.text-area: focused {
+    -fx-border-color: black;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #58595A;
+    -fx-text-inner-color: black;
+}
+
+.text-field: focused {
+    -fx-border-color: #f57c00;
+    -fx-text-inner-color: black;
+}
+
+.password-field {
+    -fx-background-color: white;
+    -fx-border-color: #58595A;
+    -fx-text-inner-color: black;
+}
+
+.password-field: focused {
+    -fx-border-color: #f57c00;
+    -fx-text-inner-color: black;
+}
+
+.toggle-button {
+    -fx-base: white;
+    -fx-border-color: white;
+}
+
+#botaoAdicionar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAdicionar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoAdicionar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoFinalizar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoFinalizar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoFinalizar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSalvar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSalvar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoSalvar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAcompanhar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAcompanhar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoAcompanhar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoCandidatar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoCandidatar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoCandidatar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoCadastrar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoCadastrar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoCadastrar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoEntrar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoEntrar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoEntrar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoRelatorio {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoRelatorio: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoRelatorio: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSelecionar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoSelecionar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoSelecionar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAprovar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoAprovar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoAprovar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoReprovar {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:17;
+    -fx-text-fill: #f57c00;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+#botaoReprovar: hover {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-background-color-radius: white;
+}
+
+#botaoReprovar: pressed {
+    -fx-font-veight: bold;
+    -fx-background-color: #f57c00;
+    -fx-font-size: 17;
+    -fx-text-fill: white;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-border-color: #f57c00;
+}
+
+// Style CSS para os choice-box
+
+// Cor de fundo de todo o menu de contexto
+.choice-box .context-menu { -fx-background-color: white; }
+
+// Cor de fundo do item em destaque na lista
+.choice-box .menu-item:focused { -fx-background-color: orange; }
+
+// Cor do texto de itens não focados na lista
+.choice-box .menu-item > .label { -fx-text-fill: #58595A; }
+
+// Cor do texto do item focado na lista
+.choice-box .menu-item:focused > .label { -fx-text-fill: black; }
+
+// Cor de fundo do próprio controle
+.choice-box {-fx-background-color: white; }
+
+// Cor da seta
+.choice-box {-fx-mark-color: orange; }
+
+// Cor do texto do item selecionado no próprio controle
+.choice-box > .label { -fx-text-fill: black; }
+
+// Cor da borda
+.choice-box {-fx-border-color: black;}
+
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+
+// Cor da seta
+.combo-box-base {-fx-mark-color: orange; }
+
+.combo-box .list-cell{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #f57c00;
+    -fx-text-fill: black;
+}
+
+.check-box {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-font-veight: bold;
+    -fx-background-color: white;
+    -fx-font-size:20;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-font-veight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: #f57c00;
+}
+
+.button: pressed {
+    -fx-font-veight: bold;
+    -fx-font-size: 20;
+    -fx-text-fill: #f57c00;
+}
+
+.table-view .column-header,
+.table-view .column-header .filler,
+.table-view .column-header-background .filler {
+    -fx-background-color: #FF4500;
+}
+
+.table-view .column-header .label {
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+// 1°cor da tabela
+.table-row-cell:odd{
+    -fx-background-color: #8B8989;
+}
+
+// 2°cor da tabela
+.table-row-cell:even{
+    -fx-background-color: #58595A;
+}
+
+// cor do fundo e do texto ao posicionar o mouse
+.table-row-cell:hover {
+    -fx-background-color: #f57c00;
+    -fx-text-fill: white;
+}
+
+// cor do fundo e do texto ao selecionar
+.table-row-cell:selected {
+    -fx-background-color: #f57c00;
+    -fx-text-fill: white;
+}
+
+// fonte e cor dos itens dentro da tabela
+.table-column {
+     -fx-font-weight: bold;
+     -fx-text-fill: white;
+}
+
+#CargoVaga {
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+
+}
+
+#DescricaoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EnderecoVaga{
+    -fx-background-color:  #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PeriodoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#RemotoVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#SalarioVaga{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CpfCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DataCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EmailCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#NomeCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#TelefoneCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CompetenciaCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CursoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#FormacaoInicio{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#FormacaoTermino{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#InglesCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#InstituicaoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DescricaoCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EmpresaCandidato{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpInicio{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpTermino{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoInteresse{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PretensaoSalarial{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#CargoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#DescricaoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#ExpVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#PeriodoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#RemotoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#SalarioVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#EnderecoVaga2{
+    -fx-background-color: #58595A;
+    -fx-text-fill: white;
+}
+
+#labelSobre{
+    -fx-text-fill: white;
+}
+
+#labelSobre2{
+    -fx-text-fill: white;
+}
+
+#labelSobre3{
+    -fx-text-fill: white;
+}
+
+#labelSobre4{
+    -fx-text-fill: white;
+}
+
+#labelSobre5{
+    -fx-text-fill: white;
+}
+
+#labelSobre6{
+    -fx-text-fill: white;
+}
+
+#labelSobre7{
+    -fx-text-fill: white;
+}
+
+#labelSobre8{
+    -fx-text-fill: white;
+}
+
+#labelSobre9{
+    -fx-text-fill: white;
+}

@@ -72,3 +72,24 @@
   
 </details>
 
+### CANDIDATURA
+
+<details>
+<summary> APROVAÇÃO DE CANDIDATO </summary>
+  
+  ![2022-11-27 22-28-51_Trim](https://user-images.githubusercontent.com/101594950/204175305-4f07c392-bbe2-4053-82d9-93e94c491654.gif)
+
+  </summary>
+  
+</details>
+
+### FUNCIONÁRIO
+
+<details>
+<summary> RELATÓRIO DE FUNCIONÁRIOS </summary>
+  
+![2022-11-27 22-30-07_Trim](https://user-images.githubusercontent.com/101594950/204175322-43f2fbed-53c0-47bf-a3c1-2e69d4255ac8.gif)
+
+  </summary>
+  
+</details>
